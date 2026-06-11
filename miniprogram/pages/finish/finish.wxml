@@ -1,0 +1,16 @@
+<view class="container finish-page">
+  <view class="card done-card">
+    <view class="emoji">🐱🐟</view>
+    <view class="title">今日渔获 {{count}} 条</view>
+    <view class="mascot-text">
+      <text class="mascot-name">卷卷：</text>新词已入缸，记得按时「开吃」复习哦
+    </view>
+    <view class="stats">
+      累计渔获 {{progress.totalCaught || 0}} 条 · 航行第 {{progress.currentDay || 1}} 天
+    </view>
+  </view>
+
+  <button class="btn-primary action-btn" bindtap="goReview">去复习</button>
+  <button class="btn-secondary action-btn" bindtap="goTank">查看词缸</button>
+  <button class="btn-secondary action-btn" bindtap="goHome">回首页</button>
+</view>

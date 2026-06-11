@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/read/read",
+    "pages/tank/tank",
+    "pages/review/review",
+    "pages/mine/mine",
+    "pages/finish/finish"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4ECDC4",
+    "navigationBarTitleText": "逮小鱼",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FFF8F0"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#2C7A7B",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/tab/home.png",
+        "selectedIconPath": "assets/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/tank/tank",
+        "text": "词缸",
+        "iconPath": "assets/tab/tank.png",
+        "selectedIconPath": "assets/tab/tank-active.png"
+      },
+      {
+        "pagePath": "pages/review/review",
+        "text": "复习",
+        "iconPath": "assets/tab/review.png",
+        "selectedIconPath": "assets/tab/review-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/tab/mine.png",
+        "selectedIconPath": "assets/tab/mine-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

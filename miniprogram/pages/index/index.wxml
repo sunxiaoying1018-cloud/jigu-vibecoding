@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="hero card">
+    <view class="brand">逮小鱼</view>
+    <view class="subtitle">{{subtitle}}</view>
+  </view>
+
+  <view class="card error-card" wx:if="{{loadError}}">
+    <view class="error-text">{{loadError}}</view>
+  </view>
+
+  <view class="card mascot-card">
+    <view class="mascot-emoji">🐱</view>
+    <view class="mascot-text">
+      <text class="mascot-name">卷卷：</text>{{mascotLine}}
+    </view>
+    <button wx:if="{{dueCount > 0}}" class="btn-secondary review-hint" bindtap="goReview">
+      去复习（{{dueCount}} 条待吃）
+    </button>
+  </view>
+
+  <view class="card article-card" wx:if="{{todayArticle}}">
+    <view class="section-label">📖 今日推荐 · 第 {{progress.currentDay || 1}} 站</view>
+    <view class="article-title">{{todayArticle.title}}</view>
+    <view class="article-meta">
+      <text class="tag">{{todayArticle.topic}}</text>
+      <text class="tag">{{todayArticle.level}}</text>
+    </view>
+    <button class="btn-primary start-btn" bindtap="goRead">开始抓鱼</button>
+  </view>
+
+  <view class="card list-card" wx:if="{{allArticles.length > 0}}">
+    <view class="section-label">📚 全部文章（{{allArticles.length}} 篇）</view>
+    <view
+      class="article-item"
+      wx:for="{{allArticles}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goRead"
+    >
+      <view class="item-title">{{item.id}}. {{item.title}}</view>
+      <view class="item-meta">
+        <text class="tag">{{item.topic}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="stats" wx:if="{{allArticles.length > 0}}">
+    词海航行第 {{progress.currentDay || 1}} 天
+    · 渔获 {{progress.totalCaught || 0}} 条
+    · 已记牢 {{progress.totalMastered || 0}} 条
+  </view>
+</view>

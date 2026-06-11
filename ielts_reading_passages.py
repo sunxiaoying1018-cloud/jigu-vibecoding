@@ -1,0 +1,416 @@
+# 10 IELTS Band 7.0 reading passages — vocabulary-dense, articles only.
+
+PASSAGES = [
+    {
+        "id": 1,
+        "title": "The Accelerating Transition to Renewable Energy",
+        "topic": "环境 · Environment",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "The scientific consensus regarding anthropogenic climate change has become "
+            "increasingly difficult to dispute. Decades of meticulous research have "
+            "demonstrated that greenhouse gas emissions, principally from the combustion "
+            "of fossil fuels, are driving unprecedented rises in global temperatures. "
+            "The ramifications extend far beyond warmer summers: glaciers are retreating "
+            "at an alarming rate, sea levels are encroaching upon coastal settlements, "
+            "and the frequency of extreme meteorological events — including prolonged "
+            "droughts, devastating floods, and destructive hurricanes — has intensified "
+            "markedly.\n\n"
+            "In response, governments have pledged to pursue ambitious decarbonisation "
+            "targets. Investment in renewable infrastructure, encompassing solar panels, "
+            "offshore wind farms, and hydroelectric facilities, has surged across both "
+            "developed and emerging economies. Proponents contend that a wholesale shift "
+            "away from coal and petroleum is not merely an environmental imperative but "
+            "an economic opportunity, capable of generating employment in green "
+            "technology sectors and reducing dependence on volatile international energy "
+            "markets. Critics, however, caution that the intermittent nature of wind and "
+            "solar power necessitates substantial advances in battery storage before "
+            "renewables can reliably supplant conventional sources.\n\n"
+            "The transition is further complicated by geopolitical considerations. "
+            "Nations endowed with abundant fossil fuel reserves may resist policies "
+            "that threaten their primary export industries, while developing countries "
+            "argue that wealthy states, having historically contributed the lion's share "
+            "of cumulative emissions, bear a disproportionate responsibility to finance "
+            "climate adaptation. Achieving meaningful international cooperation therefore "
+            "requires delicate negotiation and a willingness to compromise on seemingly "
+            "intractable differences.\n\n"
+            "At the individual level, behavioural modifications — such as reducing "
+            "discretionary air travel, adopting plant-based diets, and minimising "
+            "household energy consumption — can collectively exert considerable influence. "
+            "Nevertheless, experts emphasise that systemic change, driven by legislative "
+            "frameworks and corporate accountability, will ultimately prove more decisive "
+            "than isolated personal efforts. Carbon pricing mechanisms, subsidies for "
+            "clean energy, and stringent emissions regulations represent the kind of "
+            "policy instruments that can accelerate the transition at the scale required."
+        ),
+    },
+    {
+        "id": 2,
+        "title": "Artificial Intelligence and the Restructuring of Labour Markets",
+        "topic": "科技 · Technology",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Few technological developments have provoked as much speculation as the "
+            "rapid proliferation of artificial intelligence. Machine-learning algorithms, "
+            "capable of analysing vast datasets and identifying patterns imperceptible to "
+            "human observers, are already transforming sectors ranging from medical "
+            "diagnostics and financial forecasting to legal document review and "
+            "autonomous vehicle navigation. The sheer velocity of innovation has "
+            "prompted economists, policymakers, and workers alike to question what "
+            "employment will resemble in the decades ahead.\n\n"
+            "Historical precedent offers a measure of reassurance. Previous industrial "
+            "revolutions, though initially disruptive, ultimately generated new categories "
+            "of work that predecessors could scarcely have envisaged. The advent of "
+            "automobiles, for instance, eliminated jobs associated with horse-drawn "
+            "transportation yet simultaneously created millions of positions in "
+            "manufacturing, maintenance, and infrastructure development. Advocates of "
+            "this optimistic narrative maintain that artificial intelligence will "
+            "similarly augment human productivity rather than render it obsolete.\n\n"
+            "Sceptics draw attention to a crucial distinction: earlier technologies "
+            "primarily automated physical tasks, whereas contemporary systems increasingly "
+            "encroach upon cognitive domains previously considered exclusive to human "
+            "intellect. Routine administrative functions, data entry, and even certain "
+            "analytical roles are already being delegated to software. Workers whose "
+            "skill sets overlap substantially with algorithmic capabilities may find "
+            "themselves particularly vulnerable to displacement.\n\n"
+            "Educational institutions bear a corresponding obligation to adapt their "
+            "curricula. Rote memorisation of factual information has diminished in value "
+            "when search engines can retrieve answers instantaneously. Instead, educators "
+            "increasingly prioritise critical thinking, creative problem-solving, "
+            "interpersonal communication, and digital literacy. Governments, meanwhile, "
+            "face mounting pressure to fund retraining programmes that enable mid-career "
+            "professionals to acquire competencies aligned with evolving labour market "
+            "demands. The outcome of this transition will depend not on technology alone, "
+            "but on the foresight with which societies prepare their workforce."
+        ),
+    },
+    {
+        "id": 3,
+        "title": "Reimagining Higher Education for a Digital Era",
+        "topic": "教育 · Education",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Universities worldwide are confronting a period of profound transformation. "
+            "The traditional model — characterised by large-scale lectures delivered "
+            "in cavernous auditoriums, rigid semester schedules, and assessment through "
+            "standardised examinations — is being progressively supplemented, and in "
+            "some instances supplanted, by digital alternatives. Online platforms now "
+            "enable students to access pre-recorded lectures, participate in virtual "
+            "seminars, and submit assignments electronically, conferring a degree of "
+            "flexibility that was previously unattainable for those balancing employment "
+            "or family obligations alongside academic pursuits.\n\n"
+            "This democratisation of access represents a significant achievement. "
+            "Individuals residing in geographically remote regions, or in countries where "
+            "tertiary education remains prohibitively expensive, can now enrol in courses "
+            "offered by prestigious institutions on the opposite side of the globe. "
+            "Massive open online courses, commonly abbreviated as MOOCs, have attracted "
+            "millions of registrants, though completion rates remain disappointingly low, "
+            "suggesting that accessibility alone does not guarantee educational outcomes.\n\n"
+            "Employers, for their part, have expressed growing dissatisfaction with the "
+            "practical preparedness of graduates. Surveys consistently indicate that "
+            "recruiters prioritise demonstrable competencies — teamwork, adaptability, "
+            "and proficiency with industry-specific tools — over academic credentials "
+            "in isolation. In response, universities have cultivated partnerships with "
+            "commercial enterprises, embedding internships and collaborative projects "
+            "within degree programmes. Such initiatives aim to bridge the perennial gap "
+            "between theoretical knowledge and workplace application.\n\n"
+            "Yet a faction of academics voices apprehension that the relentless emphasis "
+            "on vocational utility may erode the intellectual foundations upon which "
+            "higher education was originally conceived. They contend that universities "
+            "should cultivate intellectual curiosity, ethical reasoning, and the capacity "
+            "for independent inquiry, qualities that transcend any particular profession "
+            "and equip graduates to navigate an unpredictable future. Striking an "
+            "appropriate equilibrium between employability and intellectual breadth "
+            "remains one of the defining challenges confronting contemporary academia."
+        ),
+    },
+    {
+        "id": 4,
+        "title": "Urbanisation and the Challenge of Sustainable City Planning",
+        "topic": "社会 · Society",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Humanity has crossed a demographic threshold of considerable significance: "
+            "more than half the global population now resides in urban environments, "
+            "and projections indicate that this proportion will continue to ascend "
+            "throughout the twenty-first century. Cities function as magnets for "
+            "economic activity, concentrating employment opportunities, educational "
+            "institutions, and cultural amenities within a comparatively compact "
+            "geographical footprint. Young adults, in particular, migrate from "
+            "predominantly rural hinterlands in pursuit of enhanced career prospects "
+            "and a more cosmopolitan lifestyle.\n\n"
+            "The consequences of unchecked urban expansion, however, are increasingly "
+            "conspicuous. Escalating demand for housing has propelled property prices "
+            "beyond the reach of low and middle-income residents, relegating many to "
+            "overcrowded accommodation on the peripheral outskirts of metropolitan areas. "
+            "Simultaneously, traffic congestion has reached chronic proportions in "
+            "numerous cities, generating not only productivity losses but also "
+            "dangerously elevated levels of atmospheric pollution. Municipal authorities "
+            "frequently struggle to provision adequate sanitation, healthcare, and "
+            "public transportation infrastructure for populations that expand far more "
+            "rapidly than budgets allow.\n\n"
+            "Urban planners have accordingly championed the concept of the 'smart city' "
+            "— an urban environment in which technology is harnessed to optimise resource "
+            "allocation, reduce environmental impact, and enhance residents' quality of "
+            "life. Proposed interventions include integrated public transit networks, "
+            "expansive green corridors, energy-efficient building codes, and mixed-use "
+            "neighbourhoods designed to minimise commuting distances. Proponents argue "
+            "that thoughtful design can reconcile the competing imperatives of economic "
+            "growth and ecological sustainability.\n\n"
+            "Implementation, inevitably, encounters formidable obstacles. Retrofitting "
+            "existing infrastructure is vastly more expensive than incorporating "
+            "sustainable principles into new developments, and political cycles rarely "
+            "align with the long-term horizons that urban transformation demands. "
+            "Gentrification — the displacement of established communities by affluent "
+            "newcomers — further complicates redevelopment efforts. Nevertheless, the "
+            "alternative of allowing cities to expand in an unplanned, haphazard "
+            "fashion carries consequences that subsequent generations may find impossible "
+            "to remedy."
+        ),
+    },
+    {
+        "id": 5,
+        "title": "Contemporary Challenges in Global Public Health",
+        "topic": "健康 · Health",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "The twentieth century witnessed extraordinary advances in medical science "
+            "that collectively extended average life expectancy across much of the globe. "
+            "Vaccination programmes eradicated smallpox and brought polio to the brink "
+            "of elimination; antibiotics revolutionised the treatment of bacterial "
+            "infections; and improvements in sanitation and nutrition dramatically "
+            "reduced infant mortality. These achievements fostered a widespread assumption "
+            "that infectious disease had been definitively conquered — an assumption "
+            "that recent events have comprehensively undermined.\n\n"
+            "Paradoxically, as communicable illnesses have receded in relative importance "
+            "in affluent nations, chronic non-communicable conditions have assumed "
+            "predominance. Obesity, cardiovascular disease, type-two diabetes, and certain "
+            "cancers now account for a substantial majority of the global disease burden. "
+            "Sedentary lifestyles, diets disproportionately rich in processed foods and "
+            "refined sugars, and pervasive occupational stress are implicated as "
+            "contributing factors. Mental health disorders, including anxiety and "
+            "depression, have likewise escalated to epidemic proportions, affecting "
+            "individuals across socioeconomic strata and age cohorts.\n\n"
+            "Stark inequalities in health outcomes persist both between and within "
+            "countries. While citizens of wealthy nations benefit from sophisticated "
+            "healthcare systems and abundant pharmaceutical resources, populations in "
+            "low-income regions frequently lack access to basic medical facilities, "
+            "clean water, and essential vaccinations. The recent pandemic laid bare these "
+            "disparities with brutal clarity, as vaccine distribution initially favoured "
+            "the world's most prosperous economies while leaving vulnerable communities "
+            "in the Global South disproportionately exposed.\n\n"
+            "Addressing these multifaceted challenges demands coordinated international "
+            "effort. Surveillance systems must be strengthened to detect emerging "
+            "pathogens before they achieve pandemic potential; research findings must "
+            "be disseminated transparently across borders; and mechanisms must be "
+            "established to ensure that life-saving treatments are distributed "
+            "equitably rather than exclusively to those who can afford premium prices. "
+            "Preventive medicine, encompassing public health campaigns and early "
+            "intervention programmes, offers a more cost-effective strategy than "
+            "treating advanced illness in overstretched hospital systems."
+        ),
+    },
+    {
+        "id": 6,
+        "title": "Preserving Cultural Heritage in an Era of Globalisation",
+        "topic": "文化 · Culture",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Cultural heritage constitutes far more than a collection of antiquated "
+            "monuments and museum exhibits. It encompasses intangible traditions — oral "
+            "histories, ceremonial practices, culinary techniques, and linguistic "
+            "varieties — transmitted across generations and constitutive of communal "
+            "identity. When a heritage site is destroyed or a minority language falls "
+            "into disuse, an irreplaceable repository of human knowledge and perspective "
+            "is irrevocably lost.\n\n"
+            "International organisations such as UNESCO have designated hundreds of "
+            "locations as World Heritage Sites, conferring recognition upon places "
+            "deemed to possess outstanding universal value. This designation frequently "
+            "attracts tourism revenue that can fund restoration and conservation projects. "
+            "Yet the relationship between tourism and preservation is inherently "
+            "ambivalent. Excessive visitor numbers exert physical pressure upon fragile "
+            "structures, while the commercialisation of sacred rituals for tourist "
+            "consumption may dilute their authentic cultural significance.\n\n"
+            "Globalisation exerts a homogenising influence that threatens cultural "
+            "diversity at an unprecedented scale. International media, multinational "
+            "corporations, and dominant languages — particularly English — permeate "
+            "societies that previously maintained distinctive customs and worldviews. "
+            "Younger generations, exposed primarily to globalised popular culture, "
+            "may regard local traditions as antiquated or irrelevant, accelerating the "
+            "erosion of practices that endured for centuries.\n\n"
+            "Conservation strategies must therefore extend beyond the physical protection "
+            "of buildings to encompass the revitalisation of living traditions. "
+            "Educational initiatives that incorporate indigenous knowledge into school "
+            "curricula, community-led documentation projects, and policies that protect "
+            "linguistic rights all contribute to ensuring that heritage remains a "
+            "dynamic, evolving dimension of contemporary society rather than a relic "
+            "confined to institutional archives. Repatriation of artefacts removed during "
+            "colonial periods has become an increasingly contentious issue, with source "
+            "nations demanding the return of culturally significant objects held in "
+            "Western museums."
+        ),
+    },
+    {
+        "id": 7,
+        "title": "The Gig Economy and the Future of Employment Relations",
+        "topic": "工作 · Work",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "The conventional employment paradigm — characterised by permanent contracts, "
+            "fixed working hours, and comprehensive benefit packages — is undergoing "
+            "substantial erosion. Digital platforms that connect freelance workers with "
+            "short-term assignments have proliferated across industries, from ride-hailing "
+            "and food delivery to graphic design, software development, and consulting. "
+            "This emergent 'gig economy' offers a degree of temporal flexibility that "
+            "appeals particularly to younger workers who prioritise autonomy and "
+            "work-life equilibrium over the security traditionally associated with "
+            "long-term employer-employee relationships.\n\n"
+            "From a corporate perspective, engaging independent contractors rather than "
+            "permanent staff reduces overhead expenditure and enables organisations to "
+            "scale their workforce in response to fluctuating demand. During periods of "
+            "economic contraction, companies can terminate contractual arrangements "
+            "without incurring the severance obligations or reputational costs associated "
+            "with large-scale redundancies. This agility is especially prized in "
+            "industries subject to rapid technological disruption.\n\n"
+            "The implications for workers are considerably less favourable. Gig "
+            "participants typically forfeit access to employer-sponsored health insurance, "
+            "paid annual leave, pension contributions, and protection against arbitrary "
+            "dismissal — safeguards that labour movements fought to establish over "
+            "generations. Income instability is endemic; earnings fluctuate unpredictably "
+            "from week to week, complicating financial planning and mortgage applications. "
+            "Critics contend that platforms have effectively externalised their "
+            "operational costs onto a precarious workforce while retaining the profits "
+            "generated by that labour.\n\n"
+            "Legislatures in several jurisdictions have begun to intervene. Courts and "
+            "parliaments are grappling with the question of whether gig workers should "
+            "be reclassified as employees entitled to statutory protections, or whether "
+            "such classification would stifle the innovation that platforms represent. "
+            "Trade unions, historically the primary advocates for worker rights, face "
+            "the novel challenge of organising a dispersed, digitally mediated workforce "
+            "that lacks a shared physical workplace. The resolution of this debate will "
+            "exert a profound influence upon the structure of labour markets for decades."
+        ),
+    },
+    {
+        "id": 8,
+        "title": "Biodiversity Loss and the Urgency of Conservation",
+        "topic": "环境 · Environment",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Planet Earth is experiencing a biodiversity crisis of alarming magnitude. "
+            "Conservation biologists estimate that species are vanishing at rates "
+            "between one hundred and one thousand times higher than the natural "
+            "background level, a phenomenon widely characterised as the sixth mass "
+            "extinction in the planet's geological history. Unlike previous extinction "
+            "events triggered by asteroid impacts or volcanic activity, the current "
+            "wave is predominantly attributable to human actions.\n\n"
+            "Habitat destruction remains the principal driver. Forests are cleared to "
+            "accommodate agricultural expansion, cattle grazing, and urban development; "
+            "wetlands are drained for commercial exploitation; and coral reefs are "
+            "bleached by rising ocean temperatures and acidification. Each ecosystem "
+            "that is degraded or eliminated takes with it species that may never have "
+            "been scientifically documented, along with biochemical compounds that "
+            "could potentially yield life-saving pharmaceutical applications.\n\n"
+            "The introduction of invasive species compounds the problem. When organisms "
+            "are transported — deliberately or inadvertently — into environments lacking "
+            "their natural predators, they can proliferate uncontrollably, outcompeting "
+            "indigenous flora and fauna for resources. Islands are especially "
+            "susceptible, having evolved ecosystems with limited defensive adaptations "
+            "against novel threats.\n\n"
+            "Conservation efforts encompass the establishment of protected reserves, "
+            "captive breeding programmes for endangered species, and legislative "
+            "prohibitions on the trade in wildlife products. Yet these measures, "
+            "however necessary, address symptoms rather than root causes. Sustainable "
+            "land management, reduced consumption of resource-intensive commodities, "
+            "and international cooperation to enforce environmental regulations are "
+            "equally indispensable. The services that intact ecosystems provide — "
+            "pollination of crops, purification of water, sequestration of atmospheric "
+            "carbon — are not luxuries but prerequisites for human civilisation's "
+            "continued prosperity. Ecotourism, when responsibly managed, can generate "
+            "revenue that incentivises local communities to protect rather than "
+            "exploit their natural surroundings."
+        ),
+    },
+    {
+        "id": 9,
+        "title": "Social Media, Misinformation, and Democratic Discourse",
+        "topic": "媒体 · Media",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "Social media platforms have fundamentally reconfigured the landscape of "
+            "public communication. Billions of users worldwide engage daily with "
+            "networks that facilitate instantaneous sharing of text, images, and video "
+            "across geographical boundaries that once imposed formidable barriers to "
+            "interaction. For proponents, these technologies democratise access to "
+            "information, amplify marginalised voices, and enable civic mobilisation "
+            "on a scale previously unimaginable.\n\n"
+            "The velocity with which content circulates online, however, presents "
+            "corresponding risks. Misinformation — encompassing inaccurate reporting, "
+            "deliberately fabricated narratives, and content stripped of essential "
+            "context — can achieve viral dissemination within minutes, reaching audiences "
+            "that vastly exceed the circulation of traditional print media. Research "
+            "indicates that emotionally provocative material spreads more rapidly than "
+            "sober factual analysis, creating incentives for sensationalism that "
+            "undermine the quality of public deliberation.\n\n"
+            "Algorithmic curation exacerbates these tendencies. Platforms optimise "
+            "content recommendations to maximise user engagement, a metric closely "
+            "correlated with advertising revenue. Consequently, users are frequently "
+            "presented with material that reinforces pre-existing beliefs rather than "
+            "challenging them — a dynamic that scholars describe as the 'echo chamber' "
+            "effect. Political polarisation, erosion of trust in institutional authority, "
+            "and the normalisation of extremist rhetoric have all been attributed, at "
+            "least partially, to these algorithmic architectures.\n\n"
+            "Educational responses emphasise the cultivation of media literacy: the "
+            "ability to evaluate sources critically, distinguish empirical evidence "
+            "from opinion, and recognise rhetorical manipulation. Regulatory approaches "
+            "vary considerably across jurisdictions, ranging from stringent content "
+            "moderation requirements to principled commitments to freedom of expression. "
+            "Journalists operating in traditional media outlets have likewise adapted, "
+            "incorporating fact-checking protocols and transparent correction policies "
+            "to distinguish their output from the unverified content that proliferates "
+            "on social networks."
+        ),
+    },
+    {
+        "id": 10,
+        "title": "Feeding the World: Agriculture, Sustainability, and Food Security",
+        "topic": "农业 · Agriculture",
+        "level": "IELTS 7.0 (C1)",
+        "text": (
+            "By the middle of this century, the global population is projected to "
+            "approach ten billion, intensifying pressure upon agricultural systems "
+            "already strained by soil degradation, water scarcity, and climatic "
+            "instability. Conventional farming practices — reliant upon synthetic "
+            "pesticides, chemical fertilisers, and intensive irrigation — have "
+            "undeniably increased crop yields over recent decades. Yet these methods "
+            "frequently inflict collateral damage upon surrounding ecosystems, "
+            "contaminating waterways, depleting aquifers, and diminishing the "
+            "biodiversity upon which long-term agricultural resilience depends.\n\n"
+            "Sustainable agriculture seeks to reconcile the imperative of food production "
+            "with environmental stewardship. Techniques such as crop rotation, "
+            "agroforestry, integrated pest management, and precision application of "
+            "water and nutrients aim to maintain productivity without compromising "
+            "the capacity of future generations to meet their nutritional requirements. "
+            "Organic certification schemes, though sometimes criticised for lower "
+            "yields and elevated consumer prices, have gained substantial market share "
+            "among environmentally conscious purchasers.\n\n"
+            "Food security — defined as reliable access to sufficient, safe, and "
+            "nutritious food — remains unevenly distributed across the globe. While "
+            "affluent societies discard staggering quantities of edible produce, "
+            "approximately eight hundred million people continue to experience chronic "
+            "undernourishment. Conflict, political instability, and infrastructural "
+            "deficiencies in storage and transportation compound the challenges faced "
+            "by low-income nations. Climate-related disruptions, including crop failures "
+            "induced by drought or unseasonable flooding, threaten to exacerbate these "
+            "inequalities further.\n\n"
+            "Addressing this multifaceted predicament requires interventions at "
+            "multiple levels: investment in agricultural research and extension services, "
+            "reform of trade policies that disadvantage smallholder farmers, reduction "
+            "of food waste throughout supply chains, and international agreements that "
+            "prioritise equitable resource allocation. Genetic modification of crops, "
+            "a subject of intense controversy, proponents argue could enhance resistance "
+            "to pests and adverse weather, though opponents raise concerns about "
+            "ecological consequences and corporate control of seed supplies."
+        ),
+    },
+]

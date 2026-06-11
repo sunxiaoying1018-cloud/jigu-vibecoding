@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="card profile">
+    <view class="avatar">🐱</view>
+    <view class="name">卷卷的搭档</view>
+    <view class="bio">在词海里抓鱼背单词</view>
+  </view>
+
+  <view class="card stats-card">
+    <view class="stat-item">
+      <view class="stat-num">{{progress.currentDay || 1}}</view>
+      <view class="stat-label">航行天数</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-num">{{progress.totalCaught || 0}}</view>
+      <view class="stat-label">累计渔获</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-num">{{progress.totalMastered || 0}}</view>
+      <view class="stat-label">已记牢</view>
+    </view>
+    <view class="stat-item">
+      <view class="stat-num">{{progress.streak || 0}}</view>
+      <view class="stat-label">连续天数</view>
+    </view>
+  </view>
+
+  <view class="card about">
+    <view class="about-title">关于逮小鱼</view>
+    <view class="about-text">读雅思文章，点不认识的词，抓一条记一条。卷卷陪你按遗忘曲线复习，把溜走的词吃掉。</view>
+    <view class="about-version">MVP v0.1 · 10 篇文章</view>
+  </view>
+
+  <button class="btn-secondary clear-btn" bindtap="clearData">清空学习数据（测试用）</button>
+</view>

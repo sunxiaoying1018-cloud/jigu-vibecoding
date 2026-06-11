@@ -1,0 +1,61 @@
+.profile {
+  text-align: center;
+  padding: 48rpx 32rpx;
+}
+
+.avatar {
+  font-size: 96rpx;
+  margin-bottom: 16rpx;
+}
+
+.name {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.bio {
+  color: #888;
+  margin-top: 8rpx;
+}
+
+.stats-card {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2c7a7b;
+}
+
+.stat-label {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 8rpx;
+}
+
+.about-title {
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.about-text {
+  color: #666;
+  line-height: 1.8;
+  font-size: 26rpx;
+}
+
+.about-version {
+  margin-top: 16rpx;
+  font-size: 22rpx;
+  color: #bbb;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 32rpx;
+  color: #e74c3c;
+  border-color: #e74c3c;
+}

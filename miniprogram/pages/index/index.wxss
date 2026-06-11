@@ -1,0 +1,33 @@
+.error-card {
+  background: #fdecea;
+  border: 2rpx solid #e74c3c;
+}
+
+.error-text {
+  color: #c0392b;
+  font-size: 26rpx;
+}
+
+.list-card {
+  padding-bottom: 16rpx;
+}
+
+.article-item {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.item-title {
+  font-size: 28rpx;
+  color: #2c3e50;
+  line-height: 1.5;
+  margin-bottom: 8rpx;
+}
+
+.item-meta {
+  display: flex;
+}

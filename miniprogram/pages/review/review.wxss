@@ -1,0 +1,89 @@
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  color: #2c7a7b;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.quiz-progress {
+  color: #999;
+  font-weight: 400;
+}
+
+.quiz-tip {
+  margin-bottom: 32rpx;
+}
+
+.quiz-word {
+  font-size: 48rpx;
+  font-weight: 700;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 16rpx;
+}
+
+.quiz-sentence {
+  font-size: 24rpx;
+  color: #888;
+  text-align: center;
+  margin-bottom: 32rpx;
+  line-height: 1.6;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.option {
+  background: #f8f9fa;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  text-align: center;
+  border: 2rpx solid transparent;
+}
+
+.option.correct {
+  background: #d4edda;
+  border-color: #27ae60;
+}
+
+.option.wrong {
+  background: #fdecea;
+  border-color: #e74c3c;
+}
+
+.feedback {
+  text-align: center;
+  margin: 24rpx 0;
+  color: #2c7a7b;
+  font-weight: 600;
+}
+
+.next-btn {
+  width: 100%;
+}
+
+.done, .empty {
+  text-align: center;
+  padding: 64rpx 32rpx;
+}
+
+.done-emoji, .empty-emoji {
+  font-size: 80rpx;
+  margin-bottom: 24rpx;
+}
+
+.done-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.done-stats {
+  font-size: 28rpx;
+  color: #2c7a7b;
+  margin-bottom: 24rpx;
+}

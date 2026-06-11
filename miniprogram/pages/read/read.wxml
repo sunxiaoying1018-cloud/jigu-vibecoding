@@ -1,0 +1,87 @@
+<view class="read-page" bindtap="onPageTap">
+  <view class="article-header card">
+    <view class="title">{{article.title}}</view>
+    <view class="meta">
+      <text class="tag">{{article.topic}}</text>
+      <text class="tag">{{article.level}}</text>
+    </view>
+    <view class="hint mascot-text">
+      <text class="mascot-name">卷卷：</text>长按选词/词组，拖左右圆点调整；点划线区域取消
+    </view>
+  </view>
+
+  <view class="article-body card">
+    <view wx:if="{{paragraphs.length === 0}}" class="empty-body">正文加载中…</view>
+
+    <block wx:for="{{paragraphs}}" wx:key="id">
+      <view class="paragraph">
+        <block wx:for="{{item.tokens}}" wx:key="tokenKey" wx:for-item="token">
+          <text
+            wx:if="{{token.type === 'word'}}"
+            id="w-{{token.wordIndex}}"
+            class="token word-token {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{markedSpanKeys[token.tokenKey] ? 'token-marked' : ''}} {{caughtKeys[token.key] ? 'word-caught' : ''}}"
+            data-index="{{token.wordIndex}}"
+            data-key="{{token.key}}"
+            data-text="{{token.text}}"
+            bindlongpress="onWordLongPress"
+            catchtap="onWordTap"
+          >{{token.text}}</text>
+          <text
+            wx:else
+            class="token token-gap {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{markedSpanKeys[token.tokenKey] ? 'token-marked' : ''}}"
+          >{{token.text}}</text>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <view
+    wx:if="{{draggingHandle}}"
+    class="drag-mask"
+    catchtouchmove="onHandleMove"
+    catchtouchend="onHandleEnd"
+  ></view>
+
+  <view
+    wx:if="{{selection && selection.menuType === 'mark' && handleLeft}}"
+    class="handle handle-left"
+    style="top: {{handleLeft.top}}px; left: {{handleLeft.left}}px;"
+    catchtouchstart="onHandleStart"
+    catchtouchmove="onHandleMove"
+    catchtouchend="onHandleEnd"
+    data-dir="left"
+  ></view>
+
+  <view
+    wx:if="{{selection && selection.menuType === 'mark' && handleRight}}"
+    class="handle handle-right"
+    style="top: {{handleRight.top}}px; left: {{handleRight.left}}px;"
+    catchtouchstart="onHandleStart"
+    catchtouchmove="onHandleMove"
+    catchtouchend="onHandleEnd"
+    data-dir="right"
+  ></view>
+
+  <view
+    wx:if="{{selection}}"
+    class="sel-menu"
+    style="top: {{selection.menuTop}}px; left: {{selection.menuLeft}}px;"
+    catchtap="onMenuTap"
+  >
+    <view wx:if="{{selection.menuType === 'mark'}}" class="sel-toolbar">
+      <view class="sel-toolbar-item" catchtap="onMarkLine">划线</view>
+    </view>
+    <view wx:if="{{selection.menuType === 'cancel'}}" class="sel-bubble" catchtap="onCancelLine">
+      <text>取消划线</text>
+      <view class="sel-bubble-arrow"></view>
+    </view>
+  </view>
+
+  <view class="footer-bar" catchtap="onPageTap">
+    <view class="footer-stats">
+      <view class="catch-count">渔获 {{sessionCount}} 条</view>
+      <view class="mark-count">划线 {{markCount}} 处</view>
+    </view>
+    <button class="btn-primary finish-btn" catchtap="finishReading">完成阅读</button>
+  </view>
+</view>

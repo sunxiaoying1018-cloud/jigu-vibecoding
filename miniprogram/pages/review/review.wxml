@@ -1,0 +1,43 @@
+<view class="container">
+  <view wx:if="{{!finished && current}}" class="quiz card">
+    <view class="quiz-header">
+      <text>开吃时间</text>
+      <text class="quiz-progress">{{index + 1}} / {{totalCount}}</text>
+    </view>
+    <view class="mascot-text quiz-tip">
+      <text class="mascot-name">卷卷：</text>选对这个词的中文意思
+    </view>
+    <view class="quiz-word">{{current.word}}</view>
+    <view class="quiz-sentence" wx:if="{{current.sentence}}">「{{current.sentence}}」</view>
+
+    <view class="options">
+      <view
+        wx:for="{{options}}"
+        wx:key="*this"
+        class="option {{selected === item ? (item === current.meaning ? 'correct' : 'wrong') : ''}} {{feedback && item === current.meaning ? 'correct' : ''}}"
+        data-meaning="{{item}}"
+        bindtap="onSelect"
+      >{{item}}</view>
+    </view>
+
+    <view class="feedback" wx:if="{{feedback}}">{{feedback}}</view>
+    <button wx:if="{{feedback}}" class="btn-primary next-btn" bindtap="nextQuestion">
+      {{index + 1 >= totalCount ? '完成' : '下一个'}}
+    </button>
+  </view>
+
+  <view wx:elif="{{finished && totalCount > 0}}" class="done card">
+    <view class="done-emoji">🐱</view>
+    <view class="done-title">复习完成</view>
+    <view class="done-stats">正确 {{correctCount}} / {{totalCount}}</view>
+    <view class="mascot-text">卷卷吃饱了，这些词短期内溜不走了</view>
+    <button class="btn-primary" bindtap="goHome">回首页</button>
+  </view>
+
+  <view wx:else class="empty card">
+    <view class="empty-emoji">🐱</view>
+    <view class="done-title">暂无待复习</view>
+    <view class="mascot-text">缸里的鱼都还好，去读文章抓新的吧</view>
+    <button class="btn-primary" bindtap="goHome">回首页</button>
+  </view>
+</view>
