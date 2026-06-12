@@ -1,17 +1,7 @@
 <view class="container">
-  <view class="header card">
-    <view class="header-title">我的词缸</view>
-    <view class="header-count">生词 {{words.length}} · 划线 {{marks.length}}</view>
-  </view>
-
-  <view wx:if="{{marks.length > 0}}" class="section card">
-    <view class="section-title">收藏划线</view>
-    <block wx:for="{{marks}}" wx:key="key">
-      <view class="sentence-card">
-        <view class="sentence-text saved-line">{{item.text}}</view>
-        <view class="sentence-from">来自：{{item.articleTitle}}</view>
-      </view>
-    </block>
+  <view class="header">
+    <view class="header-title">词缸</view>
+    <view class="header-count">{{words.length}} 条</view>
   </view>
 
   <view wx:if="{{words.length === 0 && marks.length === 0}}" class="empty card">
@@ -20,18 +10,40 @@
     <button class="btn-primary" bindtap="goRead">去读文章</button>
   </view>
 
-  <view wx:if="{{words.length > 0}}" class="section-title standalone">生词</view>
-
-  <block wx:for="{{words}}" wx:key="key">
-    <view class="word-card card">
+  <view wx:if="{{words.length > 0}}" class="word-list card">
+    <block wx:for="{{words}}" wx:key="key">
       <view class="word-row">
-        <text class="word-text">{{item.word}}</text>
-        <text class="status status-{{item.status}}">{{item.statusLabel}}</text>
+        <view class="word-left">
+          <view class="word-head">
+            <text class="word-text">{{item.word}}</text>
+            <view
+              wx:if="{{item.articleId}}"
+              class="word-go"
+              catchtap="onGoSource"
+              data-article-id="{{item.articleId}}"
+              data-source-key="{{item.sourceKey}}"
+            >›</view>
+          </view>
+          <text class="status status-{{item.status}}">{{item.statusLabel}}</text>
+        </view>
+        <view
+          class="meaning-right {{item.revealed ? 'is-revealed' : ''}}"
+          bindtap="onToggleMeaning"
+          data-key="{{item.key}}"
+        >
+          <text class="meaning-text">{{item.meaning}}</text>
+          <view class="tape-cover" wx:if="{{!item.revealed}}">
+            <view class="tape-strip"></view>
+          </view>
+        </view>
       </view>
-      <view class="word-pos" wx:if="{{item.pos}}">{{item.pos}}</view>
-      <view class="word-meaning">{{item.meaning}}</view>
-      <view class="word-from">来自：{{item.articleTitle}}</view>
-      <view class="word-sentence" wx:if="{{item.sentence}}">「{{item.sentence}}」</view>
-    </view>
-  </block>
+    </block>
+  </view>
+
+  <view wx:if="{{marks.length > 0}}" class="marks-block card">
+    <view class="marks-label">划线</view>
+    <block wx:for="{{marks}}" wx:key="key">
+      <view class="mark-line">{{item.text}}</view>
+    </block>
+  </view>
 </view>

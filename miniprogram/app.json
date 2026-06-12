@@ -8,40 +8,41 @@
     "pages/finish/finish"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#4ECDC4",
-    "navigationBarTitleText": "逮小鱼",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#FFF8F0"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "抓小鱼单词",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f8fa"
   },
   "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#2C7A7B",
+    "custom": true,
+    "color": "#8B8C91",
+    "selectedColor": "#4E92FF",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "assets/tab/home.png",
-        "selectedIconPath": "assets/tab/home-active.png"
+        "text": "阅读",
+        "iconPath": "assets/ui/tab/read.png",
+        "selectedIconPath": "assets/ui/tab/read-active.png"
       },
       {
         "pagePath": "pages/tank/tank",
-        "text": "词缸",
-        "iconPath": "assets/tab/tank.png",
-        "selectedIconPath": "assets/tab/tank-active.png"
+        "text": "生词本",
+        "iconPath": "assets/ui/tab/tank.png",
+        "selectedIconPath": "assets/ui/tab/tank-active.png"
       },
       {
         "pagePath": "pages/review/review",
         "text": "复习",
-        "iconPath": "assets/tab/review.png",
-        "selectedIconPath": "assets/tab/review-active.png"
+        "iconPath": "assets/ui/tab/review.png",
+        "selectedIconPath": "assets/ui/tab/review-active.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "assets/tab/mine.png",
-        "selectedIconPath": "assets/tab/mine-active.png"
+        "iconPath": "assets/ui/tab/mine.png",
+        "selectedIconPath": "assets/ui/tab/mine-active.png"
       }
     ]
   },

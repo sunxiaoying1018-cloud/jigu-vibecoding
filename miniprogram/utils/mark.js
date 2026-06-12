@@ -1,5 +1,6 @@
 const { todayStr } = require("./storage");
 const wordUtil = require("./word");
+const { normalizeArticleId, isSameArticle } = require("./article");
 
 const MARKS_KEY = "savedSentences";
 
@@ -14,7 +15,7 @@ function saveMarks(list) {
 function buildMarkedSpanKeys(articleId, paragraphs) {
   const map = {};
   getMarks()
-    .filter((item) => item.articleId === articleId)
+    .filter((item) => isSameArticle(item.articleId, articleId))
     .forEach((item) => {
       const start = item.startIndex ?? item.startWordIndex ?? 0;
       const end = item.endIndex ?? item.endWordIndex ?? start;
@@ -34,7 +35,7 @@ function getMarkedSpanKeys(articleId, paragraphs) {
 function findMarkAt(articleId, wordIndex) {
   return getMarks().find(
     (item) =>
-      item.articleId === articleId &&
+      isSameArticle(item.articleId, articleId) &&
       wordUtil.isWordInRange(
         wordIndex,
         item.startIndex ?? item.startWordIndex ?? 0,
@@ -62,7 +63,7 @@ function saveMarkRange(article, paragraphs, startIndex, endIndex) {
   const list = getMarks().filter(
     (item) =>
       !(
-        item.articleId === article.id &&
+        isSameArticle(item.articleId, article.id) &&
         rangesOverlap(
           range.startIndex,
           range.endIndex,
@@ -77,7 +78,7 @@ function saveMarkRange(article, paragraphs, startIndex, endIndex) {
     startIndex: range.startIndex,
     endIndex: range.endIndex,
     text,
-    articleId: article.id,
+    articleId: normalizeArticleId(article.id),
     articleTitle: article.title,
     topic: article.topic,
     savedAt: todayStr(),
@@ -86,7 +87,8 @@ function saveMarkRange(article, paragraphs, startIndex, endIndex) {
   saveMarks(list);
   return {
     markedSpanKeys: getMarkedSpanKeys(article.id, paragraphs),
-    count: list.filter((item) => item.articleId === article.id).length,
+    count: list.filter((item) => isSameArticle(item.articleId, article.id))
+      .length,
   };
 }
 
@@ -95,7 +97,7 @@ function removeMark(markKey) {
 }
 
 function getMarksForArticle(articleId) {
-  return getMarks().filter((item) => item.articleId === articleId);
+  return getMarks().filter((item) => isSameArticle(item.articleId, articleId));
 }
 
 module.exports = {

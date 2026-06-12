@@ -1,52 +1,66 @@
-<view class="container">
-  <view class="hero card">
-    <view class="brand">逮小鱼</view>
-    <view class="subtitle">{{subtitle}}</view>
-  </view>
+<view class="home-page">
+  <image class="home-header-bg" src="/assets/ui/header-bg.png" mode="widthFix" />
 
-  <view class="card error-card" wx:if="{{loadError}}">
-    <view class="error-text">{{loadError}}</view>
-  </view>
-
-  <view class="card mascot-card">
-    <view class="mascot-emoji">🐱</view>
-    <view class="mascot-text">
-      <text class="mascot-name">卷卷：</text>{{mascotLine}}
+  <view class="home-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="home-nav-inner">
+      <text class="home-nav-title">抓小鱼单词</text>
     </view>
-    <button wx:if="{{dueCount > 0}}" class="btn-secondary review-hint" bindtap="goReview">
-      去复习（{{dueCount}} 条待吃）
-    </button>
   </view>
 
-  <view class="card article-card" wx:if="{{todayArticle}}">
-    <view class="section-label">📖 今日推荐 · 第 {{progress.currentDay || 1}} 站</view>
-    <view class="article-title">{{todayArticle.title}}</view>
-    <view class="article-meta">
-      <text class="tag">{{todayArticle.topic}}</text>
-      <text class="tag">{{todayArticle.level}}</text>
+  <view class="home-greeting" style="top: {{greetingTop}}px;">
+    <text class="greeting-text">Hi～我是卷卷\n{{mascotLine}}</text>
+  </view>
+  <image class="home-mascot" src="/assets/ui/mascot.png" mode="aspectFit" style="top: {{mascotTop}}px; width: 240rpx; height: 180rpx;" />
+
+  <view class="home-fixed-content" style="padding-top: {{bodyTop}}px;">
+    <view class="error-banner" wx:if="{{loadError}}">
+      <text class="error-text">{{loadError}}</text>
     </view>
-    <button class="btn-primary start-btn" bindtap="goRead">开始抓鱼</button>
-  </view>
 
-  <view class="card list-card" wx:if="{{allArticles.length > 0}}">
-    <view class="section-label">📚 全部文章（{{allArticles.length}} 篇）</view>
-    <view
-      class="article-item"
-      wx:for="{{allArticles}}"
-      wx:key="id"
-      data-id="{{item.id}}"
-      bindtap="goRead"
-    >
-      <view class="item-title">{{item.id}}. {{item.title}}</view>
-      <view class="item-meta">
-        <text class="tag">{{item.topic}}</text>
+    <view class="today-card" wx:if="{{todayArticle}}">
+      <view class="today-card-body">
+        <view class="today-section">
+          <text class="section-label">今日文章</text>
+          <view class="today-article-block">
+            <text class="passage-title">{{todayArticle.id}}. Passage {{todayArticle.id}} {{todayArticle.title}}</text>
+            <view class="tag-row">
+              <text class="tag-pill">{{todayArticle.topicTag}}</text>
+              <text class="tag-pill">{{todayArticle.levelTag}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="cta-btn" catchtap="goReadToday">去抓小鱼</view>
       </view>
     </view>
   </view>
 
-  <view class="stats" wx:if="{{allArticles.length > 0}}">
-    词海航行第 {{progress.currentDay || 1}} 天
-    · 渔获 {{progress.totalCaught || 0}} 条
-    · 已记牢 {{progress.totalMastered || 0}} 条
+  <view class="home-all-section">
+    <view class="all-card">
+      <text class="section-label all-label">全部文章</text>
+      <scroll-view
+        scroll-y
+        class="all-list-scroll"
+        style="height: {{listScrollHeight}}px;"
+        enhanced
+        show-scrollbar="{{false}}"
+      >
+        <view class="list-scroll-inner">
+          <view
+            class="list-item"
+            wx:for="{{listArticles}}"
+            wx:key="id"
+            data-id="{{item.id}}"
+            bindtap="goRead"
+          >
+            <text class="passage-title passage-title--list">{{item.id}}. Passage {{item.id}} {{item.title}}</text>
+            <view class="tag-row">
+              <text class="tag-pill">{{item.topicTag}}</text>
+              <text class="tag-pill">{{item.levelTag}}</text>
+            </view>
+            <view class="item-divider" wx:if="{{index < listArticles.length - 1}}"></view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
   </view>
 </view>

@@ -6,6 +6,10 @@
 __pycache__/
 *.pyc
 
+# ECDICT build data (large, download locally)
+data/ecdict/
+data/translation_cache.json
+
 # 微信开发者工具私有配置（含个人设置，不建议公开）
 project.private.config.json
 

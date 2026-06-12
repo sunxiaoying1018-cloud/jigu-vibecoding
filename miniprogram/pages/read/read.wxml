@@ -1,39 +1,87 @@
-<view class="read-page" bindtap="onPageTap">
-  <view class="article-header card">
-    <view class="title">{{article.title}}</view>
-    <view class="meta">
-      <text class="tag">{{article.topic}}</text>
-      <text class="tag">{{article.level}}</text>
-    </view>
-    <view class="hint mascot-text">
-      <text class="mascot-name">卷卷：</text>长按选词/词组，拖左右圆点调整；点划线区域取消
-    </view>
-  </view>
+<page-meta page-style="{{tankPanelOpen ? 'overflow: hidden; height: 100%;' : ''}}" />
 
-  <view class="article-body card">
-    <view wx:if="{{paragraphs.length === 0}}" class="empty-body">正文加载中…</view>
-
-    <block wx:for="{{paragraphs}}" wx:key="id">
-      <view class="paragraph">
-        <block wx:for="{{item.tokens}}" wx:key="tokenKey" wx:for-item="token">
-          <text
-            wx:if="{{token.type === 'word'}}"
-            id="w-{{token.wordIndex}}"
-            class="token word-token {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{markedSpanKeys[token.tokenKey] ? 'token-marked' : ''}} {{caughtKeys[token.key] ? 'word-caught' : ''}}"
-            data-index="{{token.wordIndex}}"
-            data-key="{{token.key}}"
-            data-text="{{token.text}}"
-            bindlongpress="onWordLongPress"
-            catchtap="onWordTap"
-          >{{token.text}}</text>
-          <text
-            wx:else
-            class="token token-gap {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{markedSpanKeys[token.tokenKey] ? 'token-marked' : ''}}"
-          >{{token.text}}</text>
-        </block>
+<view class="read-page {{tankPanelOpen ? 'read-page--locked' : ''}}" bindtap="onPageTap">
+  <view class="read-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="read-nav-inner" style="padding-right: {{navRightPadding}}px;">
+      <view class="nav-back" bindtap="onNavBack">
+        <image class="nav-back-icon" src="/assets/ui/icon-back.png" mode="aspectFit" />
       </view>
-    </block>
+      <text class="nav-title">阅读</text>
+      <view class="nav-side" style="width: {{navSideWidth}}px;"></view>
+    </view>
   </view>
+
+  <scroll-view
+    scroll-y
+    class="read-scroll"
+    style="top: {{navTotalHeight}}px; height: {{scrollHeight}}px;"
+    scroll-top="{{scrollTop}}"
+    scroll-into-view="{{scrollIntoView}}"
+    bindscroll="onContentScroll"
+    bindscrolltolower="onScrollToLower"
+    scroll-with-animation="{{false}}"
+  >
+    <view class="advice-wrap">
+      <view class="advice-bar" catchtap="toggleAdvice">
+        <image class="advice-avatar" src="/assets/ui/advice-avatar.png" mode="aspectFill" />
+        <text class="advice-title">卷卷的建议</text>
+        <image
+          class="advice-chevron {{adviceExpanded ? 'advice-chevron--up' : ''}}"
+          src="/assets/ui/advice-chevron.png"
+          mode="aspectFit"
+        />
+      </view>
+      <view class="advice-panel" wx:if="{{adviceExpanded}}">
+        <text class="advice-item">通读全文，标记并根据上下文猜测生词，不要立刻查看中文释义</text>
+        <text class="advice-item">结合中文释义再次通读全文，确认每个生词在语境中的确切含义</text>
+        <text class="advice-item">隔天重读同一篇文章，直到标出的词都能认出来</text>
+      </view>
+    </view>
+
+    <view class="article-header">
+      <view class="article-meta">
+        <text class="title">{{article.title}}</text>
+        <view class="tag-row">
+          <text class="tag-pill">{{article.topicTag}}</text>
+          <text class="tag-pill">{{article.levelTag}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="article-body">
+      <view wx:if="{{paragraphs.length === 0}}" class="empty-body">正文加载中…</view>
+
+      <block wx:for="{{paragraphs}}" wx:key="id">
+        <view class="paragraph">
+          <block wx:for="{{item.tokens}}" wx:key="tokenKey" wx:for-item="token">
+            <view
+              wx:if="{{token.type === 'word'}}"
+              id="w-{{token.wordIndex}}"
+              class="word-wrap"
+            >
+              <text
+                class="token word-token {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}} {{token.isCaught ? 'word-caught' : ''}} {{focusWordIndex === token.wordIndex ? 'word-focus' : ''}}"
+                data-index="{{token.wordIndex}}"
+                data-key="{{token.key}}"
+                data-text="{{token.text}}"
+                bindlongpress="onWordLongPress"
+                catchtap="onWordTap"
+              >{{token.text}}</text>
+              <text
+                wx:if="{{token.isCaught && token.caughtIndex}}"
+                class="word-caught-index"
+              >{{token.caughtIndex}}</text>
+            </view>
+            <text
+              wx:else
+              class="token token-gap {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}}"
+            >{{token.text}}</text>
+          </block>
+        </view>
+        <view wx:if="{{showZh && item.zh}}" class="paragraph-zh">{{item.zh}}</view>
+      </block>
+    </view>
+  </scroll-view>
 
   <view
     wx:if="{{draggingHandle}}"
@@ -42,25 +90,29 @@
     catchtouchend="onHandleEnd"
   ></view>
 
-  <view
+  <image
     wx:if="{{selection && selection.menuType === 'mark' && handleLeft}}"
     class="handle handle-left"
+    src="/assets/ui/handle-left.png"
+    mode="aspectFit"
     style="top: {{handleLeft.top}}px; left: {{handleLeft.left}}px;"
     catchtouchstart="onHandleStart"
     catchtouchmove="onHandleMove"
     catchtouchend="onHandleEnd"
     data-dir="left"
-  ></view>
+  />
 
-  <view
+  <image
     wx:if="{{selection && selection.menuType === 'mark' && handleRight}}"
     class="handle handle-right"
+    src="/assets/ui/handle-right.png"
+    mode="aspectFit"
     style="top: {{handleRight.top}}px; left: {{handleRight.left}}px;"
     catchtouchstart="onHandleStart"
     catchtouchmove="onHandleMove"
     catchtouchend="onHandleEnd"
     data-dir="right"
-  ></view>
+  />
 
   <view
     wx:if="{{selection}}"
@@ -77,11 +129,48 @@
     </view>
   </view>
 
-  <view class="footer-bar" catchtap="onPageTap">
-    <view class="footer-stats">
-      <view class="catch-count">渔获 {{sessionCount}} 条</view>
-      <view class="mark-count">划线 {{markCount}} 处</view>
+  <view class="footer-bar">
+    <view class="footer-fade"></view>
+    <view class="footer-inner">
+      <block wx:if="{{hasReadBefore}}">
+        <view class="footer-btn" catchtap="toggleZh">显示中文</view>
+        <view class="footer-btn" catchtap="openTankPanel">生词本</view>
+      </block>
+      <view
+        wx:else
+        class="footer-btn footer-btn--single {{canFinish ? 'footer-btn--active' : 'footer-btn--disabled'}}"
+        catchtap="finishReading"
+      >完成阅读</view>
     </view>
-    <button class="btn-primary finish-btn" catchtap="finishReading">完成阅读</button>
+  </view>
+
+  <view wx:if="{{tankPanelOpen}}" class="tank-sheet-mask" catchtap="closeTankPanel">
+    <view class="tank-sheet" style="height: {{tankSheetHeight}}px;" catchtap="onTankSheetTap">
+      <view class="tank-sheet-nav">
+        <text class="tank-sheet-title">生词本</text>
+        <text class="tank-sheet-close" catchtap="closeTankPanel">关闭</text>
+      </view>
+      <scroll-view
+        scroll-y
+        class="tank-sheet-body"
+        style="height: {{tankSheetScrollH}}px;"
+        enhanced
+        show-scrollbar="{{false}}"
+      >
+        <view wx:if="{{articleTankWords.length === 0}}" class="tank-sheet-empty">
+          还没有标记单词，点击正文中的生词即可添加
+        </view>
+        <block wx:for="{{articleTankWords}}" wx:key="key">
+          <view class="tank-word-row">
+            <text class="tank-word-index">{{item.index}}</text>
+            <view class="tank-word-main">
+              <text class="tank-word-text">{{item.word}}</text>
+              <text wx:if="{{item.pos}}" class="tank-word-pos">{{item.pos}}</text>
+            </view>
+            <text class="tank-word-meaning">{{item.meaning}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
   </view>
 </view>

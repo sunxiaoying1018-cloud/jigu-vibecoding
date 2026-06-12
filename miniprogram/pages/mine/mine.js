@@ -1,4 +1,5 @@
 const storage = require("../../utils/storage");
+const { updateTabBarSelected } = require("../../utils/tabBar");
 
 Page({
   data: {
@@ -6,6 +7,7 @@ Page({
   },
 
   onShow() {
+    updateTabBarSelected(this, 3);
     this.setData({ progress: storage.getProgress() });
   },
 

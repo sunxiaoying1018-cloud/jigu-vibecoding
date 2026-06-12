@@ -1,5 +1,6 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
+const { updateTabBarSelected } = require("../../utils/tabBar");
 
 Page({
   data: {
@@ -15,6 +16,7 @@ Page({
   },
 
   onShow() {
+    updateTabBarSelected(this, 2);
     const app = getApp();
     this.vocab =
       app.globalData.vocab && Object.keys(app.globalData.vocab).length

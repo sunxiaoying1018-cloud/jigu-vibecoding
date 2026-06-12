@@ -1,62 +1,21 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  padding: 8rpx 8rpx 24rpx;
 }
 
 .header-title {
   font-size: 36rpx;
   font-weight: 700;
   color: #2c7a7b;
+  line-height: 1.5;
 }
 
 .header-count {
-  color: #888;
+  color: #999;
   font-size: 26rpx;
-}
-
-.section-title {
-  font-size: 28rpx;
-  font-weight: 700;
-  color: #e74c3c;
-  margin-bottom: 20rpx;
-}
-
-.section-title.standalone {
-  margin: 8rpx 0 16rpx 8rpx;
-}
-
-.sentence-card {
-  margin-bottom: 24rpx;
-  padding-bottom: 24rpx;
-  border-bottom: 1rpx solid #f0f0f0;
-}
-
-.sentence-card:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.sentence-text {
-  font-size: 28rpx;
-  line-height: 1.8;
-  color: #333;
-}
-
-.saved-line {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='4' viewBox='0 0 12 4'%3E%3Cpath d='M0 3.2 Q3 0.8 6 3.2 T12 3.2' stroke='%23e74c3c' fill='none' stroke-width='1.2'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  background-size: 24rpx 8rpx;
-  padding-bottom: 8rpx;
-  display: inline;
-}
-
-.sentence-from {
-  margin-top: 12rpx;
-  font-size: 22rpx;
-  color: #aaa;
+  line-height: 1.5;
 }
 
 .empty {
@@ -69,27 +28,54 @@
   margin-bottom: 24rpx;
 }
 
-.word-card {
-  margin-bottom: 20rpx;
+.word-list {
+  padding: 8rpx 0;
 }
 
 .word-row {
   display: flex;
-  justify-content: space-between;
+  align-items: stretch;
+  gap: 24rpx;
+  padding: 24rpx 8rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.word-row:last-child {
+  border-bottom: none;
+}
+
+.word-left {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rpx;
+  min-width: 0;
+}
+
+.word-head {
+  display: flex;
   align-items: center;
-  margin-bottom: 8rpx;
+  gap: 4rpx;
+  min-width: 0;
 }
 
 .word-text {
-  font-size: 34rpx;
-  font-weight: 700;
+  font-size: 32rpx;
+  font-weight: 600;
   color: #2c3e50;
+  line-height: 1.5;
+  word-break: break-word;
+  flex: 1;
+  min-width: 0;
 }
 
 .status {
-  font-size: 22rpx;
-  padding: 6rpx 14rpx;
-  border-radius: 20rpx;
+  align-self: flex-start;
+  font-size: 20rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 16rpx;
+  line-height: 1.5;
 }
 
 .status-pending {
@@ -97,9 +83,14 @@
   color: #3498db;
 }
 
-.status-learning {
+.status-due {
   background: #fff3cd;
   color: #e67e22;
+}
+
+.status-learning {
+  background: #f3e8ff;
+  color: #9b59b6;
 }
 
 .status-mastered {
@@ -107,25 +98,113 @@
   color: #27ae60;
 }
 
-.word-pos {
-  color: #999;
-  font-size: 24rpx;
+.word-go {
+  flex-shrink: 0;
+  width: 44rpx;
+  height: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: #2c7a7b;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-.word-meaning {
+.meaning-right {
+  position: relative;
+  flex: 1;
+  min-height: 72rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.meaning-text {
   font-size: 28rpx;
-  margin: 8rpx 0;
+  line-height: 1.5;
+  color: #444;
+  padding: 8rpx 4rpx;
+  width: 100%;
 }
 
-.word-from {
-  font-size: 22rpx;
-  color: #aaa;
+.meaning-right.is-revealed .meaning-text {
+  color: #333;
 }
 
-.word-sentence {
-  margin-top: 12rpx;
+.tape-cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rpx;
+}
+
+.tape-strip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 64rpx;
+  border-radius: 4rpx;
+  background: linear-gradient(
+    175deg,
+    #f5e6a8 0%,
+    #e8d078 35%,
+    #f0dc88 50%,
+    #dcc868 65%,
+    #f2e090 100%
+  );
+  box-shadow:
+    0 2rpx 6rpx rgba(0, 0, 0, 0.12),
+    inset 0 1rpx 0 rgba(255, 255, 255, 0.45);
+  transform: rotate(-1.5deg);
+  opacity: 0.96;
+}
+
+.tape-strip::before,
+.tape-strip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12rpx;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.tape-strip::before {
+  left: 8%;
+}
+
+.tape-strip::after {
+  right: 12%;
+}
+
+.marks-block {
+  margin-top: 24rpx;
+}
+
+.marks-label {
   font-size: 24rpx;
-  color: #666;
-  line-height: 1.6;
-  font-style: italic;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+  line-height: 1.5;
+}
+
+.mark-line {
+  font-size: 26rpx;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20rpx;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='4' viewBox='0 0 12 4'%3E%3Cpath d='M0 3.2 Q3 0.8 6 3.2 T12 3.2' stroke='%23e74c3c' fill='none' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 24rpx 8rpx;
+  padding-bottom: 8rpx;
+}
+
+.mark-line:last-child {
+  margin-bottom: 0;
 }

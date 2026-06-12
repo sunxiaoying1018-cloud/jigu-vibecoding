@@ -1,19 +1,78 @@
 const storage = require("../../utils/storage");
 const dataLoader = require("../../data/loader.js");
+const { updateTabBarSelected } = require("../../utils/tabBar");
+
+function formatArticleTags(article) {
+  const topic = article.topic || "";
+  const parts = topic.split("·").map((s) => s.trim());
+  const topicTag = parts.length >= 2 ? `${parts[0]} ${parts[1]}` : topic;
+  const level = article.level || "";
+  const levelTag = level.replace(/IELTS\s*[\d.]+\s*/i, "IELTS ").trim();
+  return { ...article, topicTag, levelTag };
+}
 
 Page({
   data: {
-    subtitle: "读文章背单词",
+    statusBarHeight: 20,
+    greetingTop: 95,
+    mascotTop: 81,
+    bodyTop: 136,
     dueCount: 0,
     todayArticle: null,
+    listArticles: [],
     allArticles: [],
     progress: {},
-    mascotLine: "今天的鱼群靠岸了，准备好了吗？",
+    mascotLine: "今天的鱼群靠岸了，准备好了吗～",
     loadError: "",
+    listScrollHeight: 300,
+  },
+
+  onLoad() {
+    const sys = wx.getSystemInfoSync();
+    const statusBarHeight = sys.statusBarHeight || 20;
+    const scale = sys.windowWidth / 375;
+    this._tabBarHeightPx = Math.round((104 / 750) * sys.windowWidth);
+    this._safeBottomPx = sys.safeArea
+      ? Math.max(sys.screenHeight - sys.safeArea.bottom, 0)
+      : 0;
+    this.setData({
+      statusBarHeight,
+      greetingTop: Math.round(95 * scale),
+      mascotTop: Math.round(81 * scale),
+      bodyTop: Math.round(136 * scale),
+    });
   },
 
   onShow() {
+    updateTabBarSelected(this, 0);
     this.loadData();
+  },
+
+  onReady() {
+    this.updateListScrollHeight();
+  },
+
+  updateListScrollHeight() {
+    wx.nextTick(() => {
+      wx.createSelectorQuery()
+        .in(this)
+        .select(".all-label")
+        .boundingClientRect()
+        .exec((res) => {
+          const labelRect = res && res[0];
+          if (!labelRect) return;
+
+          const sys = wx.getSystemInfoSync();
+          const tabBarPx = this._tabBarHeightPx || 0;
+          const safeBottom = this._safeBottomPx || 0;
+          const bottomLimit = sys.windowHeight - tabBarPx - safeBottom;
+          const height = bottomLimit - labelRect.bottom;
+
+          if (height > 0 && height !== this.data.listScrollHeight) {
+            this.setData({ listScrollHeight: Math.floor(height) });
+          }
+        });
+    });
   },
 
   loadData() {
@@ -29,32 +88,48 @@ Page({
     const dueCount = storage.getDueWords().length;
     const todayArticle = storage.getTodayArticle(articles);
 
-    let mascotLine = "今天的鱼群靠岸了，准备好了吗？";
+    let mascotLine = "今天的鱼群靠岸了，准备好了吗～";
     if (dueCount > 0) {
-      mascotLine = `缸里有 ${dueCount} 条鱼该吃了，先复习吧。`;
+      mascotLine = `缸里有 ${dueCount} 条鱼该吃了，先复习吧～`;
     }
 
     let loadError = "";
     if (!articles.length) {
-      loadError = "文章加载失败，请点击「编译」重试；若仍失败，查看控制台报错";
+      loadError = "文章加载失败，请点击「编译」重试";
     }
 
-    this.setData({
-      dueCount,
-      todayArticle,
-      allArticles: articles,
-      progress,
-      mascotLine,
-      loadError,
+    const formatted = articles.map(formatArticleTags);
+    const today = todayArticle
+      ? formatArticleTags(todayArticle)
+      : null;
+    const listArticles = formatted.filter(
+      (item) => !today || item.id !== today.id
+    );
+
+    this.setData(
+      {
+        dueCount,
+        todayArticle: today,
+        listArticles,
+        allArticles: formatted,
+        progress,
+        mascotLine,
+        loadError,
+      },
+      () => this.updateListScrollHeight()
+    );
+  },
+
+  goReadToday() {
+    if (!this.data.todayArticle) return;
+    wx.navigateTo({
+      url: `/pages/read/read?id=${this.data.todayArticle.id}`,
     });
   },
 
-  goReview() {
-    wx.switchTab({ url: "/pages/review/review" });
-  },
-
   goRead(e) {
-    const id = e && e.currentTarget.dataset.id;
+    const rawId = e && e.currentTarget.dataset.id;
+    const id = rawId != null ? parseInt(rawId, 10) : null;
     const article = id
       ? this.data.allArticles.find((a) => a.id === id)
       : this.data.todayArticle;

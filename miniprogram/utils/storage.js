@@ -1,5 +1,15 @@
 const STORAGE_KEY = "caughtWords";
 const PROGRESS_KEY = "userProgress";
+const ARTICLE_MARKS_KEY = "articleWordMarks";
+const ARTICLE_MARKS_MIGRATED_KEY = "articleWordMarksMigrated";
+const { normalizeArticleId, isSameArticle } = require("./article");
+const {
+  normalizeWordKey,
+  keysAreRelated,
+  buildHighlightKeys,
+} = require("./word");
+
+const ARTICLE_MARK_INDICES_KEY = "articleWordMarkIndices";
 
 const REVIEW_INTERVALS = [1, 2, 4, 7, 15];
 
@@ -44,17 +54,167 @@ function saveProgress(progress) {
 }
 
 function getWordKey(word) {
-  return word.toLowerCase().replace(/[^a-z'-]/g, "");
+  return normalizeWordKey(word);
+}
+
+function migrateArticleWordMarks() {
+  if (wx.getStorageSync(ARTICLE_MARKS_MIGRATED_KEY)) return;
+
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+
+  getCaughtWords().forEach((w) => {
+    if (!w || !w.key || w.articleId == null || w.articleId === "") return;
+    const id = String(normalizeArticleId(w.articleId));
+    if (!stored[id]) stored[id] = {};
+    stored[id][w.key] = true;
+    if (typeof w.wordIndex === "number" && w.wordIndex >= 0) {
+      if (!indicesMap[id]) indicesMap[id] = {};
+      indicesMap[id][String(w.wordIndex)] = w.key;
+    }
+  });
+
+  wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+  wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
+  wx.setStorageSync(ARTICLE_MARKS_MIGRATED_KEY, true);
+}
+
+function getArticleWordMarkMap(articleId) {
+  migrateArticleWordMarks();
+  const id = String(normalizeArticleId(articleId));
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  return stored[id] || {};
+}
+
+function syncArticleMarksFromTank(articleId) {
+  const id = String(normalizeArticleId(articleId));
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  let changed = false;
+
+  if (!stored[id]) stored[id] = {};
+  getCaughtWords().forEach((w) => {
+    if (!w || !w.key || !isSameArticle(w.articleId, articleId)) return;
+    if (!stored[id][w.key]) {
+      stored[id][w.key] = true;
+      changed = true;
+    }
+  });
+
+  if (changed) wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+}
+
+function getCaughtWordKeysForArticle(articleId, paragraphs) {
+  syncArticleMarksFromTank(articleId);
+
+  const markKeys = { ...getArticleWordMarkMap(articleId) };
+  getCaughtWords().forEach((w) => {
+    if (w && w.key && isSameArticle(w.articleId, articleId)) {
+      markKeys[w.key] = true;
+    }
+  });
+
+  if (!paragraphs || !paragraphs.length) {
+    return markKeys;
+  }
+
+  const highlight = buildHighlightKeys(markKeys, paragraphs);
+  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const id = String(normalizeArticleId(articleId));
+  const indices = indicesMap[id] || {};
+
+  paragraphs.forEach((para) => {
+    (para.tokens || []).forEach((token) => {
+      if (token.type === "word" && indices[String(token.wordIndex)]) {
+        highlight[token.key] = true;
+      }
+    });
+  });
+
+  return highlight;
+}
+
+function markWordInArticle(articleId, wordKey, wordIndex) {
+  const id = String(normalizeArticleId(articleId));
+  const key = normalizeWordKey(wordKey);
+  if (!key) return;
+
+  migrateArticleWordMarks();
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  if (!stored[id]) stored[id] = {};
+  stored[id][key] = true;
+  wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+
+  if (typeof wordIndex === "number" && wordIndex >= 0) {
+    const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+    if (!indicesMap[id]) indicesMap[id] = {};
+    indicesMap[id][String(wordIndex)] = key;
+    wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
+  }
+}
+
+function unmarkWordInArticle(articleId, wordKey, wordIndex) {
+  const id = String(normalizeArticleId(articleId));
+  const key = normalizeWordKey(wordKey);
+  if (!key) return;
+
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  if (stored[id]) {
+    Object.keys(stored[id]).forEach((mk) => {
+      if (keysAreRelated(mk, key)) delete stored[id][mk];
+    });
+    if (!Object.keys(stored[id]).length) delete stored[id];
+    wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+  }
+
+  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  if (indicesMap[id]) {
+    Object.keys(indicesMap[id]).forEach((idx) => {
+      if (keysAreRelated(indicesMap[id][idx], key)) {
+        delete indicesMap[id][idx];
+      }
+    });
+    if (!Object.keys(indicesMap[id]).length) delete indicesMap[id];
+    wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
+  }
+}
+
+function isWordMarkedInArticle(articleId, wordKey) {
+  const key = normalizeWordKey(wordKey);
+  if (!key) return false;
+
+  const marks = getArticleWordMarkMap(articleId);
+  if (Object.keys(marks).some((mk) => keysAreRelated(mk, key))) return true;
+
+  if (
+    getCaughtWords().some(
+      (w) => isSameArticle(w.articleId, articleId) && keysAreRelated(w.key, key)
+    )
+  ) {
+    return true;
+  }
+
+  migrateArticleWordMarks();
+  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const id = String(normalizeArticleId(articleId));
+  const indices = indicesMap[id] || {};
+  return Object.values(indices).some((mk) => keysAreRelated(mk, key));
 }
 
 function findWordRecord(words, wordKey) {
-  return words.find((w) => w.key === wordKey);
+  return words.find((w) => keysAreRelated(w.key, wordKey));
 }
 
-function catchWord(wordInfo, article, sentence) {
+function catchWord(wordInfo, article, sentence, tokenKey) {
   const words = getCaughtWords();
-  const key = getWordKey(wordInfo.word || wordInfo);
+  const key = normalizeWordKey(tokenKey || wordInfo.word || wordInfo);
   const existing = findWordRecord(words, key);
+  const displayWord = wordInfo.tappedText || tokenKey || wordInfo.word || key;
+  const wordIndex =
+    typeof wordInfo.wordIndex === "number" ? wordInfo.wordIndex : -1;
+
+  if (article && article.id != null) {
+    markWordInArticle(article.id, key, wordIndex);
+  }
 
   if (existing) {
     return { action: "exists", word: existing };
@@ -62,12 +222,13 @@ function catchWord(wordInfo, article, sentence) {
 
   const entry = {
     key,
-    word: wordInfo.word || wordInfo,
+    word: displayWord,
     pos: wordInfo.pos || "",
+    phonetic: wordInfo.phonetic || "",
     meaning: wordInfo.meaning || "暂无释义",
     example: wordInfo.example || sentence || "",
     sentence: sentence || wordInfo.example || "",
-    articleId: article.id,
+    articleId: normalizeArticleId(article.id),
     articleTitle: article.title,
     topic: article.topic,
     caughtAt: todayStr(),
@@ -75,6 +236,7 @@ function catchWord(wordInfo, article, sentence) {
     nextReviewAt: addDays(todayStr(), 1),
     status: "pending",
     correctStreak: 0,
+    wordIndex: wordIndex >= 0 ? wordIndex : undefined,
   };
 
   words.unshift(entry);
@@ -87,8 +249,13 @@ function catchWord(wordInfo, article, sentence) {
   return { action: "caught", word: entry };
 }
 
-function unCatchWord(wordKey) {
-  const words = getCaughtWords().filter((w) => w.key !== wordKey);
+function unCatchWord(wordKey, articleId, wordIndex) {
+  const key = normalizeWordKey(wordKey);
+  if (articleId != null && articleId !== "") {
+    unmarkWordInArticle(articleId, key, wordIndex);
+  }
+
+  const words = getCaughtWords().filter((w) => !keysAreRelated(w.key, key));
   saveCaughtWords(words);
   const progress = getProgress();
   progress.totalCaught = words.length;
@@ -187,13 +354,33 @@ function getStatusLabel(status) {
     pending: "待吃",
     learning: "复习中",
     mastered: "已记牢",
+    due: "该吃了",
   };
   return map[status] || "待吃";
+}
+
+function getWordDisplayStatus(word) {
+  const today = todayStr();
+  if (word.status === "mastered") {
+    return { status: "mastered", statusLabel: "已记牢" };
+  }
+  if (word.nextReviewAt && word.nextReviewAt <= today) {
+    return { status: "due", statusLabel: "该吃了" };
+  }
+  return {
+    status: word.status || "pending",
+    statusLabel: getStatusLabel(word.status || "pending"),
+  };
 }
 
 module.exports = {
   todayStr,
   getCaughtWords,
+  getCaughtWordKeysForArticle,
+  markWordInArticle,
+  unmarkWordInArticle,
+  isWordMarkedInArticle,
+  getArticleWordMarkMap,
   catchWord,
   unCatchWord,
   getDueWords,
@@ -204,4 +391,5 @@ module.exports = {
   isWordCaught,
   getWordKey,
   getStatusLabel,
+  getWordDisplayStatus,
 };

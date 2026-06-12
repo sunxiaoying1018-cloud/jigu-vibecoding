@@ -1,3 +1,9 @@
+function normalizeWordKey(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[^a-z'-]/g, "");
+}
+
 function tokenizeText(text) {
   const tokens = [];
   const regex = /([a-zA-Z]+(?:'[a-zA-Z]+)?)|(\s+)|([^\w\s])/g;
@@ -6,7 +12,7 @@ function tokenizeText(text) {
   while ((match = regex.exec(text)) !== null) {
     const value = match[0];
     if (/^[a-zA-Z]/.test(value)) {
-      tokens.push({ type: "word", text: value, key: value.toLowerCase() });
+      tokens.push({ type: "word", text: value, key: normalizeWordKey(value) });
     } else if (/^\s+$/.test(value)) {
       tokens.push({ type: "space", text: value });
     } else {
@@ -17,11 +23,26 @@ function tokenizeText(text) {
   return tokens;
 }
 
-function tokenizeParagraphs(text) {
+function tokenizeParagraphs(textOrArticle) {
   let wordIndex = 0;
+  const blocks = [];
 
-  return text.split("\n\n").map((paraText, pIndex) => {
-    const rawTokens = tokenizeText(paraText);
+  if (textOrArticle && typeof textOrArticle === "object" && textOrArticle.paragraphs) {
+    textOrArticle.paragraphs.forEach((para) => {
+      blocks.push({
+        en: para.en || "",
+        zh: para.zh || "",
+      });
+    });
+  } else {
+    const text = typeof textOrArticle === "string" ? textOrArticle : "";
+    text.split("\n\n").forEach((en) => {
+      blocks.push({ en, zh: "" });
+    });
+  }
+
+  return blocks.map((block, pIndex) => {
+    const rawTokens = tokenizeText(block.en);
     const tokens = rawTokens.map((token, tIndex) => {
       if (token.type !== "word") {
         return { ...token, tokenKey: `${pIndex}-${tIndex}` };
@@ -35,7 +56,7 @@ function tokenizeParagraphs(text) {
       return enriched;
     });
 
-    return { id: pIndex, tokens };
+    return { id: pIndex, tokens, zh: block.zh || "" };
   });
 }
 
@@ -138,6 +159,85 @@ function lookupVocab(vocab, wordKey) {
   return vocab[wordKey] || vocab[wordKey.toLowerCase()] || null;
 }
 
+function keysAreRelated(a, b) {
+  const ka = normalizeWordKey(a);
+  const kb = normalizeWordKey(b);
+  if (!ka || !kb) return false;
+  if (ka === kb) return true;
+  return lemmaCandidates(ka).includes(kb) || lemmaCandidates(kb).includes(ka);
+}
+
+function buildHighlightKeys(markKeys, paragraphs) {
+  const highlight = {};
+  const marks = Object.keys(markKeys || {});
+  if (!marks.length) return highlight;
+
+  (paragraphs || []).forEach((para) => {
+    (para.tokens || []).forEach((token) => {
+      if (token.type !== "word") return;
+      if (markKeys[token.key]) {
+        highlight[token.key] = true;
+        return;
+      }
+      for (let i = 0; i < marks.length; i += 1) {
+        if (keysAreRelated(marks[i], token.key)) {
+          highlight[token.key] = true;
+          break;
+        }
+      }
+    });
+  });
+
+  return highlight;
+}
+
+function lemmaCandidates(wordKey) {
+  const key = normalizeWordKey(wordKey);
+  const candidates = [key];
+  if (key.endsWith("ies") && key.length > 4) {
+    candidates.push(key.slice(0, -3) + "y");
+  }
+  if (key.endsWith("ied") && key.length > 4) {
+    candidates.push(key.slice(0, -3) + "y");
+  }
+  if (key.endsWith("ing") && key.length > 5) {
+    candidates.push(key.slice(0, -3));
+    candidates.push(key.slice(0, -3) + "e");
+  }
+  if (key.endsWith("ed") && key.length > 4) {
+    candidates.push(key.slice(0, -2));
+    candidates.push(key.slice(0, -1));
+  }
+  if (key.endsWith("es") && key.length > 3) {
+    candidates.push(key.slice(0, -2));
+  }
+  if (key.endsWith("s") && key.length > 3) {
+    candidates.push(key.slice(0, -1));
+  }
+  return candidates;
+}
+
+function resolveLemmaEntry(vocab, wordKey) {
+  const candidates = lemmaCandidates(wordKey);
+  for (let i = 0; i < candidates.length; i += 1) {
+    const entry = lookupVocab(vocab, candidates[i]);
+    if (entry) {
+      return {
+        ...entry,
+        lemmaKey: normalizeWordKey(entry.word),
+      };
+    }
+  }
+  const key = normalizeWordKey(wordKey);
+  return {
+    word: wordKey,
+    pos: "",
+    meaning: "暂无释义",
+    phonetic: "",
+    lemmaKey: key,
+  };
+}
+
 function buildQuizOptions(correct, vocab, count = 4) {
   const meanings = Object.values(vocab || {})
     .map((v) => v.meaning)
@@ -156,6 +256,34 @@ function buildQuizOptions(correct, vocab, count = 4) {
   }
 
   return options.sort(() => Math.random() - 0.5);
+}
+
+function findTokenByWordIndex(paragraphs, wordIndex) {
+  for (const para of paragraphs || []) {
+    for (const token of para.tokens || []) {
+      if (token.type === "word" && token.wordIndex === wordIndex) {
+        return token;
+      }
+    }
+  }
+  return null;
+}
+
+function findWordIndexByKey(paragraphs, wordKey) {
+  const candidates = lemmaCandidates(wordKey);
+  const candidateSet = {};
+  candidates.forEach((c) => {
+    candidateSet[c] = true;
+  });
+
+  for (const para of paragraphs || []) {
+    for (const token of para.tokens || []) {
+      if (token.type === "word" && candidateSet[token.key]) {
+        return token.wordIndex;
+      }
+    }
+  }
+  return -1;
 }
 
 function findContextForWord(paragraphs, wordKey) {
@@ -178,15 +306,75 @@ function findContextForWord(paragraphs, wordKey) {
   );
 }
 
+function buildCaughtIndexMap(articleTankWords, paragraphs) {
+  const lemmaToIndex = {};
+  (articleTankWords || []).forEach((item) => {
+    if (item && item.key) lemmaToIndex[item.key] = item.index;
+  });
+
+  const indexMap = {};
+  const marks = Object.keys(lemmaToIndex);
+  if (!marks.length) return indexMap;
+
+  (paragraphs || []).forEach((para) => {
+    (para.tokens || []).forEach((token) => {
+      if (token.type !== "word") return;
+      if (lemmaToIndex[token.key]) {
+        indexMap[token.key] = lemmaToIndex[token.key];
+        return;
+      }
+      for (let i = 0; i < marks.length; i += 1) {
+        if (keysAreRelated(marks[i], token.key)) {
+          indexMap[token.key] = lemmaToIndex[marks[i]];
+          break;
+        }
+      }
+    });
+  });
+
+  return indexMap;
+}
+
+function enrichParagraphs(
+  articleId,
+  paragraphs,
+  caughtKeys,
+  markedSpanKeys,
+  caughtIndexMap
+) {
+  return (paragraphs || []).map((para) => ({
+    ...para,
+    tokens: (para.tokens || []).map((token) => {
+      const isCaught = token.type === "word" && !!caughtKeys[token.key];
+      return {
+        ...token,
+        isCaught,
+        isMarked: !!markedSpanKeys[token.tokenKey],
+        caughtIndex:
+          isCaught && caughtIndexMap ? caughtIndexMap[token.key] || 0 : 0,
+      };
+    }),
+  }));
+}
+
 module.exports = {
+  normalizeWordKey,
   tokenizeParagraphs,
   getWordCount,
   normalizeWordRange,
   isWordInRange,
   buildIndexMap,
   buildSpanTokenKeys,
+  buildCaughtIndexMap,
+  enrichParagraphs,
   getFragmentText,
   lookupVocab,
+  keysAreRelated,
+  buildHighlightKeys,
+  lemmaCandidates,
+  resolveLemmaEntry,
+  findWordIndexByKey,
+  findTokenByWordIndex,
   buildQuizOptions,
   findContextForWord,
 };

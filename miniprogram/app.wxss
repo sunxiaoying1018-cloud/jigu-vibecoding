@@ -1,31 +1,37 @@
 page {
-  background-color: #fff8f0;
-  color: #2c3e50;
+  background-color: #f8f8fa;
+  color: #000000;
   font-size: 28rpx;
-  line-height: 1.6;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
 }
 
 .container {
-  padding: 32rpx;
+  padding: 0 32rpx 32rpx;
   min-height: 100vh;
   box-sizing: border-box;
+  padding-bottom: calc(104rpx + 32rpx + env(safe-area-inset-bottom));
 }
 
 .card {
   background: #ffffff;
-  border-radius: 24rpx;
+  border-radius: 32rpx;
   padding: 32rpx;
   margin-bottom: 24rpx;
-  box-shadow: 0 8rpx 24rpx rgba(44, 122, 123, 0.08);
 }
 
 .btn-primary {
-  background: #4ecdc4;
-  color: #ffffff;
-  border-radius: 48rpx;
-  font-size: 30rpx;
-  font-weight: 600;
-  padding: 24rpx 48rpx;
+  background: #bee6ff;
+  color: #000000;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  padding: 0 48rpx;
+  height: 80rpx;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
 }
 
@@ -33,36 +39,24 @@ page {
   border: none;
 }
 
-.btn-secondary {
-  background: #fff8f0;
-  color: #2c7a7b;
-  border: 2rpx solid #4ecdc4;
-  border-radius: 48rpx;
-  font-size: 28rpx;
-  padding: 20rpx 40rpx;
-}
-
-.btn-secondary::after {
-  border: none;
-}
-
 .tag {
   display: inline-block;
-  background: #e8f8f7;
-  color: #2c7a7b;
-  font-size: 22rpx;
-  padding: 8rpx 16rpx;
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18rpx;
+  line-height: 1.5;
+  padding: 4rpx 8rpx;
   border-radius: 8rpx;
   margin-right: 12rpx;
 }
 
 .mascot-text {
-  color: #666;
+  color: rgba(0, 0, 0, 0.5);
   font-size: 26rpx;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .mascot-name {
-  color: #ff9f5a;
-  font-weight: 600;
+  color: #4e92ff;
+  font-weight: 500;
 }

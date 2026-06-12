@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "逮小鱼",
+  "navigationStyle": "custom",
+  "disableScroll": true,
   "usingComponents": {}
 }

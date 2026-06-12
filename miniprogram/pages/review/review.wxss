@@ -4,6 +4,7 @@
   color: #2c7a7b;
   font-weight: 600;
   margin-bottom: 16rpx;
+  line-height: 1.5;
 }
 
 .quiz-progress {
@@ -21,6 +22,7 @@
   text-align: center;
   color: #2c3e50;
   margin-bottom: 16rpx;
+  line-height: 1.5;
 }
 
 .quiz-sentence {
@@ -28,7 +30,7 @@
   color: #888;
   text-align: center;
   margin-bottom: 32rpx;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .options {
@@ -60,6 +62,7 @@
   margin: 24rpx 0;
   color: #2c7a7b;
   font-weight: 600;
+  line-height: 1.5;
 }
 
 .next-btn {
@@ -80,10 +83,12 @@
   font-size: 36rpx;
   font-weight: 700;
   margin-bottom: 16rpx;
+  line-height: 1.5;
 }
 
 .done-stats {
   font-size: 28rpx;
   color: #2c7a7b;
   margin-bottom: 24rpx;
+  line-height: 1.5;
 }

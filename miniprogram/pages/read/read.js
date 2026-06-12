@@ -1,24 +1,65 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
 const markUtil = require("../../utils/mark");
+const { isSameArticle } = require("../../utils/article");
 const dataLoader = require("../../data/loader.js");
+
+function formatArticleTags(article) {
+  const topic = article.topic || "";
+  const parts = topic.split("·").map((s) => s.trim());
+  const topicTag = parts.length >= 2 ? `${parts[0]} ${parts[1]}` : topic;
+  const level = article.level || "";
+  const levelTag = level.replace(/IELTS\s*[\d.]+\s*/i, "IELTS ").trim();
+  return { ...article, topicTag, levelTag };
+}
+
+function articleHasReadBefore(articleId) {
+  const readArticles = wx.getStorageSync("readArticles") || {};
+  return !!readArticles[String(articleId)];
+}
 
 Page({
   data: {
     article: null,
     paragraphs: [],
-    caughtKeys: {},
-    markedSpanKeys: {},
     spanTokenKeys: {},
     selection: null,
     handleLeft: null,
     handleRight: null,
-    sessionCount: 0,
     markCount: 0,
+    articleMarkCount: 0,
     draggingHandle: false,
+    showZh: false,
+    tankPanelOpen: false,
+    articleTankWords: [],
+    tankSheetHeight: 0,
+    tankSheetScrollH: 0,
+    focusWordIndex: -1,
+    statusBarHeight: 20,
+    navTotalHeight: 64,
+    navSideWidth: 24,
+    navRightPadding: 16,
+    scrollHeight: 600,
+    scrollTop: 0,
+    scrollIntoView: "",
+    adviceExpanded: false,
+    canFinish: false,
+    hasReadBefore: false,
   },
 
   onLoad(options) {
+    const sys = wx.getSystemInfoSync();
+    const statusBarHeight = sys.statusBarHeight || 20;
+    const rpxToPx = (rpx) => (rpx / 750) * sys.windowWidth;
+    const menuButton = wx.getMenuButtonBoundingClientRect();
+    const navSideWidth = Math.ceil(rpxToPx(48));
+    const navRightPadding = Math.max(
+      Math.ceil(sys.windowWidth - menuButton.left),
+      navSideWidth
+    );
+    const navTotalHeight = statusBarHeight + Math.ceil(rpxToPx(88));
+    const scrollHeight = sys.windowHeight - navTotalHeight;
+
     const app = getApp();
     const articles = app.globalData.articles.length
       ? app.globalData.articles
@@ -28,7 +69,8 @@ Page({
       : dataLoader.loadVocab();
 
     const id = parseInt(options.id, 10) || 1;
-    const article = articles.find((a) => a.id === id) || articles[0];
+    const rawArticle = articles.find((a) => a.id === id) || articles[0];
+    const article = rawArticle ? formatArticleTags(rawArticle) : null;
 
     if (!article) {
       wx.showModal({
@@ -42,47 +84,237 @@ Page({
       return;
     }
 
-    wx.setNavigationBarTitle({
-      title: article.topic.split("·")[0].trim(),
-    });
-
-    const paragraphs = wordUtil.tokenizeParagraphs(article.text);
-    this.wordCount = wordUtil.getWordCount(paragraphs);
-
-    const caughtWords = storage.getCaughtWords();
-    const caughtKeys = {};
-    caughtWords.forEach((w) => {
-      caughtKeys[w.key] = true;
-    });
-
-    let markedSpanKeys = {};
-    let markCount = 0;
-    try {
-      markedSpanKeys = markUtil.getMarkedSpanKeys(article.id, paragraphs);
-      markCount = markUtil.getMarksForArticle(article.id).length;
-    } catch (err) {
-      console.error("load marks failed", err);
-    }
-
     this.vocab = vocab;
     this.article = article;
+    this._scrollTop = 0;
     this._handleDrag = null;
     this._ignoreHandleUntil = 0;
     this._wordRects = null;
     this._dragRange = null;
+    this._focusKey = options.focus ? decodeURIComponent(options.focus) : "";
+    this._focusDone = false;
+
+    const paragraphs = wordUtil.tokenizeParagraphs(article);
+    this.baseParagraphs = paragraphs;
+    this.wordCount = wordUtil.getWordCount(paragraphs);
+
+    this.setData(
+      {
+        article,
+        paragraphs,
+        statusBarHeight,
+        navTotalHeight,
+        navSideWidth,
+        navRightPadding,
+        scrollHeight,
+        hasReadBefore: articleHasReadBefore(article.id),
+      },
+      () => {
+        this.loadPersistedState();
+        if (this._focusKey) {
+          wx.nextTick(() => this.focusToWord());
+        }
+      }
+    );
+  },
+
+  onShow() {
+    if (this.article) {
+      this.setData({ hasReadBefore: articleHasReadBefore(this.article.id) });
+    }
+    if (this.article && this.baseParagraphs && this.baseParagraphs.length) {
+      this.loadPersistedState();
+    }
+  },
+
+  loadPersistedState(done) {
+    const baseParagraphs = this.baseParagraphs || this.data.paragraphs;
+    if (!this.article || !baseParagraphs || !baseParagraphs.length) {
+      if (typeof done === "function") done();
+      return;
+    }
+    const caughtKeys = storage.getCaughtWordKeysForArticle(
+      this.article.id,
+      baseParagraphs
+    );
+    const markedSpanKeys = markUtil.getMarkedSpanKeys(
+      this.article.id,
+      baseParagraphs
+    );
+    const markCount = markUtil.getMarksForArticle(this.article.id).length;
+
+    const articleTankWords = this.buildArticleTankWords();
+    const caughtIndexMap = wordUtil.buildCaughtIndexMap(
+      articleTankWords,
+      baseParagraphs
+    );
+
+    this.setData(
+      {
+        paragraphs: wordUtil.enrichParagraphs(
+          this.article.id,
+          baseParagraphs,
+          caughtKeys,
+          markedSpanKeys,
+          caughtIndexMap
+        ),
+        markCount,
+        articleMarkCount: articleTankWords.length,
+        ...(this.data.tankPanelOpen
+          ? this.getTankSheetLayout(articleTankWords)
+          : { articleTankWords: this.data.articleTankWords }),
+      },
+      () => {
+        if (typeof done === "function") done();
+      }
+    );
+  },
+
+  getTankSheetLayout(articleTankWords) {
+    const PANEL_RPX = 1200;
+    const sys = wx.getSystemInfoSync();
+    const rpxToPx = (rpx) => (rpx / 750) * sys.windowWidth;
+    const panelPx = Math.ceil(rpxToPx(PANEL_RPX));
+    const navPx = Math.ceil(rpxToPx(88) + 1);
+    const bodyPx = Math.max(panelPx - navPx, 0);
+    const count = (articleTankWords || []).length;
+
+    return {
+      articleTankWords: articleTankWords || [],
+      articleMarkCount: count,
+      tankSheetHeight: panelPx,
+      tankSheetScrollH: bodyPx,
+    };
+  },
+
+  buildArticleTankWords() {
+    if (!this.article || !this.vocab) return [];
+
+    const paragraphs = this.baseParagraphs || this.data.paragraphs;
+    const caughtKeys = storage.getCaughtWordKeysForArticle(
+      this.article.id,
+      paragraphs
+    );
+    const lemmaMap = {};
+    const order = [];
+
+    const addWord = (rawKey) => {
+      const entry = wordUtil.resolveLemmaEntry(this.vocab, rawKey);
+      const lemmaKey = entry.lemmaKey;
+      if (lemmaMap[lemmaKey]) return;
+      lemmaMap[lemmaKey] = {
+        key: lemmaKey,
+        word: entry.word,
+        pos: entry.pos || "",
+        meaning: entry.meaning || "暂无释义",
+        phonetic: entry.phonetic || "",
+      };
+      order.push(lemmaKey);
+    };
+
+    (paragraphs || []).forEach((para) => {
+      (para.tokens || []).forEach((token) => {
+        if (token.type === "word" && caughtKeys[token.key]) {
+          addWord(token.key);
+        }
+      });
+    });
+
+    Object.keys(caughtKeys).forEach((mk) => addWord(mk));
+
+    return order.map((lemmaKey, i) => ({
+      ...lemmaMap[lemmaKey],
+      index: i + 1,
+    }));
+  },
+
+  openTankPanel() {
+    if (this.data.selection) {
+      this.clearSelection();
+    }
+
+    const articleTankWords = this.buildArticleTankWords();
 
     this.setData({
-      article,
-      paragraphs,
-      caughtKeys,
-      markedSpanKeys,
-      sessionCount: 0,
-      markCount,
+      tankPanelOpen: true,
+      ...this.getTankSheetLayout(articleTankWords),
     });
   },
 
+  closeTankPanel() {
+    this.setData({ tankPanelOpen: false });
+  },
+
+  refreshParagraphDisplay() {
+    const scrollTop = this._scrollTop || 0;
+    this.loadPersistedState(() => {
+      wx.nextTick(() => {
+        this.setData({ scrollTop });
+      });
+    });
+  },
+
+  toggleAdvice() {
+    this.setData({ adviceExpanded: !this.data.adviceExpanded });
+  },
+
+  onContentScroll(e) {
+    this._scrollTop = e.detail.scrollTop || 0;
+  },
+
+  onScrollToLower() {
+    if (!this.data.hasReadBefore) {
+      this.setData({ canFinish: true });
+    }
+  },
+
+  onNavBack() {
+    wx.navigateBack();
+  },
+
+  finishReading() {
+    if (!this.article || !this.data.canFinish || this.data.hasReadBefore) return;
+    storage.markArticleRead(this.article.id);
+    this.setData({ hasReadBefore: true, canFinish: false });
+    wx.showToast({ title: "已完成阅读", icon: "none" });
+  },
+
+  isWordCaughtInArticle(wordKey) {
+    return storage.isWordMarkedInArticle(this.article.id, wordKey);
+  },
+
   onReady() {
-    wx.nextTick(() => this.cacheWordRects());
+    wx.nextTick(() => {
+      this.cacheWordRects();
+      if (this._focusKey && !this._focusDone) {
+        this.focusToWord();
+      }
+    });
+  },
+
+  focusToWord() {
+    if (!this._focusKey || this._focusDone || !this.baseParagraphs) return;
+
+    const wordIndex = wordUtil.findWordIndexByKey(
+      this.baseParagraphs,
+      this._focusKey
+    );
+    if (wordIndex < 0) return;
+
+    this._focusDone = true;
+    this.setData(
+      {
+        focusWordIndex: wordIndex,
+        scrollIntoView: `w-${wordIndex}`,
+      },
+      () => {
+        setTimeout(() => {
+          if (this.data.focusWordIndex === wordIndex) {
+            this.setData({ focusWordIndex: -1, scrollIntoView: "" });
+          }
+        }, 2500);
+      }
+    );
   },
 
   applySelection(startIndex, endIndex, menuType, savedKey, dragging) {
@@ -317,10 +549,17 @@ Page({
   },
 
   onPageTap() {
+    if (this.data.tankPanelOpen) return;
     if (this.data.selection) {
       this.clearSelection();
     }
   },
+
+  toggleZh() {
+    this.setData({ showZh: !this.data.showZh });
+  },
+
+  onTankSheetTap() {},
 
   onMenuTap() {},
 
@@ -336,6 +575,7 @@ Page({
   },
 
   onWordLongPress(e) {
+    if (this.data.tankPanelOpen) return;
     const wordIndex = parseInt(e.currentTarget.dataset.index, 10);
     if (Number.isNaN(wordIndex)) return;
 
@@ -418,10 +658,7 @@ Page({
     );
 
     if (result) {
-      this.setData({
-        markedSpanKeys: result.markedSpanKeys,
-        markCount: result.count,
-      });
+      this.refreshParagraphDisplay();
       wx.showToast({ title: "已划线", icon: "none" });
     }
 
@@ -436,13 +673,7 @@ Page({
 
     if (mark) {
       markUtil.removeMark(mark.key);
-      this.setData({
-        markedSpanKeys: markUtil.getMarkedSpanKeys(
-          this.article.id,
-          this.data.paragraphs
-        ),
-        markCount: markUtil.getMarksForArticle(this.article.id).length,
-      });
+      this.refreshParagraphDisplay();
       wx.showToast({ title: "已取消划线", icon: "none" });
     }
 
@@ -450,6 +681,8 @@ Page({
   },
 
   onWordTap(e) {
+    if (this.data.tankPanelOpen) return;
+
     const { key, text, index } = e.currentTarget.dataset;
     const wordIndex = parseInt(index, 10);
     if (!key || Number.isNaN(wordIndex)) return;
@@ -465,38 +698,34 @@ Page({
       return;
     }
 
-    const vocabEntry = wordUtil.lookupVocab(this.vocab, key);
-    const context = wordUtil.findContextForWord(this.data.paragraphs, key);
+    const token = wordUtil.findTokenByWordIndex(this.data.paragraphs, wordIndex);
+    const caughtKey = token ? token.key : key;
+    const alreadyCaught =
+      (token && token.isCaught) || this.isWordCaughtInArticle(caughtKey);
 
-    if (this.data.caughtKeys[key]) {
-      storage.unCatchWord(key);
-      const caughtKeys = { ...this.data.caughtKeys };
-      delete caughtKeys[key];
-      this.setData({
-        caughtKeys,
-        sessionCount: Math.max(0, this.data.sessionCount - 1),
-      });
+    if (alreadyCaught) {
+      storage.unCatchWord(caughtKey, this.article.id, wordIndex);
+      this.refreshParagraphDisplay();
       return;
     }
 
-    const info = vocabEntry || {
-      word: text,
-      pos: "",
-      meaning: "暂无释义，建议查词典",
-      example: context,
-    };
+    const vocabEntry = wordUtil.lookupVocab(this.vocab, key);
+    const context = wordUtil.findContextForWord(this.data.paragraphs, key);
 
-    storage.catchWord(info, this.article, context);
-    this.setData({
-      caughtKeys: { ...this.data.caughtKeys, [key]: true },
-      sessionCount: this.data.sessionCount + 1,
-    });
-  },
+    const info = vocabEntry
+      ? { ...vocabEntry, context, tappedText: text, wordIndex }
+      : {
+          word: text,
+          tappedText: text,
+          wordIndex,
+          pos: "",
+          phonetic: "",
+          meaning: "暂无释义，建议查词典",
+          example: context,
+          context,
+        };
 
-  finishReading() {
-    storage.markArticleRead(this.article.id);
-    wx.redirectTo({
-      url: `/pages/finish/finish?count=${this.data.sessionCount}&sentenceCount=${this.data.markCount}&articleId=${this.article.id}`,
-    });
+    storage.catchWord(info, this.article, context, key);
+    this.refreshParagraphDisplay();
   },
 });
