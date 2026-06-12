@@ -29,7 +29,7 @@
             </view>
           </view>
         </view>
-        <view class="cta-btn" catchtap="goReadToday">去抓小鱼</view>
+        <view class="cta-btn" catchtap="goReadToday">{{todayCtaText}}</view>
       </view>
     </view>
   </view>
@@ -37,30 +37,31 @@
   <view class="home-all-section">
     <view class="all-card">
       <text class="section-label all-label">全部文章</text>
-      <scroll-view
-        scroll-y
-        class="all-list-scroll"
-        style="height: {{listScrollHeight}}px;"
-        enhanced
-        show-scrollbar="{{false}}"
-      >
-        <view class="list-scroll-inner">
-          <view
-            class="list-item"
-            wx:for="{{listArticles}}"
-            wx:key="id"
-            data-id="{{item.id}}"
-            bindtap="goRead"
-          >
-            <text class="passage-title passage-title--list">{{item.id}}. Passage {{item.id}} {{item.title}}</text>
-            <view class="tag-row">
-              <text class="tag-pill">{{item.topicTag}}</text>
-              <text class="tag-pill">{{item.levelTag}}</text>
+      <view class="all-scroll-host">
+        <scroll-view
+          scroll-y
+          class="all-list-scroll"
+          style="height: {{listScrollHeight}}px;"
+          enhanced
+          show-scrollbar="{{false}}"
+        >
+          <view class="list-scroll-inner">
+            <view
+              class="list-item"
+              wx:for="{{listArticles}}"
+              wx:key="id"
+              data-id="{{item.id}}"
+              bindtap="goRead"
+            >
+              <text class="passage-title passage-title--list">{{item.id}}. Passage {{item.id}} {{item.title}}</text>
+              <view class="tag-row">
+                <text class="tag-pill">{{item.topicTag}}</text>
+                <text class="tag-pill">{{item.levelTag}}</text>
+              </view>
             </view>
-            <view class="item-divider" wx:if="{{index < listArticles.length - 1}}"></view>
           </view>
-        </view>
-      </scroll-view>
+        </scroll-view>
+      </view>
     </view>
   </view>
 </view>

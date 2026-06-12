@@ -1,6 +1,6 @@
 <view class="container">
   <view class="header">
-    <view class="header-title">词缸</view>
+    <view class="header-title">生词本</view>
     <view class="header-count">{{words.length}} 条</view>
   </view>
 

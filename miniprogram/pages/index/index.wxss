@@ -80,7 +80,7 @@
   z-index: 1;
   flex: 1;
   min-height: 0;
-  padding: 0 24rpx;
+  padding: 0 24rpx calc(24rpx + 104rpx + env(safe-area-inset-bottom));
   box-sizing: border-box;
 }
 
@@ -146,12 +146,7 @@
 }
 
 .passage-title--list {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  max-height: 90rpx;
+  word-break: break-word;
 }
 
 .tag-row {
@@ -193,19 +188,25 @@
   box-sizing: border-box;
   background: #ffffff;
   border-radius: 32rpx;
-  padding: 36rpx 32rpx 0;
+  padding: 36rpx 32rpx 32rpx;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-.all-list-scroll {
+.all-scroll-host {
   flex: 1;
+  height: 0;
   min-height: 0;
 }
 
+.all-list-scroll {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .list-scroll-inner {
-  padding-bottom: 16rpx;
+  padding-bottom: 0;
 }
 
 /* 17:2167 → 17:2168 gap 2px */
@@ -215,20 +216,12 @@
 
 /* 17:2169 — py 12px, gap 8px */
 .list-item {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16rpx;
   padding: 24rpx 0;
 }
 
-.item-divider {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1rpx;
-  background: rgba(0, 0, 0, 0.05);
-  transform: scaleY(0.5);
-  transform-origin: 0 100%;
+.list-item:last-child {
+  padding-bottom: 0;
 }

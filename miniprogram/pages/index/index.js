@@ -19,6 +19,7 @@ Page({
     bodyTop: 136,
     dueCount: 0,
     todayArticle: null,
+    todayCtaText: "去抓小鱼",
     listArticles: [],
     allArticles: [],
     progress: {},
@@ -53,26 +54,39 @@ Page({
   },
 
   updateListScrollHeight() {
-    wx.nextTick(() => {
-      wx.createSelectorQuery()
-        .in(this)
-        .select(".all-label")
-        .boundingClientRect()
-        .exec((res) => {
-          const labelRect = res && res[0];
-          if (!labelRect) return;
+    const applyHeight = (height) => {
+      const next = Math.floor(height);
+      if (next > 0 && next !== this.data.listScrollHeight) {
+        this.setData({ listScrollHeight: next });
+      }
+    };
 
-          const sys = wx.getSystemInfoSync();
-          const tabBarPx = this._tabBarHeightPx || 0;
-          const safeBottom = this._safeBottomPx || 0;
-          const bottomLimit = sys.windowHeight - tabBarPx - safeBottom;
-          const height = bottomLimit - labelRect.bottom;
+    const run = () => {
+      const query = wx.createSelectorQuery().in(this);
+      query.select(".all-scroll-host").boundingClientRect();
+      query.select(".all-label").boundingClientRect();
+      query.exec((res) => {
+        const hostRect = res && res[0];
+        const labelRect = res && res[1];
 
-          if (height > 0 && height !== this.data.listScrollHeight) {
-            this.setData({ listScrollHeight: Math.floor(height) });
-          }
-        });
-    });
+        if (hostRect && hostRect.height > 0) {
+          applyHeight(hostRect.height);
+          return;
+        }
+
+        if (!labelRect) return;
+
+        const sys = wx.getSystemInfoSync();
+        const tabBarPx = this._tabBarHeightPx || 0;
+        const safeBottom = this._safeBottomPx || 0;
+        const bottomLimit = sys.windowHeight - tabBarPx - safeBottom;
+        const height = bottomLimit - labelRect.bottom;
+        if (height > 0) applyHeight(height);
+      });
+    };
+
+    wx.nextTick(run);
+    [50, 150, 300].forEach((delay) => setTimeout(run, delay));
   },
 
   loadData() {
@@ -87,6 +101,7 @@ Page({
     const progress = storage.getProgress();
     const dueCount = storage.getDueWords().length;
     const todayArticle = storage.getTodayArticle(articles);
+    const todayCtaText = storage.getTodayArticleCtaText(articles);
 
     let mascotLine = "今天的鱼群靠岸了，准备好了吗～";
     if (dueCount > 0) {
@@ -110,6 +125,7 @@ Page({
       {
         dueCount,
         todayArticle: today,
+        todayCtaText,
         listArticles,
         allArticles: formatted,
         progress,

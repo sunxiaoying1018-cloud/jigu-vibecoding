@@ -21,6 +21,9 @@ Page({
           wx.removeStorageSync("userProgress");
           wx.removeStorageSync("readArticles");
           wx.removeStorageSync("savedSentences");
+          wx.removeStorageSync("articleWordMarks");
+          wx.removeStorageSync("articleWordMarkIndices");
+          wx.removeStorageSync("articleWordMarksMigrated");
           wx.showToast({ title: "已清空", icon: "success" });
           setTimeout(() => {
             wx.switchTab({ url: "/pages/index/index" });
