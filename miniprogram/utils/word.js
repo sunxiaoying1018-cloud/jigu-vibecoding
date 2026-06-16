@@ -4,6 +4,56 @@ function normalizeWordKey(text) {
     .replace(/[^a-z'-]/g, "");
 }
 
+/** ECDICT 老式词性码 → 现代缩写（j.→adj., r.→adv. 等） */
+const POS_TAG_MAP = {
+  n: "n",
+  v: "v",
+  j: "adj",
+  r: "adv",
+  i: "prep",
+  c: "conj",
+  p: "pron",
+  m: "num",
+  u: "int",
+  a: "art",
+  d: "adv",
+  t: "adv",
+  adj: "adj",
+  adv: "adv",
+  prep: "prep",
+  conj: "conj",
+  pron: "pron",
+  art: "art",
+  int: "int",
+  vt: "v",
+  vi: "v",
+  num: "num",
+  det: "det",
+};
+
+function normalizePosSingle(raw) {
+  const tag = String(raw || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\.$/, "");
+  if (!tag) return "";
+  const mapped = POS_TAG_MAP[tag] || tag;
+  return `${mapped}.`;
+}
+
+function normalizePos(pos) {
+  const text = String(pos || "").trim();
+  if (!text) return "";
+  if (text.includes("/")) {
+    return text
+      .split("/")
+      .map((part) => normalizePosSingle(part))
+      .filter(Boolean)
+      .join("/");
+  }
+  return normalizePosSingle(text);
+}
+
 function tokenizeText(text) {
   const tokens = [];
   const regex = /([a-zA-Z]+(?:'[a-zA-Z]+)?)|(\s+)|([^\w\s])/g;
@@ -208,33 +258,73 @@ function lemmaCandidates(wordKey) {
     candidates.push(key.slice(0, -2));
     candidates.push(key.slice(0, -1));
   }
-  if (key.endsWith("es") && key.length > 3) {
+  if (key.endsWith("es") && key.length > 4) {
     candidates.push(key.slice(0, -2));
   }
-  if (key.endsWith("s") && key.length > 3) {
+  if (key.endsWith("s") && key.length > 4 && !key.endsWith("ss")) {
     candidates.push(key.slice(0, -1));
   }
   return candidates;
 }
 
+/** 推断单词原形，用于展示（targets → target） */
+function inferLemma(wordKey) {
+  const key = normalizeWordKey(wordKey);
+  if (!key || key.length <= 2) return key;
+
+  if (key.endsWith("ies") && key.length > 4) {
+    return key.slice(0, -3) + "y";
+  }
+  if (key.endsWith("ied") && key.length > 4) {
+    return key.slice(0, -3) + "y";
+  }
+  if (key.endsWith("ing") && key.length > 5) {
+    return key.slice(0, -3);
+  }
+  if (key.endsWith("ed") && key.length > 4) {
+    const stem = key.slice(0, -2);
+    if (stem.length >= 3) return stem;
+    const alt = key.slice(0, -1);
+    if (alt.length >= 3) return alt;
+  }
+  if (key.endsWith("es") && key.length > 4) {
+    return key.slice(0, -2);
+  }
+  if (key.endsWith("s") && key.length > 4 && !key.endsWith("ss")) {
+    return key.slice(0, -1);
+  }
+  return key;
+}
+
 function resolveLemmaEntry(vocab, wordKey) {
-  const candidates = lemmaCandidates(wordKey);
+  const key = normalizeWordKey(wordKey);
+  const lemmaKey = inferLemma(key);
+  const candidates = [...new Set([lemmaKey, key, ...lemmaCandidates(key)])];
+
+  let entry = null;
   for (let i = 0; i < candidates.length; i += 1) {
-    const entry = lookupVocab(vocab, candidates[i]);
-    if (entry) {
-      return {
-        ...entry,
-        lemmaKey: normalizeWordKey(entry.word),
-      };
+    const found = lookupVocab(vocab, candidates[i]);
+    if (found) {
+      entry = found;
+      break;
     }
   }
-  const key = normalizeWordKey(wordKey);
+
+  if (entry) {
+    return {
+      ...entry,
+      pos: normalizePos(entry.pos),
+      word: lemmaKey,
+      lemmaKey,
+    };
+  }
+
   return {
-    word: wordKey,
+    word: lemmaKey,
     pos: "",
     meaning: "暂无释义",
     phonetic: "",
-    lemmaKey: key,
+    lemmaKey,
   };
 }
 
@@ -359,6 +449,7 @@ function enrichParagraphs(
 
 module.exports = {
   normalizeWordKey,
+  normalizePos,
   tokenizeParagraphs,
   getWordCount,
   normalizeWordRange,
@@ -372,6 +463,7 @@ module.exports = {
   keysAreRelated,
   buildHighlightKeys,
   lemmaCandidates,
+  inferLemma,
   resolveLemmaEntry,
   findWordIndexByKey,
   findTokenByWordIndex,

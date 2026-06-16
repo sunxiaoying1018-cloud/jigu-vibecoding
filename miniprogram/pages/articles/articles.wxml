@@ -1,0 +1,39 @@
+<view class="articles-page">
+  <view class="articles-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="articles-nav-inner">
+      <view class="nav-back" bindtap="onBack">
+        <image class="nav-back-icon" src="/assets/ui/icon-back.png" mode="aspectFit" />
+      </view>
+      <text class="nav-title">全部文章</text>
+      <view class="nav-side"></view>
+    </view>
+  </view>
+
+  <scroll-view
+    scroll-y
+    class="articles-scroll"
+    style="padding-top: {{navTotalHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="articles-list">
+      <view
+        class="article-card"
+        wx:for="{{articles}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="goRead"
+      >
+        <view class="article-card-head">
+          <text class="passage-id">Passage {{item.id}}</text>
+          <text class="status-pill status-pill--{{item.statusType}}" wx:if="{{item.statusLabel}}">{{item.statusLabel}}</text>
+        </view>
+        <text class="passage-title">{{item.title}}</text>
+        <view class="tag-row">
+          <text class="tag-pill">{{item.topicTag}}</text>
+          <text class="tag-pill">{{item.levelTag}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

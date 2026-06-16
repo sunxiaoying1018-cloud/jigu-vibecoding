@@ -11,68 +11,49 @@ function formatArticleTags(article) {
   return { ...article, topicTag, levelTag };
 }
 
+function getMarkedWordCount() {
+  const stored = wx.getStorageSync("articleWordMarks") || {};
+  let count = 0;
+  Object.values(stored).forEach((marks) => {
+    if (marks && typeof marks === "object") {
+      count += Object.keys(marks).length;
+    }
+  });
+  return count;
+}
+
+function getReadArticleCount() {
+  const readArticles = wx.getStorageSync("readArticles") || {};
+  return Object.keys(readArticles).length;
+}
+
 Page({
   data: {
     statusBarHeight: 20,
-    greetingTop: 95,
-    mascotTop: 81,
-    bodyTop: 136,
+    navTotalHeight: 88,
     dueCount: 0,
+    markedCount: 0,
+    readCount: 0,
+    totalCaught: 0,
+    totalArticles: 0,
     todayArticle: null,
-    listArticles: [],
     allArticles: [],
-    progress: {},
-    mascotLine: "今天的鱼群靠岸了，准备好了吗～",
     loadError: "",
-    listScrollHeight: 300,
+    showReviewCard: false,
   },
 
   onLoad() {
     const sys = wx.getSystemInfoSync();
     const statusBarHeight = sys.statusBarHeight || 20;
-    const scale = sys.windowWidth / 375;
-    this._tabBarHeightPx = Math.round((104 / 750) * sys.windowWidth);
-    this._safeBottomPx = sys.safeArea
-      ? Math.max(sys.screenHeight - sys.safeArea.bottom, 0)
-      : 0;
     this.setData({
       statusBarHeight,
-      greetingTop: Math.round(95 * scale),
-      mascotTop: Math.round(81 * scale),
-      bodyTop: Math.round(136 * scale),
+      navTotalHeight: statusBarHeight + 44,
     });
   },
 
   onShow() {
     updateTabBarSelected(this, 0);
     this.loadData();
-  },
-
-  onReady() {
-    this.updateListScrollHeight();
-  },
-
-  updateListScrollHeight() {
-    wx.nextTick(() => {
-      wx.createSelectorQuery()
-        .in(this)
-        .select(".all-label")
-        .boundingClientRect()
-        .exec((res) => {
-          const labelRect = res && res[0];
-          if (!labelRect) return;
-
-          const sys = wx.getSystemInfoSync();
-          const tabBarPx = this._tabBarHeightPx || 0;
-          const safeBottom = this._safeBottomPx || 0;
-          const bottomLimit = sys.windowHeight - tabBarPx - safeBottom;
-          const height = bottomLimit - labelRect.bottom;
-
-          if (height > 0 && height !== this.data.listScrollHeight) {
-            this.setData({ listScrollHeight: Math.floor(height) });
-          }
-        });
-    });
   },
 
   loadData() {
@@ -84,14 +65,13 @@ Page({
       app.globalData.articles = articles;
     }
 
-    const progress = storage.getProgress();
+    const caughtWords = storage.getCaughtWords();
     const dueCount = storage.getDueWords().length;
     const todayArticle = storage.getTodayArticle(articles);
-
-    let mascotLine = "今天的鱼群靠岸了，准备好了吗～";
-    if (dueCount > 0) {
-      mascotLine = `缸里有 ${dueCount} 条鱼该吃了，先复习吧～`;
-    }
+    const markedCount = getMarkedWordCount();
+    const readCount = getReadArticleCount();
+    const totalCaught = caughtWords.length;
+    const showReviewCard = dueCount > 0;
 
     let loadError = "";
     if (!articles.length) {
@@ -99,25 +79,19 @@ Page({
     }
 
     const formatted = articles.map(formatArticleTags);
-    const today = todayArticle
-      ? formatArticleTags(todayArticle)
-      : null;
-    const listArticles = formatted.filter(
-      (item) => !today || item.id !== today.id
-    );
+    const today = todayArticle ? formatArticleTags(todayArticle) : null;
 
-    this.setData(
-      {
-        dueCount,
-        todayArticle: today,
-        listArticles,
-        allArticles: formatted,
-        progress,
-        mascotLine,
-        loadError,
-      },
-      () => this.updateListScrollHeight()
-    );
+    this.setData({
+      dueCount,
+      markedCount,
+      readCount,
+      totalCaught,
+      totalArticles: articles.length,
+      todayArticle: today,
+      allArticles: formatted,
+      loadError,
+      showReviewCard,
+    });
   },
 
   goReadToday() {
@@ -127,19 +101,11 @@ Page({
     });
   },
 
-  goRead(e) {
-    const rawId = e && e.currentTarget.dataset.id;
-    const id = rawId != null ? parseInt(rawId, 10) : null;
-    const article = id
-      ? this.data.allArticles.find((a) => a.id === id)
-      : this.data.todayArticle;
+  goReview() {
+    wx.navigateTo({ url: "/pages/review/review" });
+  },
 
-    if (!article) {
-      wx.showToast({ title: "暂无文章", icon: "none" });
-      return;
-    }
-    wx.navigateTo({
-      url: `/pages/read/read?id=${article.id}`,
-    });
+  goArticles() {
+    wx.navigateTo({ url: "/pages/articles/articles" });
   },
 });

@@ -5,21 +5,15 @@ Component({
     list: [
       {
         pagePath: "/pages/index/index",
-        text: "阅读",
-        iconPath: "/assets/ui/tab/read.png",
-        selectedIconPath: "/assets/ui/tab/read-active.png",
+        text: "首页",
+        iconPath: "/assets/tab/home.png",
+        selectedIconPath: "/assets/tab/home-active.png",
       },
       {
         pagePath: "/pages/tank/tank",
-        text: "生词本",
+        text: "鱼缸",
         iconPath: "/assets/ui/tab/tank.png",
         selectedIconPath: "/assets/ui/tab/tank-active.png",
-      },
-      {
-        pagePath: "/pages/review/review",
-        text: "复习",
-        iconPath: "/assets/ui/tab/review.png",
-        selectedIconPath: "/assets/ui/tab/review-active.png",
       },
       {
         pagePath: "/pages/mine/mine",

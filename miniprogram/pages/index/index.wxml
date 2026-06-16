@@ -7,60 +7,75 @@
     </view>
   </view>
 
-  <view class="home-greeting" style="top: {{greetingTop}}px;">
-    <text class="greeting-text">Hi～我是卷卷\n{{mascotLine}}</text>
-  </view>
-  <image class="home-mascot" src="/assets/ui/mascot.png" mode="aspectFit" style="top: {{mascotTop}}px; width: 240rpx; height: 180rpx;" />
+  <scroll-view
+    scroll-y
+    class="home-scroll"
+    style="padding-top: {{navTotalHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="home-body">
+      <view class="error-banner" wx:if="{{loadError}}">
+        <text class="error-text">{{loadError}}</text>
+      </view>
 
-  <view class="home-fixed-content" style="padding-top: {{bodyTop}}px;">
-    <view class="error-banner" wx:if="{{loadError}}">
-      <text class="error-text">{{loadError}}</text>
-    </view>
-
-    <view class="today-card" wx:if="{{todayArticle}}">
-      <view class="today-card-body">
-        <view class="today-section">
-          <text class="section-label">今日文章</text>
-          <view class="today-article-block">
-            <text class="passage-title">{{todayArticle.id}}. Passage {{todayArticle.id}} {{todayArticle.title}}</text>
-            <view class="tag-row">
-              <text class="tag-pill">{{todayArticle.topicTag}}</text>
-              <text class="tag-pill">{{todayArticle.levelTag}}</text>
-            </view>
+      <view class="stats-card">
+        <view class="stat-col">
+          <text class="stat-label">已标记生词</text>
+          <view class="stat-value-row">
+            <text class="stat-num">{{markedCount}}</text>
+            <text class="stat-unit">个</text>
           </view>
         </view>
-        <view class="cta-btn" catchtap="goReadToday">去抓小鱼</view>
+        <view class="stat-col">
+          <text class="stat-label">累计阅读</text>
+          <view class="stat-value-row">
+            <text class="stat-num">{{readCount}}</text>
+            <text class="stat-unit">篇</text>
+          </view>
+        </view>
+        <view class="stat-col">
+          <text class="stat-label">待复习单词</text>
+          <view class="stat-value-row">
+            <text class="stat-num">{{dueCount}}</text>
+            <text class="stat-unit">个</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="today-card" wx:if="{{todayArticle}}">
+        <image class="today-mascot" src="/assets/ui/mascot.png" mode="aspectFit" />
+        <text class="section-label">今日阅读</text>
+        <view class="today-article-block">
+          <text class="passage-id">Passage {{todayArticle.id}}</text>
+          <text class="passage-title">{{todayArticle.title}}</text>
+          <view class="tag-row">
+            <text class="tag-pill">{{todayArticle.topicTag}}</text>
+            <text class="tag-pill">{{todayArticle.levelTag}}</text>
+          </view>
+        </view>
+        <view class="cta-btn" catchtap="goReadToday">开始阅读</view>
+      </view>
+
+      <view class="bottom-cards {{showReviewCard ? 'bottom-cards--split' : ''}}">
+        <view
+          class="action-card action-card--review"
+          wx:if="{{showReviewCard}}"
+          bindtap="goReview"
+        >
+          <text class="action-arrow">›</text>
+          <text class="action-title">复习</text>
+          <text class="action-sub">待复习单词 {{dueCount}}/{{totalCaught}}</text>
+        </view>
+        <view
+          class="action-card action-card--articles {{showReviewCard ? '' : 'action-card--full'}}"
+          bindtap="goArticles"
+        >
+          <text class="action-arrow">›</text>
+          <text class="action-title">全部文章</text>
+          <text class="action-sub">学习中 {{readCount}}/{{totalArticles}}</text>
+        </view>
       </view>
     </view>
-  </view>
-
-  <view class="home-all-section">
-    <view class="all-card">
-      <text class="section-label all-label">全部文章</text>
-      <scroll-view
-        scroll-y
-        class="all-list-scroll"
-        style="height: {{listScrollHeight}}px;"
-        enhanced
-        show-scrollbar="{{false}}"
-      >
-        <view class="list-scroll-inner">
-          <view
-            class="list-item"
-            wx:for="{{listArticles}}"
-            wx:key="id"
-            data-id="{{item.id}}"
-            bindtap="goRead"
-          >
-            <text class="passage-title passage-title--list">{{item.id}}. Passage {{item.id}} {{item.title}}</text>
-            <view class="tag-row">
-              <text class="tag-pill">{{item.topicTag}}</text>
-              <text class="tag-pill">{{item.levelTag}}</text>
-            </view>
-            <view class="item-divider" wx:if="{{index < listArticles.length - 1}}"></view>
-          </view>
-        </view>
-      </scroll-view>
-    </view>
-  </view>
+  </scroll-view>
 </view>

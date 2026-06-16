@@ -1,14 +1,46 @@
 const storage = require("../../utils/storage");
-const markUtil = require("../../utils/mark");
 const wordUtil = require("../../utils/word");
 const dataLoader = require("../../data/loader.js");
 const { updateTabBarSelected } = require("../../utils/tabBar");
 
+function formatPhonetic(phonetic) {
+  if (!phonetic) return "";
+  const trimmed = String(phonetic).trim();
+  if (!trimmed) return "";
+  if (trimmed.startsWith("[") && trimmed.endsWith("]")) return trimmed;
+  return `[${trimmed}]`;
+}
+
+function formatMeaningDisplay(pos, meaning) {
+  const text = (meaning || "暂无释义").trim() || "暂无释义";
+  const posStr = wordUtil.normalizePos(pos);
+  if (!posStr) return text;
+
+  const lowerText = text.toLowerCase();
+  if (
+    lowerText.startsWith(posStr.toLowerCase()) ||
+    lowerText.startsWith(`${posStr.replace(/\.$/, "").toLowerCase()} `)
+  ) {
+    return text;
+  }
+  return `${posStr} ${text}`;
+}
+
 Page({
   data: {
+    statusBarHeight: 20,
+    navTotalHeight: 88,
     words: [],
-    marks: [],
-    emptyText: "还没有抓到鱼，去读今天的文章吧",
+    emptyText: "鱼缸还是空的，去读文章标记生词吧",
+  },
+
+  onLoad() {
+    const sys = wx.getSystemInfoSync();
+    const statusBarHeight = sys.statusBarHeight || 20;
+    this.setData({
+      statusBarHeight,
+      navTotalHeight: statusBarHeight + 44,
+    });
   },
 
   onShow() {
@@ -27,25 +59,20 @@ Page({
       const lemmaKey = entry.lemmaKey;
       if (lemmaMap[lemmaKey]) return;
 
-      const displayStatus = storage.getWordDisplayStatus(w);
       lemmaMap[lemmaKey] = {
         key: lemmaKey,
         word: entry.word,
-        meaning: entry.meaning || w.meaning || "暂无释义",
+        meaningDisplay: formatMeaningDisplay(
+          entry.pos || w.pos,
+          entry.meaning || w.meaning
+        ),
+        phoneticDisplay: formatPhonetic(entry.phonetic || w.phonetic),
         revealed: !!revealed[lemmaKey],
-        articleId: w.articleId || 0,
-        sourceKey: w.key,
-        status: displayStatus.status,
-        statusLabel: displayStatus.statusLabel,
       };
     });
 
-    const words = Object.values(lemmaMap);
-    const marks = markUtil.getMarks();
-
     this.setData({
-      words,
-      marks,
+      words: Object.values(lemmaMap),
     });
   },
 
@@ -66,14 +93,6 @@ Page({
     });
 
     this.setData({ words });
-  },
-
-  onGoSource(e) {
-    const { articleId, sourceKey } = e.currentTarget.dataset;
-    if (!articleId) return;
-    wx.navigateTo({
-      url: `/pages/read/read?id=${articleId}&focus=${encodeURIComponent(sourceKey || "")}`,
-    });
   },
 
   goRead() {

@@ -64,6 +64,38 @@ def build_curated_vocab():
     return lookup
 
 
+# ECDICT / StarDict 词性码（老式单字母）→ 现代缩写
+ECDICT_POS_MAP = {
+    "n": "n.",
+    "v": "v.",
+    "j": "adj.",  # 形容词
+    "r": "adv.",  # 副词
+    "i": "prep.",  # 介词
+    "c": "conj.",  # 连词
+    "p": "pron.",  # 代词
+    "m": "num.",  # 数词
+    "u": "int.",  # 叹词
+    "a": "art.",  # 冠词
+    "d": "adv.",  # 部分词条作副词
+    "t": "adv.",  # 时间词，展示为副词类
+    "adj": "adj.",
+    "adv": "adv.",
+    "prep": "prep.",
+    "conj": "conj.",
+    "pron": "pron.",
+    "art": "art.",
+    "int": "int.",
+    "vt": "v.",
+    "vi": "v.",
+    "num": "num.",
+}
+
+
+def normalize_pos_tag(tag):
+    tag = (tag or "").strip().lower().rstrip(".")
+    return ECDICT_POS_MAP.get(tag, f"{tag}." if tag else "")
+
+
 def parse_pos(pos_field):
     if not pos_field:
         return ""
@@ -71,19 +103,18 @@ def parse_pos(pos_field):
     if ":" in first:
         tag = first.split(":")[0]
     else:
-        tag = first
-    mapping = {
-        "n": "n.",
-        "v": "v.",
-        "adj": "adj.",
-        "adv": "adv.",
-        "prep": "prep.",
-        "conj": "conj.",
-        "pron": "pron.",
-        "art": "art.",
-        "int": "int.",
-    }
-    return mapping.get(tag, f"{tag}.")
+        tag = first.rstrip(".")
+    return normalize_pos_tag(tag)
+
+
+def pos_from_translation(translation):
+    if not translation:
+        return ""
+    first_line = translation.split("\n")[0].strip()
+    match = re.match(r"^([a-z]+\.)\s", first_line, flags=re.I)
+    if not match:
+        return ""
+    return normalize_pos_tag(match.group(1).rstrip("."))
 
 
 def shorten_meaning(translation, max_len=80):
@@ -167,9 +198,10 @@ def lookup_word(conn, word):
 
 def ecdict_entry_to_vocab(key, row):
     word, phonetic, pos, translation, _exchange = row
+    parsed_pos = parse_pos(pos) or pos_from_translation(translation)
     return {
         "word": word,
-        "pos": parse_pos(pos),
+        "pos": parsed_pos,
         "meaning": shorten_meaning(translation),
         "phonetic": phonetic or "",
         "example": "",
@@ -191,8 +223,14 @@ def build_vocab():
         if key in curated:
             entry = dict(curated[key])
             row = lookup_word(conn, key)
-            if row and not entry.get("phonetic"):
-                entry["phonetic"] = row[1] or ""
+            if row:
+                _word, row_phonetic, row_pos, row_translation, _ex = row
+                if not entry.get("phonetic"):
+                    entry["phonetic"] = row_phonetic or ""
+                if not entry.get("pos"):
+                    entry["pos"] = parse_pos(row_pos) or pos_from_translation(
+                        row_translation
+                    )
             vocab[key] = entry
             continue
 

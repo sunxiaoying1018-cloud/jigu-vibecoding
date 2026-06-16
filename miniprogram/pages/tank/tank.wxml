@@ -1,49 +1,42 @@
-<view class="container">
-  <view class="header">
-    <view class="header-title">词缸</view>
-    <view class="header-count">{{words.length}} 条</view>
+<view class="tank-page">
+  <view class="tank-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="tank-nav-inner">
+      <text class="tank-nav-title">抓小鱼单词</text>
+    </view>
   </view>
 
-  <view wx:if="{{words.length === 0 && marks.length === 0}}" class="empty card">
-    <view class="empty-emoji">🐱</view>
-    <view class="mascot-text">{{emptyText}}</view>
-    <button class="btn-primary" bindtap="goRead">去读文章</button>
-  </view>
+  <scroll-view
+    scroll-y
+    class="tank-scroll"
+    style="padding-top: {{navTotalHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="tank-body">
+      <view wx:if="{{words.length === 0}}" class="empty-block">
+        <image class="empty-mascot" src="/assets/ui/mascot.png" mode="aspectFit" />
+        <text class="empty-text">{{emptyText}}</text>
+        <view class="empty-btn" bindtap="goRead">去读文章</view>
+      </view>
 
-  <view wx:if="{{words.length > 0}}" class="word-list card">
-    <block wx:for="{{words}}" wx:key="key">
-      <view class="word-row">
-        <view class="word-left">
-          <view class="word-head">
+      <view wx:else class="word-list">
+        <view class="word-row" wx:for="{{words}}" wx:key="key">
+          <view class="word-left">
             <text class="word-text">{{item.word}}</text>
-            <view
-              wx:if="{{item.articleId}}"
-              class="word-go"
-              catchtap="onGoSource"
-              data-article-id="{{item.articleId}}"
-              data-source-key="{{item.sourceKey}}"
-            >›</view>
+            <text class="word-phonetic" wx:if="{{item.phoneticDisplay}}">{{item.phoneticDisplay}}</text>
           </view>
-          <text class="status status-{{item.status}}">{{item.statusLabel}}</text>
-        </view>
-        <view
-          class="meaning-right {{item.revealed ? 'is-revealed' : ''}}"
-          bindtap="onToggleMeaning"
-          data-key="{{item.key}}"
-        >
-          <text class="meaning-text">{{item.meaning}}</text>
-          <view class="tape-cover" wx:if="{{!item.revealed}}">
-            <view class="tape-strip"></view>
+          <view
+            class="meaning-right {{item.revealed ? 'is-revealed' : ''}}"
+            bindtap="onToggleMeaning"
+            data-key="{{item.key}}"
+          >
+            <text class="meaning-text">{{item.meaningDisplay}}</text>
+            <view class="tape-cover" wx:if="{{!item.revealed}}">
+              <view class="tape-strip"></view>
+            </view>
           </view>
         </view>
       </view>
-    </block>
-  </view>
-
-  <view wx:if="{{marks.length > 0}}" class="marks-block card">
-    <view class="marks-label">划线</view>
-    <block wx:for="{{marks}}" wx:key="key">
-      <view class="mark-line">{{item.text}}</view>
-    </block>
-  </view>
+    </view>
+  </scroll-view>
 </view>

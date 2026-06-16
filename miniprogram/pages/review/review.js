@@ -1,6 +1,5 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
-const { updateTabBarSelected } = require("../../utils/tabBar");
 
 Page({
   data: {
@@ -16,7 +15,6 @@ Page({
   },
 
   onShow() {
-    updateTabBarSelected(this, 2);
     const app = getApp();
     this.vocab =
       app.globalData.vocab && Object.keys(app.globalData.vocab).length
@@ -48,9 +46,15 @@ Page({
   },
 
   showQuestion(word) {
-    const options = wordUtil.buildQuizOptions(word.meaning, this.vocab, 4);
+    const entry = wordUtil.resolveLemmaEntry(this.vocab, word.key);
+    const display = {
+      ...word,
+      word: entry.word,
+      meaning: entry.meaning || word.meaning,
+    };
+    const options = wordUtil.buildQuizOptions(display.meaning, this.vocab, 4);
     this.setData({
-      current: word,
+      current: display,
       options,
       selected: "",
       feedback: "",

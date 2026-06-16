@@ -7,7 +7,7 @@ Page({
   },
 
   onShow() {
-    updateTabBarSelected(this, 3);
+    updateTabBarSelected(this, 2);
     this.setData({ progress: storage.getProgress() });
   },
 

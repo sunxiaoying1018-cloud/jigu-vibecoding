@@ -1,7 +1,7 @@
 module.exports = {
   "a": {
     "word": "a",
-    "pos": "a.",
+    "pos": "art.",
     "meaning": "第一个字母 A; 一个; 第一的",
     "phonetic": "ei",
     "example": "",
@@ -9,7 +9,7 @@ module.exports = {
   },
   "abbreviated": {
     "word": "abbreviated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "缩写的, 短缩的, 简写的, 简略的, 缩略的",
     "phonetic": "",
     "example": "",
@@ -25,7 +25,7 @@ module.exports = {
   },
   "about": {
     "word": "about",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...周围, 大约, 有关, 关于",
     "phonetic": "ә'baut",
     "example": "",
@@ -33,7 +33,7 @@ module.exports = {
   },
   "abundant": {
     "word": "abundant",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "丰富的, 充分的, 大量的",
     "phonetic": "ә'bʌndәnt",
     "example": "",
@@ -58,7 +58,7 @@ module.exports = {
   },
   "academics": {
     "word": "academics",
-    "pos": "",
+    "pos": "n.",
     "meaning": "学习, 学术; 学者( academic的复数形式 ); 大学教师; [复数]（院校的）学术活动; [A-]柏拉图哲学信奉者",
     "phonetic": "ækə'demɪks",
     "example": "",
@@ -74,7 +74,7 @@ module.exports = {
   },
   "accelerating": {
     "word": "accelerating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "加速",
     "phonetic": "æk'selәreitiŋ",
     "example": "",
@@ -115,7 +115,7 @@ module.exports = {
   },
   "accordingly": {
     "word": "accordingly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "相应地, 因此, 于是",
     "phonetic": "ә'kɒ:diŋli",
     "example": "",
@@ -156,7 +156,7 @@ module.exports = {
   },
   "achievements": {
     "word": "achievements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "业绩；获得（achievement的复数）",
     "phonetic": "",
     "example": "",
@@ -189,7 +189,7 @@ module.exports = {
   },
   "across": {
     "word": "across",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "越过, 穿过, 与...相交叉, 在...的对面",
     "phonetic": "ә'krɒs",
     "example": "",
@@ -197,7 +197,7 @@ module.exports = {
   },
   "actions": {
     "word": "actions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "动作；行动（action的复数）",
     "phonetic": "",
     "example": "",
@@ -237,7 +237,7 @@ module.exports = {
   },
   "adaptations": {
     "word": "adaptations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "适应( adaptation的复数形式 ); 适合; 改编; 改编本",
     "phonetic": "ædæp'teɪʃnz",
     "example": "",
@@ -245,7 +245,7 @@ module.exports = {
   },
   "adapted": {
     "word": "adapted",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "适合的",
     "phonetic": "",
     "example": "",
@@ -278,7 +278,7 @@ module.exports = {
   },
   "administrative": {
     "word": "administrative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "管理的, 行政的",
     "phonetic": "әd'ministrәtiv",
     "example": "",
@@ -286,7 +286,7 @@ module.exports = {
   },
   "adopting": {
     "word": "adopting",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "采取；接受；收养；正式通过",
     "phonetic": "ə'dɒpt",
     "example": "",
@@ -294,7 +294,7 @@ module.exports = {
   },
   "adults": {
     "word": "adults",
-    "pos": "",
+    "pos": "n.",
     "meaning": "成年人（adult的复数形式）",
     "phonetic": "",
     "example": "",
@@ -302,7 +302,7 @@ module.exports = {
   },
   "advanced": {
     "word": "advanced",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "在前的, 高级的, 先进的, 年老的",
     "phonetic": "әd'vɑ:nst",
     "example": "",
@@ -310,7 +310,7 @@ module.exports = {
   },
   "advances": {
     "word": "advances",
-    "pos": "",
+    "pos": "n.",
     "meaning": "作友好表示, 求爱, 献殷勤",
     "phonetic": "",
     "example": "",
@@ -326,7 +326,7 @@ module.exports = {
   },
   "adverse": {
     "word": "adverse",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不利的, 敌对的, 相反的, 逆的",
     "phonetic": "'ædvә:s",
     "example": "",
@@ -351,7 +351,7 @@ module.exports = {
   },
   "advocates": {
     "word": "advocates",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（辩护）律师( advocate的名词复数 ); 提倡者; 辩护律师; [A-]基督",
     "phonetic": "ˈædvəkeits",
     "example": "",
@@ -359,7 +359,7 @@ module.exports = {
   },
   "affecting": {
     "word": "affecting",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "感人的, 动人的",
     "phonetic": "ә'fektiŋ",
     "example": "",
@@ -367,7 +367,7 @@ module.exports = {
   },
   "affluent": {
     "word": "affluent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "丰富的, 富裕的",
     "phonetic": "'æfluәnt",
     "example": "",
@@ -383,7 +383,7 @@ module.exports = {
   },
   "against": {
     "word": "against",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "反对, 对着, 倚靠",
     "phonetic": "ә'geinst",
     "example": "",
@@ -407,7 +407,7 @@ module.exports = {
   },
   "agreements": {
     "word": "agreements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "协定; 协定( agreement的复数形式 ); 同意; 达成协议; （性、数、人称方面与…）一致",
     "phonetic": "əɡ'ri:mənts",
     "example": "",
@@ -415,7 +415,7 @@ module.exports = {
   },
   "agricultural": {
     "word": "agricultural",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "农业的",
     "phonetic": ".ægri'kʌltʃәrәl",
     "example": "",
@@ -439,7 +439,7 @@ module.exports = {
   },
   "ahead": {
     "word": "ahead",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "领先的, 预先的, 向前的",
     "phonetic": "ә'hed",
     "example": "",
@@ -463,7 +463,7 @@ module.exports = {
   },
   "alarming": {
     "word": "alarming",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "使人惊恐的, 引起惊恐的",
     "phonetic": "ә'lɑ:miŋ",
     "example": "",
@@ -471,7 +471,7 @@ module.exports = {
   },
   "algorithmic": {
     "word": "algorithmic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "算法的",
     "phonetic": "",
     "example": "",
@@ -479,7 +479,7 @@ module.exports = {
   },
   "algorithms": {
     "word": "algorithms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "算法；算法式（algorithm的复数）",
     "phonetic": "",
     "example": "",
@@ -495,7 +495,7 @@ module.exports = {
   },
   "aligned": {
     "word": "aligned",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "对齐的；均衡的",
     "phonetic": "",
     "example": "",
@@ -503,7 +503,7 @@ module.exports = {
   },
   "alike": {
     "word": "alike",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "相似的, 同样的",
     "phonetic": "ә'laik",
     "example": "",
@@ -511,7 +511,7 @@ module.exports = {
   },
   "all": {
     "word": "all",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "所有的, 全部的, 一切的",
     "phonetic": "ɒ:l",
     "example": "",
@@ -544,7 +544,7 @@ module.exports = {
   },
   "allowing": {
     "word": "allowing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "允许（allow的现在分词）",
     "phonetic": "",
     "example": "",
@@ -552,7 +552,7 @@ module.exports = {
   },
   "alone": {
     "word": "alone",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "孤独的, 单独的, 独自的",
     "phonetic": "ә'lәun",
     "example": "",
@@ -560,7 +560,7 @@ module.exports = {
   },
   "along": {
     "word": "along",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "平行地, 向前",
     "phonetic": "ә'lɒŋ",
     "example": "",
@@ -568,7 +568,7 @@ module.exports = {
   },
   "alongside": {
     "word": "alongside",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在旁边, 靠拢着",
     "phonetic": "ә'lɒŋ'said",
     "example": "",
@@ -576,7 +576,7 @@ module.exports = {
   },
   "already": {
     "word": "already",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "已经, 早已",
     "phonetic": "ɒ:l'redi",
     "example": "",
@@ -584,7 +584,7 @@ module.exports = {
   },
   "also": {
     "word": "also",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "也, 并且, 同样地",
     "phonetic": "'ɒ:lsәu",
     "example": "",
@@ -601,7 +601,7 @@ module.exports = {
   },
   "alternatives": {
     "word": "alternatives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "选择的余地( alternative的复数形式 ); 可供选择的事物; 取舍; 非传统（或他择性）生活方式的追随者（或鼓吹者）",
     "phonetic": "ɔ:l'tɜ:nətɪvz",
     "example": "",
@@ -609,7 +609,7 @@ module.exports = {
   },
   "ambitious": {
     "word": "ambitious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有野心的, 抱负不凡的, 雄心勃勃的",
     "phonetic": "æm'biʃәs",
     "example": "",
@@ -617,7 +617,7 @@ module.exports = {
   },
   "ambivalent": {
     "word": "ambivalent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "矛盾的, 模棱两可的",
     "phonetic": "æm'bivәlәnt",
     "example": "",
@@ -633,7 +633,7 @@ module.exports = {
   },
   "among": {
     "word": "among",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之中",
     "phonetic": "ә'mʌŋ",
     "example": "",
@@ -649,7 +649,7 @@ module.exports = {
   },
   "an": {
     "word": "an",
-    "pos": "",
+    "pos": "art.",
     "meaning": "一",
     "phonetic": "æn",
     "example": "",
@@ -657,7 +657,7 @@ module.exports = {
   },
   "analysing": {
     "word": "analysing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "分析, 分解, 解释( analyse的现在分词 )",
     "phonetic": "æ'nəlaɪzɪŋ",
     "example": "",
@@ -674,7 +674,7 @@ module.exports = {
   },
   "analytical": {
     "word": "analytical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "分析的, 善于分析的, 解析的",
     "phonetic": ".ænә'litikl",
     "example": "",
@@ -691,7 +691,7 @@ module.exports = {
   },
   "and": {
     "word": "and",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "和, 与",
     "phonetic": "ænd",
     "example": "",
@@ -699,7 +699,7 @@ module.exports = {
   },
   "annual": {
     "word": "annual",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "年刊, 年报",
     "phonetic": "'ænjuәl",
     "example": "",
@@ -707,7 +707,7 @@ module.exports = {
   },
   "answers": {
     "word": "answers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "答案, 回答（answer的复数）",
     "phonetic": "",
     "example": "",
@@ -715,7 +715,7 @@ module.exports = {
   },
   "anthropogenic": {
     "word": "anthropogenic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "[医] 人类发生的, 人类起源的",
     "phonetic": "",
     "example": "",
@@ -723,7 +723,7 @@ module.exports = {
   },
   "antibiotics": {
     "word": "antibiotics",
-    "pos": "",
+    "pos": "n.",
     "meaning": "抗生学；抗生素",
     "phonetic": "",
     "example": "",
@@ -731,7 +731,7 @@ module.exports = {
   },
   "antiquated": {
     "word": "antiquated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "陈旧的, 过时的, 年老的",
     "phonetic": "'æntikweitid",
     "example": "",
@@ -747,7 +747,7 @@ module.exports = {
   },
   "any": {
     "word": "any",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "任何的",
     "phonetic": "'eni",
     "example": "",
@@ -755,7 +755,7 @@ module.exports = {
   },
   "appeals": {
     "word": "appeals",
-    "pos": "",
+    "pos": "n.",
     "meaning": "上诉；恳求（appeal的复数）",
     "phonetic": "",
     "example": "",
@@ -771,7 +771,7 @@ module.exports = {
   },
   "applications": {
     "word": "applications",
-    "pos": "",
+    "pos": "n.",
     "meaning": "应用；应用程序；应用软件（application的复数）",
     "phonetic": "",
     "example": "",
@@ -804,7 +804,7 @@ module.exports = {
   },
   "appropriate": {
     "word": "appropriate",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "适当的",
     "phonetic": "ә'prәupriәt",
     "example": "",
@@ -812,7 +812,7 @@ module.exports = {
   },
   "approximately": {
     "word": "approximately",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "大约, 大致, 近于",
     "phonetic": "ә'prɒksimәtli",
     "example": "",
@@ -820,7 +820,7 @@ module.exports = {
   },
   "aquifers": {
     "word": "aquifers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地下蓄水层, 砂石含水层( aquifer的复数形式 )",
     "phonetic": "æk'waɪfəz",
     "example": "",
@@ -828,7 +828,7 @@ module.exports = {
   },
   "arbitrary": {
     "word": "arbitrary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "任意的, 武断的, 专治的, 霸道的",
     "phonetic": "'ɑ:bitrәri",
     "example": "",
@@ -836,7 +836,7 @@ module.exports = {
   },
   "architectures": {
     "word": "architectures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "建筑学( architecture的复数形式 ); 建筑风格; 体系结构; （总体、层次）结构",
     "phonetic": "'ɑ:kɪtektʃərz",
     "example": "",
@@ -844,7 +844,7 @@ module.exports = {
   },
   "archives": {
     "word": "archives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "档案, 档案室",
     "phonetic": "'ɑ:kaivz",
     "example": "",
@@ -860,7 +860,7 @@ module.exports = {
   },
   "areas": {
     "word": "areas",
-    "pos": "",
+    "pos": "n.",
     "meaning": "区域, 领域；面积（area的复数形式）",
     "phonetic": "",
     "example": "",
@@ -876,7 +876,7 @@ module.exports = {
   },
   "arrangements": {
     "word": "arrangements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "安排；准备；整理（arrangement的复数）",
     "phonetic": "",
     "example": "",
@@ -884,7 +884,7 @@ module.exports = {
   },
   "artefacts": {
     "word": "artefacts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "人工制品（尤指有考古价值的工具或武器）( artefact的复数形式 )",
     "phonetic": "'ɑ:tɪfækts",
     "example": "",
@@ -901,7 +901,7 @@ module.exports = {
   },
   "as": {
     "word": "as",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "同样地, 例如",
     "phonetic": "æz",
     "example": "",
@@ -943,7 +943,7 @@ module.exports = {
   },
   "assignments": {
     "word": "assignments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "分配；作业（assignment的复数形式）",
     "phonetic": "",
     "example": "",
@@ -951,7 +951,7 @@ module.exports = {
   },
   "associated": {
     "word": "associated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "联合的",
     "phonetic": "",
     "example": "",
@@ -968,7 +968,7 @@ module.exports = {
   },
   "assumed": {
     "word": "assumed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "假装的, 装的, 假定的",
     "phonetic": "ә'sju:md",
     "example": "",
@@ -992,7 +992,7 @@ module.exports = {
   },
   "at": {
     "word": "at",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在, 向, 对",
     "phonetic": "æt",
     "example": "",
@@ -1009,7 +1009,7 @@ module.exports = {
   },
   "atmospheric": {
     "word": "atmospheric",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "大气的",
     "phonetic": "ætmәs'ferik",
     "example": "",
@@ -1034,7 +1034,7 @@ module.exports = {
   },
   "attracted": {
     "word": "attracted",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "吸引",
     "phonetic": "ə'træktɪd",
     "example": "",
@@ -1042,7 +1042,7 @@ module.exports = {
   },
   "attracts": {
     "word": "attracts",
-    "pos": "",
+    "pos": "v.",
     "meaning": "吸引( attract的第三人称单数 ); 使喜爱; 引起…的好感（或爱慕）; 具有吸引力",
     "phonetic": "əˈtrækts",
     "example": "",
@@ -1050,7 +1050,7 @@ module.exports = {
   },
   "attributable": {
     "word": "attributable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "可归于...的",
     "phonetic": "ә'tribju:tәbl",
     "example": "",
@@ -1058,7 +1058,7 @@ module.exports = {
   },
   "attributed": {
     "word": "attributed",
-    "pos": "",
+    "pos": "v.",
     "meaning": "认为...是( attribute的过去式和过去分词 ); 把...归于; 把...品质归于某人; 认为某事[物]属于某人[物]",
     "phonetic": "ə'trɪbjuːtɪd",
     "example": "",
@@ -1075,7 +1075,7 @@ module.exports = {
   },
   "audiences": {
     "word": "audiences",
-    "pos": "",
+    "pos": "n.",
     "meaning": "观众, 听众, 读者( audience的复数形式 )",
     "phonetic": "'ɔ:dɪənsɪz",
     "example": "",
@@ -1083,7 +1083,7 @@ module.exports = {
   },
   "auditoriums": {
     "word": "auditoriums",
-    "pos": "",
+    "pos": "n.",
     "meaning": "观众席( auditorium的复数形式 ); 听众席; 礼堂; 会堂",
     "phonetic": "ɔ:dɪ'tɔ:rɪəmz",
     "example": "",
@@ -1099,7 +1099,7 @@ module.exports = {
   },
   "authentic": {
     "word": "authentic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "可靠的, 可信的, 真正的",
     "phonetic": "ɒ:'θentik",
     "example": "",
@@ -1107,7 +1107,7 @@ module.exports = {
   },
   "authorities": {
     "word": "authorities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "当局, 官方（authority的复数）",
     "phonetic": "",
     "example": "",
@@ -1124,7 +1124,7 @@ module.exports = {
   },
   "automated": {
     "word": "automated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "自动化的；机械化的",
     "phonetic": "",
     "example": "",
@@ -1141,7 +1141,7 @@ module.exports = {
   },
   "automobiles": {
     "word": "automobiles",
-    "pos": "",
+    "pos": "n.",
     "meaning": "<美>汽车( automobile的复数形式 )",
     "phonetic": "'ɔ:təməbi:lz",
     "example": "",
@@ -1149,7 +1149,7 @@ module.exports = {
   },
   "autonomous": {
     "word": "autonomous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "自治的",
     "phonetic": "ɒ:'tɒnәmәs",
     "example": "",
@@ -1165,7 +1165,7 @@ module.exports = {
   },
   "average": {
     "word": "average",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "平均, 平均数, 一般水平, 海损",
     "phonetic": "'ævәridʒ",
     "example": "",
@@ -1173,7 +1173,7 @@ module.exports = {
   },
   "away": {
     "word": "away",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "离去",
     "phonetic": "ә'wei",
     "example": "",
@@ -1189,7 +1189,7 @@ module.exports = {
   },
   "bacterial": {
     "word": "bacterial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "细菌的",
     "phonetic": "bæk'tiәriәl",
     "example": "",
@@ -1214,7 +1214,7 @@ module.exports = {
   },
   "bare": {
     "word": "bare",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "赤裸的, 缺少的, 无遮蔽的, 坦率的",
     "phonetic": "bєә",
     "example": "",
@@ -1222,7 +1222,7 @@ module.exports = {
   },
   "barriers": {
     "word": "barriers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "障碍( barrier的复数形式 ); 屏障; 栅栏; 分界线",
     "phonetic": "'bærɪəz",
     "example": "",
@@ -1230,7 +1230,7 @@ module.exports = {
   },
   "based": {
     "word": "based",
-    "pos": "",
+    "pos": "v.",
     "meaning": "立基于, 以…为基础（base的过去式和过去分词）",
     "phonetic": "beist",
     "example": "",
@@ -1238,7 +1238,7 @@ module.exports = {
   },
   "basic": {
     "word": "basic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "基本原理, 要素, 基本规律",
     "phonetic": "'beisik",
     "example": "",
@@ -1286,7 +1286,7 @@ module.exports = {
   },
   "before": {
     "word": "before",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之前",
     "phonetic": "bi'fɒ:",
     "example": "",
@@ -1302,7 +1302,7 @@ module.exports = {
   },
   "behavioural": {
     "word": "behavioural",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "行为的",
     "phonetic": "bi'heivjәrәl",
     "example": "",
@@ -1318,7 +1318,7 @@ module.exports = {
   },
   "beliefs": {
     "word": "beliefs",
-    "pos": "",
+    "pos": "n.",
     "meaning": "信仰；信?（belief的复数）",
     "phonetic": "",
     "example": "",
@@ -1335,7 +1335,7 @@ module.exports = {
   },
   "between": {
     "word": "between",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之间",
     "phonetic": "bi'twi:n",
     "example": "",
@@ -1343,7 +1343,7 @@ module.exports = {
   },
   "beyond": {
     "word": "beyond",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "超过, 在那一边, 迟于",
     "phonetic": "bi'jɒnd",
     "example": "",
@@ -1351,7 +1351,7 @@ module.exports = {
   },
   "billion": {
     "word": "billion",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "十亿, 十亿个",
     "phonetic": "'biljәn",
     "example": "",
@@ -1359,7 +1359,7 @@ module.exports = {
   },
   "billions": {
     "word": "billions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "十亿（billion的复数形式）",
     "phonetic": "'bɪljənz",
     "example": "",
@@ -1367,7 +1367,7 @@ module.exports = {
   },
   "biochemical": {
     "word": "biochemical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "生物化学的",
     "phonetic": ".baiәu'kemikl",
     "example": "",
@@ -1384,7 +1384,7 @@ module.exports = {
   },
   "biologists": {
     "word": "biologists",
-    "pos": "",
+    "pos": "n.",
     "meaning": "生物学家( biologist的复数形式 )",
     "phonetic": "baɪˈɔlədʒɪsts",
     "example": "",
@@ -1392,7 +1392,7 @@ module.exports = {
   },
   "bleached": {
     "word": "bleached",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "漂白的, 晒白的, 颜色变浅的",
     "phonetic": "bli:tʃt",
     "example": "",
@@ -1400,7 +1400,7 @@ module.exports = {
   },
   "borders": {
     "word": "borders",
-    "pos": "",
+    "pos": "n.",
     "meaning": "边界；边缘地区（border的复数）",
     "phonetic": "'bɔ:dәz",
     "example": "",
@@ -1408,7 +1408,7 @@ module.exports = {
   },
   "both": {
     "word": "both",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "两者的",
     "phonetic": "bәuθ",
     "example": "",
@@ -1416,7 +1416,7 @@ module.exports = {
   },
   "boundaries": {
     "word": "boundaries",
-    "pos": "",
+    "pos": "n.",
     "meaning": "分界线( boundary的名词复数 ); 范围; 使球越过边界线的击球（得加分）; 疆界",
     "phonetic": "'baʊndri",
     "example": "",
@@ -1473,7 +1473,7 @@ module.exports = {
   },
   "brutal": {
     "word": "brutal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "残忍的, 野蛮的, 不讲理的",
     "phonetic": "'bru:tәl",
     "example": "",
@@ -1481,7 +1481,7 @@ module.exports = {
   },
   "budgets": {
     "word": "budgets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "预算（budget复数形式）",
     "phonetic": "",
     "example": "",
@@ -1497,7 +1497,7 @@ module.exports = {
   },
   "buildings": {
     "word": "buildings",
-    "pos": "",
+    "pos": "n.",
     "meaning": "建筑物（building的复数）",
     "phonetic": "",
     "example": "",
@@ -1513,7 +1513,7 @@ module.exports = {
   },
   "but": {
     "word": "but",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "除了",
     "phonetic": "bʌt",
     "example": "",
@@ -1521,7 +1521,7 @@ module.exports = {
   },
   "by": {
     "word": "by",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "被, 经, 由, 在...之旁",
     "phonetic": "bai",
     "example": "",
@@ -1529,7 +1529,7 @@ module.exports = {
   },
   "campaigns": {
     "word": "campaigns",
-    "pos": "",
+    "pos": "n.",
     "meaning": "运动( campaign的名词复数 ); 竞选运动; 战役; 季节性竞赛",
     "phonetic": "kæmˈpeinz",
     "example": "",
@@ -1554,7 +1554,7 @@ module.exports = {
   },
   "cancers": {
     "word": "cancers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "癌( cancer的复数形式 ); 迅速蔓延的恶劣的或危险的事物",
     "phonetic": "'kænsəz",
     "example": "",
@@ -1562,7 +1562,7 @@ module.exports = {
   },
   "capabilities": {
     "word": "capabilities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "能力( capability的名词复数 ); 可能; 容量; [复数]潜在能力",
     "phonetic": "ˌkeɪpəˈbɪlɪti:z",
     "example": "",
@@ -1570,7 +1570,7 @@ module.exports = {
   },
   "capable": {
     "word": "capable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有能力的, 能的, 能干的",
     "phonetic": "'keipәbl",
     "example": "",
@@ -1587,7 +1587,7 @@ module.exports = {
   },
   "captive": {
     "word": "captive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "俘虏, 迷恋者",
     "phonetic": "'kæptiv",
     "example": "",
@@ -1604,7 +1604,7 @@ module.exports = {
   },
   "cardiovascular": {
     "word": "cardiovascular",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "心血管的",
     "phonetic": "kɑ:diәu'væskjulә",
     "example": "",
@@ -1621,7 +1621,7 @@ module.exports = {
   },
   "carries": {
     "word": "carries",
-    "pos": "",
+    "pos": "v.",
     "meaning": "传递；携带；运载；怀孕（carry的第三人称单数形式）",
     "phonetic": "",
     "example": "",
@@ -1629,7 +1629,7 @@ module.exports = {
   },
   "categories": {
     "word": "categories",
-    "pos": "",
+    "pos": "n.",
     "meaning": "分类；类别（category的复数）",
     "phonetic": "",
     "example": "",
@@ -1645,7 +1645,7 @@ module.exports = {
   },
   "causes": {
     "word": "causes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "原因",
     "phonetic": "",
     "example": "",
@@ -1661,7 +1661,7 @@ module.exports = {
   },
   "cavernous": {
     "word": "cavernous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "似巨穴的",
     "phonetic": "'kævәnәs",
     "example": "",
@@ -1669,7 +1669,7 @@ module.exports = {
   },
   "centuries": {
     "word": "centuries",
-    "pos": "",
+    "pos": "n.",
     "meaning": "100年, 一世纪( century的名词复数 ); 100分; 千秋",
     "phonetic": "'sentʃərɪz",
     "example": "",
@@ -1685,7 +1685,7 @@ module.exports = {
   },
   "ceremonial": {
     "word": "ceremonial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "仪式",
     "phonetic": ".seri'mәunjәl",
     "example": "",
@@ -1693,7 +1693,7 @@ module.exports = {
   },
   "certain": {
     "word": "certain",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "确定的, 某一个的, 必然的",
     "phonetic": "'sә:tәn",
     "example": "",
@@ -1709,7 +1709,7 @@ module.exports = {
   },
   "chains": {
     "word": "chains",
-    "pos": "",
+    "pos": "n.",
     "meaning": "枷锁；联营企业；缝条；链条（chain的复数）",
     "phonetic": "",
     "example": "",
@@ -1725,7 +1725,7 @@ module.exports = {
   },
   "challenges": {
     "word": "challenges",
-    "pos": "",
+    "pos": "n.",
     "meaning": "挑战( challenge的名词复数 ); 要求; （警卫等）查问口令; 怀疑",
     "phonetic": "ˈtʃælindʒz",
     "example": "",
@@ -1733,7 +1733,7 @@ module.exports = {
   },
   "challenging": {
     "word": "challenging",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "挑战的, 引起争论的",
     "phonetic": "'tʃælindʒiŋ",
     "example": "",
@@ -1749,7 +1749,7 @@ module.exports = {
   },
   "championed": {
     "word": "championed",
-    "pos": "",
+    "pos": "v.",
     "meaning": "为…而斗争, 捍卫, 声援（champion的过去式与过去分词形式）",
     "phonetic": "",
     "example": "",
@@ -1774,7 +1774,7 @@ module.exports = {
   },
   "characterised": {
     "word": "characterised",
-    "pos": "",
+    "pos": "v.",
     "meaning": "刻划……的性格；表示……的特性 (characterise的变形)",
     "phonetic": "",
     "example": "",
@@ -1790,7 +1790,7 @@ module.exports = {
   },
   "chemical": {
     "word": "chemical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "化学药品",
     "phonetic": "'kemikl",
     "example": "",
@@ -1807,7 +1807,7 @@ module.exports = {
   },
   "circulates": {
     "word": "circulates",
-    "pos": "",
+    "pos": "v.",
     "meaning": "（使）循环( circulate的第三人称单数 ); （使）流通; （使）流传; 散布",
     "phonetic": "ˈsə:kjuleits",
     "example": "",
@@ -1823,7 +1823,7 @@ module.exports = {
   },
   "cities": {
     "word": "cities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "城市（city的复数）",
     "phonetic": "",
     "example": "",
@@ -1840,7 +1840,7 @@ module.exports = {
   },
   "citizens": {
     "word": "citizens",
-    "pos": "",
+    "pos": "n.",
     "meaning": "市民；公民（citizen的复数）",
     "phonetic": "",
     "example": "",
@@ -1856,7 +1856,7 @@ module.exports = {
   },
   "civic": {
     "word": "civic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "市的, 市民的, 公民的",
     "phonetic": "'sivik",
     "example": "",
@@ -1864,7 +1864,7 @@ module.exports = {
   },
   "civilisation's": {
     "word": "civilisations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（英）文明（等于civilization）",
     "phonetic": ",sɪvɪlaɪ'zeɪʃən",
     "example": "",
@@ -1896,7 +1896,7 @@ module.exports = {
   },
   "cleared": {
     "word": "cleared",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "使干净；清除（clear的过去分词）",
     "phonetic": "",
     "example": "",
@@ -1913,7 +1913,7 @@ module.exports = {
   },
   "climatic": {
     "word": "climatic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "气候的",
     "phonetic": "klai'mætik",
     "example": "",
@@ -1921,7 +1921,7 @@ module.exports = {
   },
   "closely": {
     "word": "closely",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "接近地",
     "phonetic": "'klәusli",
     "example": "",
@@ -1937,7 +1937,7 @@ module.exports = {
   },
   "coastal": {
     "word": "coastal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "海岸的, 沿海的, 沿岸的",
     "phonetic": "'kәustәl",
     "example": "",
@@ -1945,7 +1945,7 @@ module.exports = {
   },
   "codes": {
     "word": "codes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "编码, 代码；规范；准则（code的复数）",
     "phonetic": "",
     "example": "",
@@ -1953,7 +1953,7 @@ module.exports = {
   },
   "cognitive": {
     "word": "cognitive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "认知的, 认识的",
     "phonetic": "'kɒgnitiv",
     "example": "",
@@ -1961,7 +1961,7 @@ module.exports = {
   },
   "cohorts": {
     "word": "cohorts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "军团; （古罗马军队的）步兵大队( cohort的复数形式 ); 一群人; 同伙; 支持者",
     "phonetic": "'kəʊhɔ:ts",
     "example": "",
@@ -1969,7 +1969,7 @@ module.exports = {
   },
   "collaborative": {
     "word": "collaborative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "合作的, 协作的",
     "phonetic": "kә'læbәreitiv",
     "example": "",
@@ -2002,7 +2002,7 @@ module.exports = {
   },
   "collectively": {
     "word": "collectively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "集合, 聚合性, 共同, 集体主义, 集团, 集体",
     "phonetic": "",
     "example": "",
@@ -2010,7 +2010,7 @@ module.exports = {
   },
   "colonial": {
     "word": "colonial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "殖民的, 殖民地的",
     "phonetic": "kә'lәunjәl",
     "example": "",
@@ -2035,7 +2035,7 @@ module.exports = {
   },
   "commercialisation": {
     "word": "commercialisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "商业化",
     "phonetic": "kəˌmɜ:ʃəlaɪ'zeɪʃən",
     "example": "",
@@ -2043,7 +2043,7 @@ module.exports = {
   },
   "commitments": {
     "word": "commitments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "委托( commitment的复数形式 ); 任务; 承担的义务",
     "phonetic": "kə'mɪtmənts",
     "example": "",
@@ -2051,7 +2051,7 @@ module.exports = {
   },
   "commodities": {
     "word": "commodities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "商品( commodity的名词复数 ); 农产品; 有价值的物品; 有用的东西",
     "phonetic": "kəˈmɔditiz",
     "example": "",
@@ -2059,7 +2059,7 @@ module.exports = {
   },
   "commonly": {
     "word": "commonly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "一般, 普通, 通常",
     "phonetic": "'kɒmәnli",
     "example": "",
@@ -2067,7 +2067,7 @@ module.exports = {
   },
   "communal": {
     "word": "communal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "公有的, 公社的",
     "phonetic": "'kɒmjunәl",
     "example": "",
@@ -2075,7 +2075,7 @@ module.exports = {
   },
   "communicable": {
     "word": "communicable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "可传达的, 会传染的, 爱说话的",
     "phonetic": "kә'mju:nikәbl",
     "example": "",
@@ -2100,7 +2100,7 @@ module.exports = {
   },
   "communities": {
     "word": "communities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "社区；团体, 群体（community的复数形式）",
     "phonetic": "",
     "example": "",
@@ -2125,7 +2125,7 @@ module.exports = {
   },
   "compact": {
     "word": "compact",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "紧凑的, 紧密的, 简洁的",
     "phonetic": "kәm'pækt",
     "example": "",
@@ -2133,7 +2133,7 @@ module.exports = {
   },
   "companies": {
     "word": "companies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "公司, 企业；公司财产；伙伴（company的复数形式）",
     "phonetic": "",
     "example": "",
@@ -2141,7 +2141,7 @@ module.exports = {
   },
   "comparatively": {
     "word": "comparatively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "比较地, 相对地",
     "phonetic": "kәm'pærәtivli",
     "example": "",
@@ -2158,7 +2158,7 @@ module.exports = {
   },
   "competencies": {
     "word": "competencies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "能力（competency的复数）；胜任特征；职业能力素质",
     "phonetic": "",
     "example": "",
@@ -2166,7 +2166,7 @@ module.exports = {
   },
   "competing": {
     "word": "competing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "相互矛盾的；抵触的",
     "phonetic": "",
     "example": "",
@@ -2182,7 +2182,7 @@ module.exports = {
   },
   "complicated": {
     "word": "complicated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "复杂的",
     "phonetic": "'kɒmplikeitid",
     "example": "",
@@ -2190,7 +2190,7 @@ module.exports = {
   },
   "complicates": {
     "word": "complicates",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使复杂化( complicate的第三人称单数 )",
     "phonetic": "ˈkɔmplɪˌkeɪts",
     "example": "",
@@ -2198,7 +2198,7 @@ module.exports = {
   },
   "complicating": {
     "word": "complicating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "使复杂化( complicate的现在分词 )",
     "phonetic": "ˈkɔmplɪˌkeɪtɪŋ",
     "example": "",
@@ -2214,7 +2214,7 @@ module.exports = {
   },
   "compounds": {
     "word": "compounds",
-    "pos": "",
+    "pos": "n.",
     "meaning": "场地( compound的名词复数 ); 复合物; （筑有围墙的）院子; 复合词",
     "phonetic": "ˈkɔmpaundz",
     "example": "",
@@ -2222,7 +2222,7 @@ module.exports = {
   },
   "comprehensive": {
     "word": "comprehensive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "广泛的, 有理解力的, 综合的",
     "phonetic": ".kɒmpri'hensiv",
     "example": "",
@@ -2230,7 +2230,7 @@ module.exports = {
   },
   "comprehensively": {
     "word": "comprehensively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "包括地；包括一切地",
     "phonetic": "",
     "example": "",
@@ -2246,7 +2246,7 @@ module.exports = {
   },
   "compromising": {
     "word": "compromising",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "妥协的；让步的",
     "phonetic": "",
     "example": "",
@@ -2254,7 +2254,7 @@ module.exports = {
   },
   "conceived": {
     "word": "conceived",
-    "pos": "",
+    "pos": "v.",
     "meaning": "想出( conceive的过去式和过去分词 ); 构想; 设想; 怀孕",
     "phonetic": "kənˈsi:vd",
     "example": "",
@@ -2279,7 +2279,7 @@ module.exports = {
   },
   "concerns": {
     "word": "concerns",
-    "pos": "",
+    "pos": "n.",
     "meaning": "关注；关注点；关注者（concern的复数形式）",
     "phonetic": "",
     "example": "",
@@ -2296,7 +2296,7 @@ module.exports = {
   },
   "conditions": {
     "word": "conditions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "形势, 情况, 环境",
     "phonetic": "",
     "example": "",
@@ -2313,7 +2313,7 @@ module.exports = {
   },
   "conferring": {
     "word": "conferring",
-    "pos": "",
+    "pos": "v.",
     "meaning": "<拉>商谈, 商议( confer的现在分词 ); 授予, 赋予",
     "phonetic": "kənˈfə:ɪŋ",
     "example": "",
@@ -2321,7 +2321,7 @@ module.exports = {
   },
   "confined": {
     "word": "confined",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被限制的, 狭窄的, 在分娩中的, 坐月子的",
     "phonetic": "kәn'faind",
     "example": "",
@@ -2338,7 +2338,7 @@ module.exports = {
   },
   "confronting": {
     "word": "confronting",
-    "pos": "",
+    "pos": "v.",
     "meaning": "面对( confront的现在分词 ); 使面对; 使对质; 处理",
     "phonetic": "kənˈfrʌntɪŋ",
     "example": "",
@@ -2362,7 +2362,7 @@ module.exports = {
   },
   "conquered": {
     "word": "conquered",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "攻克( conquer的过去式和过去分词 ); 征服; 破除; 克服",
     "phonetic": "ˈkɔŋkəd",
     "example": "",
@@ -2370,7 +2370,7 @@ module.exports = {
   },
   "conscious": {
     "word": "conscious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有意识的, 知觉的, 觉察的",
     "phonetic": "'kɒnʃәs",
     "example": "",
@@ -2395,7 +2395,7 @@ module.exports = {
   },
   "consequences": {
     "word": "consequences",
-    "pos": "",
+    "pos": "n.",
     "meaning": "重要（性）( consequence的复数形式 ); 结果; 重要地位; 因果关系",
     "phonetic": "ˈkɔnsikwənsiz",
     "example": "",
@@ -2403,7 +2403,7 @@ module.exports = {
   },
   "consequently": {
     "word": "consequently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "所以",
     "phonetic": "'kɒnsikwәntli",
     "example": "",
@@ -2429,7 +2429,7 @@ module.exports = {
   },
   "considerably": {
     "word": "considerably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "非常地, 很, 颇",
     "phonetic": "kәn'sidәrәbli",
     "example": "",
@@ -2437,7 +2437,7 @@ module.exports = {
   },
   "considerations": {
     "word": "considerations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "考虑( consideration的复数形式 ); 报酬; 仔细考虑; （对他人的）考虑周到",
     "phonetic": "kənsɪdə'reɪʃnz",
     "example": "",
@@ -2445,7 +2445,7 @@ module.exports = {
   },
   "considered": {
     "word": "considered",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "考虑过的, 被尊重的",
     "phonetic": "kәn'sidәd",
     "example": "",
@@ -2453,7 +2453,7 @@ module.exports = {
   },
   "consistently": {
     "word": "consistently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "坚固, 坚实, 一致, 始终如一, 连贯",
     "phonetic": "",
     "example": "",
@@ -2461,7 +2461,7 @@ module.exports = {
   },
   "conspicuous": {
     "word": "conspicuous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "显著的, 显眼的, 出众的",
     "phonetic": "kәn'spikjuәs",
     "example": "",
@@ -2469,7 +2469,7 @@ module.exports = {
   },
   "constitutes": {
     "word": "constitutes",
-    "pos": "",
+    "pos": "v.",
     "meaning": "组成；构成（constitute的单三形式）",
     "phonetic": "",
     "example": "",
@@ -2477,7 +2477,7 @@ module.exports = {
   },
   "constitutive": {
     "word": "constitutive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有设立权的, 有制定权的, 组成的, 基本的",
     "phonetic": "'kɔnstitju:tiv",
     "example": "",
@@ -2485,7 +2485,7 @@ module.exports = {
   },
   "consulting": {
     "word": "consulting",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "商议的, 咨询的, 任专职顾问的",
     "phonetic": "kәn'sʌltiŋ",
     "example": "",
@@ -2519,7 +2519,7 @@ module.exports = {
   },
   "contaminating": {
     "word": "contaminating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "把…弄脏, 污染( contaminate的现在分词 ); 玷污, 毒害, 腐蚀（人的思想或品德）",
     "phonetic": "kənˈtæmineitɪŋ",
     "example": "",
@@ -2527,7 +2527,7 @@ module.exports = {
   },
   "contemporary": {
     "word": "contemporary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "同时代的人",
     "phonetic": "kәn'tempәrәri",
     "example": "",
@@ -2543,7 +2543,7 @@ module.exports = {
   },
   "content": {
     "word": "content",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "内容, 满足, 意义, 要旨",
     "phonetic": "kәn'tent",
     "example": "",
@@ -2551,7 +2551,7 @@ module.exports = {
   },
   "contentious": {
     "word": "contentious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "好争吵的, 爱争论的, 有异议的",
     "phonetic": "kәn'tenʃәs",
     "example": "",
@@ -2575,7 +2575,7 @@ module.exports = {
   },
   "continued": {
     "word": "continued",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "继续的, 延续的",
     "phonetic": "kәn'tinju:d",
     "example": "",
@@ -2591,7 +2591,7 @@ module.exports = {
   },
   "contractors": {
     "word": "contractors",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（建筑、监造中的）承包人( contractor的复数形式 )",
     "phonetic": "kɒnt'ræktəz",
     "example": "",
@@ -2599,7 +2599,7 @@ module.exports = {
   },
   "contracts": {
     "word": "contracts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "契约( contract的名词复数 ); 婚约; [法律]契约法; 行贿",
     "phonetic": "kənˈtrækts",
     "example": "",
@@ -2607,7 +2607,7 @@ module.exports = {
   },
   "contractual": {
     "word": "contractual",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "契约的",
     "phonetic": "kәn'træktʃuәl",
     "example": "",
@@ -2624,7 +2624,7 @@ module.exports = {
   },
   "contributed": {
     "word": "contributed",
-    "pos": "",
+    "pos": "art.",
     "meaning": "已缴入的；贡献的, 分配的",
     "phonetic": "",
     "example": "",
@@ -2632,7 +2632,7 @@ module.exports = {
   },
   "contributing": {
     "word": "contributing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "贡献的, 起一份作用的",
     "phonetic": "",
     "example": "",
@@ -2640,7 +2640,7 @@ module.exports = {
   },
   "contributions": {
     "word": "contributions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "贡献；出资",
     "phonetic": "",
     "example": "",
@@ -2664,7 +2664,7 @@ module.exports = {
   },
   "conventional": {
     "word": "conventional",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "传统的, 习惯的, 约定的",
     "phonetic": "kәn'venʃәnl",
     "example": "",
@@ -2680,7 +2680,7 @@ module.exports = {
   },
   "coordinated": {
     "word": "coordinated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "调节；调整；整理；使调和（coordinate的过去分词）",
     "phonetic": "",
     "example": "",
@@ -2705,7 +2705,7 @@ module.exports = {
   },
   "corporations": {
     "word": "corporations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "公司, 企业（corporation的复数形式）",
     "phonetic": "",
     "example": "",
@@ -2721,7 +2721,7 @@ module.exports = {
   },
   "correlated": {
     "word": "correlated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有相互关系的",
     "phonetic": "'kɒrәleitid",
     "example": "",
@@ -2729,7 +2729,7 @@ module.exports = {
   },
   "corresponding": {
     "word": "corresponding",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "相当的, 一致的, 通信的",
     "phonetic": ".kɒri'spɒndiŋ",
     "example": "",
@@ -2737,7 +2737,7 @@ module.exports = {
   },
   "corridors": {
     "word": "corridors",
-    "pos": "",
+    "pos": "n.",
     "meaning": "走廊, 通道( corridor的复数形式 ); 走廊（一国领土通过他国境内的狭长地带）",
     "phonetic": "'kɒrɪdɔ:z",
     "example": "",
@@ -2745,7 +2745,7 @@ module.exports = {
   },
   "cosmopolitan": {
     "word": "cosmopolitan",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "世界主义的, 世界性的, 全世界的, 遍生的, 不偏狭的, 卓有见识的",
     "phonetic": ",kɔzmә'pɔlitәn",
     "example": "",
@@ -2761,7 +2761,7 @@ module.exports = {
   },
   "costs": {
     "word": "costs",
-    "pos": "",
+    "pos": "n.",
     "meaning": "费用；诉讼费；损失（cost的复数）",
     "phonetic": "",
     "example": "",
@@ -2793,7 +2793,7 @@ module.exports = {
   },
   "courts": {
     "word": "courts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "法院；场地（court的复数）",
     "phonetic": "",
     "example": "",
@@ -2801,7 +2801,7 @@ module.exports = {
   },
   "created": {
     "word": "created",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "创造的",
     "phonetic": "kri: 'eitid",
     "example": "",
@@ -2817,7 +2817,7 @@ module.exports = {
   },
   "creative": {
     "word": "creative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有创造力的, 创作的, 产生的",
     "phonetic": "kri:'eitiv",
     "example": "",
@@ -2825,7 +2825,7 @@ module.exports = {
   },
   "credentials": {
     "word": "credentials",
-    "pos": "",
+    "pos": "n.",
     "meaning": "信任状, 国书, 文件, 身份证明, 证书",
     "phonetic": "",
     "example": "",
@@ -2841,7 +2841,7 @@ module.exports = {
   },
   "critical": {
     "word": "critical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "批评的, 决定性的, 危险的, 临界的",
     "phonetic": "'kritikәl",
     "example": "",
@@ -2849,7 +2849,7 @@ module.exports = {
   },
   "critically": {
     "word": "critically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "批评性地, 审慎地, 精密地",
     "phonetic": "'kritikәli",
     "example": "",
@@ -2857,7 +2857,7 @@ module.exports = {
   },
   "criticised": {
     "word": "criticised",
-    "pos": "",
+    "pos": "v.",
     "meaning": "批评；吹毛求疵；非难",
     "phonetic": "'krɪtɪ,saɪz",
     "example": "",
@@ -2865,7 +2865,7 @@ module.exports = {
   },
   "critics": {
     "word": "critics",
-    "pos": "",
+    "pos": "n.",
     "meaning": "评论家；批评者；吹毛求疵的人（critic的复数）",
     "phonetic": "",
     "example": "",
@@ -2889,7 +2889,7 @@ module.exports = {
   },
   "crossed": {
     "word": "crossed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "十字的, 划掉的, 交叉的",
     "phonetic": "krɒst",
     "example": "",
@@ -2897,7 +2897,7 @@ module.exports = {
   },
   "crucial": {
     "word": "crucial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "决定性的, 重要的, 严厉的",
     "phonetic": "'kru:ʃәl",
     "example": "",
@@ -2905,7 +2905,7 @@ module.exports = {
   },
   "culinary": {
     "word": "culinary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "厨房的, 烹调用的",
     "phonetic": "'kʌlinәri",
     "example": "",
@@ -2921,7 +2921,7 @@ module.exports = {
   },
   "cultivated": {
     "word": "cultivated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "耕耘的, 栽植的, 有教养的",
     "phonetic": "'kʌltiveitid",
     "example": "",
@@ -2937,7 +2937,7 @@ module.exports = {
   },
   "cultural": {
     "word": "cultural",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "文化的, 教养的, 修养的",
     "phonetic": "'kʌltʃәrәl",
     "example": "",
@@ -2945,7 +2945,7 @@ module.exports = {
   },
   "culturally": {
     "word": "culturally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "从文化角度, 文化意义上；在人文学方面",
     "phonetic": "",
     "example": "",
@@ -2962,7 +2962,7 @@ module.exports = {
   },
   "cumulative": {
     "word": "cumulative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "累积的",
     "phonetic": "'kju:mjulәtiv",
     "example": "",
@@ -2986,7 +2986,7 @@ module.exports = {
   },
   "current": {
     "word": "current",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "涌流, 趋势, 流",
     "phonetic": "'kʌrәnt",
     "example": "",
@@ -2994,7 +2994,7 @@ module.exports = {
   },
   "curricula": {
     "word": "curricula",
-    "pos": "",
+    "pos": "n.",
     "meaning": "课程",
     "phonetic": "kә'rikjulә",
     "example": "",
@@ -3020,7 +3020,7 @@ module.exports = {
   },
   "customs": {
     "word": "customs",
-    "pos": "",
+    "pos": "n.",
     "meaning": "海关, 关卡, 关税",
     "phonetic": "",
     "example": "",
@@ -3028,7 +3028,7 @@ module.exports = {
   },
   "cycles": {
     "word": "cycles",
-    "pos": "",
+    "pos": "n.",
     "meaning": "循环动作；圈数；周期（cycle的复数）",
     "phonetic": "",
     "example": "",
@@ -3036,7 +3036,7 @@ module.exports = {
   },
   "daily": {
     "word": "daily",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "每日的, 日常的",
     "phonetic": "'deili",
     "example": "",
@@ -3052,7 +3052,7 @@ module.exports = {
   },
   "dangerously": {
     "word": "dangerously",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "危险, 不安全",
     "phonetic": "",
     "example": "",
@@ -3085,7 +3085,7 @@ module.exports = {
   },
   "decades": {
     "word": "decades",
-    "pos": "",
+    "pos": "n.",
     "meaning": "十年, 十年间( decade的复数形式 )",
     "phonetic": "ˈdekeidz",
     "example": "",
@@ -3093,7 +3093,7 @@ module.exports = {
   },
   "decarbonisation": {
     "word": "decarbonisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "脱碳",
     "phonetic": "",
     "example": "",
@@ -3101,7 +3101,7 @@ module.exports = {
   },
   "decisive": {
     "word": "decisive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "决定性的, 坚定的, 果断的",
     "phonetic": "di'saisiv",
     "example": "",
@@ -3118,7 +3118,7 @@ module.exports = {
   },
   "deemed": {
     "word": "deemed",
-    "pos": "",
+    "pos": "v.",
     "meaning": "认为, 相信( deem的过去式和过去分词 ); 想",
     "phonetic": "di:md",
     "example": "",
@@ -3126,7 +3126,7 @@ module.exports = {
   },
   "defensive": {
     "word": "defensive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "防卫的, 防备用的, 自卫的",
     "phonetic": "di'fensiv",
     "example": "",
@@ -3134,7 +3134,7 @@ module.exports = {
   },
   "deficiencies": {
     "word": "deficiencies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "缺乏( deficiency的名词复数 ); 不足; 缺点; 缺陷",
     "phonetic": "diˈfiʃənsiz",
     "example": "",
@@ -3142,7 +3142,7 @@ module.exports = {
   },
   "defined": {
     "word": "defined",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "清晰的, 轮廓分明的；有定义的, 确定的",
     "phonetic": "di'faind",
     "example": "",
@@ -3150,7 +3150,7 @@ module.exports = {
   },
   "defining": {
     "word": "defining",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "定义的",
     "phonetic": "",
     "example": "",
@@ -3158,7 +3158,7 @@ module.exports = {
   },
   "definitively": {
     "word": "definitively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "决定性地, 最后地",
     "phonetic": "dɪ'fɪnətɪvlɪ",
     "example": "",
@@ -3183,7 +3183,7 @@ module.exports = {
   },
   "degraded": {
     "word": "degraded",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被降级的, 落泊的, 退化的",
     "phonetic": "di'greidid",
     "example": "",
@@ -3199,7 +3199,7 @@ module.exports = {
   },
   "delegated": {
     "word": "delegated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "授与的",
     "phonetic": "",
     "example": "",
@@ -3207,7 +3207,7 @@ module.exports = {
   },
   "deliberately": {
     "word": "deliberately",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "故意地",
     "phonetic": "di'libәrәtli",
     "example": "",
@@ -3223,7 +3223,7 @@ module.exports = {
   },
   "delicate": {
     "word": "delicate",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "细致优雅的, 微妙的, 美味的",
     "phonetic": "'delikәt",
     "example": "",
@@ -3231,7 +3231,7 @@ module.exports = {
   },
   "delivered": {
     "word": "delivered",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "业已交货",
     "phonetic": "di'livәd",
     "example": "",
@@ -3255,7 +3255,7 @@ module.exports = {
   },
   "demanding": {
     "word": "demanding",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "要求高的, 费力的",
     "phonetic": "di'mɑ:ndiŋ",
     "example": "",
@@ -3263,7 +3263,7 @@ module.exports = {
   },
   "demands": {
     "word": "demands",
-    "pos": "",
+    "pos": "v.",
     "meaning": "要求( demand的第三人称单数 ); 需要; 想要知道; 查问",
     "phonetic": "diˈmɑ:ndz",
     "example": "",
@@ -3288,7 +3288,7 @@ module.exports = {
   },
   "democratise": {
     "word": "democratise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "<主英> = democratize",
     "phonetic": "di'mɔkrәtaiz",
     "example": "",
@@ -3296,7 +3296,7 @@ module.exports = {
   },
   "demographic": {
     "word": "demographic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "人口统计的",
     "phonetic": ".demә'græfik",
     "example": "",
@@ -3304,7 +3304,7 @@ module.exports = {
   },
   "demonstrable": {
     "word": "demonstrable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "可论证的",
     "phonetic": "'demәnstrәbl",
     "example": "",
@@ -3321,7 +3321,7 @@ module.exports = {
   },
   "demonstrated": {
     "word": "demonstrated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "举行示威游行（或集会）( demonstrate的过去式和过去分词 ); 示范。展示; 显示; 论证",
     "phonetic": "ˈdemənstreitid",
     "example": "",
@@ -3345,7 +3345,7 @@ module.exports = {
   },
   "depends": {
     "word": "depends",
-    "pos": "",
+    "pos": "v.",
     "meaning": "依赖；信赖（depend的三单形式）",
     "phonetic": "",
     "example": "",
@@ -3353,7 +3353,7 @@ module.exports = {
   },
   "depleting": {
     "word": "depleting",
-    "pos": "",
+    "pos": "v.",
     "meaning": "<正>使大大的减少, 使空虚( deplete的现在分词 ); 耗尽, 使枯竭",
     "phonetic": "diˈpli:tɪŋ",
     "example": "",
@@ -3385,7 +3385,7 @@ module.exports = {
   },
   "designated": {
     "word": "designated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "特指的；指定的",
     "phonetic": "'deziɡ.neitid",
     "example": "",
@@ -3401,7 +3401,7 @@ module.exports = {
   },
   "designed": {
     "word": "designed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "故意的, 有计划的, 特意的",
     "phonetic": "di'zaind",
     "example": "",
@@ -3418,7 +3418,7 @@ module.exports = {
   },
   "destroyed": {
     "word": "destroyed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被毁, 毁坏；遭破坏的",
     "phonetic": "",
     "example": "",
@@ -3434,7 +3434,7 @@ module.exports = {
   },
   "destructive": {
     "word": "destructive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "毁灭性的, 破坏的, 有害的",
     "phonetic": "di'strʌktiv",
     "example": "",
@@ -3450,7 +3450,7 @@ module.exports = {
   },
   "devastating": {
     "word": "devastating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "毁灭性的, (非正式)很好的, 引人注目的",
     "phonetic": "'devәsteitiŋ",
     "example": "",
@@ -3458,7 +3458,7 @@ module.exports = {
   },
   "developed": {
     "word": "developed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "发达的（国家或地区）；成熟的",
     "phonetic": "di'velәpid",
     "example": "",
@@ -3466,7 +3466,7 @@ module.exports = {
   },
   "developing": {
     "word": "developing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "发展中的",
     "phonetic": "di'velәpiŋ",
     "example": "",
@@ -3482,7 +3482,7 @@ module.exports = {
   },
   "developments": {
     "word": "developments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "建设；发展；进展（development的复数）",
     "phonetic": "",
     "example": "",
@@ -3533,7 +3533,7 @@ module.exports = {
   },
   "diets": {
     "word": "diets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "日常饮食( diet的名词复数 ); 规定饮食",
     "phonetic": "ˈdaiəts",
     "example": "",
@@ -3541,7 +3541,7 @@ module.exports = {
   },
   "differences": {
     "word": "differences",
-    "pos": "",
+    "pos": "n.",
     "meaning": "偏差, 差异（difference复数形式）",
     "phonetic": "",
     "example": "",
@@ -3549,7 +3549,7 @@ module.exports = {
   },
   "difficult": {
     "word": "difficult",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "困难的",
     "phonetic": "'difikәlt",
     "example": "",
@@ -3566,7 +3566,7 @@ module.exports = {
   },
   "digitally": {
     "word": "digitally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "数位",
     "phonetic": "",
     "example": "",
@@ -3574,7 +3574,7 @@ module.exports = {
   },
   "dilute": {
     "word": "dilute",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "冲淡, 稀释",
     "phonetic": "dai'lju:t",
     "example": "",
@@ -3590,7 +3590,7 @@ module.exports = {
   },
   "diminished": {
     "word": "diminished",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "减退了的；减弱的",
     "phonetic": "di'miniʃt",
     "example": "",
@@ -3598,7 +3598,7 @@ module.exports = {
   },
   "diminishing": {
     "word": "diminishing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "减少；衰减；递减；削弱…的权势（diminish的现在分词）",
     "phonetic": "di'miniʃiŋ",
     "example": "",
@@ -3614,7 +3614,7 @@ module.exports = {
   },
   "disappointingly": {
     "word": "disappointingly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "令人失望地",
     "phonetic": ",disə'pɔintiŋli",
     "example": "",
@@ -3639,7 +3639,7 @@ module.exports = {
   },
   "discretionary": {
     "word": "discretionary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "选择的",
     "phonetic": "dis'kreʃәnәri",
     "example": "",
@@ -3672,7 +3672,7 @@ module.exports = {
   },
   "disorders": {
     "word": "disorders",
-    "pos": "",
+    "pos": "n.",
     "meaning": "混乱( disorder的名词复数 ); 凌乱; 骚乱; （身心、机能）失调",
     "phonetic": "disˈɔ:dəz",
     "example": "",
@@ -3680,7 +3680,7 @@ module.exports = {
   },
   "disparities": {
     "word": "disparities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "不同( disparity的名词复数 ); 不等; 不一致; 悬殊",
     "phonetic": "dɪˈspærɪti:z",
     "example": "",
@@ -3688,7 +3688,7 @@ module.exports = {
   },
   "dispersed": {
     "word": "dispersed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被驱散的, 被分散的, 散布的",
     "phonetic": "dis'pә:st",
     "example": "",
@@ -3704,7 +3704,7 @@ module.exports = {
   },
   "disproportionate": {
     "word": "disproportionate",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不成比例的",
     "phonetic": ".disprә'pɒ:ʃәnit",
     "example": "",
@@ -3712,7 +3712,7 @@ module.exports = {
   },
   "disproportionately": {
     "word": "disproportionately",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "不匀称, 不相称",
     "phonetic": "",
     "example": "",
@@ -3736,7 +3736,7 @@ module.exports = {
   },
   "disruptions": {
     "word": "disruptions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "中断( disruption的复数形式 ); 分裂; 瓦解; 破坏",
     "phonetic": "disˈrʌpʃənz",
     "example": "",
@@ -3744,7 +3744,7 @@ module.exports = {
   },
   "disruptive": {
     "word": "disruptive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "分裂的, 破坏(性)的",
     "phonetic": "dis'rʌptiv",
     "example": "",
@@ -3760,7 +3760,7 @@ module.exports = {
   },
   "disseminated": {
     "word": "disseminated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "散布, 传播( disseminate的过去式和过去分词 )",
     "phonetic": "dɪ'semɪneɪtɪd",
     "example": "",
@@ -3776,7 +3776,7 @@ module.exports = {
   },
   "distances": {
     "word": "distances",
-    "pos": "",
+    "pos": "n.",
     "meaning": "距离( distance的名词复数 ); 远处; （时间或空间的）相距; 疏远",
     "phonetic": "ˈdistənsiz",
     "example": "",
@@ -3792,7 +3792,7 @@ module.exports = {
   },
   "distinctive": {
     "word": "distinctive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有特色的, 出众的",
     "phonetic": "di'stiŋktiv",
     "example": "",
@@ -3808,7 +3808,7 @@ module.exports = {
   },
   "distributed": {
     "word": "distributed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "分布式的",
     "phonetic": "di'stribju:tid",
     "example": "",
@@ -3865,7 +3865,7 @@ module.exports = {
   },
   "documented": {
     "word": "documented",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "备有证明文件的",
     "phonetic": "",
     "example": "",
@@ -3873,7 +3873,7 @@ module.exports = {
   },
   "does": {
     "word": "does",
-    "pos": "",
+    "pos": "v.",
     "meaning": "做；工作；有用（do的第三人称单数形式）",
     "phonetic": "dʌz; dәz",
     "example": "",
@@ -3881,7 +3881,7 @@ module.exports = {
   },
   "domains": {
     "word": "domains",
-    "pos": "",
+    "pos": "n.",
     "meaning": "域, 域名；领域；网域（domain的复数形式）",
     "phonetic": "",
     "example": "",
@@ -3898,7 +3898,7 @@ module.exports = {
   },
   "dominant": {
     "word": "dominant",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "占优势的, 支配的",
     "phonetic": "'dɒminәnt",
     "example": "",
@@ -3906,7 +3906,7 @@ module.exports = {
   },
   "drained": {
     "word": "drained",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "（使）流干, （使）逐渐流走( drain的过去式和过去分词 ); 喝光, 喝干; 使（精力、金钱等）耗尽",
     "phonetic": "dreɪnd",
     "example": "",
@@ -3914,7 +3914,7 @@ module.exports = {
   },
   "dramatically": {
     "word": "dramatically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "戏剧地, 引人注目地, 突然地",
     "phonetic": "drә'mætikli",
     "example": "",
@@ -3930,7 +3930,7 @@ module.exports = {
   },
   "drawn": {
     "word": "drawn",
-    "pos": "",
+    "pos": "art.",
     "meaning": "拔出的",
     "phonetic": "drɒ:n",
     "example": "",
@@ -3938,7 +3938,7 @@ module.exports = {
   },
   "driven": {
     "word": "driven",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有紧迫感的",
     "phonetic": "'drivn",
     "example": "",
@@ -3954,7 +3954,7 @@ module.exports = {
   },
   "driving": {
     "word": "driving",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "赶, 操纵, 驾驶",
     "phonetic": "'draiviŋ",
     "example": "",
@@ -3971,7 +3971,7 @@ module.exports = {
   },
   "droughts": {
     "word": "droughts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "干旱（时期）( drought的复数形式 )",
     "phonetic": "d'raʊts",
     "example": "",
@@ -3979,7 +3979,7 @@ module.exports = {
   },
   "during": {
     "word": "during",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...的时候",
     "phonetic": "'djuәriŋ",
     "example": "",
@@ -3987,7 +3987,7 @@ module.exports = {
   },
   "dynamic": {
     "word": "dynamic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "动态的, 有活力的, 有力的, 动力的, 不断变化的",
     "phonetic": "dai'næmik",
     "example": "",
@@ -3995,7 +3995,7 @@ module.exports = {
   },
   "each": {
     "word": "each",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "每个, 每一",
     "phonetic": "i:tʃ",
     "example": "",
@@ -4003,7 +4003,7 @@ module.exports = {
   },
   "earlier": {
     "word": "earlier",
-    "pos": "",
+    "pos": "art.",
     "meaning": "早的；初期的",
     "phonetic": "",
     "example": "",
@@ -4011,7 +4011,7 @@ module.exports = {
   },
   "early": {
     "word": "early",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "早的, 早熟的",
     "phonetic": "'ә:li",
     "example": "",
@@ -4043,7 +4043,7 @@ module.exports = {
   },
   "ecological": {
     "word": "ecological",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "生态学的, 主张生态保护的",
     "phonetic": ".i:kә'lɒdʒikәl",
     "example": "",
@@ -4051,7 +4051,7 @@ module.exports = {
   },
   "economic": {
     "word": "economic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "经济上的, 实用的, 节省的",
     "phonetic": ".i:kә'nɒmik",
     "example": "",
@@ -4059,7 +4059,7 @@ module.exports = {
   },
   "economies": {
     "word": "economies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "节约( economy的名词复数 ); 经济; 经济情况; 经济结构",
     "phonetic": "iˈkɔnəmiz",
     "example": "",
@@ -4067,7 +4067,7 @@ module.exports = {
   },
   "economists": {
     "word": "economists",
-    "pos": "",
+    "pos": "n.",
     "meaning": "经济学家, 经济专家( economist的复数形式 )",
     "phonetic": "ɪ'kɒnəmɪsts",
     "example": "",
@@ -4092,7 +4092,7 @@ module.exports = {
   },
   "ecosystems": {
     "word": "ecosystems",
-    "pos": "",
+    "pos": "n.",
     "meaning": "<生>生态系统( ecosystem的复数形式 )",
     "phonetic": "ˈekəʊˌsɪstəmz",
     "example": "",
@@ -4108,7 +4108,7 @@ module.exports = {
   },
   "edible": {
     "word": "edible",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "食品, 食物",
     "phonetic": "'edibl",
     "example": "",
@@ -4133,7 +4133,7 @@ module.exports = {
   },
   "educational": {
     "word": "educational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "教育的, 教育性的",
     "phonetic": ".edju'keiʃәnl",
     "example": "",
@@ -4141,7 +4141,7 @@ module.exports = {
   },
   "educators": {
     "word": "educators",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（尤指作为一种职业的）教育工作者, 教员, 教师( educator的复数形式 )",
     "phonetic": "'edʒʊkeɪtəz",
     "example": "",
@@ -4157,7 +4157,7 @@ module.exports = {
   },
   "effective": {
     "word": "effective",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有效的, 有力的, 实际的",
     "phonetic": "i'fektiv",
     "example": "",
@@ -4165,7 +4165,7 @@ module.exports = {
   },
   "effectively": {
     "word": "effectively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "有效地, 有力地, 实际上",
     "phonetic": "i'fektivli",
     "example": "",
@@ -4190,7 +4190,7 @@ module.exports = {
   },
   "efforts": {
     "word": "efforts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "努力；转向力（effort的复数）",
     "phonetic": "",
     "example": "",
@@ -4198,7 +4198,7 @@ module.exports = {
   },
   "eight": {
     "word": "eight",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "八, 八个",
     "phonetic": "eit",
     "example": "",
@@ -4206,7 +4206,7 @@ module.exports = {
   },
   "electronically": {
     "word": "electronically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "电子地",
     "phonetic": "",
     "example": "",
@@ -4214,7 +4214,7 @@ module.exports = {
   },
   "elevated": {
     "word": "elevated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "提高的",
     "phonetic": "'eliveitid",
     "example": "",
@@ -4222,7 +4222,7 @@ module.exports = {
   },
   "eliminated": {
     "word": "eliminated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "排除( eliminate的过去式和过去分词 ); 消除; 除掉; <口>干掉",
     "phonetic": "iˈlimineitid",
     "example": "",
@@ -4246,7 +4246,7 @@ module.exports = {
   },
   "emergent": {
     "word": "emergent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "紧急的, 浮现的, 出现的, 自然发生的",
     "phonetic": "i'mә:dʒәnt",
     "example": "",
@@ -4254,7 +4254,7 @@ module.exports = {
   },
   "emerging": {
     "word": "emerging",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "[法] 出现的, 发生的, 形成的",
     "phonetic": "",
     "example": "",
@@ -4271,7 +4271,7 @@ module.exports = {
   },
   "emissions": {
     "word": "emissions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "排放物( emission的复数形式 ); 散发物（尤指气体）",
     "phonetic": "ɪˈmɪʃənz",
     "example": "",
@@ -4279,7 +4279,7 @@ module.exports = {
   },
   "emotionally": {
     "word": "emotionally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "在情绪上",
     "phonetic": "i'mәuʃәnәli",
     "example": "",
@@ -4295,7 +4295,7 @@ module.exports = {
   },
   "emphasise": {
     "word": "emphasise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "强调, 重读, 加强...的语气, 着重",
     "phonetic": "",
     "example": "",
@@ -4303,7 +4303,7 @@ module.exports = {
   },
   "empirical": {
     "word": "empirical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "完全跟据经验的, 经验主义的",
     "phonetic": "em'pirikәl",
     "example": "",
@@ -4336,7 +4336,7 @@ module.exports = {
   },
   "employees": {
     "word": "employees",
-    "pos": "",
+    "pos": "n.",
     "meaning": "员工；雇员；从业人员（emploee的复数）",
     "phonetic": "",
     "example": "",
@@ -4352,7 +4352,7 @@ module.exports = {
   },
   "employers": {
     "word": "employers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "雇主( employer的复数形式 )",
     "phonetic": "ɪmp'lɔɪəz",
     "example": "",
@@ -4376,7 +4376,7 @@ module.exports = {
   },
   "enables": {
     "word": "enables",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使能够, 提供做…的权利[措施]( enable的第三人称单数 ); 使可能",
     "phonetic": "iˈneiblz",
     "example": "",
@@ -4392,7 +4392,7 @@ module.exports = {
   },
   "encompasses": {
     "word": "encompasses",
-    "pos": "",
+    "pos": "v.",
     "meaning": "围绕( encompass的第三人称单数 ); 包围; 包含; 包括",
     "phonetic": "enˈkʌmpəsiz",
     "example": "",
@@ -4400,7 +4400,7 @@ module.exports = {
   },
   "encompassing": {
     "word": "encompassing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "围绕( encompass的现在分词 ); 包围; 包含; 包括",
     "phonetic": "enˈkʌmpəsɪŋ",
     "example": "",
@@ -4408,7 +4408,7 @@ module.exports = {
   },
   "encounters": {
     "word": "encounters",
-    "pos": "",
+    "pos": "n.",
     "meaning": "遭遇战( encounter的名词复数 ); [天文学]（向着某一天体的）接近; 突然遇到",
     "phonetic": "inˈkauntəz",
     "example": "",
@@ -4424,7 +4424,7 @@ module.exports = {
   },
   "encroaching": {
     "word": "encroaching",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "渐渐渗入的",
     "phonetic": "ɪn'krəʊtʃɪŋ",
     "example": "",
@@ -4441,7 +4441,7 @@ module.exports = {
   },
   "endemic": {
     "word": "endemic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "地方病",
     "phonetic": "en'demik",
     "example": "",
@@ -4449,7 +4449,7 @@ module.exports = {
   },
   "endowed": {
     "word": "endowed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "捐钱( endow的过去式和过去分词 ); 捐赠; 资助; 使（某人）天生具有（好资质、能力等）",
     "phonetic": "ɪn'daʊ",
     "example": "",
@@ -4457,7 +4457,7 @@ module.exports = {
   },
   "endured": {
     "word": "endured",
-    "pos": "",
+    "pos": "art.",
     "meaning": "吃苦耐劳的",
     "phonetic": "inˈdjuəd",
     "example": "",
@@ -4498,7 +4498,7 @@ module.exports = {
   },
   "engaging": {
     "word": "engaging",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "动人的, 迷人的, 有魅力的",
     "phonetic": "in'geidʒiŋ",
     "example": "",
@@ -4506,7 +4506,7 @@ module.exports = {
   },
   "engines": {
     "word": "engines",
-    "pos": "",
+    "pos": "n.",
     "meaning": "火车头；发动机, 引擎（engine的复数形式）",
     "phonetic": "",
     "example": "",
@@ -4514,7 +4514,7 @@ module.exports = {
   },
   "english": {
     "word": "English",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "英语",
     "phonetic": "'iŋgliʃ",
     "example": "",
@@ -4530,7 +4530,7 @@ module.exports = {
   },
   "enhanced": {
     "word": "enhanced",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "增大的；加强的",
     "phonetic": "in'hɑ:nst. -'hænst",
     "example": "",
@@ -4538,7 +4538,7 @@ module.exports = {
   },
   "enrol": {
     "word": "enrol",
-    "pos": "",
+    "pos": "v.",
     "meaning": "登记, 使加入",
     "phonetic": "in'rәul",
     "example": "",
@@ -4563,7 +4563,7 @@ module.exports = {
   },
   "ensuring": {
     "word": "ensuring",
-    "pos": "",
+    "pos": "v.",
     "meaning": "确保( ensure的现在分词 ); 担保获得[避免]; 使（某人）获得; 使安全",
     "phonetic": "inˈʃuərɪŋ",
     "example": "",
@@ -4580,7 +4580,7 @@ module.exports = {
   },
   "enterprises": {
     "word": "enterprises",
-    "pos": "",
+    "pos": "n.",
     "meaning": "企业（enterprise的复数）",
     "phonetic": "",
     "example": "",
@@ -4588,7 +4588,7 @@ module.exports = {
   },
   "entitled": {
     "word": "entitled",
-    "pos": "",
+    "pos": "art.",
     "meaning": "有资格的；给与名称的",
     "phonetic": "in'taitld",
     "example": "",
@@ -4612,7 +4612,7 @@ module.exports = {
   },
   "environmental": {
     "word": "environmental",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "周围的, 环境的",
     "phonetic": "in.vaiәrәn'mentәl",
     "example": "",
@@ -4620,7 +4620,7 @@ module.exports = {
   },
   "environmentally": {
     "word": "environmentally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "有关环境方面",
     "phonetic": "",
     "example": "",
@@ -4628,7 +4628,7 @@ module.exports = {
   },
   "environments": {
     "word": "environments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "环境；生态环境；[计]（计算机系统运行的）环境（environment的复数）",
     "phonetic": "",
     "example": "",
@@ -4636,7 +4636,7 @@ module.exports = {
   },
   "envisaged": {
     "word": "envisaged",
-    "pos": "",
+    "pos": "v.",
     "meaning": "想像, 设想( envisage的过去式和过去分词 )",
     "phonetic": "inˈvizidʒd",
     "example": "",
@@ -4653,7 +4653,7 @@ module.exports = {
   },
   "equally": {
     "word": "equally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "相等地, 同样地, 平等地",
     "phonetic": "'i:kwәli",
     "example": "",
@@ -4677,7 +4677,7 @@ module.exports = {
   },
   "equitable": {
     "word": "equitable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "公平的, 公正的",
     "phonetic": "'ekwitәbl",
     "example": "",
@@ -4685,7 +4685,7 @@ module.exports = {
   },
   "equitably": {
     "word": "equitably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "公正地, 依据衡平法",
     "phonetic": "'ekwitәbli",
     "example": "",
@@ -4693,7 +4693,7 @@ module.exports = {
   },
   "eradicated": {
     "word": "eradicated",
-    "pos": "",
+    "pos": "art.",
     "meaning": "画着根的",
     "phonetic": "i'rædikeitid",
     "example": "",
@@ -4718,7 +4718,7 @@ module.exports = {
   },
   "escalated": {
     "word": "escalated",
-    "pos": "",
+    "pos": "v.",
     "meaning": "（使）逐步升级( escalate的过去式和过去分词 ); （使）逐步扩大; （使）更高; （使）更大",
     "phonetic": "ˈeskəleitid",
     "example": "",
@@ -4726,7 +4726,7 @@ module.exports = {
   },
   "escalating": {
     "word": "escalating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "（使）逐步升级( escalate的现在分词 ); （使）逐步扩大; （使）更高; （使）更大",
     "phonetic": "ˈeskəleitɪŋ",
     "example": "",
@@ -4734,7 +4734,7 @@ module.exports = {
   },
   "especially": {
     "word": "especially",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "尤其, 特别, 格外",
     "phonetic": "i'speʃәli",
     "example": "",
@@ -4742,7 +4742,7 @@ module.exports = {
   },
   "essential": {
     "word": "essential",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "要素, 要点, 本质",
     "phonetic": "i'senʃәl",
     "example": "",
@@ -4759,7 +4759,7 @@ module.exports = {
   },
   "established": {
     "word": "established",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "(被)建立的, 固定的, 既定的, 确定的, 确认的, 确立的, (被)制定的",
     "phonetic": "is'tæbliʃt",
     "example": "",
@@ -4784,7 +4784,7 @@ module.exports = {
   },
   "ethical": {
     "word": "ethical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "伦理的, 民族的, 民族特有的",
     "phonetic": "'eθikәl",
     "example": "",
@@ -4809,7 +4809,7 @@ module.exports = {
   },
   "even": {
     "word": "even",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "平坦的, 相等的, 连贯的, 均等的, 公平的, 偶数的, 平均的, 平衡的, 恰好的",
     "phonetic": "'i:vәn",
     "example": "",
@@ -4817,7 +4817,7 @@ module.exports = {
   },
   "events": {
     "word": "events",
-    "pos": "",
+    "pos": "n.",
     "meaning": "事件；[体育]项目（event的复数）",
     "phonetic": "",
     "example": "",
@@ -4834,7 +4834,7 @@ module.exports = {
   },
   "evolved": {
     "word": "evolved",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "进化了的",
     "phonetic": "",
     "example": "",
@@ -4842,7 +4842,7 @@ module.exports = {
   },
   "evolving": {
     "word": "evolving",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "展开的；进化的",
     "phonetic": "",
     "example": "",
@@ -4858,7 +4858,7 @@ module.exports = {
   },
   "exacerbates": {
     "word": "exacerbates",
-    "pos": "",
+    "pos": "n.",
     "meaning": "使恶化, 使加重( exacerbate的名词复数 )",
     "phonetic": "ɪgˈzæsəˌbeɪts",
     "example": "",
@@ -4866,7 +4866,7 @@ module.exports = {
   },
   "examinations": {
     "word": "examinations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "检查( examination的复数形式 ); 考试; 考查; 试题",
     "phonetic": "iɡˌzæmiˈneiʃənz",
     "example": "",
@@ -4882,7 +4882,7 @@ module.exports = {
   },
   "excessive": {
     "word": "excessive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "过度的, 过多的, 极端的",
     "phonetic": "ik'sesiv",
     "example": "",
@@ -4890,7 +4890,7 @@ module.exports = {
   },
   "exclusive": {
     "word": "exclusive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "排外的, 独占的, 唯一的",
     "phonetic": "ik'sklu:siv",
     "example": "",
@@ -4898,7 +4898,7 @@ module.exports = {
   },
   "exclusively": {
     "word": "exclusively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "排他地, 仅仅, 专门, 只, 仅, 唯一地, 专有地",
     "phonetic": "ik'sklu:sivli",
     "example": "",
@@ -4914,7 +4914,7 @@ module.exports = {
   },
   "exerts": {
     "word": "exerts",
-    "pos": "",
+    "pos": "v.",
     "meaning": "用（力）( exert的第三人称单数 ); 尽（力）; 运用; 发挥",
     "phonetic": "iɡˈzə:ts",
     "example": "",
@@ -4922,7 +4922,7 @@ module.exports = {
   },
   "exhibits": {
     "word": "exhibits",
-    "pos": "",
+    "pos": "n.",
     "meaning": "陈列品；展览（exhibit的复数）",
     "phonetic": "",
     "example": "",
@@ -4930,7 +4930,7 @@ module.exports = {
   },
   "existing": {
     "word": "existing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "存在的, 目前的, 现存的, 现有的",
     "phonetic": "i^'zistiŋ",
     "example": "",
@@ -4954,7 +4954,7 @@ module.exports = {
   },
   "expansive": {
     "word": "expansive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "扩张性的, 使扩大的, 广阔的",
     "phonetic": "ik'spænsiv",
     "example": "",
@@ -4978,7 +4978,7 @@ module.exports = {
   },
   "expensive": {
     "word": "expensive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "贵的, 奢华的, 费用浩大的, 乱化钱的",
     "phonetic": "ik'spensiv",
     "example": "",
@@ -4994,7 +4994,7 @@ module.exports = {
   },
   "experiencing": {
     "word": "experiencing",
-    "pos": "",
+    "pos": "n.",
     "meaning": "体验",
     "phonetic": "",
     "example": "",
@@ -5011,7 +5011,7 @@ module.exports = {
   },
   "experts": {
     "word": "experts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "专家；人才（expert的复数形式）",
     "phonetic": "",
     "example": "",
@@ -5043,7 +5043,7 @@ module.exports = {
   },
   "exposed": {
     "word": "exposed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "暴露的, 无掩蔽的, 易受攻击的",
     "phonetic": "ik'spәuzd",
     "example": "",
@@ -5051,7 +5051,7 @@ module.exports = {
   },
   "expressed": {
     "word": "expressed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "表达( express的过去式和过去分词 ); （用符号等）表示; 榨; [express oneself]（如在说话、写作或绘画中）表达（自己）的意见",
     "phonetic": "iksˈprest",
     "example": "",
@@ -5075,7 +5075,7 @@ module.exports = {
   },
   "extended": {
     "word": "extended",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "延续的, 伸出的, 竭尽全力的, 广大的, 扩大范围的",
     "phonetic": "ik'stendid",
     "example": "",
@@ -5107,7 +5107,7 @@ module.exports = {
   },
   "extraordinary": {
     "word": "extraordinary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "非常的, 特别的, 非凡的",
     "phonetic": "ik'strɒ:dәnәri",
     "example": "",
@@ -5115,7 +5115,7 @@ module.exports = {
   },
   "extreme": {
     "word": "extreme",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "极端, 末端",
     "phonetic": "ik'stri:m",
     "example": "",
@@ -5123,7 +5123,7 @@ module.exports = {
   },
   "extremist": {
     "word": "extremist",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "[经] 偏激份子",
     "phonetic": "iks'tri:mist",
     "example": "",
@@ -5131,7 +5131,7 @@ module.exports = {
   },
   "fabricated": {
     "word": "fabricated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "焊接的；组合的, 装配式的",
     "phonetic": "",
     "example": "",
@@ -5147,7 +5147,7 @@ module.exports = {
   },
   "faced": {
     "word": "faced",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有某种面孔或表情的",
     "phonetic": "feist",
     "example": "",
@@ -5163,7 +5163,7 @@ module.exports = {
   },
   "facilities": {
     "word": "facilities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "工具, 设施, 设备",
     "phonetic": "",
     "example": "",
@@ -5196,7 +5196,7 @@ module.exports = {
   },
   "factors": {
     "word": "factors",
-    "pos": "",
+    "pos": "n.",
     "meaning": "因素（factor的复数）",
     "phonetic": "",
     "example": "",
@@ -5204,7 +5204,7 @@ module.exports = {
   },
   "factual": {
     "word": "factual",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "事实的, 实际的",
     "phonetic": "'fæktʃuәl",
     "example": "",
@@ -5221,7 +5221,7 @@ module.exports = {
   },
   "failures": {
     "word": "failures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "失败（failure的复数）",
     "phonetic": "",
     "example": "",
@@ -5229,7 +5229,7 @@ module.exports = {
   },
   "falls": {
     "word": "falls",
-    "pos": "",
+    "pos": "n.",
     "meaning": "瀑布；陨石",
     "phonetic": "fɔ:ls",
     "example": "",
@@ -5245,7 +5245,7 @@ module.exports = {
   },
   "far": {
     "word": "far",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "远的, 久远的, 遥远的",
     "phonetic": "fɑ:",
     "example": "",
@@ -5253,7 +5253,7 @@ module.exports = {
   },
   "farmers": {
     "word": "farmers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "农民（farmer的复数）",
     "phonetic": "",
     "example": "",
@@ -5261,7 +5261,7 @@ module.exports = {
   },
   "farming": {
     "word": "farming",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "农业, 耕作",
     "phonetic": "'fɑ:miŋ",
     "example": "",
@@ -5269,7 +5269,7 @@ module.exports = {
   },
   "farms": {
     "word": "farms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "农场；庄园（farm的复数形式）",
     "phonetic": "",
     "example": "",
@@ -5293,7 +5293,7 @@ module.exports = {
   },
   "favourable": {
     "word": "favourable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有用的, 良好的, 赞成的, 顺利的",
     "phonetic": "'feivәrәbl",
     "example": "",
@@ -5301,7 +5301,7 @@ module.exports = {
   },
   "favoured": {
     "word": "favoured",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "受到优待的, 优惠的, 受优惠的, 有天赋的",
     "phonetic": "'feivәd",
     "example": "",
@@ -5318,7 +5318,7 @@ module.exports = {
   },
   "fertilisers": {
     "word": "fertilisers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "化肥（等于fertilizer）",
     "phonetic": "'fɜːtɪlaɪsə",
     "example": "",
@@ -5326,7 +5326,7 @@ module.exports = {
   },
   "few": {
     "word": "few",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "很少的, 不多的, 少数的",
     "phonetic": "fju:",
     "example": "",
@@ -5342,7 +5342,7 @@ module.exports = {
   },
   "financial": {
     "word": "financial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "财政的, 金融的",
     "phonetic": "fai'nænʃәl",
     "example": "",
@@ -5367,7 +5367,7 @@ module.exports = {
   },
   "findings": {
     "word": "findings",
-    "pos": "",
+    "pos": "n.",
     "meaning": "发现, 调查结果；检验发现的情况（finding复数）",
     "phonetic": "",
     "example": "",
@@ -5375,7 +5375,7 @@ module.exports = {
   },
   "first": {
     "word": "first",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "首先, 第一, 优先",
     "phonetic": "fә:st",
     "example": "",
@@ -5392,7 +5392,7 @@ module.exports = {
   },
   "fixed": {
     "word": "fixed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "固定的, 不变的",
     "phonetic": "fikst",
     "example": "",
@@ -5408,7 +5408,7 @@ module.exports = {
   },
   "flooding": {
     "word": "flooding",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "充溢, 泛滥, 血崩",
     "phonetic": "'flʌdiŋ",
     "example": "",
@@ -5416,7 +5416,7 @@ module.exports = {
   },
   "floods": {
     "word": "floods",
-    "pos": "",
+    "pos": "n.",
     "meaning": "洪水( flood的名词复数 ); 水灾; 大批",
     "phonetic": "flʌdz",
     "example": "",
@@ -5440,7 +5440,7 @@ module.exports = {
   },
   "fluctuating": {
     "word": "fluctuating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "波动（fluctuate的ing形式）",
     "phonetic": "",
     "example": "",
@@ -5456,7 +5456,7 @@ module.exports = {
   },
   "foods": {
     "word": "foods",
-    "pos": "",
+    "pos": "n.",
     "meaning": "食品",
     "phonetic": "",
     "example": "",
@@ -5472,7 +5472,7 @@ module.exports = {
   },
   "for": {
     "word": "for",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "为, 因为, 至于",
     "phonetic": "fɒ:",
     "example": "",
@@ -5496,7 +5496,7 @@ module.exports = {
   },
   "forests": {
     "word": "forests",
-    "pos": "",
+    "pos": "n.",
     "meaning": "森林( forest的名词复数 ); 丛林; （森林似的）一丛; 一片",
     "phonetic": "ˈfɔrists",
     "example": "",
@@ -5512,7 +5512,7 @@ module.exports = {
   },
   "formidable": {
     "word": "formidable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "巨大的, 优秀的, 可怕的, 艰难的",
     "phonetic": "'fɒ:midәbl",
     "example": "",
@@ -5528,7 +5528,7 @@ module.exports = {
   },
   "fostered": {
     "word": "fostered",
-    "pos": "",
+    "pos": "v.",
     "meaning": "培养, 促进( foster的过去式和过去分词 ); 收养, 养育",
     "phonetic": "ˈfɔstəd",
     "example": "",
@@ -5544,7 +5544,7 @@ module.exports = {
   },
   "foundations": {
     "word": "foundations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地基",
     "phonetic": "",
     "example": "",
@@ -5552,7 +5552,7 @@ module.exports = {
   },
   "fragile": {
     "word": "fragile",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "易碎的, 脆的",
     "phonetic": "'frædʒail",
     "example": "",
@@ -5560,7 +5560,7 @@ module.exports = {
   },
   "frameworks": {
     "word": "frameworks",
-    "pos": "",
+    "pos": "n.",
     "meaning": "构架( framework的复数形式 ); 结构; （体系的）结构; （作为判断、决定等基础的）信仰",
     "phonetic": "ˈfreimwə:ks",
     "example": "",
@@ -5576,7 +5576,7 @@ module.exports = {
   },
   "freelance": {
     "word": "freelance",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "自由作家, 自由投稿, 自由职业者",
     "phonetic": "",
     "example": "",
@@ -5592,7 +5592,7 @@ module.exports = {
   },
   "frequently": {
     "word": "frequently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "频繁, 经常地",
     "phonetic": "'fri:kwәntli",
     "example": "",
@@ -5600,7 +5600,7 @@ module.exports = {
   },
   "from": {
     "word": "from",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "从, 来自, 根据",
     "phonetic": "frɒm",
     "example": "",
@@ -5616,7 +5616,7 @@ module.exports = {
   },
   "fuels": {
     "word": "fuels",
-    "pos": "",
+    "pos": "n.",
     "meaning": "燃料, 供给燃料（fuel 复数形式）",
     "phonetic": "fjuәlz",
     "example": "",
@@ -5633,7 +5633,7 @@ module.exports = {
   },
   "functions": {
     "word": "functions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "功能；函数（function的复数形式）",
     "phonetic": "",
     "example": "",
@@ -5650,7 +5650,7 @@ module.exports = {
   },
   "fundamentally": {
     "word": "fundamentally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "基础, 首要, 主要, 十分重要, 基本, 根本, 原始, 基频, 基音, 基谐波",
     "phonetic": "fʌndә'mentәli",
     "example": "",
@@ -5666,7 +5666,7 @@ module.exports = {
   },
   "future": {
     "word": "future",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "未来, 将来",
     "phonetic": "'fju:tʃә",
     "example": "",
@@ -5674,7 +5674,7 @@ module.exports = {
   },
   "gained": {
     "word": "gained",
-    "pos": "",
+    "pos": "v.",
     "meaning": "增进；获得, 得到（gain的过去式）",
     "phonetic": "",
     "example": "",
@@ -5706,7 +5706,7 @@ module.exports = {
   },
   "generated": {
     "word": "generated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "生成的；发生的",
     "phonetic": "",
     "example": "",
@@ -5714,7 +5714,7 @@ module.exports = {
   },
   "generating": {
     "word": "generating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "产生的, 生成的",
     "phonetic": "'dʒenә,reitiŋ",
     "example": "",
@@ -5731,7 +5731,7 @@ module.exports = {
   },
   "generations": {
     "word": "generations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "世代（generation的复数）",
     "phonetic": "",
     "example": "",
@@ -5739,7 +5739,7 @@ module.exports = {
   },
   "genetic": {
     "word": "genetic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "创始的, 遗传的, 起源的, 遗传学的",
     "phonetic": "dʒi'netik",
     "example": "",
@@ -5755,7 +5755,7 @@ module.exports = {
   },
   "geographical": {
     "word": "geographical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "地理学的, 地理的",
     "phonetic": "dʒiә'græfikl",
     "example": "",
@@ -5763,7 +5763,7 @@ module.exports = {
   },
   "geographically": {
     "word": "geographically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "自通地",
     "phonetic": "",
     "example": "",
@@ -5771,7 +5771,7 @@ module.exports = {
   },
   "geological": {
     "word": "geological",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "地质学的, 地质的",
     "phonetic": ".dʒiәu'lɒdʒikәl",
     "example": "",
@@ -5779,7 +5779,7 @@ module.exports = {
   },
   "geopolitical": {
     "word": "geopolitical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "地理的",
     "phonetic": ",dʒi(:)әupә'litikәl",
     "example": "",
@@ -5795,7 +5795,7 @@ module.exports = {
   },
   "glaciers": {
     "word": "glaciers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "冰河, 冰川( glacier的复数形式 )",
     "phonetic": "ɡ'læsɪəz",
     "example": "",
@@ -5803,7 +5803,7 @@ module.exports = {
   },
   "global": {
     "word": "global",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "通用的, 全球的, 球形的, 综合的, 普遍的",
     "phonetic": "'glәubl",
     "example": "",
@@ -5811,7 +5811,7 @@ module.exports = {
   },
   "globalisation": {
     "word": "globalisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "全球化, =globalization",
     "phonetic": ",gləubəlai'zeiʃən",
     "example": "",
@@ -5835,7 +5835,7 @@ module.exports = {
   },
   "governments": {
     "word": "governments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "政权；政府；可转让政府证券（government的复数）",
     "phonetic": "",
     "example": "",
@@ -5852,7 +5852,7 @@ module.exports = {
   },
   "graduates": {
     "word": "graduates",
-    "pos": "",
+    "pos": "n.",
     "meaning": "<美>毕业生( graduate的名词复数 ); <英>大学毕业生; （已经取得学士学位正在攻读高级学位的）研究生; 量筒",
     "phonetic": "ˈɡrædjuits",
     "example": "",
@@ -5860,7 +5860,7 @@ module.exports = {
   },
   "graphic": {
     "word": "graphic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "生动的, 轮廓分明的, 绘画似的, 图解的",
     "phonetic": "'græfik",
     "example": "",
@@ -5868,7 +5868,7 @@ module.exports = {
   },
   "grappling": {
     "word": "grappling",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "=grapnel grappling iron (打捞用的)抓机, 爪钩",
     "phonetic": "'^ræpliŋ",
     "example": "",
@@ -5876,7 +5876,7 @@ module.exports = {
   },
   "grazing": {
     "word": "grazing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "放牧, 牧草, 草场, 放牧法",
     "phonetic": "'greiziŋ",
     "example": "",
@@ -5884,7 +5884,7 @@ module.exports = {
   },
   "green": {
     "word": "green",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "绿色, 绿色颜料",
     "phonetic": "gri:n",
     "example": "",
@@ -5900,7 +5900,7 @@ module.exports = {
   },
   "growing": {
     "word": "growing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "成长的",
     "phonetic": "'grәuiŋ",
     "example": "",
@@ -5941,7 +5941,7 @@ module.exports = {
   },
   "hailing": {
     "word": "hailing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "下雹子( hail的现在分词 ); 如冰雹般地降下; 致敬; 打招呼",
     "phonetic": "heilɪŋ",
     "example": "",
@@ -5949,7 +5949,7 @@ module.exports = {
   },
   "half": {
     "word": "half",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "一半, 半场, 不完全",
     "phonetic": "hɑ:f",
     "example": "",
@@ -5957,7 +5957,7 @@ module.exports = {
   },
   "haphazard": {
     "word": "haphazard",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "偶然性, 偶然事件",
     "phonetic": "hæp'hæzәd",
     "example": "",
@@ -5965,7 +5965,7 @@ module.exports = {
   },
   "harnessed": {
     "word": "harnessed",
-    "pos": "",
+    "pos": "v.",
     "meaning": "给（马等）装上挽具( harness的过去式和过去分词 ); 治理, 利用",
     "phonetic": "ˈhɑ:nist",
     "example": "",
@@ -5989,7 +5989,7 @@ module.exports = {
   },
   "having": {
     "word": "having",
-    "pos": "",
+    "pos": "n.",
     "meaning": "财产, 所有物",
     "phonetic": "'hæviŋ",
     "example": "",
@@ -6005,7 +6005,7 @@ module.exports = {
   },
   "healthcare": {
     "word": "healthcare",
-    "pos": "",
+    "pos": "n.",
     "meaning": "医疗保健；卫生保健；健康护理, 健康服务",
     "phonetic": "'helθkεә",
     "example": "",
@@ -6013,7 +6013,7 @@ module.exports = {
   },
   "held": {
     "word": "held",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "hold的过去式和过去分词",
     "phonetic": "held",
     "example": "",
@@ -6038,7 +6038,7 @@ module.exports = {
   },
   "hinterlands": {
     "word": "hinterlands",
-    "pos": "",
+    "pos": "n.",
     "meaning": "内陆地区( hinterland的复数形式 ); 内地; 腹地; （由某一港口或某些其他中心城市供应物资的）内陆贸易区",
     "phonetic": "'hɪntəlændz",
     "example": "",
@@ -6046,7 +6046,7 @@ module.exports = {
   },
   "historical": {
     "word": "historical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "历史的, 史实的, 历史上的",
     "phonetic": "hi'stɒrikәl",
     "example": "",
@@ -6054,7 +6054,7 @@ module.exports = {
   },
   "historically": {
     "word": "historically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "历史上地；从历史观点上说",
     "phonetic": "his'tɔrikәli",
     "example": "",
@@ -6062,7 +6062,7 @@ module.exports = {
   },
   "histories": {
     "word": "histories",
-    "pos": "",
+    "pos": "n.",
     "meaning": "历史, 历史故事；历史纪录（history的复数形式）",
     "phonetic": "",
     "example": "",
@@ -6086,7 +6086,7 @@ module.exports = {
   },
   "horizons": {
     "word": "horizons",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地平线( horizon的复数形式 ); 范围; 界限; 眼界",
     "phonetic": "hə'raɪznz",
     "example": "",
@@ -6110,7 +6110,7 @@ module.exports = {
   },
   "hours": {
     "word": "hours",
-    "pos": "",
+    "pos": "n.",
     "meaning": "小时（hour的复数形式）",
     "phonetic": "",
     "example": "",
@@ -6134,7 +6134,7 @@ module.exports = {
   },
   "however": {
     "word": "however",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "然而, 无论如何, 究竟怎样",
     "phonetic": "hau'evә",
     "example": "",
@@ -6142,7 +6142,7 @@ module.exports = {
   },
   "human": {
     "word": "human",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "人, 人类",
     "phonetic": "'hju:mәn",
     "example": "",
@@ -6158,7 +6158,7 @@ module.exports = {
   },
   "hundred": {
     "word": "hundred",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "百, 百个东西",
     "phonetic": "'hʌndrәd",
     "example": "",
@@ -6166,7 +6166,7 @@ module.exports = {
   },
   "hundreds": {
     "word": "hundreds",
-    "pos": "",
+    "pos": "n.",
     "meaning": "数百",
     "phonetic": "",
     "example": "",
@@ -6174,7 +6174,7 @@ module.exports = {
   },
   "hurricanes": {
     "word": "hurricanes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "飓风, （尤指西印度群岛的）旋风( hurricane的复数形式 )",
     "phonetic": "'hʌrɪkənz",
     "example": "",
@@ -6182,7 +6182,7 @@ module.exports = {
   },
   "hydroelectric": {
     "word": "hydroelectric",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "水力电气的",
     "phonetic": ".haidrәui'lektrik",
     "example": "",
@@ -6199,7 +6199,7 @@ module.exports = {
   },
   "identifying": {
     "word": "identifying",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "识别, 标识；标识关系",
     "phonetic": "",
     "example": "",
@@ -6233,7 +6233,7 @@ module.exports = {
   },
   "illnesses": {
     "word": "illnesses",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（身体或精神上的）疾病( illness的复数形式 ); （某种）病; 患病期",
     "phonetic": "'ɪlnəsɪz",
     "example": "",
@@ -6241,7 +6241,7 @@ module.exports = {
   },
   "images": {
     "word": "images",
-    "pos": "",
+    "pos": "n.",
     "meaning": "图片；意象（image的复数）",
     "phonetic": "",
     "example": "",
@@ -6276,7 +6276,7 @@ module.exports = {
   },
   "impacts": {
     "word": "impacts",
-    "pos": "",
+    "pos": "n.",
     "meaning": "影响, 作用( impact的名词复数 ); 碰撞; 冲击; 撞击",
     "phonetic": "ˈimpækts",
     "example": "",
@@ -6284,7 +6284,7 @@ module.exports = {
   },
   "imperative": {
     "word": "imperative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "命令, 必要的事, 规则, 祈使语气",
     "phonetic": "im'perәtiv",
     "example": "",
@@ -6292,7 +6292,7 @@ module.exports = {
   },
   "imperatives": {
     "word": "imperatives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "必要的事( imperative的复数形式 ); 祈使语气; 必须履行的责任",
     "phonetic": "ɪm'perətɪvz",
     "example": "",
@@ -6300,7 +6300,7 @@ module.exports = {
   },
   "imperceptible": {
     "word": "imperceptible",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不能感知的, 微细的",
     "phonetic": ".impә'septibl",
     "example": "",
@@ -6325,7 +6325,7 @@ module.exports = {
   },
   "implicated": {
     "word": "implicated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "密切关联的；牵涉其中的",
     "phonetic": "'ɪmplɪkeɪtɪd",
     "example": "",
@@ -6333,7 +6333,7 @@ module.exports = {
   },
   "implications": {
     "word": "implications",
-    "pos": "",
+    "pos": "n.",
     "meaning": "蕴涵式；卷入（implication的复数）",
     "phonetic": "",
     "example": "",
@@ -6349,7 +6349,7 @@ module.exports = {
   },
   "imposed": {
     "word": "imposed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "强加的；施加的；应用的",
     "phonetic": "",
     "example": "",
@@ -6357,7 +6357,7 @@ module.exports = {
   },
   "impossible": {
     "word": "impossible",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不可能的, 难以置信的, 令人无法忍受的",
     "phonetic": "im'pɒsәbl",
     "example": "",
@@ -6365,7 +6365,7 @@ module.exports = {
   },
   "improvements": {
     "word": "improvements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "增加或修改( improvement的复数形式 ); 改进; 改善; 改良",
     "phonetic": "ɪmp'ru:vmənts",
     "example": "",
@@ -6373,7 +6373,7 @@ module.exports = {
   },
   "in": {
     "word": "in",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...期间, 在...之内, 处于...之中, 从事于, 按照, 穿着",
     "phonetic": "in",
     "example": "",
@@ -6381,7 +6381,7 @@ module.exports = {
   },
   "inaccurate": {
     "word": "inaccurate",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "错误的, 不准确的",
     "phonetic": "in'ækjurit",
     "example": "",
@@ -6389,7 +6389,7 @@ module.exports = {
   },
   "inadvertently": {
     "word": "inadvertently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "漫不经心地, 疏忽地; 非故意地",
     "phonetic": "ˌɪnədˈvɜ:təntli",
     "example": "",
@@ -6397,7 +6397,7 @@ module.exports = {
   },
   "incentives": {
     "word": "incentives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "激励某人做某事的事物( incentive的复数形式 ); 刺激; 诱因; 动机",
     "phonetic": "ɪn'sentɪvz",
     "example": "",
@@ -6421,7 +6421,7 @@ module.exports = {
   },
   "including": {
     "word": "including",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "包含, 包括",
     "phonetic": "",
     "example": "",
@@ -6446,7 +6446,7 @@ module.exports = {
   },
   "incorporating": {
     "word": "incorporating",
-    "pos": "",
+    "pos": "v.",
     "meaning": "组成公司( incorporate的现在分词 ); 包含; 使混合; 使具体化",
     "phonetic": "inˈkɔ:pəreitɪŋ",
     "example": "",
@@ -6454,7 +6454,7 @@ module.exports = {
   },
   "increased": {
     "word": "increased",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "增强的（increase的过去分词）",
     "phonetic": "in'kri:st",
     "example": "",
@@ -6462,7 +6462,7 @@ module.exports = {
   },
   "increasingly": {
     "word": "increasingly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "逐渐地, 渐增地",
     "phonetic": "in'kri:siŋli",
     "example": "",
@@ -6470,7 +6470,7 @@ module.exports = {
   },
   "incurring": {
     "word": "incurring",
-    "pos": "",
+    "pos": "n.",
     "meaning": "招致（遭受）",
     "phonetic": "",
     "example": "",
@@ -6478,7 +6478,7 @@ module.exports = {
   },
   "independent": {
     "word": "independent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "独立自主者, 无党派者",
     "phonetic": ".indi'pendәnt",
     "example": "",
@@ -6495,7 +6495,7 @@ module.exports = {
   },
   "indicates": {
     "word": "indicates",
-    "pos": "",
+    "pos": "v.",
     "meaning": "指示, 显示；表明（indicate的第三人称单数形式）",
     "phonetic": "",
     "example": "",
@@ -6503,7 +6503,7 @@ module.exports = {
   },
   "indigenous": {
     "word": "indigenous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "本土的, 国产的, 固有的",
     "phonetic": "in'didʒinәs",
     "example": "",
@@ -6511,7 +6511,7 @@ module.exports = {
   },
   "indispensable": {
     "word": "indispensable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不可缺少之物",
     "phonetic": ".indis'pensәbl",
     "example": "",
@@ -6519,7 +6519,7 @@ module.exports = {
   },
   "individual": {
     "word": "individual",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "人, 个人, 个体",
     "phonetic": ".indi'vidʒuәl",
     "example": "",
@@ -6527,7 +6527,7 @@ module.exports = {
   },
   "individuals": {
     "word": "individuals",
-    "pos": "",
+    "pos": "n.",
     "meaning": "个人；个体（individual的复数）",
     "phonetic": "",
     "example": "",
@@ -6535,7 +6535,7 @@ module.exports = {
   },
   "induced": {
     "word": "induced",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "感应的；诱发型",
     "phonetic": "in'dju:st",
     "example": "",
@@ -6543,7 +6543,7 @@ module.exports = {
   },
   "industrial": {
     "word": "industrial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "工业的, 供工业用的, 工业高度发展的, 产业的",
     "phonetic": "in'dʌstriәl",
     "example": "",
@@ -6551,7 +6551,7 @@ module.exports = {
   },
   "industries": {
     "word": "industries",
-    "pos": "",
+    "pos": "n.",
     "meaning": "行业, 工业；实业公司（industry的复数）",
     "phonetic": "",
     "example": "",
@@ -6568,7 +6568,7 @@ module.exports = {
   },
   "inequalities": {
     "word": "inequalities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "[数]不等式；不均等, 不平衡；不平坦（inequality的复数形式）",
     "phonetic": "",
     "example": "",
@@ -6585,7 +6585,7 @@ module.exports = {
   },
   "inevitably": {
     "word": "inevitably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "不可避免地",
     "phonetic": "in'evitәbli",
     "example": "",
@@ -6610,7 +6610,7 @@ module.exports = {
   },
   "infections": {
     "word": "infections",
-    "pos": "",
+    "pos": "n.",
     "meaning": "传染病；口腔病害（infection复数形式）",
     "phonetic": "",
     "example": "",
@@ -6618,7 +6618,7 @@ module.exports = {
   },
   "infectious": {
     "word": "infectious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有传染性的, 易传染的",
     "phonetic": "in'fekʃәs",
     "example": "",
@@ -6650,7 +6650,7 @@ module.exports = {
   },
   "infrastructural": {
     "word": "infrastructural",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "基础结构的基础设施的",
     "phonetic": "ˌɪnfrə'strʌktʃərəl",
     "example": "",
@@ -6666,7 +6666,7 @@ module.exports = {
   },
   "inherently": {
     "word": "inherently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "内在地, 生来地, 固有地",
     "phonetic": "in'hiәrәntli",
     "example": "",
@@ -6674,7 +6674,7 @@ module.exports = {
   },
   "initially": {
     "word": "initially",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "最初, 开头",
     "phonetic": "i'niʃәli",
     "example": "",
@@ -6682,7 +6682,7 @@ module.exports = {
   },
   "initiatives": {
     "word": "initiatives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "主动性( initiative的复数形式 ); 主动的行动; 初步; 主动权",
     "phonetic": "ɪ'nɪʃətɪvz",
     "example": "",
@@ -6733,7 +6733,7 @@ module.exports = {
   },
   "instances": {
     "word": "instances",
-    "pos": "",
+    "pos": "n.",
     "meaning": "例子, 实例( instance的名词复数 )",
     "phonetic": "ˈinstənsiz",
     "example": "",
@@ -6741,7 +6741,7 @@ module.exports = {
   },
   "instantaneous": {
     "word": "instantaneous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "即时的, 瞬间的, 猝发的",
     "phonetic": ".instәn'teinjәs",
     "example": "",
@@ -6749,7 +6749,7 @@ module.exports = {
   },
   "instantaneously": {
     "word": "instantaneously",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "即刻, 立即",
     "phonetic": "",
     "example": "",
@@ -6757,7 +6757,7 @@ module.exports = {
   },
   "instead": {
     "word": "instead",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "作为替代, 反而",
     "phonetic": "in'sted",
     "example": "",
@@ -6765,7 +6765,7 @@ module.exports = {
   },
   "institutional": {
     "word": "institutional",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "制度的, 公共机构的, 学会的",
     "phonetic": ".insti'tju:ʃәnәl",
     "example": "",
@@ -6773,7 +6773,7 @@ module.exports = {
   },
   "institutions": {
     "word": "institutions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "体系",
     "phonetic": "",
     "example": "",
@@ -6781,7 +6781,7 @@ module.exports = {
   },
   "instruments": {
     "word": "instruments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "乐器；工具；仪器（instrument的复数）",
     "phonetic": "",
     "example": "",
@@ -6797,7 +6797,7 @@ module.exports = {
   },
   "intact": {
     "word": "intact",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "尚未被人碰过的, 原封不动的, 完整的",
     "phonetic": "in'tækt",
     "example": "",
@@ -6805,7 +6805,7 @@ module.exports = {
   },
   "intangible": {
     "word": "intangible",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "难以明了的, 无形的",
     "phonetic": "in'tændʒәbl",
     "example": "",
@@ -6813,7 +6813,7 @@ module.exports = {
   },
   "integrated": {
     "word": "integrated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "综合的, 完整的, 互相协调的",
     "phonetic": "'intәgreitid",
     "example": "",
@@ -6829,7 +6829,7 @@ module.exports = {
   },
   "intellectual": {
     "word": "intellectual",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有知识者, 知识分子, 凭理智做事者",
     "phonetic": ".intә'lektʃuәl",
     "example": "",
@@ -6845,7 +6845,7 @@ module.exports = {
   },
   "intense": {
     "word": "intense",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "非常的, 强烈的, 紧张的, 热情的",
     "phonetic": "in'tens",
     "example": "",
@@ -6853,7 +6853,7 @@ module.exports = {
   },
   "intensified": {
     "word": "intensified",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "（使）增强, （使）加剧( intensify的过去式和过去分词 )",
     "phonetic": "inˈtensifaid",
     "example": "",
@@ -6861,7 +6861,7 @@ module.exports = {
   },
   "intensifying": {
     "word": "intensifying",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "加强；加紧, 加剧；增强（intensify的现在分词）",
     "phonetic": "",
     "example": "",
@@ -6869,7 +6869,7 @@ module.exports = {
   },
   "intensive": {
     "word": "intensive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "加强的, 内涵的, 集中的",
     "phonetic": "in'tensiv",
     "example": "",
@@ -6885,7 +6885,7 @@ module.exports = {
   },
   "intermittent": {
     "word": "intermittent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "间歇的, 断断续续的",
     "phonetic": ".intә'mitәnt",
     "example": "",
@@ -6893,7 +6893,7 @@ module.exports = {
   },
   "international": {
     "word": "international",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "国际的",
     "phonetic": ".intә'næʃәnәl",
     "example": "",
@@ -6910,7 +6910,7 @@ module.exports = {
   },
   "internships": {
     "word": "internships",
-    "pos": "",
+    "pos": "n.",
     "meaning": "<美>实习医师, 实习医师期( internship的复数形式 )",
     "phonetic": "ˈintə:nʃips",
     "example": "",
@@ -6918,7 +6918,7 @@ module.exports = {
   },
   "interpersonal": {
     "word": "interpersonal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "人与人之间的, 人际(关系)的",
     "phonetic": ".intә'pә:sәnәl",
     "example": "",
@@ -6942,7 +6942,7 @@ module.exports = {
   },
   "interventions": {
     "word": "interventions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "介入, 干涉, 干预( intervention的复数形式 )",
     "phonetic": "ɪntə'venʃnz",
     "example": "",
@@ -6950,7 +6950,7 @@ module.exports = {
   },
   "into": {
     "word": "into",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "进入...之内, 朝..., 深入...之中, 成为...状况",
     "phonetic": "'intu:",
     "example": "",
@@ -6958,7 +6958,7 @@ module.exports = {
   },
   "intractable": {
     "word": "intractable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不听话的, 倔强的, 棘手的",
     "phonetic": "in'træktәbl",
     "example": "",
@@ -6974,7 +6974,7 @@ module.exports = {
   },
   "invasive": {
     "word": "invasive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "侵入的, 侵略性的, 攻击性的",
     "phonetic": "in'veisiv",
     "example": "",
@@ -7008,7 +7008,7 @@ module.exports = {
   },
   "irrelevant": {
     "word": "irrelevant",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不恰当的, 无关系的, 不相干的",
     "phonetic": "i'relәvәnt",
     "example": "",
@@ -7016,7 +7016,7 @@ module.exports = {
   },
   "irreplaceable": {
     "word": "irreplaceable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不能调换的, 不能代替的",
     "phonetic": ".iri'pleisәbl",
     "example": "",
@@ -7024,7 +7024,7 @@ module.exports = {
   },
   "irrevocably": {
     "word": "irrevocably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "不能取消地, 不能撤回地",
     "phonetic": "ɪ'revəkəblɪ",
     "example": "",
@@ -7048,7 +7048,7 @@ module.exports = {
   },
   "islands": {
     "word": "islands",
-    "pos": "",
+    "pos": "n.",
     "meaning": "岛屿；群岛（island的复数）",
     "phonetic": "",
     "example": "",
@@ -7056,7 +7056,7 @@ module.exports = {
   },
   "isolated": {
     "word": "isolated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "孤立的, 孤零零的",
     "phonetic": "'aisәleitid",
     "example": "",
@@ -7081,7 +7081,7 @@ module.exports = {
   },
   "it": {
     "word": "it",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "它",
     "phonetic": "it",
     "example": "",
@@ -7089,7 +7089,7 @@ module.exports = {
   },
   "jobs": {
     "word": "jobs",
-    "pos": "",
+    "pos": "n.",
     "meaning": "工作（job的复数形式）",
     "phonetic": "dʒɔbs",
     "example": "",
@@ -7106,7 +7106,7 @@ module.exports = {
   },
   "journalists": {
     "word": "journalists",
-    "pos": "",
+    "pos": "n.",
     "meaning": "新闻工作者, 新闻记者( journalist的复数形式 )",
     "phonetic": "'dʒɜ:nəlɪsts",
     "example": "",
@@ -7114,7 +7114,7 @@ module.exports = {
   },
   "jurisdictions": {
     "word": "jurisdictions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "司法权( jurisdiction的复数形式 ); 裁判权; 管辖区域; 管辖范围",
     "phonetic": "ˌdʒuərisˈdikʃənz",
     "example": "",
@@ -7122,7 +7122,7 @@ module.exports = {
   },
   "kind": {
     "word": "kind",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "种类, 性质, 方式",
     "phonetic": "kaind",
     "example": "",
@@ -7138,7 +7138,7 @@ module.exports = {
   },
   "labour": {
     "word": "labour",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "劳动, 努力, 工作, 劳工, 分娩",
     "phonetic": "'leibә",
     "example": "",
@@ -7154,7 +7154,7 @@ module.exports = {
   },
   "lacking": {
     "word": "lacking",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "缺乏的, 不足的",
     "phonetic": "'lækiŋ",
     "example": "",
@@ -7162,7 +7162,7 @@ module.exports = {
   },
   "lacks": {
     "word": "lacks",
-    "pos": "",
+    "pos": "n.",
     "meaning": "缺乏, 不足, 没有( lack的名词复数 )",
     "phonetic": "læks",
     "example": "",
@@ -7170,7 +7170,7 @@ module.exports = {
   },
   "laid": {
     "word": "laid",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "lay的过去式和过去分词",
     "phonetic": "leid",
     "example": "",
@@ -7202,7 +7202,7 @@ module.exports = {
   },
   "languages": {
     "word": "languages",
-    "pos": "",
+    "pos": "n.",
     "meaning": "语系, 语种；语言文字（language复数）",
     "phonetic": "",
     "example": "",
@@ -7210,7 +7210,7 @@ module.exports = {
   },
   "large": {
     "word": "large",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "大的, 大量的, 宽大的, 广博的",
     "phonetic": "lɑ:dʒ",
     "example": "",
@@ -7226,7 +7226,7 @@ module.exports = {
   },
   "least": {
     "word": "least",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "最少, 最小, 最小限度",
     "phonetic": "li:st",
     "example": "",
@@ -7259,7 +7259,7 @@ module.exports = {
   },
   "lectures": {
     "word": "lectures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "演讲, 讲课( lecture的名词复数 ); 冗长的训斥[谴责]",
     "phonetic": "ˈlektʃəz",
     "example": "",
@@ -7275,7 +7275,7 @@ module.exports = {
   },
   "legal": {
     "word": "legal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "法律的, 法定的, 合法的",
     "phonetic": "'li:gәl",
     "example": "",
@@ -7292,7 +7292,7 @@ module.exports = {
   },
   "legislative": {
     "word": "legislative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "立法机构",
     "phonetic": "'ledʒislәtiv",
     "example": "",
@@ -7300,7 +7300,7 @@ module.exports = {
   },
   "legislatures": {
     "word": "legislatures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "立法机关, 立法团体( legislature的复数形式 )",
     "phonetic": "ˈledʒɪˌsleɪtʃəz",
     "example": "",
@@ -7308,7 +7308,7 @@ module.exports = {
   },
   "less": {
     "word": "less",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "较少, 较小",
     "phonetic": "les",
     "example": "",
@@ -7316,7 +7316,7 @@ module.exports = {
   },
   "level": {
     "word": "level",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "水平, 水准, 平地",
     "phonetic": "'levl",
     "example": "",
@@ -7324,7 +7324,7 @@ module.exports = {
   },
   "levels": {
     "word": "levels",
-    "pos": "",
+    "pos": "n.",
     "meaning": "色阶调整；控制色阶；水平, 标准（level复数形式）",
     "phonetic": "",
     "example": "",
@@ -7356,7 +7356,7 @@ module.exports = {
   },
   "likewise": {
     "word": "likewise",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "同样地, 也",
     "phonetic": "'laikwaiz",
     "example": "",
@@ -7364,7 +7364,7 @@ module.exports = {
   },
   "limited": {
     "word": "limited",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "有限制的, 有限的, 有限责任的",
     "phonetic": "'limitid",
     "example": "",
@@ -7372,7 +7372,7 @@ module.exports = {
   },
   "linguistic": {
     "word": "linguistic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "语言的, 语言学的",
     "phonetic": "liŋ'^wistik",
     "example": "",
@@ -7397,7 +7397,7 @@ module.exports = {
   },
   "living": {
     "word": "living",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "生活, 生计, 生存",
     "phonetic": "'liviŋ",
     "example": "",
@@ -7405,7 +7405,7 @@ module.exports = {
   },
   "local": {
     "word": "local",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "地方性的, 当地的, 局部的, 乡土的, 本地的",
     "phonetic": "'lәukәl",
     "example": "",
@@ -7413,7 +7413,7 @@ module.exports = {
   },
   "locations": {
     "word": "locations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "位置；定位件；地点（location的复数）",
     "phonetic": "",
     "example": "",
@@ -7421,7 +7421,7 @@ module.exports = {
   },
   "long": {
     "word": "long",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "长的, 长久的, 冗长的, 做多头的",
     "phonetic": "lɒŋ",
     "example": "",
@@ -7429,7 +7429,7 @@ module.exports = {
   },
   "losses": {
     "word": "losses",
-    "pos": "",
+    "pos": "n.",
     "meaning": "损失；损耗（loss的复数）",
     "phonetic": "",
     "example": "",
@@ -7437,7 +7437,7 @@ module.exports = {
   },
   "lost": {
     "word": "lost",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "失去的, 遗失的, 迷惑的",
     "phonetic": "lɒst",
     "example": "",
@@ -7445,7 +7445,7 @@ module.exports = {
   },
   "low": {
     "word": "low",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "低点, 低价, 低, 牛叫声",
     "phonetic": "lәu",
     "example": "",
@@ -7461,7 +7461,7 @@ module.exports = {
   },
   "luxuries": {
     "word": "luxuries",
-    "pos": "",
+    "pos": "n.",
     "meaning": "奢侈( luxury的名词复数 ); 豪华; 奢侈品; 不常有的乐趣（或享受、优势）",
     "phonetic": "ˈlʌkʃəriz",
     "example": "",
@@ -7477,7 +7477,7 @@ module.exports = {
   },
   "magnets": {
     "word": "magnets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "磁铁, 磁体( magnet的复数形式 ); 有吸引力的人[物]; 磁石; 吸铁石",
     "phonetic": "'mæɡnɪts",
     "example": "",
@@ -7502,7 +7502,7 @@ module.exports = {
   },
   "maintained": {
     "word": "maintained",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被保持的",
     "phonetic": "",
     "example": "",
@@ -7544,7 +7544,7 @@ module.exports = {
   },
   "managed": {
     "word": "managed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "与中央化计划及管制有关的；托管的",
     "phonetic": "",
     "example": "",
@@ -7576,7 +7576,7 @@ module.exports = {
   },
   "many": {
     "word": "many",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "多数, 多数人",
     "phonetic": "'meni",
     "example": "",
@@ -7592,7 +7592,7 @@ module.exports = {
   },
   "markedly": {
     "word": "markedly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "显著地, 醒目地, 明显地",
     "phonetic": "'mɑ:kidli",
     "example": "",
@@ -7608,7 +7608,7 @@ module.exports = {
   },
   "markets": {
     "word": "markets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "市场, 市场组合（market 复数）",
     "phonetic": "",
     "example": "",
@@ -7616,7 +7616,7 @@ module.exports = {
   },
   "mass": {
     "word": "mass",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "块, 大多数, 质量, 大量, 群众, 弥撒",
     "phonetic": "mæs",
     "example": "",
@@ -7624,7 +7624,7 @@ module.exports = {
   },
   "massive": {
     "word": "massive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "大而重的, 宽大的, 宏伟的",
     "phonetic": "'mæsiv",
     "example": "",
@@ -7632,7 +7632,7 @@ module.exports = {
   },
   "material": {
     "word": "material",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "材料, 物资, 素材, 布料, 资料",
     "phonetic": "mә'tiәriәl",
     "example": "",
@@ -7640,7 +7640,7 @@ module.exports = {
   },
   "maximise": {
     "word": "maximise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "把...增加到最大限度, 把...扩大到最大限度, 充分重视, 找出...的最高值",
     "phonetic": "'mæksimaiz",
     "example": "",
@@ -7656,7 +7656,7 @@ module.exports = {
   },
   "meaningful": {
     "word": "meaningful",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "意味深长的",
     "phonetic": "'mi:niŋful",
     "example": "",
@@ -7664,7 +7664,7 @@ module.exports = {
   },
   "meanwhile": {
     "word": "meanwhile",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "其时, 其间",
     "phonetic": "'mi:nhwail",
     "example": "",
@@ -7680,7 +7680,7 @@ module.exports = {
   },
   "measures": {
     "word": "measures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "措施；层组（measure的复数）",
     "phonetic": "",
     "example": "",
@@ -7697,7 +7697,7 @@ module.exports = {
   },
   "mechanisms": {
     "word": "mechanisms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "机械( mechanism的复数形式 ); 机械装置; [生物学] 机制; 机械作用",
     "phonetic": "'mekənɪzəmz",
     "example": "",
@@ -7714,7 +7714,7 @@ module.exports = {
   },
   "mediated": {
     "word": "mediated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "仲裁, 调停；调解（mediate的过去式及过去分词形式）",
     "phonetic": "'mi:dieitid",
     "example": "",
@@ -7722,7 +7722,7 @@ module.exports = {
   },
   "medical": {
     "word": "medical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "医生, 体格检查",
     "phonetic": "'medikl",
     "example": "",
@@ -7746,7 +7746,7 @@ module.exports = {
   },
   "memorisation": {
     "word": "memorisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "背诵；熟记",
     "phonetic": ".memәrai'zeiʃәn. -ri'z-",
     "example": "",
@@ -7754,7 +7754,7 @@ module.exports = {
   },
   "mental": {
     "word": "mental",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "心智的, 精神病的, 心理的, 颏的",
     "phonetic": "'mentl",
     "example": "",
@@ -7762,7 +7762,7 @@ module.exports = {
   },
   "merely": {
     "word": "merely",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "只",
     "phonetic": "'miәli",
     "example": "",
@@ -7770,7 +7770,7 @@ module.exports = {
   },
   "meteorological": {
     "word": "meteorological",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "气象的, 气象学的",
     "phonetic": "",
     "example": "",
@@ -7787,7 +7787,7 @@ module.exports = {
   },
   "methods": {
     "word": "methods",
-    "pos": "",
+    "pos": "n.",
     "meaning": "方法, 方式；研究方法（method的复数）",
     "phonetic": "",
     "example": "",
@@ -7795,7 +7795,7 @@ module.exports = {
   },
   "meticulous": {
     "word": "meticulous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "一丝不苟的, 精确的, 过细的",
     "phonetic": "mә'tikjulәs",
     "example": "",
@@ -7803,7 +7803,7 @@ module.exports = {
   },
   "metric": {
     "word": "metric",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "公尺的, 公制的, 计量的",
     "phonetic": "'metrik",
     "example": "",
@@ -7811,7 +7811,7 @@ module.exports = {
   },
   "metropolitan": {
     "word": "metropolitan",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "大都市居民, 都主教, 宗主国的公民",
     "phonetic": ".metrә'pɒlitn",
     "example": "",
@@ -7819,7 +7819,7 @@ module.exports = {
   },
   "mid": {
     "word": "mid",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "中间的, 中央的, 中部的",
     "phonetic": "mid",
     "example": "",
@@ -7827,7 +7827,7 @@ module.exports = {
   },
   "middle": {
     "word": "middle",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "中央, 中间, 腰部",
     "phonetic": "'midl",
     "example": "",
@@ -7843,7 +7843,7 @@ module.exports = {
   },
   "million": {
     "word": "million",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "百万, 无数",
     "phonetic": "'miljәn",
     "example": "",
@@ -7851,7 +7851,7 @@ module.exports = {
   },
   "millions": {
     "word": "millions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "数百万",
     "phonetic": "",
     "example": "",
@@ -7859,7 +7859,7 @@ module.exports = {
   },
   "minimise": {
     "word": "minimise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使减到最少/最小, 使降到最低限度, 使缩到最小, 极度轻视",
     "phonetic": "",
     "example": "",
@@ -7884,7 +7884,7 @@ module.exports = {
   },
   "minutes": {
     "word": "minutes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "会议记录",
     "phonetic": "",
     "example": "",
@@ -7900,7 +7900,7 @@ module.exports = {
   },
   "mixed": {
     "word": "mixed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "混合的, 形形色色的, 弄糊涂的",
     "phonetic": "mikst",
     "example": "",
@@ -7908,7 +7908,7 @@ module.exports = {
   },
   "mobilisation": {
     "word": "mobilisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "动员, 运用",
     "phonetic": "ˌməʊbɪlaɪ'zeɪʃən",
     "example": "",
@@ -7940,7 +7940,7 @@ module.exports = {
   },
   "modifications": {
     "word": "modifications",
-    "pos": "",
+    "pos": "n.",
     "meaning": "缓和( modification的复数形式 ); 限制; 更改; 改变",
     "phonetic": "ˌmɔdəfɪˈkeɪʃənz",
     "example": "",
@@ -7948,7 +7948,7 @@ module.exports = {
   },
   "monuments": {
     "word": "monuments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "纪念碑( monument的复数形式 ); 遗迹; 遗址; 丰碑",
     "phonetic": "ˈmɔnjumənts",
     "example": "",
@@ -7964,7 +7964,7 @@ module.exports = {
   },
   "more": {
     "word": "more",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "更多",
     "phonetic": "mɒ:",
     "example": "",
@@ -7988,7 +7988,7 @@ module.exports = {
   },
   "most": {
     "word": "most",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "最多, 最大",
     "phonetic": "mәust",
     "example": "",
@@ -7996,7 +7996,7 @@ module.exports = {
   },
   "mounting": {
     "word": "mounting",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "装备, 衬托纸, 舞台效果, 上马",
     "phonetic": "'mauntiŋ",
     "example": "",
@@ -8004,7 +8004,7 @@ module.exports = {
   },
   "movements": {
     "word": "movements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "运动, 运转；运动健身；动作（movement的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8012,7 +8012,7 @@ module.exports = {
   },
   "much": {
     "word": "much",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "大量, 许多, 重要的事",
     "phonetic": "mʌtʃ",
     "example": "",
@@ -8020,7 +8020,7 @@ module.exports = {
   },
   "multifaceted": {
     "word": "multifaceted",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "多层面的",
     "phonetic": ".mʌlti'fæsitid",
     "example": "",
@@ -8028,7 +8028,7 @@ module.exports = {
   },
   "multinational": {
     "word": "multinational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "多国的, 跨国公司的",
     "phonetic": ".mʌlti'næʃәnl",
     "example": "",
@@ -8036,7 +8036,7 @@ module.exports = {
   },
   "multiple": {
     "word": "multiple",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "倍数, 并联",
     "phonetic": "'mʌltipl",
     "example": "",
@@ -8044,7 +8044,7 @@ module.exports = {
   },
   "municipal": {
     "word": "municipal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "市政的, 自治区的, 内政的",
     "phonetic": "mju:'nisipl",
     "example": "",
@@ -8060,7 +8060,7 @@ module.exports = {
   },
   "museums": {
     "word": "museums",
-    "pos": "",
+    "pos": "n.",
     "meaning": "博物馆（museum的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8076,7 +8076,7 @@ module.exports = {
   },
   "narrative": {
     "word": "narrative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "叙述, 故事",
     "phonetic": "'nærәtiv",
     "example": "",
@@ -8084,7 +8084,7 @@ module.exports = {
   },
   "narratives": {
     "word": "narratives",
-    "pos": "",
+    "pos": "n.",
     "meaning": "记叙文( narrative的复数形式 ); 故事; 叙述; 叙述部分",
     "phonetic": "'nærətɪvz",
     "example": "",
@@ -8092,7 +8092,7 @@ module.exports = {
   },
   "nations": {
     "word": "nations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "国家（nation的复数）",
     "phonetic": "",
     "example": "",
@@ -8100,7 +8100,7 @@ module.exports = {
   },
   "natural": {
     "word": "natural",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "白痴",
     "phonetic": "'nætʃәrәl",
     "example": "",
@@ -8132,7 +8132,7 @@ module.exports = {
   },
   "necessary": {
     "word": "necessary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "必要的；必然的；必需的",
     "phonetic": "'nesisәri",
     "example": "",
@@ -8140,7 +8140,7 @@ module.exports = {
   },
   "necessitates": {
     "word": "necessitates",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使…成为必要, 需要( necessitate的第三人称单数 )",
     "phonetic": "niˈsesiteits",
     "example": "",
@@ -8156,7 +8156,7 @@ module.exports = {
   },
   "neighbourhoods": {
     "word": "neighbourhoods",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地区, 某地区的人, 与某处邻近的地区( neighbourhood的复数形式 )",
     "phonetic": "ˈneibəhudz",
     "example": "",
@@ -8173,7 +8173,7 @@ module.exports = {
   },
   "networks": {
     "word": "networks",
-    "pos": "",
+    "pos": "n.",
     "meaning": "网络；广播电视网（network的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8181,7 +8181,7 @@ module.exports = {
   },
   "never": {
     "word": "never",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "从不, 决不, 不曾",
     "phonetic": "'nevә",
     "example": "",
@@ -8189,7 +8189,7 @@ module.exports = {
   },
   "nevertheless": {
     "word": "nevertheless",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "然而, 虽然如此",
     "phonetic": ".nevәðә'les",
     "example": "",
@@ -8197,7 +8197,7 @@ module.exports = {
   },
   "new": {
     "word": "new",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "新的, 陌生的, 最近的, 不熟悉的",
     "phonetic": "nju:",
     "example": "",
@@ -8205,7 +8205,7 @@ module.exports = {
   },
   "newcomers": {
     "word": "newcomers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "新来的人, 新手( newcomer的复数形式 )",
     "phonetic": "ˈnu:ˌkʌməz",
     "example": "",
@@ -8213,7 +8213,7 @@ module.exports = {
   },
   "non": {
     "word": "non",
-    "pos": "",
+    "pos": "adv.",
     "meaning": "非, 不",
     "phonetic": "nɔn",
     "example": "",
@@ -8221,7 +8221,7 @@ module.exports = {
   },
   "normalisation": {
     "word": "normalisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "normalise的变形",
     "phonetic": ",nɔ:məlai'zeiʃən",
     "example": "",
@@ -8229,7 +8229,7 @@ module.exports = {
   },
   "not": {
     "word": "not",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "不, 非, 未",
     "phonetic": "nɒt",
     "example": "",
@@ -8237,7 +8237,7 @@ module.exports = {
   },
   "novel": {
     "word": "novel",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "小说, 长篇故事",
     "phonetic": "'nɒvl",
     "example": "",
@@ -8245,7 +8245,7 @@ module.exports = {
   },
   "now": {
     "word": "now",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "现在, 刚才, 目前",
     "phonetic": "nau",
     "example": "",
@@ -8253,7 +8253,7 @@ module.exports = {
   },
   "numbers": {
     "word": "numbers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "数字（number的复数）；算术",
     "phonetic": "'nʌmbәz",
     "example": "",
@@ -8261,7 +8261,7 @@ module.exports = {
   },
   "numerous": {
     "word": "numerous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "很多的, 数目众多的, 多数的",
     "phonetic": "'nju:mәrәs",
     "example": "",
@@ -8269,7 +8269,7 @@ module.exports = {
   },
   "nutrients": {
     "word": "nutrients",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（食品或化学品）营养物, 营养品( nutrient的复数形式 )",
     "phonetic": "'nju:trɪənts",
     "example": "",
@@ -8286,7 +8286,7 @@ module.exports = {
   },
   "nutritional": {
     "word": "nutritional",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "营养的, 滋养的",
     "phonetic": "nju: 'triʃәnәl",
     "example": "",
@@ -8294,7 +8294,7 @@ module.exports = {
   },
   "nutritious": {
     "word": "nutritious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "滋养的, 营养的",
     "phonetic": "nju:'triʃәs",
     "example": "",
@@ -8311,7 +8311,7 @@ module.exports = {
   },
   "objects": {
     "word": "objects",
-    "pos": "",
+    "pos": "n.",
     "meaning": "目标；物体（object的复数）",
     "phonetic": "",
     "example": "",
@@ -8327,7 +8327,7 @@ module.exports = {
   },
   "obligations": {
     "word": "obligations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "义务；债务；承付款项（obligation的复数）",
     "phonetic": "",
     "example": "",
@@ -8344,7 +8344,7 @@ module.exports = {
   },
   "observers": {
     "word": "observers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "观察者( observer的复数形式 ); 遵守者; 观测者; 目击者",
     "phonetic": "əb'zɜ:vəz",
     "example": "",
@@ -8352,7 +8352,7 @@ module.exports = {
   },
   "obsolete": {
     "word": "obsolete",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "荒废的, 成废物的, 陈旧的, 老式的",
     "phonetic": "'ɒbsәli:t",
     "example": "",
@@ -8360,7 +8360,7 @@ module.exports = {
   },
   "obstacles": {
     "word": "obstacles",
-    "pos": "",
+    "pos": "n.",
     "meaning": "障碍（物）( obstacle的复数形式 ); 障碍物; 绊脚石; 障碍栅栏",
     "phonetic": "'ɒbstəklz",
     "example": "",
@@ -8386,7 +8386,7 @@ module.exports = {
   },
   "occupational": {
     "word": "occupational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "职业的, 军事占领的",
     "phonetic": ".ɒkju'peiʃәnl",
     "example": "",
@@ -8402,7 +8402,7 @@ module.exports = {
   },
   "of": {
     "word": "of",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "的, 属于",
     "phonetic": "ɒv",
     "example": "",
@@ -8410,7 +8410,7 @@ module.exports = {
   },
   "offered": {
     "word": "offered",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "提供, 提议；奉献（offer过去时态）",
     "phonetic": "",
     "example": "",
@@ -8418,7 +8418,7 @@ module.exports = {
   },
   "offers": {
     "word": "offers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "提议；出价；求婚；试图（offer的复数）",
     "phonetic": "",
     "example": "",
@@ -8426,7 +8426,7 @@ module.exports = {
   },
   "offshore": {
     "word": "offshore",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "海面的, 吹向海面的, 近海的",
     "phonetic": "ɒ:f'ʃɒ:",
     "example": "",
@@ -8434,7 +8434,7 @@ module.exports = {
   },
   "on": {
     "word": "on",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之上",
     "phonetic": "ɒn",
     "example": "",
@@ -8442,7 +8442,7 @@ module.exports = {
   },
   "once": {
     "word": "once",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "一次, 曾经, 一旦",
     "phonetic": "wʌns",
     "example": "",
@@ -8450,7 +8450,7 @@ module.exports = {
   },
   "one": {
     "word": "one",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "一(个)",
     "phonetic": "wʌn",
     "example": "",
@@ -8458,7 +8458,7 @@ module.exports = {
   },
   "online": {
     "word": "online",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "联机",
     "phonetic": "",
     "example": "",
@@ -8466,7 +8466,7 @@ module.exports = {
   },
   "only": {
     "word": "only",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "唯一的, 仅有的, 最佳的",
     "phonetic": "'әunli",
     "example": "",
@@ -8474,7 +8474,7 @@ module.exports = {
   },
   "onto": {
     "word": "onto",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之上",
     "phonetic": "'ɒntu:",
     "example": "",
@@ -8482,7 +8482,7 @@ module.exports = {
   },
   "open": {
     "word": "open",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "公开, 户外, 空旷",
     "phonetic": "'әupәn",
     "example": "",
@@ -8507,7 +8507,7 @@ module.exports = {
   },
   "operational": {
     "word": "operational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "操作的, 运作的",
     "phonetic": ".ɒpә'reiʃәnl",
     "example": "",
@@ -8523,7 +8523,7 @@ module.exports = {
   },
   "opponents": {
     "word": "opponents",
-    "pos": "",
+    "pos": "n.",
     "meaning": "对手（opponent的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8531,7 +8531,7 @@ module.exports = {
   },
   "opportunities": {
     "word": "opportunities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "机会( opportunity的名词复数 ); 适当的时机; 条件; 就业（或晋升、进步等）的良机",
     "phonetic": "ˌɒpə'tju:nɪtɪs",
     "example": "",
@@ -8547,7 +8547,7 @@ module.exports = {
   },
   "opposite": {
     "word": "opposite",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "相对的, 相反的, 对面的",
     "phonetic": "'ɒpәzit",
     "example": "",
@@ -8555,7 +8555,7 @@ module.exports = {
   },
   "optimise": {
     "word": "optimise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使最优化, 使尽可能有效",
     "phonetic": "'ɒptɪmaɪz",
     "example": "",
@@ -8563,7 +8563,7 @@ module.exports = {
   },
   "optimistic": {
     "word": "optimistic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "乐观的, 乐观主义的, 乐天的",
     "phonetic": ".ɒpti'mistik",
     "example": "",
@@ -8571,7 +8571,7 @@ module.exports = {
   },
   "or": {
     "word": "or",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "或, 或者",
     "phonetic": "ɒ:",
     "example": "",
@@ -8579,7 +8579,7 @@ module.exports = {
   },
   "oral": {
     "word": "oral",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "口试",
     "phonetic": "'ɒ:rәl",
     "example": "",
@@ -8596,7 +8596,7 @@ module.exports = {
   },
   "organic": {
     "word": "organic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "器官的, 有机的, 组织的, 根本的",
     "phonetic": "ɒ:'gænik",
     "example": "",
@@ -8604,7 +8604,7 @@ module.exports = {
   },
   "organisations": {
     "word": "organisations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "组织；团体（等于organization）",
     "phonetic": ",ɔːɡənaɪ'zeɪʃən",
     "example": "",
@@ -8620,7 +8620,7 @@ module.exports = {
   },
   "organisms": {
     "word": "organisms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "有机物( organism的复数形式 ); 有机体; 生物; 有机体系",
     "phonetic": "'ɔrgən,ɪzəm",
     "example": "",
@@ -8628,7 +8628,7 @@ module.exports = {
   },
   "originally": {
     "word": "originally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "本来, 原来, 最初, 就起源而论, 独创地",
     "phonetic": "ә'ridʒәnli",
     "example": "",
@@ -8644,7 +8644,7 @@ module.exports = {
   },
   "outcomes": {
     "word": "outcomes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "结果( outcome的复数形式 )",
     "phonetic": "ˈautkʌmz",
     "example": "",
@@ -8660,7 +8660,7 @@ module.exports = {
   },
   "outlets": {
     "word": "outlets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "出路；排水口；销售点；批发商点（outlet的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8684,7 +8684,7 @@ module.exports = {
   },
   "outstanding": {
     "word": "outstanding",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "杰出的, 突出的, 未偿付的, 未决定的",
     "phonetic": ".aut'stændiŋ",
     "example": "",
@@ -8692,7 +8692,7 @@ module.exports = {
   },
   "over": {
     "word": "over",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "结束, 越过, 从头到尾",
     "phonetic": "'әuvә",
     "example": "",
@@ -8700,7 +8700,7 @@ module.exports = {
   },
   "overcrowded": {
     "word": "overcrowded",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "挤满的; 过度拥挤的",
     "phonetic": "ˌəʊvəˈkraʊdɪd",
     "example": "",
@@ -8724,7 +8724,7 @@ module.exports = {
   },
   "overstretched": {
     "word": "overstretched",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "延伸过长( overstretch的过去式和过去分词 )",
     "phonetic": "ˈəuvəˈstretʃt",
     "example": "",
@@ -8732,7 +8732,7 @@ module.exports = {
   },
   "packages": {
     "word": "packages",
-    "pos": "",
+    "pos": "n.",
     "meaning": "程序包；包装；包裹（package的复数）",
     "phonetic": "",
     "example": "",
@@ -8740,7 +8740,7 @@ module.exports = {
   },
   "paid": {
     "word": "paid",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "受雇的, 付清的",
     "phonetic": "peid",
     "example": "",
@@ -8748,7 +8748,7 @@ module.exports = {
   },
   "pandemic": {
     "word": "pandemic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "大流行的, 普遍的, 全世界的",
     "phonetic": "pæn'demik",
     "example": "",
@@ -8756,7 +8756,7 @@ module.exports = {
   },
   "panels": {
     "word": "panels",
-    "pos": "",
+    "pos": "n.",
     "meaning": "镶板( panel的名词复数 ); 面; （门、墙等上面的）嵌板; 控制板",
     "phonetic": "'pænl",
     "example": "",
@@ -8772,7 +8772,7 @@ module.exports = {
   },
   "paradoxically": {
     "word": "paradoxically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "反论, 荒谬, 自相矛盾, 似非而可能是",
     "phonetic": "",
     "example": "",
@@ -8780,7 +8780,7 @@ module.exports = {
   },
   "parliaments": {
     "word": "parliaments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "议会, 国会( parliament的复数形式 ); 一届议会的会期",
     "phonetic": "ˈpɑ:ləmənts",
     "example": "",
@@ -8788,7 +8788,7 @@ module.exports = {
   },
   "part": {
     "word": "part",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "部分, 局部, 零件, 要素, 等分, 职责, 角色, 部位",
     "phonetic": "pɑ:t",
     "example": "",
@@ -8796,7 +8796,7 @@ module.exports = {
   },
   "partially": {
     "word": "partially",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "部分地, 一部分地, 不公平地",
     "phonetic": "'pɑ:ʃәli",
     "example": "",
@@ -8804,7 +8804,7 @@ module.exports = {
   },
   "participants": {
     "word": "participants",
-    "pos": "",
+    "pos": "n.",
     "meaning": "参加者, 参与者; 参加者, 参与者( participant的名词复数 )",
     "phonetic": "pɑ:'tɪsɪpənts",
     "example": "",
@@ -8820,7 +8820,7 @@ module.exports = {
   },
   "particular": {
     "word": "particular",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "一项(或条、点), 个别项目, 详细说明",
     "phonetic": "pә'tikjulә",
     "example": "",
@@ -8828,7 +8828,7 @@ module.exports = {
   },
   "particularly": {
     "word": "particularly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "特别, 格外, 尤其, 详细地, 细致地",
     "phonetic": "pә'tikjjlәli",
     "example": "",
@@ -8836,7 +8836,7 @@ module.exports = {
   },
   "partnerships": {
     "word": "partnerships",
-    "pos": "",
+    "pos": "n.",
     "meaning": "伙伴关系( partnership的复数形式 ); 合伙人身份; 合作关系",
     "phonetic": "ˈpɑ:tnəʃips",
     "example": "",
@@ -8852,7 +8852,7 @@ module.exports = {
   },
   "patterns": {
     "word": "patterns",
-    "pos": "",
+    "pos": "n.",
     "meaning": "模式（pattern的复数形式）",
     "phonetic": "",
     "example": "",
@@ -8876,7 +8876,7 @@ module.exports = {
   },
   "perennial": {
     "word": "perennial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "常年的, 长期的, 反复的",
     "phonetic": "pә'reniәl",
     "example": "",
@@ -8892,7 +8892,7 @@ module.exports = {
   },
   "periods": {
     "word": "periods",
-    "pos": "",
+    "pos": "n.",
     "meaning": "周期（period的复数）",
     "phonetic": "",
     "example": "",
@@ -8900,7 +8900,7 @@ module.exports = {
   },
   "peripheral": {
     "word": "peripheral",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "周边的, 周围的, 圆周的, 无关紧要的, 肤浅的",
     "phonetic": "pә'rifәrәl",
     "example": "",
@@ -8908,7 +8908,7 @@ module.exports = {
   },
   "permanent": {
     "word": "permanent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "永久的, 不变的, 固定的, 持久的",
     "phonetic": "'pә:mәnәnt",
     "example": "",
@@ -8932,7 +8932,7 @@ module.exports = {
   },
   "personal": {
     "word": "personal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "私人的, 涉及隐私的, 有人性的, 人称的, 亲自的, 身体的",
     "phonetic": "'pә:snl",
     "example": "",
@@ -8948,7 +8948,7 @@ module.exports = {
   },
   "pervasive": {
     "word": "pervasive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "普遍的, 流行的, 到处蔓延的, 到处渗透的",
     "phonetic": "pә'veisiv",
     "example": "",
@@ -8964,7 +8964,7 @@ module.exports = {
   },
   "pesticides": {
     "word": "pesticides",
-    "pos": "",
+    "pos": "n.",
     "meaning": "杀虫剂( pesticide的复数形式 ); 除害药物",
     "phonetic": "'pestɪsaɪdz",
     "example": "",
@@ -8972,7 +8972,7 @@ module.exports = {
   },
   "pests": {
     "word": "pests",
-    "pos": "",
+    "pos": "n.",
     "meaning": "有害的人或物( pest的复数形式 ); 害虫; 害兽; 害鸟",
     "phonetic": "'pests",
     "example": "",
@@ -8988,7 +8988,7 @@ module.exports = {
   },
   "pharmaceutical": {
     "word": "pharmaceutical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "药学的, 制药的, 药用的, 药物的, 药剂师的, 药师的",
     "phonetic": ",fɑ:mә'sju:tikәl",
     "example": "",
@@ -9014,7 +9014,7 @@ module.exports = {
   },
   "places": {
     "word": "places",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地点；位置；[数]位数（place的复数）",
     "phonetic": "",
     "example": "",
@@ -9030,7 +9030,7 @@ module.exports = {
   },
   "planet's": {
     "word": "planets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "行星( planet的复数形式 ); 地球（尤指环境）",
     "phonetic": "p'lænɪts",
     "example": "",
@@ -9038,7 +9038,7 @@ module.exports = {
   },
   "planners": {
     "word": "planners",
-    "pos": "",
+    "pos": "n.",
     "meaning": "规划者, 策划人( planner的名词复数 )",
     "phonetic": "p'lænəz",
     "example": "",
@@ -9062,7 +9062,7 @@ module.exports = {
   },
   "platforms": {
     "word": "platforms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "台( platform的复数形式 ); 站台; （公开表达意见或在某方面发展的）机会; 纲领",
     "phonetic": "p'lætfɔ:mz",
     "example": "",
@@ -9070,7 +9070,7 @@ module.exports = {
   },
   "pledged": {
     "word": "pledged",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "保证, 许诺, 发誓( pledge的过去式和过去分词 ); 典当; 保证给予（或做）; 以誓言约束",
     "phonetic": "pledʒd",
     "example": "",
@@ -9078,7 +9078,7 @@ module.exports = {
   },
   "polarisation": {
     "word": "polarisation",
-    "pos": "",
+    "pos": "n.",
     "meaning": "[物]偏振(现象),极化(作用),两极化,分化",
     "phonetic": ",pәjlәrai'zeiʃәn; -ri'z-",
     "example": "",
@@ -9086,7 +9086,7 @@ module.exports = {
   },
   "policies": {
     "word": "policies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "政策；保险单（policy的复数）",
     "phonetic": "",
     "example": "",
@@ -9119,7 +9119,7 @@ module.exports = {
   },
   "political": {
     "word": "political",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "政治的, 政治上的, 政党的, 从事政治的",
     "phonetic": "pә'litikl",
     "example": "",
@@ -9144,7 +9144,7 @@ module.exports = {
   },
   "popular": {
     "word": "popular",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "通俗的, 流行的, 受欢迎的, 大众的, 人民的, 普及的",
     "phonetic": "'pɒpjulә",
     "example": "",
@@ -9161,7 +9161,7 @@ module.exports = {
   },
   "populations": {
     "word": "populations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "人口( population的复数形式 ); 全体居民; 特定人[动物]群",
     "phonetic": "pɒpjʊ'leɪʃnz",
     "example": "",
@@ -9169,7 +9169,7 @@ module.exports = {
   },
   "positions": {
     "word": "positions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "定位；位置（position的复数）",
     "phonetic": "",
     "example": "",
@@ -9194,7 +9194,7 @@ module.exports = {
   },
   "potentially": {
     "word": "potentially",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "可能地, 潜在地",
     "phonetic": "pә'tenʃәli",
     "example": "",
@@ -9219,7 +9219,7 @@ module.exports = {
   },
   "practical": {
     "word": "practical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "实际的, 现实的, 实用性的",
     "phonetic": "'præktikl",
     "example": "",
@@ -9227,7 +9227,7 @@ module.exports = {
   },
   "practices": {
     "word": "practices",
-    "pos": "",
+    "pos": "n.",
     "meaning": "练习( practice的名词复数 ); 实践; （医生或律师的）业务; 惯例",
     "phonetic": "ˈpræktisiz",
     "example": "",
@@ -9235,7 +9235,7 @@ module.exports = {
   },
   "pre": {
     "word": "pre",
-    "pos": "",
+    "pos": "abbr.",
     "meaning": "炼油工程师（Petroleum Refining Engineer）",
     "phonetic": "",
     "example": "",
@@ -9243,7 +9243,7 @@ module.exports = {
   },
   "precarious": {
     "word": "precarious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不稳定的, 不安的, 危险的",
     "phonetic": "pri'kєәriәs",
     "example": "",
@@ -9267,7 +9267,7 @@ module.exports = {
   },
   "predators": {
     "word": "predators",
-    "pos": "",
+    "pos": "n.",
     "meaning": "食肉动物( predator的复数形式 ); 奴役他人者（尤指在财务或性关系方面）",
     "phonetic": "p'redətəz",
     "example": "",
@@ -9275,7 +9275,7 @@ module.exports = {
   },
   "predecessors": {
     "word": "predecessors",
-    "pos": "",
+    "pos": "n.",
     "meaning": "前任( predecessor的复数形式 ); 前辈; （被取代的）原有事物; 前身",
     "phonetic": "ˈpri:disesəz",
     "example": "",
@@ -9299,7 +9299,7 @@ module.exports = {
   },
   "predominantly": {
     "word": "predominantly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "主要地, 显著地, 大多数地, 突出地",
     "phonetic": "",
     "example": "",
@@ -9307,7 +9307,7 @@ module.exports = {
   },
   "premium": {
     "word": "premium",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "额外补贴, 奖金, 奖赏, 保险费",
     "phonetic": "'pri:miәm",
     "example": "",
@@ -9331,7 +9331,7 @@ module.exports = {
   },
   "prerequisites": {
     "word": "prerequisites",
-    "pos": "",
+    "pos": "n.",
     "meaning": "先决条件, 前提( prerequisite的复数形式 )",
     "phonetic": "pri:'rekwɪzɪts",
     "example": "",
@@ -9339,7 +9339,7 @@ module.exports = {
   },
   "presented": {
     "word": "presented",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "& vi. （动词present的过去式及过去分词形式）; 表示\"展示; 展现; 出示\"",
     "phonetic": "ˈprezəntid",
     "example": "",
@@ -9347,7 +9347,7 @@ module.exports = {
   },
   "presents": {
     "word": "presents",
-    "pos": "",
+    "pos": "n.",
     "meaning": "出品；礼物（present的复数）",
     "phonetic": "",
     "example": "",
@@ -9371,7 +9371,7 @@ module.exports = {
   },
   "prestigious": {
     "word": "prestigious",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "享有声望的",
     "phonetic": "pre'stidʒiәs",
     "example": "",
@@ -9388,7 +9388,7 @@ module.exports = {
   },
   "preventive": {
     "word": "preventive",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "预防的, 防止的",
     "phonetic": "pri'ventiv",
     "example": "",
@@ -9405,7 +9405,7 @@ module.exports = {
   },
   "previously": {
     "word": "previously",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "先, 先前, 以前, 前, (非正式)过早, 过急, 在前, 在...以前, 在先",
     "phonetic": "'pri:vju:sli",
     "example": "",
@@ -9413,7 +9413,7 @@ module.exports = {
   },
   "prices": {
     "word": "prices",
-    "pos": "",
+    "pos": "n.",
     "meaning": "价格（price的复数）",
     "phonetic": "",
     "example": "",
@@ -9429,7 +9429,7 @@ module.exports = {
   },
   "primarily": {
     "word": "primarily",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "主要地, 首先地",
     "phonetic": "'praimәrili",
     "example": "",
@@ -9446,7 +9446,7 @@ module.exports = {
   },
   "principal": {
     "word": "principal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "校长, 首长, 本金, 主犯, 资本, 委托人",
     "phonetic": "'prinsipәl",
     "example": "",
@@ -9454,7 +9454,7 @@ module.exports = {
   },
   "principally": {
     "word": "principally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "主要地, 大部分",
     "phonetic": "'prinsәpәli",
     "example": "",
@@ -9471,7 +9471,7 @@ module.exports = {
   },
   "principled": {
     "word": "principled",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "原则的, 有原则的, 原则性的",
     "phonetic": "'prinsәpld",
     "example": "",
@@ -9479,7 +9479,7 @@ module.exports = {
   },
   "principles": {
     "word": "principles",
-    "pos": "",
+    "pos": "n.",
     "meaning": "原则, 原理, 道义, 节操",
     "phonetic": "",
     "example": "",
@@ -9495,7 +9495,7 @@ module.exports = {
   },
   "prioritise": {
     "word": "prioritise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "给予…优先权; 按优先顺序处理; 出轻重缓急",
     "phonetic": "praɪ'ɒrəˌtaɪz",
     "example": "",
@@ -9503,7 +9503,7 @@ module.exports = {
   },
   "prized": {
     "word": "prized",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被看作最有价值的",
     "phonetic": "",
     "example": "",
@@ -9528,7 +9528,7 @@ module.exports = {
   },
   "processed": {
     "word": "processed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "处理的, 加工过的",
     "phonetic": "",
     "example": "",
@@ -9560,7 +9560,7 @@ module.exports = {
   },
   "products": {
     "word": "products",
-    "pos": "",
+    "pos": "n.",
     "meaning": "产品；商品（product的复数）",
     "phonetic": "",
     "example": "",
@@ -9576,7 +9576,7 @@ module.exports = {
   },
   "professionals": {
     "word": "professionals",
-    "pos": "",
+    "pos": "n.",
     "meaning": "专业人员（professional的复数）",
     "phonetic": "",
     "example": "",
@@ -9601,7 +9601,7 @@ module.exports = {
   },
   "profits": {
     "word": "profits",
-    "pos": "",
+    "pos": "n.",
     "meaning": "收益, 红利；盈利（profit的复数）",
     "phonetic": "",
     "example": "",
@@ -9609,7 +9609,7 @@ module.exports = {
   },
   "profound": {
     "word": "profound",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "极深的, 深厚的, 深刻的, 渊博的",
     "phonetic": "prә'faund",
     "example": "",
@@ -9617,7 +9617,7 @@ module.exports = {
   },
   "programmes": {
     "word": "programmes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（演出或活动的）程序( programme的复数形式 ); 计划; 节目; 课程",
     "phonetic": "p'rəʊɡræmz",
     "example": "",
@@ -9625,7 +9625,7 @@ module.exports = {
   },
   "progressively": {
     "word": "progressively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "进步, 先进, 向前进, 不断前进, 累进, 渐进, 逐渐, 渐次, 主张进步, 进行性",
     "phonetic": "",
     "example": "",
@@ -9633,7 +9633,7 @@ module.exports = {
   },
   "prohibitions": {
     "word": "prohibitions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "禁令, 禁律( prohibition的复数形式 ); 禁酒; 禁例",
     "phonetic": "ˌprəʊəˈbɪʃənz",
     "example": "",
@@ -9641,7 +9641,7 @@ module.exports = {
   },
   "prohibitively": {
     "word": "prohibitively",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "禁止, 起阻止作用, 抑制",
     "phonetic": "",
     "example": "",
@@ -9649,7 +9649,7 @@ module.exports = {
   },
   "projected": {
     "word": "projected",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "投影的, 投射",
     "phonetic": "",
     "example": "",
@@ -9657,7 +9657,7 @@ module.exports = {
   },
   "projections": {
     "word": "projections",
-    "pos": "",
+    "pos": "n.",
     "meaning": "投影；发射, 规划；突出部分；预测, 推测（projection的复数形式）",
     "phonetic": "",
     "example": "",
@@ -9665,7 +9665,7 @@ module.exports = {
   },
   "projects": {
     "word": "projects",
-    "pos": "",
+    "pos": "n.",
     "meaning": "项目；企划；工程（project的复数）",
     "phonetic": "",
     "example": "",
@@ -9681,7 +9681,7 @@ module.exports = {
   },
   "proliferated": {
     "word": "proliferated",
-    "pos": "",
+    "pos": "v.",
     "meaning": "激增( proliferate的过去式和过去分词 ); （迅速）繁殖; 增生; 扩散",
     "phonetic": "prəuˈlifəreitid",
     "example": "",
@@ -9689,7 +9689,7 @@ module.exports = {
   },
   "proliferates": {
     "word": "proliferates",
-    "pos": "",
+    "pos": "n.",
     "meaning": "激增( proliferate的名词复数 ); （迅速）繁殖; 增生; 扩散",
     "phonetic": "prəuˈlifəreits",
     "example": "",
@@ -9705,7 +9705,7 @@ module.exports = {
   },
   "prolonged": {
     "word": "prolonged",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "延续的, 长时间的",
     "phonetic": "prә'lɔŋd",
     "example": "",
@@ -9722,7 +9722,7 @@ module.exports = {
   },
   "prompted": {
     "word": "prompted",
-    "pos": "",
+    "pos": "v.",
     "meaning": "引起；提示（prompt的过去时, 过去分词）",
     "phonetic": "",
     "example": "",
@@ -9730,7 +9730,7 @@ module.exports = {
   },
   "propelled": {
     "word": "propelled",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "推进的",
     "phonetic": "",
     "example": "",
@@ -9746,7 +9746,7 @@ module.exports = {
   },
   "proponents": {
     "word": "proponents",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（某事业、理论等的）支持者, 拥护者( proponent的复数形式 )",
     "phonetic": "prəˈpəʊnənts",
     "example": "",
@@ -9754,7 +9754,7 @@ module.exports = {
   },
   "proportion": {
     "word": "proportion",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "比例, 比率, 均衡, 部分, 面积",
     "phonetic": "prә'pɒ:ʃәn",
     "example": "",
@@ -9762,7 +9762,7 @@ module.exports = {
   },
   "proportions": {
     "word": "proportions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "比例；大小（proportion的复数形式）",
     "phonetic": "",
     "example": "",
@@ -9770,7 +9770,7 @@ module.exports = {
   },
   "proposed": {
     "word": "proposed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "被提议的；所推荐的",
     "phonetic": "",
     "example": "",
@@ -9778,7 +9778,7 @@ module.exports = {
   },
   "prospects": {
     "word": "prospects",
-    "pos": "",
+    "pos": "n.",
     "meaning": "预期；前景；潜在顾客；远景展望",
     "phonetic": "",
     "example": "",
@@ -9794,7 +9794,7 @@ module.exports = {
   },
   "prosperous": {
     "word": "prosperous",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "成功的, 繁盛的, 幸运的",
     "phonetic": "'prɒspәrәs",
     "example": "",
@@ -9810,7 +9810,7 @@ module.exports = {
   },
   "protected": {
     "word": "protected",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "受保护的",
     "phonetic": "",
     "example": "",
@@ -9826,7 +9826,7 @@ module.exports = {
   },
   "protections": {
     "word": "protections",
-    "pos": "",
+    "pos": "n.",
     "meaning": "保护( protection的复数形式 ); 贸易保护措施; 保险; （向歹徒缴纳的）保护费",
     "phonetic": "prə'tekʃnz",
     "example": "",
@@ -9834,7 +9834,7 @@ module.exports = {
   },
   "protocols": {
     "word": "protocols",
-    "pos": "",
+    "pos": "n.",
     "meaning": "协议；礼仪礼节；条款（protocol的复数）",
     "phonetic": "",
     "example": "",
@@ -9866,7 +9866,7 @@ module.exports = {
   },
   "provocative": {
     "word": "provocative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "激发感情的, 挑拨的, 刺激的",
     "phonetic": "prә'vɒkәtiv",
     "example": "",
@@ -9874,7 +9874,7 @@ module.exports = {
   },
   "provoked": {
     "word": "provoked",
-    "pos": "",
+    "pos": "v.",
     "meaning": "激起( provoke的过去式和过去分词 ); 惹怒; 引起; 引发",
     "phonetic": "prəˈvəukt",
     "example": "",
@@ -9891,7 +9891,7 @@ module.exports = {
   },
   "public": {
     "word": "public",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "公众, 民众",
     "phonetic": "'pʌblik",
     "example": "",
@@ -9917,7 +9917,7 @@ module.exports = {
   },
   "purchasers": {
     "word": "purchasers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "用户, 购买者（purchaser的复数形式）",
     "phonetic": "",
     "example": "",
@@ -9949,7 +9949,7 @@ module.exports = {
   },
   "pursuits": {
     "word": "pursuits",
-    "pos": "",
+    "pos": "n.",
     "meaning": "追赶( pursuit的复数形式 ); 工作; 消遣; 嗜好",
     "phonetic": "pəˈsju:ts",
     "example": "",
@@ -9966,7 +9966,7 @@ module.exports = {
   },
   "qualities": {
     "word": "qualities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "质( quality的名词复数 ); 特点; 品质; 优点",
     "phonetic": "ˈkwɔlitiz",
     "example": "",
@@ -9982,7 +9982,7 @@ module.exports = {
   },
   "quantities": {
     "word": "quantities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "数量, 工程量；[音]音符长度（quantity的复数）",
     "phonetic": "",
     "example": "",
@@ -10006,7 +10006,7 @@ module.exports = {
   },
   "ramifications": {
     "word": "ramifications",
-    "pos": "",
+    "pos": "n.",
     "meaning": "结果, 后果( ramification的复数形式 )",
     "phonetic": "ˌræməfɪˈkeɪʃənz",
     "example": "",
@@ -10014,7 +10014,7 @@ module.exports = {
   },
   "ranging": {
     "word": "ranging",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "距离修正, 广泛搜索",
     "phonetic": "'reindʒiŋ",
     "example": "",
@@ -10022,7 +10022,7 @@ module.exports = {
   },
   "rapid": {
     "word": "rapid",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "迅速的, 飞快的, 急促的, 陡的",
     "phonetic": "'ræpid",
     "example": "",
@@ -10030,7 +10030,7 @@ module.exports = {
   },
   "rapidly": {
     "word": "rapidly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "飞快地, 迅速地, 赶紧地",
     "phonetic": "'ræpidli",
     "example": "",
@@ -10038,7 +10038,7 @@ module.exports = {
   },
   "rarely": {
     "word": "rarely",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "很少地, 罕有地",
     "phonetic": "'rєәli",
     "example": "",
@@ -10054,7 +10054,7 @@ module.exports = {
   },
   "rates": {
     "word": "rates",
-    "pos": "",
+    "pos": "n.",
     "meaning": "比率；价格；等级（rate的复数形式）",
     "phonetic": "",
     "example": "",
@@ -10062,7 +10062,7 @@ module.exports = {
   },
   "rather": {
     "word": "rather",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "宁可, 稍微, 相当",
     "phonetic": "'ræðә",
     "example": "",
@@ -10078,7 +10078,7 @@ module.exports = {
   },
   "reached": {
     "word": "reached",
-    "pos": "",
+    "pos": "v.",
     "meaning": "到达( reach的过去式和过去分词 ); 联络; 伸出手臂, 延伸",
     "phonetic": "ri:tʃt",
     "example": "",
@@ -10086,7 +10086,7 @@ module.exports = {
   },
   "reaching": {
     "word": "reaching",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "到达( reach的现在分词 ); 联络; 伸出手臂, 延伸",
     "phonetic": "ri:tʃɪŋ",
     "example": "",
@@ -10110,7 +10110,7 @@ module.exports = {
   },
   "receded": {
     "word": "receded",
-    "pos": "",
+    "pos": "v.",
     "meaning": "逐渐远离( recede的过去式和过去分词 ); 向后倾斜; 自原处后退或避开别人的注视; 尤指问题",
     "phonetic": "riˈsi:did",
     "example": "",
@@ -10118,7 +10118,7 @@ module.exports = {
   },
   "recent": {
     "word": "recent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "最近的, 近代的, 最新的",
     "phonetic": "'ri:snt",
     "example": "",
@@ -10126,7 +10126,7 @@ module.exports = {
   },
   "reclassified": {
     "word": "reclassified",
-    "pos": "",
+    "pos": "v.",
     "meaning": "将…再次（重新）分类( reclassify的过去式和过去分词 )",
     "phonetic": "ri:ˈklæsifaid",
     "example": "",
@@ -10134,7 +10134,7 @@ module.exports = {
   },
   "recognise": {
     "word": "recognise",
-    "pos": "",
+    "pos": "v.",
     "meaning": "认识, 辩认, 认出, 承认, 认可, 清楚地认识到, 自认, 公认, 赏识, 准许某人发言",
     "phonetic": "'rekә^naiz",
     "example": "",
@@ -10150,7 +10150,7 @@ module.exports = {
   },
   "recommendations": {
     "word": "recommendations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "推荐( recommendation的复数形式 ); 推荐信; 正式建议; 提议",
     "phonetic": "ˌrekəmenˈdeiʃənz",
     "example": "",
@@ -10166,7 +10166,7 @@ module.exports = {
   },
   "reconfigured": {
     "word": "reconfigured",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "重新配置",
     "phonetic": "riːkən'fɪgə",
     "example": "",
@@ -10174,7 +10174,7 @@ module.exports = {
   },
   "recorded": {
     "word": "recorded",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "记录的",
     "phonetic": "",
     "example": "",
@@ -10182,7 +10182,7 @@ module.exports = {
   },
   "recruiters": {
     "word": "recruiters",
-    "pos": "",
+    "pos": "n.",
     "meaning": "招聘人员, 征兵人员",
     "phonetic": "rɪ'kruːtə",
     "example": "",
@@ -10215,7 +10215,7 @@ module.exports = {
   },
   "reduced": {
     "word": "reduced",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "减少的；简化的；缩减的",
     "phonetic": "ri'dju:st",
     "example": "",
@@ -10223,7 +10223,7 @@ module.exports = {
   },
   "reduces": {
     "word": "reduces",
-    "pos": "",
+    "pos": "v.",
     "meaning": "减少；降低；将…归纳；折合（reduce的第三人称单数形式）",
     "phonetic": "",
     "example": "",
@@ -10231,7 +10231,7 @@ module.exports = {
   },
   "reducing": {
     "word": "reducing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "减低；减轻体重法, 减肥法",
     "phonetic": "ri'dju:siŋ",
     "example": "",
@@ -10247,7 +10247,7 @@ module.exports = {
   },
   "redundancies": {
     "word": "redundancies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "过多( redundancy的复数形式 ); （机器的）多余度; （尤指文字）冗长; （因劳动力过剩而造成的）裁员",
     "phonetic": "rɪˈdʌndənsi:z",
     "example": "",
@@ -10263,7 +10263,7 @@ module.exports = {
   },
   "refined": {
     "word": "refined",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "精炼的, 优雅的, 精细的",
     "phonetic": "ri'faind",
     "example": "",
@@ -10280,7 +10280,7 @@ module.exports = {
   },
   "regard": {
     "word": "regard",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "关心, 注意, 尊敬, 关系, 问候",
     "phonetic": "ri'gɑ:d",
     "example": "",
@@ -10288,7 +10288,7 @@ module.exports = {
   },
   "regarding": {
     "word": "regarding",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "关于",
     "phonetic": "ri'gɑ:diŋ",
     "example": "",
@@ -10296,7 +10296,7 @@ module.exports = {
   },
   "regions": {
     "word": "regions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "地区；地域；领域（region的复数）",
     "phonetic": "",
     "example": "",
@@ -10304,7 +10304,7 @@ module.exports = {
   },
   "registrants": {
     "word": "registrants",
-    "pos": "",
+    "pos": "n.",
     "meaning": "登记者",
     "phonetic": "'redʒɪstr(ə)nt",
     "example": "",
@@ -10330,7 +10330,7 @@ module.exports = {
   },
   "regulations": {
     "word": "regulations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "章则；条例；规程（regulation的复数）",
     "phonetic": "",
     "example": "",
@@ -10338,7 +10338,7 @@ module.exports = {
   },
   "regulatory": {
     "word": "regulatory",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "受控制的, 统制的, 调整的",
     "phonetic": "'regjulәtәri",
     "example": "",
@@ -10346,7 +10346,7 @@ module.exports = {
   },
   "reinforces": {
     "word": "reinforces",
-    "pos": "",
+    "pos": "v.",
     "meaning": "加固( reinforce的第三人称单数 ); 使更结实; 加强; 充实",
     "phonetic": "ˌri:ɪnˈfɔ:siz",
     "example": "",
@@ -10354,7 +10354,7 @@ module.exports = {
   },
   "related": {
     "word": "related",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "讲述的, 叙述的；有关系的, 有关联的",
     "phonetic": "ri'leitid",
     "example": "",
@@ -10370,7 +10370,7 @@ module.exports = {
   },
   "relationships": {
     "word": "relationships",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（事物之间的）关系( relationship的复数形式 ); （人、团体、国家之间的）关系; 情爱关系; 血缘关系",
     "phonetic": "rɪ'leɪʃnʃɪps",
     "example": "",
@@ -10378,7 +10378,7 @@ module.exports = {
   },
   "relative": {
     "word": "relative",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "亲戚, 关系词",
     "phonetic": "'relәtiv",
     "example": "",
@@ -10386,7 +10386,7 @@ module.exports = {
   },
   "relegating": {
     "word": "relegating",
-    "pos": "",
+    "pos": "v.",
     "meaning": "使降级( relegate的现在分词 ); 使降职; 转移; 把…归类",
     "phonetic": "ˈreliɡeitɪŋ",
     "example": "",
@@ -10394,7 +10394,7 @@ module.exports = {
   },
   "relentless": {
     "word": "relentless",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "无情的, 冷酷的, 残酷的",
     "phonetic": "ri'lentlis",
     "example": "",
@@ -10402,7 +10402,7 @@ module.exports = {
   },
   "reliable": {
     "word": "reliable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "可靠的, 可信赖的",
     "phonetic": "ri'laiәbl",
     "example": "",
@@ -10410,7 +10410,7 @@ module.exports = {
   },
   "reliably": {
     "word": "reliably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "可靠地, 可信赖地",
     "phonetic": "ri'laiәbli",
     "example": "",
@@ -10418,7 +10418,7 @@ module.exports = {
   },
   "reliant": {
     "word": "reliant",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "依赖的, 信赖的",
     "phonetic": "ri'laiәnt",
     "example": "",
@@ -10458,7 +10458,7 @@ module.exports = {
   },
   "remote": {
     "word": "remote",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "遥远的, 偏僻的, 疏远的, 微少的",
     "phonetic": "ri'mәut",
     "example": "",
@@ -10466,7 +10466,7 @@ module.exports = {
   },
   "removed": {
     "word": "removed",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "离开的, 间隔的, 远离的",
     "phonetic": "ri'mu:vd",
     "example": "",
@@ -10507,7 +10507,7 @@ module.exports = {
   },
   "reporting": {
     "word": "reporting",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "报道",
     "phonetic": "ri'pɒ:tiŋ",
     "example": "",
@@ -10531,7 +10531,7 @@ module.exports = {
   },
   "represents": {
     "word": "represents",
-    "pos": "",
+    "pos": "v.",
     "meaning": "表现( represent的第三人称单数 ); 代表; 体现; 作为…的代表",
     "phonetic": "ˌrepriˈzents",
     "example": "",
@@ -10539,7 +10539,7 @@ module.exports = {
   },
   "reputational": {
     "word": "reputational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "reputation（名声, 声誉）的变形",
     "phonetic": ",repju'teiʃən",
     "example": "",
@@ -10556,7 +10556,7 @@ module.exports = {
   },
   "required": {
     "word": "required",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "必需的",
     "phonetic": "ri'kwaiәd",
     "example": "",
@@ -10564,7 +10564,7 @@ module.exports = {
   },
   "requirements": {
     "word": "requirements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "调整需要量, 必需品；要求（requirement的复数）",
     "phonetic": "",
     "example": "",
@@ -10572,7 +10572,7 @@ module.exports = {
   },
   "requires": {
     "word": "requires",
-    "pos": "",
+    "pos": "n.",
     "meaning": "需要；要求；需求（require的复数）",
     "phonetic": "",
     "example": "",
@@ -10596,7 +10596,7 @@ module.exports = {
   },
   "reserves": {
     "word": "reserves",
-    "pos": "",
+    "pos": "n.",
     "meaning": "储量, 后备队",
     "phonetic": "",
     "example": "",
@@ -10604,7 +10604,7 @@ module.exports = {
   },
   "residents": {
     "word": "residents",
-    "pos": "",
+    "pos": "n.",
     "meaning": "居民；房客；住院医生（resident的复数）",
     "phonetic": "",
     "example": "",
@@ -10612,7 +10612,7 @@ module.exports = {
   },
   "resides": {
     "word": "resides",
-    "pos": "",
+    "pos": "v.",
     "meaning": "居住( reside的第三人称单数 ); 定居; 驻扎; 属于",
     "phonetic": "riˈzaidz",
     "example": "",
@@ -10620,7 +10620,7 @@ module.exports = {
   },
   "residing": {
     "word": "residing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "居住( reside的现在分词 ); 定居; 驻扎; 属于",
     "phonetic": "riˈzaidɪŋ",
     "example": "",
@@ -10669,7 +10669,7 @@ module.exports = {
   },
   "resources": {
     "word": "resources",
-    "pos": "",
+    "pos": "n.",
     "meaning": "资源；物力（resource的复数）",
     "phonetic": "",
     "example": "",
@@ -10677,7 +10677,7 @@ module.exports = {
   },
   "response": {
     "word": "response",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "反应, 回答, 响应",
     "phonetic": "ri'spɒns",
     "example": "",
@@ -10685,7 +10685,7 @@ module.exports = {
   },
   "responses": {
     "word": "responses",
-    "pos": "",
+    "pos": "n.",
     "meaning": "响应回应",
     "phonetic": "",
     "example": "",
@@ -10701,7 +10701,7 @@ module.exports = {
   },
   "responsibly": {
     "word": "responsibly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "认真负责地, 可信赖地, 可靠地",
     "phonetic": "",
     "example": "",
@@ -10717,7 +10717,7 @@ module.exports = {
   },
   "retaining": {
     "word": "retaining",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "保留, 保持, 维持防护",
     "phonetic": "rɪˈteɪnɪŋ",
     "example": "",
@@ -10733,7 +10733,7 @@ module.exports = {
   },
   "retreating": {
     "word": "retreating",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "[化] 再精制; 再处理",
     "phonetic": "",
     "example": "",
@@ -10798,7 +10798,7 @@ module.exports = {
   },
   "revolutions": {
     "word": "revolutions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "革命, 转数（revolution的复数形式）",
     "phonetic": "",
     "example": "",
@@ -10814,7 +10814,7 @@ module.exports = {
   },
   "rhetorical": {
     "word": "rhetorical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "修辞学的, 符合修辞学的, 修辞的",
     "phonetic": "ri'tɒ:rikl",
     "example": "",
@@ -10822,7 +10822,7 @@ module.exports = {
   },
   "rich": {
     "word": "rich",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "富裕的, 富饶的, 浓厚的, 贵重的",
     "phonetic": "ri:tʃ",
     "example": "",
@@ -10838,7 +10838,7 @@ module.exports = {
   },
   "rights": {
     "word": "rights",
-    "pos": "",
+    "pos": "n.",
     "meaning": "正当权利",
     "phonetic": "",
     "example": "",
@@ -10846,7 +10846,7 @@ module.exports = {
   },
   "rigid": {
     "word": "rigid",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "坚硬的, 刚性的, 严格的, 精密的, 刻板的",
     "phonetic": "'ridʒid",
     "example": "",
@@ -10854,7 +10854,7 @@ module.exports = {
   },
   "rises": {
     "word": "rises",
-    "pos": "",
+    "pos": "v.",
     "meaning": "价格上涨；（日、月、星）升起；起身（rise第三人称单数）",
     "phonetic": "",
     "example": "",
@@ -10862,7 +10862,7 @@ module.exports = {
   },
   "rising": {
     "word": "rising",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "上升, 造反, 叛乱",
     "phonetic": "'raiziŋ",
     "example": "",
@@ -10870,7 +10870,7 @@ module.exports = {
   },
   "risks": {
     "word": "risks",
-    "pos": "",
+    "pos": "n.",
     "meaning": "风险, 危险（risk复数）",
     "phonetic": "",
     "example": "",
@@ -10878,7 +10878,7 @@ module.exports = {
   },
   "rituals": {
     "word": "rituals",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（宗教等的）仪式( ritual的复数形式 ); 例行公事, 老规矩",
     "phonetic": "'rɪtʃʊəlz",
     "example": "",
@@ -10895,7 +10895,7 @@ module.exports = {
   },
   "roles": {
     "word": "roles",
-    "pos": "",
+    "pos": "n.",
     "meaning": "人物；角色；任务, 作用（role的复数形式）",
     "phonetic": "",
     "example": "",
@@ -10927,7 +10927,7 @@ module.exports = {
   },
   "routine": {
     "word": "routine",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "常规, 日常工作, 惯例, 例行公事",
     "phonetic": "ru:'ti:n",
     "example": "",
@@ -10935,7 +10935,7 @@ module.exports = {
   },
   "rural": {
     "word": "rural",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "乡下的, 田园的, 乡村风味的",
     "phonetic": "'ruәrәl",
     "example": "",
@@ -10943,7 +10943,7 @@ module.exports = {
   },
   "sacred": {
     "word": "sacred",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "神圣的, 献给上帝的, 庄严的, 祭祀的",
     "phonetic": "'seikrid",
     "example": "",
@@ -10951,7 +10951,7 @@ module.exports = {
   },
   "safe": {
     "word": "safe",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "保险箱, 冷藏室",
     "phonetic": "seif",
     "example": "",
@@ -10959,7 +10959,7 @@ module.exports = {
   },
   "safeguards": {
     "word": "safeguards",
-    "pos": "",
+    "pos": "n.",
     "meaning": "保障措施；安全保护（safeguard的复数）",
     "phonetic": "",
     "example": "",
@@ -10993,7 +10993,7 @@ module.exports = {
   },
   "saving": {
     "word": "saving",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "存款, 挽救, 节约",
     "phonetic": "'seiviŋ",
     "example": "",
@@ -11009,7 +11009,7 @@ module.exports = {
   },
   "scarcely": {
     "word": "scarcely",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "简直不, 一定不, 仅仅",
     "phonetic": "'skɑ:sli",
     "example": "",
@@ -11025,7 +11025,7 @@ module.exports = {
   },
   "sceptics": {
     "word": "sceptics",
-    "pos": "",
+    "pos": "n.",
     "meaning": "多疑者( sceptic的复数形式 ); 怀疑宗教的人",
     "phonetic": "ˈskeptɪks",
     "example": "",
@@ -11033,7 +11033,7 @@ module.exports = {
   },
   "schedules": {
     "word": "schedules",
-    "pos": "",
+    "pos": "n.",
     "meaning": "时间表；待办事项；日程安排（schedule的复数形式）",
     "phonetic": "",
     "example": "",
@@ -11041,7 +11041,7 @@ module.exports = {
   },
   "schemes": {
     "word": "schemes",
-    "pos": "",
+    "pos": "n.",
     "meaning": "计划( scheme的名词复数 ); 体系; 阴谋",
     "phonetic": "ski:mz",
     "example": "",
@@ -11049,7 +11049,7 @@ module.exports = {
   },
   "scholars": {
     "word": "scholars",
-    "pos": "",
+    "pos": "n.",
     "meaning": "奖学金获得者( scholar的复数形式 ); 学者; 聪颖勤奋的学生; 文人学士",
     "phonetic": "s'kɒləz",
     "example": "",
@@ -11082,7 +11082,7 @@ module.exports = {
   },
   "scientific": {
     "word": "scientific",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "科学的, 系统的, 符合科学规律的",
     "phonetic": ".saiәn'tifik",
     "example": "",
@@ -11090,7 +11090,7 @@ module.exports = {
   },
   "scientifically": {
     "word": "scientifically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "合乎科学地, 学问上, 系统地",
     "phonetic": ".saiәn'tifikәli",
     "example": "",
@@ -11114,7 +11114,7 @@ module.exports = {
   },
   "sectors": {
     "word": "sectors",
-    "pos": "",
+    "pos": "n.",
     "meaning": "分区；部门；扇区数（sector的复数）",
     "phonetic": "",
     "example": "",
@@ -11130,7 +11130,7 @@ module.exports = {
   },
   "sedentary": {
     "word": "sedentary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "久坐的, 坐惯的, 定栖的",
     "phonetic": "'sedәntәri",
     "example": "",
@@ -11146,7 +11146,7 @@ module.exports = {
   },
   "seeks": {
     "word": "seeks",
-    "pos": "",
+    "pos": "v.",
     "meaning": "寻找, 探寻( seek的第三人称单数 ); 企图; 试图; 探索",
     "phonetic": "si:ks",
     "example": "",
@@ -11154,7 +11154,7 @@ module.exports = {
   },
   "seemingly": {
     "word": "seemingly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "看来似乎, 表面上看来",
     "phonetic": "'si:miŋli",
     "example": "",
@@ -11179,7 +11179,7 @@ module.exports = {
   },
   "seminars": {
     "word": "seminars",
-    "pos": "",
+    "pos": "n.",
     "meaning": "研讨班( seminar的复数形式 ); 研讨小组; 研讨会; 培训会",
     "phonetic": "'semɪnɑ:z",
     "example": "",
@@ -11203,7 +11203,7 @@ module.exports = {
   },
   "services": {
     "word": "services",
-    "pos": "",
+    "pos": "n.",
     "meaning": "服务；服务项目（service复数形式）",
     "phonetic": "",
     "example": "",
@@ -11211,7 +11211,7 @@ module.exports = {
   },
   "sets": {
     "word": "sets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "集合, 设置（set的复数）",
     "phonetic": "",
     "example": "",
@@ -11219,7 +11219,7 @@ module.exports = {
   },
   "settlements": {
     "word": "settlements",
-    "pos": "",
+    "pos": "n.",
     "meaning": "解决( settlement的复数形式 ); 结算; <律>金钱或财产的转让（契约）; 移民",
     "phonetic": "'setlmənts",
     "example": "",
@@ -11227,7 +11227,7 @@ module.exports = {
   },
   "several": {
     "word": "several",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "几个的, 一些的, 各自的",
     "phonetic": "'sevәrәl",
     "example": "",
@@ -11251,7 +11251,7 @@ module.exports = {
   },
   "shared": {
     "word": "shared",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "共享的",
     "phonetic": "ʃεәd",
     "example": "",
@@ -11259,7 +11259,7 @@ module.exports = {
   },
   "sharing": {
     "word": "sharing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "共享, 公用",
     "phonetic": "'ʃeәriŋ",
     "example": "",
@@ -11267,7 +11267,7 @@ module.exports = {
   },
   "sheer": {
     "word": "sheer",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "绝对的, 全然的, 纯粹的, 透明的, 峻峭的",
     "phonetic": "ʃiә",
     "example": "",
@@ -11283,7 +11283,7 @@ module.exports = {
   },
   "short": {
     "word": "short",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "短的, 近的, 矮的, 短期的, 简短的, 少量的",
     "phonetic": "ʃɒ:t",
     "example": "",
@@ -11324,7 +11324,7 @@ module.exports = {
   },
   "similarly": {
     "word": "similarly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "相像地, 类似于",
     "phonetic": "'similәli",
     "example": "",
@@ -11332,7 +11332,7 @@ module.exports = {
   },
   "simultaneously": {
     "word": "simultaneously",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "同时发生, 一齐, 同时, 同时存在",
     "phonetic": "simәl'teiniәsly; (?@) saim-",
     "example": "",
@@ -11348,7 +11348,7 @@ module.exports = {
   },
   "sites": {
     "word": "sites",
-    "pos": "",
+    "pos": "n.",
     "meaning": "遗址, 举办地点；网站（site的复数）",
     "phonetic": "",
     "example": "",
@@ -11356,7 +11356,7 @@ module.exports = {
   },
   "sixth": {
     "word": "sixth",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "第六, 六分之一",
     "phonetic": "siksθ",
     "example": "",
@@ -11388,7 +11388,7 @@ module.exports = {
   },
   "smart": {
     "word": "smart",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "聪明的, 漂亮的, 刺痛的, 剧烈的, 敏捷的, 巧妙的, 伶俐的, 潇洒的",
     "phonetic": "smɑ:t",
     "example": "",
@@ -11396,7 +11396,7 @@ module.exports = {
   },
   "sober": {
     "word": "sober",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "未醉的, 稳重的, 节制的, 严肃的, 不夸大的, 合理的, 朴素的",
     "phonetic": "'sәubә",
     "example": "",
@@ -11404,7 +11404,7 @@ module.exports = {
   },
   "social": {
     "word": "social",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "社会的, 群居的, 社交的",
     "phonetic": "'sәuʃәl",
     "example": "",
@@ -11412,7 +11412,7 @@ module.exports = {
   },
   "societies": {
     "word": "societies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "社会( society的名词复数 ); 上流社会; 社团; 社群",
     "phonetic": "səˈsaiətiz",
     "example": "",
@@ -11428,7 +11428,7 @@ module.exports = {
   },
   "socioeconomic": {
     "word": "socioeconomic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "社会经济学的",
     "phonetic": "'sәuʃiәu,i:kә'nɔmik",
     "example": "",
@@ -11453,7 +11453,7 @@ module.exports = {
   },
   "solar": {
     "word": "solar",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "太阳的, 日光的, 源自太阳的",
     "phonetic": "'sәulә",
     "example": "",
@@ -11469,7 +11469,7 @@ module.exports = {
   },
   "some": {
     "word": "some",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "一些, 一部分, 若干",
     "phonetic": "sʌm",
     "example": "",
@@ -11477,7 +11477,7 @@ module.exports = {
   },
   "sometimes": {
     "word": "sometimes",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "有时, 时常, 往往",
     "phonetic": "'sʌmtaimz",
     "example": "",
@@ -11485,7 +11485,7 @@ module.exports = {
   },
   "sophisticated": {
     "word": "sophisticated",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "复杂的, 久经世故的",
     "phonetic": "sә'fistikeitid",
     "example": "",
@@ -11502,7 +11502,7 @@ module.exports = {
   },
   "sources": {
     "word": "sources",
-    "pos": "",
+    "pos": "n.",
     "meaning": "输入源；发起者；来源（source的复数）",
     "phonetic": "",
     "example": "",
@@ -11526,7 +11526,7 @@ module.exports = {
   },
   "specific": {
     "word": "specific",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "特效药, 特性",
     "phonetic": "spi'sifik",
     "example": "",
@@ -11542,7 +11542,7 @@ module.exports = {
   },
   "sponsored": {
     "word": "sponsored",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "赞助( sponsor的过去式和过去分词); 资助（某人的培训或教育）; 为慈善活动捐资; 发起, 倡议",
     "phonetic": "ˈspɔnsəd",
     "example": "",
@@ -11550,7 +11550,7 @@ module.exports = {
   },
   "spreads": {
     "word": "spreads",
-    "pos": "",
+    "pos": "n.",
     "meaning": "扩展；广阔；桌布（spread的复数）",
     "phonetic": "",
     "example": "",
@@ -11567,7 +11567,7 @@ module.exports = {
   },
   "staggering": {
     "word": "staggering",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "蹒跚的, 巨大的, 惊人的",
     "phonetic": "'stægәriŋ",
     "example": "",
@@ -11575,7 +11575,7 @@ module.exports = {
   },
   "standardised": {
     "word": "standardised",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "使…符合标准；使…标准化；使…统一",
     "phonetic": "'stændədaiz",
     "example": "",
@@ -11583,7 +11583,7 @@ module.exports = {
   },
   "stark": {
     "word": "stark",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "僵硬的, 完全的, 刻板的, 明显的, 荒凉的, 结实的",
     "phonetic": "stɑ:k",
     "example": "",
@@ -11591,7 +11591,7 @@ module.exports = {
   },
   "states": {
     "word": "States",
-    "pos": "",
+    "pos": "n.",
     "meaning": "美国",
     "phonetic": "",
     "example": "",
@@ -11599,7 +11599,7 @@ module.exports = {
   },
   "statutory": {
     "word": "statutory",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "法令的, 法定的, 可依法惩处的",
     "phonetic": "'stætjutәri",
     "example": "",
@@ -11631,7 +11631,7 @@ module.exports = {
   },
   "strained": {
     "word": "strained",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "紧张的, 滤过的, 矫饰的",
     "phonetic": "'streind",
     "example": "",
@@ -11639,7 +11639,7 @@ module.exports = {
   },
   "strata": {
     "word": "strata",
-    "pos": "",
+    "pos": "pl.",
     "meaning": "层, 地层, 阶层",
     "phonetic": "'streitә",
     "example": "",
@@ -11647,7 +11647,7 @@ module.exports = {
   },
   "strategies": {
     "word": "strategies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "策略( strategy的复数形式 ); 战略; 战略学; 对策",
     "phonetic": "ˈstrætidʒiz",
     "example": "",
@@ -11663,7 +11663,7 @@ module.exports = {
   },
   "strengthened": {
     "word": "strengthened",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "加强, 巩固( strengthen的过去式和过去分词 )",
     "phonetic": "ˈstreŋθnd",
     "example": "",
@@ -11679,7 +11679,7 @@ module.exports = {
   },
   "striking": {
     "word": "striking",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "醒目的, 惊人的, 打击的, 罢工的",
     "phonetic": "'straikiŋ",
     "example": "",
@@ -11687,7 +11687,7 @@ module.exports = {
   },
   "stringent": {
     "word": "stringent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "迫切的, 严厉的, 银根紧的",
     "phonetic": "'strindʒәnt",
     "example": "",
@@ -11695,7 +11695,7 @@ module.exports = {
   },
   "stripped": {
     "word": "stripped",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "剥去的",
     "phonetic": "stript",
     "example": "",
@@ -11712,7 +11712,7 @@ module.exports = {
   },
   "structures": {
     "word": "structures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "结构；构筑物；业务方式（structure的复数）",
     "phonetic": "",
     "example": "",
@@ -11728,7 +11728,7 @@ module.exports = {
   },
   "students": {
     "word": "students",
-    "pos": "",
+    "pos": "n.",
     "meaning": "（尤指大专院校的）学生（student的复数）",
     "phonetic": "",
     "example": "",
@@ -11736,7 +11736,7 @@ module.exports = {
   },
   "subject": {
     "word": "subject",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "科目, 主题, 臣民, 主语, 题目, (事物的)经受者, 学科, 受治疗者, 原因, 理由",
     "phonetic": "'sʌbdʒekt",
     "example": "",
@@ -11761,7 +11761,7 @@ module.exports = {
   },
   "subsequent": {
     "word": "subsequent",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "后来的, 接下去的",
     "phonetic": "'sʌbsikwәnt",
     "example": "",
@@ -11769,7 +11769,7 @@ module.exports = {
   },
   "subsidies": {
     "word": "subsidies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "补贴, 津贴, 补助金( subsidy的名词复数 )",
     "phonetic": "ˈsʌbsidiz",
     "example": "",
@@ -11777,7 +11777,7 @@ module.exports = {
   },
   "substantial": {
     "word": "substantial",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "重要材料(或事物), 有实际价值的东西",
     "phonetic": "sәb'stænʃәl",
     "example": "",
@@ -11785,7 +11785,7 @@ module.exports = {
   },
   "substantially": {
     "word": "substantially",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "实质上, 本质上, 大体上",
     "phonetic": "sәb'stænʃәli",
     "example": "",
@@ -11793,7 +11793,7 @@ module.exports = {
   },
   "such": {
     "word": "such",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "如此的, 这样的",
     "phonetic": "sʌtʃ",
     "example": "",
@@ -11801,7 +11801,7 @@ module.exports = {
   },
   "sufficient": {
     "word": "sufficient",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "充分的, 足够的",
     "phonetic": "sә'fiʃәnt",
     "example": "",
@@ -11809,7 +11809,7 @@ module.exports = {
   },
   "sugars": {
     "word": "sugars",
-    "pos": "",
+    "pos": "n.",
     "meaning": "糖类（sugar的复数形式）",
     "phonetic": "",
     "example": "",
@@ -11817,7 +11817,7 @@ module.exports = {
   },
   "suggesting": {
     "word": "suggesting",
-    "pos": "",
+    "pos": "v.",
     "meaning": "提议；暗示（suggest的ing形式）",
     "phonetic": "",
     "example": "",
@@ -11825,7 +11825,7 @@ module.exports = {
   },
   "summers": {
     "word": "Summers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "萨莫斯（人名）",
     "phonetic": "",
     "example": "",
@@ -11841,7 +11841,7 @@ module.exports = {
   },
   "supplanted": {
     "word": "supplanted",
-    "pos": "",
+    "pos": "v.",
     "meaning": "把…排挤掉, 取代( supplant的过去式和过去分词 )",
     "phonetic": "səˈplæntid",
     "example": "",
@@ -11849,7 +11849,7 @@ module.exports = {
   },
   "supplemented": {
     "word": "supplemented",
-    "pos": "",
+    "pos": "v.",
     "meaning": "增补, 补充（supplement的过去分词）",
     "phonetic": "",
     "example": "",
@@ -11857,7 +11857,7 @@ module.exports = {
   },
   "supplies": {
     "word": "supplies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "供应品, 日用必需品, 生活用品, (储备)物质, 存货, 补给品, 生活费用",
     "phonetic": "",
     "example": "",
@@ -11873,7 +11873,7 @@ module.exports = {
   },
   "surged": {
     "word": "surged",
-    "pos": "",
+    "pos": "v.",
     "meaning": "（波涛等）汹涌( surge的过去式和过去分词 ); （人群等）蜂拥而出; 使强烈地感到",
     "phonetic": "",
     "example": "",
@@ -11881,7 +11881,7 @@ module.exports = {
   },
   "surrounding": {
     "word": "surrounding",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "环境",
     "phonetic": "sә'raundiŋ",
     "example": "",
@@ -11905,7 +11905,7 @@ module.exports = {
   },
   "surveys": {
     "word": "surveys",
-    "pos": "",
+    "pos": "n.",
     "meaning": "调查（survey的复数）",
     "phonetic": "",
     "example": "",
@@ -11913,7 +11913,7 @@ module.exports = {
   },
   "susceptible": {
     "word": "susceptible",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "易受影响的, 易感动的, 容许...的",
     "phonetic": "sә'septәbl",
     "example": "",
@@ -11947,7 +11947,7 @@ module.exports = {
   },
   "symptoms": {
     "word": "symptoms",
-    "pos": "",
+    "pos": "n.",
     "meaning": "病徵；症状；症候",
     "phonetic": "",
     "example": "",
@@ -11955,7 +11955,7 @@ module.exports = {
   },
   "synthetic": {
     "word": "synthetic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "合成物质",
     "phonetic": "sin'θetik",
     "example": "",
@@ -11963,7 +11963,7 @@ module.exports = {
   },
   "systemic": {
     "word": "systemic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "系统的, 体系的, 全身的",
     "phonetic": "si'stemik",
     "example": "",
@@ -11971,7 +11971,7 @@ module.exports = {
   },
   "systems": {
     "word": "systems",
-    "pos": "",
+    "pos": "n.",
     "meaning": "体制, 体系；制度；系统（system的复数形式）",
     "phonetic": "",
     "example": "",
@@ -11979,7 +11979,7 @@ module.exports = {
   },
   "takes": {
     "word": "takes",
-    "pos": "",
+    "pos": "v.",
     "meaning": "取走, 预备动作（take第三人称单数）",
     "phonetic": "",
     "example": "",
@@ -11987,7 +11987,7 @@ module.exports = {
   },
   "targets": {
     "word": "targets",
-    "pos": "",
+    "pos": "n.",
     "meaning": "目标；枪靶；投放范围（target的复数）",
     "phonetic": "",
     "example": "",
@@ -11995,7 +11995,7 @@ module.exports = {
   },
   "tasks": {
     "word": "tasks",
-    "pos": "",
+    "pos": "n.",
     "meaning": "任务；工作；苦差事（task的复数）",
     "phonetic": "",
     "example": "",
@@ -12029,7 +12029,7 @@ module.exports = {
   },
   "techniques": {
     "word": "techniques",
-    "pos": "",
+    "pos": "n.",
     "meaning": "方法；技巧；技术（technique的复数）",
     "phonetic": "",
     "example": "",
@@ -12037,7 +12037,7 @@ module.exports = {
   },
   "technological": {
     "word": "technological",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "技术的",
     "phonetic": ".teknә'lɒdʒikl",
     "example": "",
@@ -12045,7 +12045,7 @@ module.exports = {
   },
   "technologies": {
     "word": "technologies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "技术；科技（technology的复数）",
     "phonetic": "",
     "example": "",
@@ -12062,7 +12062,7 @@ module.exports = {
   },
   "temperatures": {
     "word": "temperatures",
-    "pos": "",
+    "pos": "n.",
     "meaning": "温度( temperature的复数形式 ); 气温; 高烧; 发烧",
     "phonetic": "'temprətʃəz",
     "example": "",
@@ -12070,7 +12070,7 @@ module.exports = {
   },
   "temporal": {
     "word": "temporal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "时间的, 暂时的, 现世的, 世俗的, 颞的, 太阳穴的",
     "phonetic": "'tempәrәl",
     "example": "",
@@ -12078,7 +12078,7 @@ module.exports = {
   },
   "ten": {
     "word": "ten",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "十, 十个",
     "phonetic": "ten",
     "example": "",
@@ -12086,7 +12086,7 @@ module.exports = {
   },
   "tendencies": {
     "word": "tendencies",
-    "pos": "",
+    "pos": "n.",
     "meaning": "倾向, 趋势( tendency的名词复数 ); （政党内的）极端派别",
     "phonetic": "ˈtendənsiz",
     "example": "",
@@ -12110,7 +12110,7 @@ module.exports = {
   },
   "tertiary": {
     "word": "tertiary",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "第三的, 第三位的, 第三产业的",
     "phonetic": "'tә:ʃiәri",
     "example": "",
@@ -12126,7 +12126,7 @@ module.exports = {
   },
   "than": {
     "word": "than",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "比, 除...外",
     "phonetic": "ðæn",
     "example": "",
@@ -12134,7 +12134,7 @@ module.exports = {
   },
   "that": {
     "word": "that",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "那, 那个",
     "phonetic": "ðæt",
     "example": "",
@@ -12142,7 +12142,7 @@ module.exports = {
   },
   "the": {
     "word": "the",
-    "pos": "a.",
+    "pos": "art.",
     "meaning": "那",
     "phonetic": "ðә",
     "example": "",
@@ -12150,7 +12150,7 @@ module.exports = {
   },
   "their": {
     "word": "their",
-    "pos": "a.",
+    "pos": "art.",
     "meaning": "他们的",
     "phonetic": "ðєә",
     "example": "",
@@ -12158,7 +12158,7 @@ module.exports = {
   },
   "them": {
     "word": "them",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "他们, 她们, 它们",
     "phonetic": "ðem",
     "example": "",
@@ -12166,7 +12166,7 @@ module.exports = {
   },
   "themselves": {
     "word": "themselves",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "他们自己, 她们自己, 它们自己",
     "phonetic": "ðәm'selvz",
     "example": "",
@@ -12174,7 +12174,7 @@ module.exports = {
   },
   "theoretical": {
     "word": "theoretical",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "理论的, 理论上的, 假设的, 推理的",
     "phonetic": "θiә'retikәl",
     "example": "",
@@ -12200,7 +12200,7 @@ module.exports = {
   },
   "therefore": {
     "word": "therefore",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "因此, 所以",
     "phonetic": "'ðєәfɒ:",
     "example": "",
@@ -12208,7 +12208,7 @@ module.exports = {
   },
   "these": {
     "word": "these",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "这些",
     "phonetic": "ði:z",
     "example": "",
@@ -12216,7 +12216,7 @@ module.exports = {
   },
   "they": {
     "word": "they",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "他们, 它们",
     "phonetic": "ðei",
     "example": "",
@@ -12232,7 +12232,7 @@ module.exports = {
   },
   "this": {
     "word": "this",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "这, 本",
     "phonetic": "θis",
     "example": "",
@@ -12240,7 +12240,7 @@ module.exports = {
   },
   "those": {
     "word": "those",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "那些",
     "phonetic": "ðәuz",
     "example": "",
@@ -12248,7 +12248,7 @@ module.exports = {
   },
   "though": {
     "word": "though",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "然而, 可是",
     "phonetic": "ðәu",
     "example": "",
@@ -12256,7 +12256,7 @@ module.exports = {
   },
   "thoughtful": {
     "word": "thoughtful",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "深思的, 体贴的",
     "phonetic": "'θɒ:tful",
     "example": "",
@@ -12264,7 +12264,7 @@ module.exports = {
   },
   "thousand": {
     "word": "thousand",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "千",
     "phonetic": "'θauznd",
     "example": "",
@@ -12281,7 +12281,7 @@ module.exports = {
   },
   "threatens": {
     "word": "threatens",
-    "pos": "",
+    "pos": "v.",
     "meaning": "预示（某事）( threaten的第三人称单数 ); 恐吓; 危及; 预示凶兆",
     "phonetic": "ˈθretənz",
     "example": "",
@@ -12289,7 +12289,7 @@ module.exports = {
   },
   "threats": {
     "word": "threats",
-    "pos": "",
+    "pos": "n.",
     "meaning": "威胁, 恐吓( threat的名词复数 ); 可能造成威胁的人[事, 想法]; 恶兆, 兆头",
     "phonetic": "θrets",
     "example": "",
@@ -12305,7 +12305,7 @@ module.exports = {
   },
   "through": {
     "word": "through",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "穿越, 从头至尾, 到底, 因为",
     "phonetic": "θru:",
     "example": "",
@@ -12313,7 +12313,7 @@ module.exports = {
   },
   "throughout": {
     "word": "throughout",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "到处, 贯穿全部地, 自始至终",
     "phonetic": "θru:'aut",
     "example": "",
@@ -12321,7 +12321,7 @@ module.exports = {
   },
   "times": {
     "word": "times",
-    "pos": "",
+    "pos": "n.",
     "meaning": "时代, 境遇, 时报",
     "phonetic": "taimz",
     "example": "",
@@ -12329,7 +12329,7 @@ module.exports = {
   },
   "to": {
     "word": "to",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "到, 向, 趋于",
     "phonetic": "tu:",
     "example": "",
@@ -12337,7 +12337,7 @@ module.exports = {
   },
   "tools": {
     "word": "tools",
-    "pos": "",
+    "pos": "n.",
     "meaning": "工具, 工具菜单；工具箱（tool的复数形式）",
     "phonetic": "tu:lz",
     "example": "",
@@ -12378,7 +12378,7 @@ module.exports = {
   },
   "traditional": {
     "word": "traditional",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "传统的, 惯例的",
     "phonetic": "trә'diʃәnl",
     "example": "",
@@ -12386,7 +12386,7 @@ module.exports = {
   },
   "traditionally": {
     "word": "traditionally",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "传统上；传说上；习惯上",
     "phonetic": "",
     "example": "",
@@ -12394,7 +12394,7 @@ module.exports = {
   },
   "traditions": {
     "word": "traditions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "传统( tradition的复数形式 ); 惯例",
     "phonetic": "trə'dɪʃnz",
     "example": "",
@@ -12435,7 +12435,7 @@ module.exports = {
   },
   "transforming": {
     "word": "transforming",
-    "pos": "",
+    "pos": "v.",
     "meaning": "改变( transform的现在分词 ); 使改变形态, 使改变外观（或性质）, 使改观",
     "phonetic": "trænsˈfɔ:mɪŋ",
     "example": "",
@@ -12468,7 +12468,7 @@ module.exports = {
   },
   "transmitted": {
     "word": "transmitted",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "传输；传送（transmit的过去分词）",
     "phonetic": "",
     "example": "",
@@ -12476,7 +12476,7 @@ module.exports = {
   },
   "transparent": {
     "word": "transparent",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "透明的, 显然的, 清晰的",
     "phonetic": "træns'pærәnt",
     "example": "",
@@ -12484,7 +12484,7 @@ module.exports = {
   },
   "transparently": {
     "word": "transparently",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "显然地, 易觉察地；明亮地",
     "phonetic": "",
     "example": "",
@@ -12500,7 +12500,7 @@ module.exports = {
   },
   "transported": {
     "word": "transported",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "情不自禁的",
     "phonetic": "trænsˈpɔ:tid",
     "example": "",
@@ -12533,7 +12533,7 @@ module.exports = {
   },
   "treatments": {
     "word": "treatments",
-    "pos": "",
+    "pos": "n.",
     "meaning": "处理( treatment的复数形式 ); 对待; 治疗; 疗法",
     "phonetic": "'tri:tmənts",
     "example": "",
@@ -12550,7 +12550,7 @@ module.exports = {
   },
   "triggered": {
     "word": "triggered",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "触发的；起动的；有扳机的",
     "phonetic": "'triɡәd",
     "example": "",
@@ -12575,7 +12575,7 @@ module.exports = {
   },
   "twentieth": {
     "word": "twentieth",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "第二十, 二十分之一",
     "phonetic": "'twentiiθ",
     "example": "",
@@ -12583,7 +12583,7 @@ module.exports = {
   },
   "twenty": {
     "word": "twenty",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "二十, 二十个",
     "phonetic": "'twenti",
     "example": "",
@@ -12591,7 +12591,7 @@ module.exports = {
   },
   "two": {
     "word": "two",
-    "pos": "m.",
+    "pos": "num.",
     "meaning": "二, 二个",
     "phonetic": "tu:",
     "example": "",
@@ -12607,7 +12607,7 @@ module.exports = {
   },
   "typically": {
     "word": "typically",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "代表性地；作为特色地",
     "phonetic": "'tipikәli",
     "example": "",
@@ -12615,7 +12615,7 @@ module.exports = {
   },
   "ultimately": {
     "word": "ultimately",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "最后, 最终",
     "phonetic": "'ʌltimәtli",
     "example": "",
@@ -12623,7 +12623,7 @@ module.exports = {
   },
   "unattainable": {
     "word": "unattainable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "难到达的, 不可得到的",
     "phonetic": ".ʌnә'teinәbl",
     "example": "",
@@ -12631,7 +12631,7 @@ module.exports = {
   },
   "unchecked": {
     "word": "unchecked",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "未加抑制的, 未经检查的",
     "phonetic": ".ʌn'tʃekt",
     "example": "",
@@ -12639,7 +12639,7 @@ module.exports = {
   },
   "uncontrollably": {
     "word": "uncontrollably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "无法控制地",
     "phonetic": ",ʌnkən'trəuləbli",
     "example": "",
@@ -12647,7 +12647,7 @@ module.exports = {
   },
   "undeniably": {
     "word": "undeniably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "确凿无疑地；不可否认地",
     "phonetic": "",
     "example": "",
@@ -12655,7 +12655,7 @@ module.exports = {
   },
   "undergoing": {
     "word": "undergoing",
-    "pos": "",
+    "pos": "v.",
     "meaning": "经历, 承受( undergo的现在分词 )",
     "phonetic": "ˌʌndəˈɡəuɪŋ",
     "example": "",
@@ -12680,7 +12680,7 @@ module.exports = {
   },
   "undermined": {
     "word": "undermined",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "暗地里破坏；挖…的下面（undermine的过去分词）",
     "phonetic": "",
     "example": "",
@@ -12688,7 +12688,7 @@ module.exports = {
   },
   "undernourishment": {
     "word": "undernourishment",
-    "pos": "",
+    "pos": "n.",
     "meaning": "营养不足",
     "phonetic": "",
     "example": "",
@@ -12713,7 +12713,7 @@ module.exports = {
   },
   "unevenly": {
     "word": "unevenly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "不平坦地；不均衡地；不平行地",
     "phonetic": "",
     "example": "",
@@ -12721,7 +12721,7 @@ module.exports = {
   },
   "unimaginable": {
     "word": "unimaginable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不能想象的, 不可思议的",
     "phonetic": ".ʌni'mædʒinәbl",
     "example": "",
@@ -12729,7 +12729,7 @@ module.exports = {
   },
   "unions": {
     "word": "unions",
-    "pos": "",
+    "pos": "n.",
     "meaning": "工会；联合（union的复数）",
     "phonetic": "",
     "example": "",
@@ -12737,7 +12737,7 @@ module.exports = {
   },
   "universal": {
     "word": "universal",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "全世界的, 普遍的, 宇宙的, 通用的",
     "phonetic": ".ju:ni'vә:sl",
     "example": "",
@@ -12745,7 +12745,7 @@ module.exports = {
   },
   "universities": {
     "word": "universities",
-    "pos": "",
+    "pos": "n.",
     "meaning": "大学( university的名词复数 )",
     "phonetic": "ˌjuːnɪˈvɜː(r)sətiz",
     "example": "",
@@ -12753,7 +12753,7 @@ module.exports = {
   },
   "unlike": {
     "word": "unlike",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "不像的, 不同的",
     "phonetic": ".ʌn'laik",
     "example": "",
@@ -12761,7 +12761,7 @@ module.exports = {
   },
   "unplanned": {
     "word": "unplanned",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "无计划的, 未经筹划的, 意外的, 在计划外的",
     "phonetic": "'ʌn'plænd",
     "example": "",
@@ -12769,7 +12769,7 @@ module.exports = {
   },
   "unprecedented": {
     "word": "unprecedented",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "空前的",
     "phonetic": ".ʌn'presidentid",
     "example": "",
@@ -12777,7 +12777,7 @@ module.exports = {
   },
   "unpredictable": {
     "word": "unpredictable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不可预知的",
     "phonetic": ".ʌnpri'diktәbl",
     "example": "",
@@ -12785,7 +12785,7 @@ module.exports = {
   },
   "unpredictably": {
     "word": "unpredictably",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "无法预言地）；不可预见地（不能预料地",
     "phonetic": "ˌʌnprɪˈdɪktəblɪ",
     "example": "",
@@ -12793,7 +12793,7 @@ module.exports = {
   },
   "unseasonable": {
     "word": "unseasonable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "不合时令的, 不合季节的, 季候不顺的, 不合时宜的, 不适时的",
     "phonetic": "ʌn'si:znәbl",
     "example": "",
@@ -12801,7 +12801,7 @@ module.exports = {
   },
   "unverified": {
     "word": "unverified",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "未经核对的, 未经证实的",
     "phonetic": "",
     "example": "",
@@ -12809,7 +12809,7 @@ module.exports = {
   },
   "upon": {
     "word": "upon",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "在...之上, 迫近, 紧接着",
     "phonetic": "ә'pɒn",
     "example": "",
@@ -12842,7 +12842,7 @@ module.exports = {
   },
   "users": {
     "word": "users",
-    "pos": "",
+    "pos": "n.",
     "meaning": "使用者；受限用户（user的复数）",
     "phonetic": "",
     "example": "",
@@ -12866,7 +12866,7 @@ module.exports = {
   },
   "vaccinations": {
     "word": "vaccinations",
-    "pos": "",
+    "pos": "n.",
     "meaning": "<医>种痘, 接种( vaccination的复数形式 ); 牛痘疤",
     "phonetic": "ˌvæksəˈneɪʃənz",
     "example": "",
@@ -12891,7 +12891,7 @@ module.exports = {
   },
   "vanishing": {
     "word": "vanishing",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "消没的",
     "phonetic": "'væniʃiŋ",
     "example": "",
@@ -12908,7 +12908,7 @@ module.exports = {
   },
   "varieties": {
     "word": "varieties",
-    "pos": "",
+    "pos": "n.",
     "meaning": "种种( variety的名词复数 ); 品种; 变化; （基于遗传差异的）变种",
     "phonetic": "vəˈraiətiz",
     "example": "",
@@ -12924,7 +12924,7 @@ module.exports = {
   },
   "vast": {
     "word": "vast",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "巨大的, 广大的, 非常的, 大量的",
     "phonetic": "vɑ:st",
     "example": "",
@@ -12932,7 +12932,7 @@ module.exports = {
   },
   "vastly": {
     "word": "vastly",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "广大地, 许多, 巨大",
     "phonetic": "'vɑ:stli",
     "example": "",
@@ -12982,7 +12982,7 @@ module.exports = {
   },
   "viral": {
     "word": "viral",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "病毒的, 病毒引起的",
     "phonetic": "'vairәl",
     "example": "",
@@ -13007,7 +13007,7 @@ module.exports = {
   },
   "vocational": {
     "word": "vocational",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "职业的",
     "phonetic": "vәu'keiʃәnl",
     "example": "",
@@ -13015,7 +13015,7 @@ module.exports = {
   },
   "voices": {
     "word": "voices",
-    "pos": "",
+    "pos": "n.",
     "meaning": "声音",
     "phonetic": "",
     "example": "",
@@ -13023,7 +13023,7 @@ module.exports = {
   },
   "volatile": {
     "word": "volatile",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "挥发性的, 可变的, 不稳定的, 飞行的, 轻快的, 爆炸性的",
     "phonetic": "'vɒlәtail",
     "example": "",
@@ -13031,7 +13031,7 @@ module.exports = {
   },
   "volcanic": {
     "word": "volcanic",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "火山的, 猛烈的",
     "phonetic": "vɒl'kænik",
     "example": "",
@@ -13066,7 +13066,7 @@ module.exports = {
   },
   "vulnerable": {
     "word": "vulnerable",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "易受伤害的, 有弱点的, 易受影响的, 脆弱的, 成局的",
     "phonetic": "'vʌlnәrәbl",
     "example": "",
@@ -13074,7 +13074,7 @@ module.exports = {
   },
   "warmer": {
     "word": "warmer",
-    "pos": "",
+    "pos": "n.",
     "meaning": "进行加热的人, 取暖器",
     "phonetic": "'wɒ:mә",
     "example": "",
@@ -13106,7 +13106,7 @@ module.exports = {
   },
   "waterways": {
     "word": "waterways",
-    "pos": "",
+    "pos": "n.",
     "meaning": "水路, 航道( waterway的复数形式 ); 河渠",
     "phonetic": "'wɔ:təweɪz",
     "example": "",
@@ -13122,7 +13122,7 @@ module.exports = {
   },
   "wealthy": {
     "word": "wealthy",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "富有的, 丰裕的, 充分的",
     "phonetic": "'welθi",
     "example": "",
@@ -13164,7 +13164,7 @@ module.exports = {
   },
   "western": {
     "word": "western",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "西方人, 西部片, 西部小说",
     "phonetic": "'westәn",
     "example": "",
@@ -13172,7 +13172,7 @@ module.exports = {
   },
   "wetlands": {
     "word": "wetlands",
-    "pos": "",
+    "pos": "n.",
     "meaning": "潮湿的土壤, 沼泽地( wetland的复数形式 )",
     "phonetic": "'wetlændz",
     "example": "",
@@ -13180,7 +13180,7 @@ module.exports = {
   },
   "what": {
     "word": "what",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "什么",
     "phonetic": "hwɒt",
     "example": "",
@@ -13188,7 +13188,7 @@ module.exports = {
   },
   "when": {
     "word": "when",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "当...的时候",
     "phonetic": "hwen",
     "example": "",
@@ -13196,7 +13196,7 @@ module.exports = {
   },
   "where": {
     "word": "where",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "在哪里",
     "phonetic": "hwєә",
     "example": "",
@@ -13204,7 +13204,7 @@ module.exports = {
   },
   "whereas": {
     "word": "whereas",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "然而, 鉴于",
     "phonetic": "hwєәr'æz",
     "example": "",
@@ -13212,7 +13212,7 @@ module.exports = {
   },
   "whether": {
     "word": "whether",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "是否, 不论",
     "phonetic": "'hweðә",
     "example": "",
@@ -13220,7 +13220,7 @@ module.exports = {
   },
   "which": {
     "word": "which",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "哪一个, 那一个",
     "phonetic": "hwitʃ",
     "example": "",
@@ -13228,7 +13228,7 @@ module.exports = {
   },
   "while": {
     "word": "while",
-    "pos": "c.",
+    "pos": "conj.",
     "meaning": "一会儿, (一段)时间",
     "phonetic": "hwail",
     "example": "",
@@ -13236,7 +13236,7 @@ module.exports = {
   },
   "who": {
     "word": "who",
-    "pos": "p.",
+    "pos": "pron.",
     "meaning": "谁",
     "phonetic": "hu:",
     "example": "",
@@ -13244,7 +13244,7 @@ module.exports = {
   },
   "wholesale": {
     "word": "wholesale",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "批发",
     "phonetic": "'hәulseil",
     "example": "",
@@ -13252,7 +13252,7 @@ module.exports = {
   },
   "whose": {
     "word": "whose",
-    "pos": "d.",
+    "pos": "adv.",
     "meaning": "谁的",
     "phonetic": "hu:z",
     "example": "",
@@ -13260,7 +13260,7 @@ module.exports = {
   },
   "widely": {
     "word": "widely",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "广泛地",
     "phonetic": "'waidli",
     "example": "",
@@ -13268,7 +13268,7 @@ module.exports = {
   },
   "widespread": {
     "word": "widespread",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "充分伸展的, 广布的, 普及的, 流传广的",
     "phonetic": "'waidspred",
     "example": "",
@@ -13318,7 +13318,7 @@ module.exports = {
   },
   "with": {
     "word": "with",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "和...在一起, 以, 由于",
     "phonetic": "wið",
     "example": "",
@@ -13326,7 +13326,7 @@ module.exports = {
   },
   "within": {
     "word": "within",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "内部, 里头",
     "phonetic": "wi'ðin",
     "example": "",
@@ -13334,7 +13334,7 @@ module.exports = {
   },
   "without": {
     "word": "without",
-    "pos": "i.",
+    "pos": "prep.",
     "meaning": "没有, 不, 在...之外",
     "phonetic": "wi'ðaut",
     "example": "",
@@ -13342,7 +13342,7 @@ module.exports = {
   },
   "witnessed": {
     "word": "witnessed",
-    "pos": "",
+    "pos": "v.",
     "meaning": "作证( witness的过去式和过去分词 ); 表示; （摆证据）…就是证据; 是…的迹象",
     "phonetic": "ˈwitnist",
     "example": "",
@@ -13366,7 +13366,7 @@ module.exports = {
   },
   "workers": {
     "word": "workers",
-    "pos": "",
+    "pos": "n.",
     "meaning": "工人, 人员；角色（worker复数形式）",
     "phonetic": "",
     "example": "",
@@ -13383,7 +13383,7 @@ module.exports = {
   },
   "working": {
     "word": "working",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "工作, 运转, 劳动",
     "phonetic": "'wә:kiŋ",
     "example": "",
@@ -13423,7 +13423,7 @@ module.exports = {
   },
   "worldwide": {
     "word": "worldwide",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "全世界的",
     "phonetic": "'wә:ldwaid",
     "example": "",
@@ -13439,7 +13439,7 @@ module.exports = {
   },
   "yet": {
     "word": "yet",
-    "pos": "r.",
+    "pos": "adv.",
     "meaning": "还, 尚, 仍然, 已经, 然而",
     "phonetic": "jet",
     "example": "",
@@ -13455,7 +13455,7 @@ module.exports = {
   },
   "yields": {
     "word": "yields",
-    "pos": "",
+    "pos": "n.",
     "meaning": "生产量, 投资效益（yield的复数形式）",
     "phonetic": "",
     "example": "",
@@ -13463,7 +13463,7 @@ module.exports = {
   },
   "young": {
     "word": "young",
-    "pos": "j.",
+    "pos": "adj.",
     "meaning": "年轻的, 无经验的, 朝气蓬勃的",
     "phonetic": "jʌŋ",
     "example": "",
@@ -13471,7 +13471,7 @@ module.exports = {
   },
   "younger": {
     "word": "younger",
-    "pos": "",
+    "pos": "n.",
     "meaning": "年纪较小者",
     "phonetic": "'jʌŋgә",
     "example": "",
