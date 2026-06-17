@@ -1,3 +1,5 @@
+/* Figma 144:1926 / 144:2096 — 375px canvas, 1px = 2rpx */
+
 .home-page {
   min-height: 100vh;
   background: #f8f8fa;
@@ -10,7 +12,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 532rpx;
+  height: 600rpx;
   z-index: 0;
 }
 
@@ -30,11 +32,23 @@
   justify-content: center;
 }
 
+/* 17:2143 — Medium 17px */
 .home-nav-title {
   font-size: 34rpx;
   font-weight: 500;
   color: #000000;
   line-height: 1.5;
+}
+
+/* 144:1988 — 120×90 at (255, 155) */
+.home-mascot {
+  position: fixed;
+  right: 0;
+  width: 240rpx;
+  height: 180rpx;
+  z-index: 5;
+  pointer-events: none;
+  display: block;
 }
 
 .home-scroll {
@@ -60,29 +74,46 @@
   font-size: 28rpx;
 }
 
-/* 状态条 — Figma 144:1957 */
+/* 144:1958 — 343×82, radius 16px, content y=114 (18px inset) */
 .stats-card {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  height: 164rpx;
   background: #ffffff;
   border-radius: 32rpx;
-  padding: 32rpx 40rpx 36rpx;
-  margin-bottom: 16rpx;
+  padding: 36rpx 40rpx 0;
+  margin-bottom: 32rpx;
+  box-sizing: border-box;
 }
 
 .stat-col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 16rpx;
   min-width: 0;
 }
 
+.stat-col--left {
+  flex: 0 0 120rpx;
+}
+
+.stat-col--center {
+  flex: 1;
+  align-items: center;
+}
+
+.stat-col--right {
+  flex: 0 0 120rpx;
+  align-items: flex-end;
+}
+
+/* 12px Regular #999 */
 .stat-label {
   font-size: 24rpx;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1.4;
+  color: #999999;
+  line-height: 1.5;
   white-space: nowrap;
 }
 
@@ -92,47 +123,54 @@
   gap: 4rpx;
 }
 
+/* 15px Medium #333 */
 .stat-num {
-  font-size: 36rpx;
+  font-size: 30rpx;
   font-weight: 500;
-  color: #000000;
-  line-height: 1.2;
+  color: #333333;
+  line-height: 1.5;
 }
 
+/* 12px Regular #333 */
 .stat-unit {
   font-size: 24rpx;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1.4;
+  color: #333333;
+  line-height: 1.5;
 }
 
-/* 今日阅读卡 — Figma 144:1974 */
+/* 144:1974 — 343×260, padding 16px, radius 16px */
 .today-card {
   position: relative;
   background: #ffffff;
   border-radius: 32rpx;
   padding: 32rpx;
-  margin-bottom: 16rpx;
-  overflow: visible;
+  margin-bottom: 32rpx;
+  box-sizing: border-box;
 }
 
-.today-mascot {
-  position: absolute;
-  top: -36rpx;
-  right: 16rpx;
-  width: 240rpx;
-  height: 180rpx;
-  z-index: 2;
-  pointer-events: none;
+.action-card--full {
+  width: 100%;
+  margin-bottom: 32rpx;
 }
 
+.bottom-cards .action-card--full {
+  margin-bottom: 0;
+}
+
+.today-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 56rpx;
+}
+
+/* 20px Medium */
 .section-label {
   display: block;
-  font-size: 32rpx;
+  font-size: 40rpx;
   font-weight: 500;
   color: #000000;
   line-height: 1.5;
-  margin-bottom: 28rpx;
   padding-right: 200rpx;
 }
 
@@ -140,17 +178,18 @@
   display: flex;
   flex-direction: column;
   gap: 16rpx;
-  margin-bottom: 28rpx;
 }
 
+/* 15px Regular #999 */
 .passage-id {
   display: block;
   font-size: 30rpx;
   font-weight: 400;
-  color: #333333;
+  color: #999999;
   line-height: 1.5;
 }
 
+/* 15px Regular #333 */
 .passage-title {
   display: block;
   font-size: 30rpx;
@@ -159,12 +198,28 @@
   line-height: 1.5;
 }
 
+.passage-title--multi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-height: 90rpx;
+}
+
+.passage-title--single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12rpx;
 }
 
+/* 9px Regular */
 .tag-pill {
   background: rgba(0, 0, 0, 0.03);
   border-radius: 8rpx;
@@ -175,19 +230,21 @@
   line-height: 1.5;
 }
 
+/* 144:1986 — #31AFFF, 48px, 16px white text, radius 12px */
 .cta-btn {
   height: 96rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #bee6ff;
+  background: #31afff;
   border-radius: 24rpx;
-  font-size: 28rpx;
+  font-size: 32rpx;
   font-weight: 500;
-  color: #000000;
+  color: #ffffff;
+  line-height: 1.5;
 }
 
-/* 底部入口卡 — Figma 144:1990 / 144:2160 */
+/* 144:1990 / 144:2160 — gap 15px, height 89px */
 .bottom-cards {
   display: flex;
   gap: 30rpx;
@@ -203,37 +260,53 @@
   background: #ffffff;
   border-radius: 32rpx;
   padding: 32rpx;
-  min-height: 178rpx;
+  height: 178rpx;
   box-sizing: border-box;
 }
 
-.action-card--full {
-  width: 100%;
+.bottom-cards .action-card {
+  margin-bottom: 0;
 }
 
+/* 144:1994 — 24×24 grey chevron, y=43 in card */
 .action-arrow {
   position: absolute;
-  top: 32rpx;
+  top: 86rpx;
   right: 32rpx;
-  font-size: 40rpx;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.25);
-  line-height: 1;
+  width: 48rpx;
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.action-arrow::after {
+  content: "";
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 3rpx solid #bababd;
+  border-right: 3rpx solid #bababd;
+  transform: rotate(45deg);
+  margin-left: -4rpx;
+}
+
+/* 20px Medium */
 .action-title {
   display: block;
-  font-size: 32rpx;
+  font-size: 40rpx;
   font-weight: 500;
   color: #000000;
   line-height: 1.5;
-  margin-bottom: 8rpx;
+  padding-right: 56rpx;
 }
 
+/* 14px Regular 50% opacity */
 .action-sub {
   display: block;
-  font-size: 26rpx;
+  margin-top: 12rpx;
+  font-size: 28rpx;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.45);
+  color: #000000;
+  opacity: 0.5;
   line-height: 1.5;
 }

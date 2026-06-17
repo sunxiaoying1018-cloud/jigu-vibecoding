@@ -31,6 +31,8 @@ Page({
   data: {
     statusBarHeight: 20,
     navTotalHeight: 88,
+    mascotTop: 155,
+    bodyPaddingTop: 8,
     dueCount: 0,
     markedCount: 0,
     readCount: 0,
@@ -40,15 +42,25 @@ Page({
     allArticles: [],
     loadError: "",
     showReviewCard: false,
+    mascotSrc: "/assets/ui/mascot.gif",
   },
 
   onLoad() {
     const sys = wx.getSystemInfoSync();
     const statusBarHeight = sys.statusBarHeight || 20;
+    const scale = sys.windowWidth / 375;
     this.setData({
       statusBarHeight,
       navTotalHeight: statusBarHeight + 44,
+      mascotTop: Math.round(155 * scale),
+      bodyPaddingTop: Math.max(0, Math.round(96 * scale) - (statusBarHeight + 44)),
     });
+  },
+
+  onMascotError() {
+    if (this.data.mascotSrc.endsWith("mascot.gif")) {
+      this.setData({ mascotSrc: "/assets/ui/mascot-static.png" });
+    }
   },
 
   onShow() {
@@ -103,6 +115,10 @@ Page({
 
   goReview() {
     wx.navigateTo({ url: "/pages/review/review" });
+  },
+
+  goTank() {
+    wx.navigateTo({ url: "/pages/tank/tank" });
   },
 
   goArticles() {

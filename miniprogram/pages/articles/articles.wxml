@@ -1,11 +1,12 @@
 <view class="articles-page">
-  <view class="articles-nav" style="padding-top: {{statusBarHeight}}px;">
-    <view class="articles-nav-inner">
+  <view class="articles-nav">
+    <view class="articles-nav-status" style="height: {{statusBarHeight}}px;"></view>
+    <view class="articles-nav-inner" style="padding-right: {{navRightPadding}}px;">
       <view class="nav-back" bindtap="onBack">
-        <image class="nav-back-icon" src="/assets/ui/icon-back.png" mode="aspectFit" />
+        <image class="nav-back-icon" src="/assets/ui/icon-back-new.png" mode="aspectFit" />
       </view>
       <text class="nav-title">全部文章</text>
-      <view class="nav-side"></view>
+      <view class="nav-side" style="width: {{navSideWidth}}px;"></view>
     </view>
   </view>
 
@@ -16,7 +17,7 @@
     enhanced
     show-scrollbar="{{false}}"
   >
-    <view class="articles-list">
+    <view class="articles-list" style="padding-top: {{bodyPaddingTop}}px;">
       <view
         class="article-card"
         wx:for="{{articles}}"
@@ -24,14 +25,19 @@
         data-id="{{item.id}}"
         bindtap="goRead"
       >
-        <view class="article-card-head">
-          <text class="passage-id">Passage {{item.id}}</text>
-          <text class="status-pill status-pill--{{item.statusType}}" wx:if="{{item.statusLabel}}">{{item.statusLabel}}</text>
-        </view>
-        <text class="passage-title">{{item.title}}</text>
-        <view class="tag-row">
-          <text class="tag-pill">{{item.topicTag}}</text>
-          <text class="tag-pill">{{item.levelTag}}</text>
+        <view class="article-card-inner">
+          <view class="article-card-head">
+            <text class="passage-id">Passage {{item.id}}</text>
+            <text
+              wx:if="{{item.showStatus}}"
+              class="status-pill status-pill--{{item.statusType}}"
+            >{{item.statusLabel}}</text>
+          </view>
+          <text class="passage-title">{{item.title}}</text>
+          <view class="tag-row">
+            <text class="tag-pill">{{item.topicTag}}</text>
+            <text class="tag-pill">{{item.levelTag}}</text>
+          </view>
         </view>
       </view>
     </view>

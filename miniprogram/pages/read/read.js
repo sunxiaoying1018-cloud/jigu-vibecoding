@@ -1,3 +1,34 @@
+const HANDLE_WIDTH_RPX = 28;
+const HANDLE_HEIGHT_RPX = 62;
+
+function getHandleMetrics() {
+  const windowWidth = wx.getSystemInfoSync().windowWidth || 375;
+  const rpxToPx = (rpx) => (rpx / 750) * windowWidth;
+  return {
+    widthPx: Math.ceil(rpxToPx(HANDLE_WIDTH_RPX)),
+    heightPx: Math.ceil(rpxToPx(HANDLE_HEIGHT_RPX)),
+    rpxToPx,
+  };
+}
+
+function buildHandlePositions(startRect, endRect) {
+  const { rpxToPx } = getHandleMetrics();
+  const edgeFix = rpxToPx(2);
+  const leftStemBottomX = rpxToPx(20);
+  const rightStemTopX = rpxToPx(4);
+
+  return {
+    handleLeft: {
+      top: startRect.bottom - edgeFix,
+      left: startRect.left - leftStemBottomX,
+    },
+    handleRight: {
+      top: endRect.top - edgeFix,
+      left: endRect.right - rightStemTopX,
+    },
+  };
+}
+
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
 const markUtil = require("../../utils/mark");
@@ -39,6 +70,9 @@ Page({
     navTotalHeight: 64,
     navSideWidth: 24,
     navRightPadding: 16,
+    stickyHeaderTop: 88,
+    stickyHeaderHeightPx: 120,
+    scrollTopOffset: 148,
     scrollHeight: 600,
     scrollTop: 0,
     scrollIntoView: "",
@@ -58,7 +92,12 @@ Page({
       navSideWidth
     );
     const navTotalHeight = statusBarHeight + Math.ceil(rpxToPx(88));
-    const scrollHeight = sys.windowHeight - navTotalHeight;
+    const stickyHeaderHeightPx = Math.ceil(
+      rpxToPx(24 + 96 + 32 + 36 + 25)
+    );
+    const stickyHeaderTop = navTotalHeight;
+    const scrollTopOffset = navTotalHeight + stickyHeaderHeightPx;
+    const scrollHeight = sys.windowHeight - scrollTopOffset;
 
     const app = getApp();
     const articles = app.globalData.articles.length
@@ -97,20 +136,26 @@ Page({
     const paragraphs = wordUtil.tokenizeParagraphs(article);
     this.baseParagraphs = paragraphs;
     this.wordCount = wordUtil.getWordCount(paragraphs);
+    this._pageReady = false;
+
+    const displayState = this.buildParagraphDisplayState(paragraphs);
 
     this.setData(
       {
         article,
-        paragraphs,
+        ...displayState,
         statusBarHeight,
         navTotalHeight,
         navSideWidth,
         navRightPadding,
+        stickyHeaderTop,
+        stickyHeaderHeightPx,
+        scrollTopOffset,
         scrollHeight,
         hasReadBefore: articleHasReadBefore(article.id),
       },
       () => {
-        this.loadPersistedState();
+        this._pageReady = true;
         if (this._focusKey) {
           wx.nextTick(() => this.focusToWord());
         }
@@ -122,17 +167,21 @@ Page({
     if (this.article) {
       this.setData({ hasReadBefore: articleHasReadBefore(this.article.id) });
     }
-    if (this.article && this.baseParagraphs && this.baseParagraphs.length) {
+    if (
+      this._pageReady &&
+      this.article &&
+      this.baseParagraphs &&
+      this.baseParagraphs.length
+    ) {
       this.loadPersistedState();
     }
   },
 
-  loadPersistedState(done) {
-    const baseParagraphs = this.baseParagraphs || this.data.paragraphs;
+  buildParagraphDisplayState(baseParagraphs) {
     if (!this.article || !baseParagraphs || !baseParagraphs.length) {
-      if (typeof done === "function") done();
-      return;
+      return { paragraphs: [], markCount: 0, articleMarkCount: 0 };
     }
+
     const caughtKeys = storage.getCaughtWordKeysForArticle(
       this.article.id,
       baseParagraphs
@@ -142,27 +191,41 @@ Page({
       baseParagraphs
     );
     const markCount = markUtil.getMarksForArticle(this.article.id).length;
-
-    const articleTankWords = this.buildArticleTankWords();
+    const articleTankWords = this.buildArticleTankWords(baseParagraphs, caughtKeys);
     const caughtIndexMap = wordUtil.buildCaughtIndexMap(
       articleTankWords,
       baseParagraphs
     );
 
+    return {
+      paragraphs: wordUtil.enrichParagraphs(
+        this.article.id,
+        baseParagraphs,
+        caughtKeys,
+        markedSpanKeys,
+        caughtIndexMap
+      ),
+      markCount,
+      articleMarkCount: articleTankWords.length,
+      articleTankWords,
+    };
+  },
+
+  loadPersistedState(done) {
+    const baseParagraphs = this.baseParagraphs;
+    if (!this.article || !baseParagraphs || !baseParagraphs.length) {
+      if (typeof done === "function") done();
+      return;
+    }
+
+    const displayState = this.buildParagraphDisplayState(baseParagraphs);
+
     this.setData(
       {
-        paragraphs: wordUtil.enrichParagraphs(
-          this.article.id,
-          baseParagraphs,
-          caughtKeys,
-          markedSpanKeys,
-          caughtIndexMap
-        ),
-        markCount,
-        articleMarkCount: articleTankWords.length,
+        ...displayState,
         ...(this.data.tankPanelOpen
-          ? this.getTankSheetLayout(articleTankWords)
-          : { articleTankWords: this.data.articleTankWords }),
+          ? this.getTankSheetLayout(displayState.articleTankWords)
+          : {}),
       },
       () => {
         if (typeof done === "function") done();
@@ -187,14 +250,15 @@ Page({
     };
   },
 
-  buildArticleTankWords() {
+  buildArticleTankWords(baseParagraphs, caughtKeys) {
     if (!this.article || !this.vocab) return [];
 
-    const paragraphs = this.baseParagraphs || this.data.paragraphs;
-    const caughtKeys = storage.getCaughtWordKeysForArticle(
-      this.article.id,
-      paragraphs
-    );
+    const paragraphs = baseParagraphs || this.baseParagraphs;
+    if (!paragraphs || !paragraphs.length) return [];
+
+    const keys =
+      caughtKeys ||
+      storage.getCaughtWordKeysForArticle(this.article.id, paragraphs);
     const lemmaMap = {};
     const order = [];
 
@@ -214,13 +278,13 @@ Page({
 
     (paragraphs || []).forEach((para) => {
       (para.tokens || []).forEach((token) => {
-        if (token.type === "word" && caughtKeys[token.key]) {
+        if (token.type === "word" && keys[token.key]) {
           addWord(token.key);
         }
       });
     });
 
-    Object.keys(caughtKeys).forEach((mk) => addWord(mk));
+    Object.keys(keys).forEach((mk) => addWord(mk));
 
     return order.map((lemmaKey, i) => ({
       ...lemmaMap[lemmaKey],
@@ -375,14 +439,7 @@ Page({
         (w) => w.wordIndex === range.endIndex
       );
       if (startRect && endRect) {
-        payload.handleLeft = {
-          top: startRect.bottom - 2,
-          left: startRect.left,
-        };
-        payload.handleRight = {
-          top: endRect.bottom - 2,
-          left: endRect.right,
-        };
+        Object.assign(payload, buildHandlePositions(startRect, endRect));
       }
     }
 
@@ -502,16 +559,22 @@ Page({
       .exec((res) => {
         if (!res[0] || !res[1] || !this.data.selection) return;
 
-        this.setData({
-          handleLeft: {
-            top: res[0].top + res[0].height - 2,
-            left: res[0].left,
-          },
-          handleRight: {
-            top: res[1].top + res[1].height - 2,
-            left: res[1].right,
-          },
-        });
+        this.setData(
+          buildHandlePositions(
+            {
+              left: res[0].left,
+              right: res[0].right,
+              top: res[0].top,
+              bottom: res[0].top + res[0].height,
+            },
+            {
+              left: res[1].left,
+              right: res[1].right,
+              top: res[1].top,
+              bottom: res[1].top + res[1].height,
+            }
+          )
+        );
       });
   },
 
@@ -726,6 +789,11 @@ Page({
         };
 
     storage.catchWord(info, this.article, context, key);
+    const app = getApp();
+    const articles = app.globalData.articles.length
+      ? app.globalData.articles
+      : dataLoader.loadArticles();
+    storage.syncCaughtWordsFromArticleMarks(articles);
     this.refreshParagraphDisplay();
   },
 });

@@ -17,7 +17,7 @@
   "tabBar": {
     "custom": true,
     "color": "#8B8C91",
-    "selectedColor": "#4E92FF",
+    "selectedColor": "#31AFFF",
     "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [
@@ -26,12 +26,6 @@
         "text": "首页",
         "iconPath": "assets/tab/home.png",
         "selectedIconPath": "assets/tab/home-active.png"
-      },
-      {
-        "pagePath": "pages/tank/tank",
-        "text": "鱼缸",
-        "iconPath": "assets/ui/tab/tank.png",
-        "selectedIconPath": "assets/ui/tab/tank-active.png"
       },
       {
         "pagePath": "pages/mine/mine",

@@ -10,12 +10,6 @@ Component({
         selectedIconPath: "/assets/tab/home-active.png",
       },
       {
-        pagePath: "/pages/tank/tank",
-        text: "鱼缸",
-        iconPath: "/assets/ui/tab/tank.png",
-        selectedIconPath: "/assets/ui/tab/tank-active.png",
-      },
-      {
         pagePath: "/pages/mine/mine",
         text: "我的",
         iconPath: "/assets/ui/tab/mine.png",

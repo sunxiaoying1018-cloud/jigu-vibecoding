@@ -7,6 +7,14 @@
     </view>
   </view>
 
+  <image
+    class="home-mascot"
+    src="{{mascotSrc}}"
+    mode="aspectFit"
+    style="top: {{mascotTop}}px;"
+    binderror="onMascotError"
+  />
+
   <scroll-view
     scroll-y
     class="home-scroll"
@@ -14,27 +22,27 @@
     enhanced
     show-scrollbar="{{false}}"
   >
-    <view class="home-body">
+    <view class="home-body" style="padding-top: {{bodyPaddingTop}}px;">
       <view class="error-banner" wx:if="{{loadError}}">
         <text class="error-text">{{loadError}}</text>
       </view>
 
       <view class="stats-card">
-        <view class="stat-col">
+        <view class="stat-col stat-col--left">
           <text class="stat-label">已标记生词</text>
           <view class="stat-value-row">
             <text class="stat-num">{{markedCount}}</text>
             <text class="stat-unit">个</text>
           </view>
         </view>
-        <view class="stat-col">
+        <view class="stat-col stat-col--center">
           <text class="stat-label">累计阅读</text>
           <view class="stat-value-row">
             <text class="stat-num">{{readCount}}</text>
-            <text class="stat-unit">篇</text>
+            <text class="stat-unit">个</text>
           </view>
         </view>
-        <view class="stat-col">
+        <view class="stat-col stat-col--right">
           <text class="stat-label">待复习单词</text>
           <view class="stat-value-row">
             <text class="stat-num">{{dueCount}}</text>
@@ -43,37 +51,46 @@
         </view>
       </view>
 
-      <view class="today-card" wx:if="{{todayArticle}}">
-        <image class="today-mascot" src="/assets/ui/mascot.png" mode="aspectFit" />
-        <text class="section-label">今日阅读</text>
-        <view class="today-article-block">
-          <text class="passage-id">Passage {{todayArticle.id}}</text>
-          <text class="passage-title">{{todayArticle.title}}</text>
-          <view class="tag-row">
-            <text class="tag-pill">{{todayArticle.topicTag}}</text>
-            <text class="tag-pill">{{todayArticle.levelTag}}</text>
+      <view class="today-card {{showReviewCard ? 'today-card--compact' : ''}}" wx:if="{{todayArticle}}">
+        <view class="today-card-inner">
+          <text class="section-label">今日文章</text>
+
+          <view class="today-article-block">
+            <text class="passage-id">Passage {{todayArticle.id}}</text>
+            <text class="passage-title {{showReviewCard ? 'passage-title--single' : 'passage-title--multi'}}">{{todayArticle.title}}</text>
+            <view class="tag-row">
+              <text class="tag-pill">{{todayArticle.topicTag}}</text>
+              <text class="tag-pill">{{todayArticle.levelTag}}</text>
+            </view>
           </view>
+
+          <view class="cta-btn" catchtap="goReadToday">开始阅读</view>
         </view>
-        <view class="cta-btn" catchtap="goReadToday">开始阅读</view>
+      </view>
+
+      <view class="action-card action-card--full" bindtap="goTank">
+        <view class="action-arrow" />
+        <text class="action-title">生词本</text>
+        <text class="action-sub">你标记过的单词都会被记录在这里哦</text>
       </view>
 
       <view class="bottom-cards {{showReviewCard ? 'bottom-cards--split' : ''}}">
         <view
-          class="action-card action-card--review"
+          class="action-card"
           wx:if="{{showReviewCard}}"
           bindtap="goReview"
         >
-          <text class="action-arrow">›</text>
-          <text class="action-title">复习</text>
-          <text class="action-sub">待复习单词 {{dueCount}}/{{totalCaught}}</text>
+          <view class="action-arrow" />
+          <text class="action-title">复习单词</text>
+          <text class="action-sub">待复习 {{dueCount}}/{{totalCaught}}</text>
         </view>
         <view
-          class="action-card action-card--articles {{showReviewCard ? '' : 'action-card--full'}}"
+          class="action-card {{showReviewCard ? '' : 'action-card--full'}}"
           bindtap="goArticles"
         >
-          <text class="action-arrow">›</text>
+          <view class="action-arrow" />
           <text class="action-title">全部文章</text>
-          <text class="action-sub">学习中 {{readCount}}/{{totalArticles}}</text>
+          <text class="action-sub">已阅读 {{readCount}}/{{totalArticles}}</text>
         </view>
       </view>
     </view>

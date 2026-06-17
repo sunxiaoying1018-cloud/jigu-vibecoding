@@ -142,6 +142,66 @@ def parse_exchange_lemma(exchange, form):
     return None
 
 
+def morphological_candidates(word):
+    key = word.lower()
+    candidates = []
+    if key.endswith("ies") and len(key) > 4:
+        candidates.append(key[:-3] + "y")
+    if key.endswith("ied") and len(key) > 4:
+        candidates.append(key[:-3] + "y")
+    if key.endswith("ing") and len(key) > 5:
+        candidates.append(key[:-3])
+        candidates.append(key[:-3] + "e")
+    if key.endswith("ed") and len(key) > 4:
+        candidates.append(key[:-2])
+        candidates.append(key[:-1])
+    if key.endswith("es") and len(key) > 4:
+        candidates.append(key[:-2])
+    if key.endswith("s") and len(key) > 4 and not key.endswith("ss"):
+        candidates.append(key[:-1])
+    return candidates
+
+
+def lemma_from_exchange(exchange):
+    if not exchange:
+        return None
+    for part in exchange.split("/"):
+        if ":" not in part:
+            continue
+        code, value = part.split(":", 1)
+        if code == "0" and value:
+            return value
+    return None
+
+
+def lookup_phonetic(conn, word):
+    row = conn.execute(
+        "SELECT phonetic FROM stardict WHERE word = ? COLLATE NOCASE",
+        (word,),
+    ).fetchone()
+    if row and row[0] and str(row[0]).strip():
+        return str(row[0]).strip()
+    return ""
+
+
+def resolve_phonetic(conn, word, phonetic="", exchange=""):
+    if (phonetic or "").strip():
+        return phonetic.strip()
+
+    lemma = lemma_from_exchange(exchange)
+    if lemma:
+        got = lookup_phonetic(conn, lemma)
+        if got:
+            return got
+
+    for cand in morphological_candidates(word):
+        got = lookup_phonetic(conn, cand)
+        if got:
+            return got
+
+    return ""
+
+
 def lookup_word(conn, word):
     cur = conn.cursor()
     row = cur.execute(
@@ -169,21 +229,7 @@ def lookup_word(conn, word):
         return row
 
     # common suffix fallbacks
-    candidates = []
-    if word.endswith("ies") and len(word) > 4:
-        candidates.append(word[:-3] + "y")
-    if word.endswith("ied") and len(word) > 4:
-        candidates.append(word[:-3] + "y")
-    if word.endswith("ing") and len(word) > 5:
-        candidates.append(word[:-3])
-        candidates.append(word[:-3] + "e")
-    if word.endswith("ed") and len(word) > 4:
-        candidates.append(word[:-2])
-        candidates.append(word[:-1])
-    if word.endswith("es") and len(word) > 3:
-        candidates.append(word[:-2])
-    if word.endswith("s") and len(word) > 3:
-        candidates.append(word[:-1])
+    candidates = morphological_candidates(word)
 
     for cand in candidates:
         row = cur.execute(
@@ -196,14 +242,14 @@ def lookup_word(conn, word):
     return None
 
 
-def ecdict_entry_to_vocab(key, row):
-    word, phonetic, pos, translation, _exchange = row
+def ecdict_entry_to_vocab(conn, key, row):
+    word, phonetic, pos, translation, exchange = row
     parsed_pos = parse_pos(pos) or pos_from_translation(translation)
     return {
         "word": word,
         "pos": parsed_pos,
         "meaning": shorten_meaning(translation),
-        "phonetic": phonetic or "",
+        "phonetic": resolve_phonetic(conn, word, phonetic, exchange),
         "example": "",
         "topic": "阅读词汇",
     }
@@ -224,9 +270,11 @@ def build_vocab():
             entry = dict(curated[key])
             row = lookup_word(conn, key)
             if row:
-                _word, row_phonetic, row_pos, row_translation, _ex = row
+                _word, row_phonetic, row_pos, row_translation, row_exchange = row
                 if not entry.get("phonetic"):
-                    entry["phonetic"] = row_phonetic or ""
+                    entry["phonetic"] = resolve_phonetic(
+                        conn, key, row_phonetic or "", row_exchange or ""
+                    )
                 if not entry.get("pos"):
                     entry["pos"] = parse_pos(row_pos) or pos_from_translation(
                         row_translation
@@ -236,7 +284,7 @@ def build_vocab():
 
         row = lookup_word(conn, key)
         if row:
-            vocab[key] = ecdict_entry_to_vocab(key, row)
+            vocab[key] = ecdict_entry_to_vocab(conn, key, row)
         else:
             missing.append(key)
 

@@ -4,24 +4,17 @@
   <view class="read-nav" style="padding-top: {{statusBarHeight}}px;">
     <view class="read-nav-inner" style="padding-right: {{navRightPadding}}px;">
       <view class="nav-back" bindtap="onNavBack">
-        <image class="nav-back-icon" src="/assets/ui/icon-back.png" mode="aspectFit" />
+        <image class="nav-back-icon" src="/assets/ui/icon-back-new.png" mode="aspectFit" />
       </view>
       <text class="nav-title">阅读</text>
-      <view class="nav-side" style="width: {{navSideWidth}}px;"></view>
     </view>
   </view>
 
-  <scroll-view
-    scroll-y
-    class="read-scroll"
-    style="top: {{navTotalHeight}}px; height: {{scrollHeight}}px;"
-    scroll-top="{{scrollTop}}"
-    scroll-into-view="{{scrollIntoView}}"
-    bindscroll="onContentScroll"
-    bindscrolltolower="onScrollToLower"
-    scroll-with-animation="{{false}}"
+  <view
+    class="read-sticky-header"
+    style="top: {{stickyHeaderTop}}px; height: {{stickyHeaderHeightPx}}px;"
   >
-    <view class="advice-wrap">
+    <view class="advice-wrap {{adviceExpanded ? 'advice-wrap--expanded' : ''}}">
       <view class="advice-bar" catchtap="toggleAdvice">
         <image class="advice-avatar" src="/assets/ui/advice-avatar.png" mode="aspectFill" />
         <text class="advice-title">卷卷的建议</text>
@@ -32,12 +25,25 @@
         />
       </view>
       <view class="advice-panel" wx:if="{{adviceExpanded}}">
-        <text class="advice-item">通读全文，标记并根据上下文猜测生词，不要立刻查看中文释义</text>
-        <text class="advice-item">结合中文释义再次通读全文，确认每个生词在语境中的确切含义</text>
-        <text class="advice-item">隔天重读同一篇文章，直到标出的词都能认出来</text>
+        <text class="advice-item">1. 通读全文，标记并根据上下文猜测生词，不要立刻查看中文释义</text>
+        <text class="advice-item">2. 结合中文释义再次通读全文，确认每个生词在语境中的确切含义</text>
+        <text class="advice-item">3. 隔天重读同一篇文章，直到标出的词都能认出来</text>
       </view>
     </view>
+    <text class="read-tips {{adviceExpanded ? 'read-tips--covered' : ''}}">tips: 不认识的词单击标记，长按可以标记句子哦～</text>
+    <view class="read-sticky-divider"></view>
+  </view>
 
+  <scroll-view
+    scroll-y
+    class="read-scroll"
+    style="top: {{scrollTopOffset}}px; height: {{scrollHeight}}px;"
+    scroll-top="{{scrollTop}}"
+    scroll-into-view="{{scrollIntoView}}"
+    bindscroll="onContentScroll"
+    bindscrolltolower="onScrollToLower"
+    scroll-with-animation="{{false}}"
+  >
     <view class="article-header">
       <view class="article-meta">
         <text class="title">{{article.title}}</text>
@@ -53,30 +59,7 @@
 
       <block wx:for="{{paragraphs}}" wx:key="id">
         <view class="paragraph">
-          <block wx:for="{{item.tokens}}" wx:key="tokenKey" wx:for-item="token">
-            <view
-              wx:if="{{token.type === 'word'}}"
-              id="w-{{token.wordIndex}}"
-              class="word-wrap"
-            >
-              <text
-                class="token word-token {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}} {{token.isCaught ? 'word-caught' : ''}} {{focusWordIndex === token.wordIndex ? 'word-focus' : ''}}"
-                data-index="{{token.wordIndex}}"
-                data-key="{{token.key}}"
-                data-text="{{token.text}}"
-                bindlongpress="onWordLongPress"
-                catchtap="onWordTap"
-              >{{token.text}}</text>
-              <text
-                wx:if="{{token.isCaught && token.caughtIndex}}"
-                class="word-caught-index"
-              >{{token.caughtIndex}}</text>
-            </view>
-            <text
-              wx:else
-              class="token token-gap {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}}"
-            >{{token.text}}</text>
-          </block>
+          <block wx:for="{{item.tokens}}" wx:key="tokenKey" wx:for-item="token"><view wx:if="{{token.type === 'word'}}" id="w-{{token.wordIndex}}" class="word-wrap"><text class="token word-token {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}} {{token.isCaught ? 'word-caught' : ''}} {{focusWordIndex === token.wordIndex ? 'word-focus' : ''}}" data-index="{{token.wordIndex}}" data-key="{{token.key}}" data-text="{{token.text}}" bindlongpress="onWordLongPress" catchtap="onWordTap">{{token.text}}</text><text wx:if="{{token.isCaught}}" class="word-caught-index">{{token.caughtIndex}}</text></view><text wx:else class="token token-gap {{spanTokenKeys[token.tokenKey] ? 'token-selected' : ''}} {{token.isMarked ? 'token-marked' : ''}}">{{token.text}}</text></block>
         </view>
         <view wx:if="{{showZh && item.zh}}" class="paragraph-zh">{{item.zh}}</view>
       </block>
@@ -130,7 +113,6 @@
   </view>
 
   <view class="footer-bar">
-    <view class="footer-fade"></view>
     <view class="footer-inner">
       <block wx:if="{{hasReadBefore}}">
         <view class="footer-btn" catchtap="toggleZh">显示中文</view>

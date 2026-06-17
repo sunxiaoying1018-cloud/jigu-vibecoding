@@ -1,7 +1,6 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
 const dataLoader = require("../../data/loader.js");
-const { updateTabBarSelected } = require("../../utils/tabBar");
 
 function formatPhonetic(phonetic) {
   if (!phonetic) return "";
@@ -44,7 +43,6 @@ Page({
   },
 
   onShow() {
-    updateTabBarSelected(this, 1);
     const app = getApp();
     const vocab =
       app.globalData.vocab && Object.keys(app.globalData.vocab).length
@@ -93,6 +91,10 @@ Page({
     });
 
     this.setData({ words });
+  },
+
+  onNavBack() {
+    wx.navigateBack({ delta: 1 });
   },
 
   goRead() {

@@ -11,7 +11,7 @@ module.exports = {
     "word": "abbreviated",
     "pos": "adj.",
     "meaning": "缩写的, 短缩的, 简写的, 简略的, 缩略的",
-    "phonetic": "",
+    "phonetic": "ә'bri:vieit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -158,7 +158,7 @@ module.exports = {
     "word": "achievements",
     "pos": "n.",
     "meaning": "业绩；获得（achievement的复数）",
-    "phonetic": "",
+    "phonetic": "ә'tʃi:vmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -166,7 +166,7 @@ module.exports = {
     "word": "achieving",
     "pos": "",
     "meaning": "取得",
-    "phonetic": "",
+    "phonetic": "ә'tʃi:v",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -199,7 +199,7 @@ module.exports = {
     "word": "actions",
     "pos": "n.",
     "meaning": "动作；行动（action的复数）",
-    "phonetic": "",
+    "phonetic": "'ækʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -247,7 +247,7 @@ module.exports = {
     "word": "adapted",
     "pos": "adj.",
     "meaning": "适合的",
-    "phonetic": "",
+    "phonetic": "ә'dæpt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -296,7 +296,7 @@ module.exports = {
     "word": "adults",
     "pos": "n.",
     "meaning": "成年人（adult的复数形式）",
-    "phonetic": "",
+    "phonetic": "'ædʌlt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -312,7 +312,7 @@ module.exports = {
     "word": "advances",
     "pos": "n.",
     "meaning": "作友好表示, 求爱, 献殷勤",
-    "phonetic": "",
+    "phonetic": "әd'vɑ:ns",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -481,7 +481,7 @@ module.exports = {
     "word": "algorithms",
     "pos": "n.",
     "meaning": "算法；算法式（algorithm的复数）",
-    "phonetic": "",
+    "phonetic": "'ælgәriðm",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -497,7 +497,7 @@ module.exports = {
     "word": "aligned",
     "pos": "adj.",
     "meaning": "对齐的；均衡的",
-    "phonetic": "",
+    "phonetic": "ә'lain",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -546,7 +546,7 @@ module.exports = {
     "word": "allowing",
     "pos": "v.",
     "meaning": "允许（allow的现在分词）",
-    "phonetic": "",
+    "phonetic": "ә'lau",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -627,7 +627,7 @@ module.exports = {
     "word": "amenities",
     "pos": "n.",
     "meaning": "令人愉快之事物（amenity的复数）",
-    "phonetic": "",
+    "phonetic": "ә'mi:niti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -709,7 +709,7 @@ module.exports = {
     "word": "answers",
     "pos": "n.",
     "meaning": "答案, 回答（answer的复数）",
-    "phonetic": "",
+    "phonetic": "'ɑ:nsә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -725,7 +725,7 @@ module.exports = {
     "word": "antibiotics",
     "pos": "n.",
     "meaning": "抗生学；抗生素",
-    "phonetic": "",
+    "phonetic": ".æntibai'ɒtik",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -757,7 +757,7 @@ module.exports = {
     "word": "appeals",
     "pos": "n.",
     "meaning": "上诉；恳求（appeal的复数）",
-    "phonetic": "",
+    "phonetic": "ә'pi:l",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -773,7 +773,7 @@ module.exports = {
     "word": "applications",
     "pos": "n.",
     "meaning": "应用；应用程序；应用软件（application的复数）",
-    "phonetic": "",
+    "phonetic": ".æpli'keiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -798,7 +798,7 @@ module.exports = {
     "word": "approaches",
     "pos": "",
     "meaning": "处理",
-    "phonetic": "",
+    "phonetic": "ә'prәutʃ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -862,7 +862,7 @@ module.exports = {
     "word": "areas",
     "pos": "n.",
     "meaning": "区域, 领域；面积（area的复数形式）",
-    "phonetic": "",
+    "phonetic": "'єәriә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -878,7 +878,7 @@ module.exports = {
     "word": "arrangements",
     "pos": "n.",
     "meaning": "安排；准备；整理（arrangement的复数）",
-    "phonetic": "",
+    "phonetic": "ә'reindʒmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -945,7 +945,7 @@ module.exports = {
     "word": "assignments",
     "pos": "n.",
     "meaning": "分配；作业（assignment的复数形式）",
-    "phonetic": "",
+    "phonetic": "ә'sainmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -953,7 +953,7 @@ module.exports = {
     "word": "associated",
     "pos": "adj.",
     "meaning": "联合的",
-    "phonetic": "",
+    "phonetic": "ә'sәuʃieit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1109,7 +1109,7 @@ module.exports = {
     "word": "authorities",
     "pos": "n.",
     "meaning": "当局, 官方（authority的复数）",
-    "phonetic": "",
+    "phonetic": "ɒ:'θɒriti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1126,7 +1126,7 @@ module.exports = {
     "word": "automated",
     "pos": "adj.",
     "meaning": "自动化的；机械化的",
-    "phonetic": "",
+    "phonetic": "'ɔ:tәmeit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1320,7 +1320,7 @@ module.exports = {
     "word": "beliefs",
     "pos": "n.",
     "meaning": "信仰；信?（belief的复数）",
-    "phonetic": "",
+    "phonetic": "bi'li:f",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1483,7 +1483,7 @@ module.exports = {
     "word": "budgets",
     "pos": "n.",
     "meaning": "预算（budget复数形式）",
-    "phonetic": "",
+    "phonetic": "'bʌdʒit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1499,7 +1499,7 @@ module.exports = {
     "word": "buildings",
     "pos": "n.",
     "meaning": "建筑物（building的复数）",
-    "phonetic": "",
+    "phonetic": "'bildiŋ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1623,7 +1623,7 @@ module.exports = {
     "word": "carries",
     "pos": "v.",
     "meaning": "传递；携带；运载；怀孕（carry的第三人称单数形式）",
-    "phonetic": "",
+    "phonetic": "'kæri",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1631,7 +1631,7 @@ module.exports = {
     "word": "categories",
     "pos": "n.",
     "meaning": "分类；类别（category的复数）",
-    "phonetic": "",
+    "phonetic": "'kætigәri",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1647,7 +1647,7 @@ module.exports = {
     "word": "causes",
     "pos": "n.",
     "meaning": "原因",
-    "phonetic": "",
+    "phonetic": "kɒ:z",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1711,7 +1711,7 @@ module.exports = {
     "word": "chains",
     "pos": "n.",
     "meaning": "枷锁；联营企业；缝条；链条（chain的复数）",
-    "phonetic": "",
+    "phonetic": "tʃein",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1751,7 +1751,7 @@ module.exports = {
     "word": "championed",
     "pos": "v.",
     "meaning": "为…而斗争, 捍卫, 声援（champion的过去式与过去分词形式）",
-    "phonetic": "",
+    "phonetic": "'tʃæmpiәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1776,7 +1776,7 @@ module.exports = {
     "word": "characterised",
     "pos": "v.",
     "meaning": "刻划……的性格；表示……的特性 (characterise的变形)",
-    "phonetic": "",
+    "phonetic": "'kærәktәraiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1825,7 +1825,7 @@ module.exports = {
     "word": "cities",
     "pos": "n.",
     "meaning": "城市（city的复数）",
-    "phonetic": "",
+    "phonetic": "'siti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1842,7 +1842,7 @@ module.exports = {
     "word": "citizens",
     "pos": "n.",
     "meaning": "市民；公民（citizen的复数）",
-    "phonetic": "",
+    "phonetic": "'sitizn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1898,7 +1898,7 @@ module.exports = {
     "word": "cleared",
     "pos": "adj.",
     "meaning": "使干净；清除（clear的过去分词）",
-    "phonetic": "",
+    "phonetic": "kliә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -1947,7 +1947,7 @@ module.exports = {
     "word": "codes",
     "pos": "n.",
     "meaning": "编码, 代码；规范；准则（code的复数）",
-    "phonetic": "",
+    "phonetic": "kәud",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2102,7 +2102,7 @@ module.exports = {
     "word": "communities",
     "pos": "n.",
     "meaning": "社区；团体, 群体（community的复数形式）",
-    "phonetic": "",
+    "phonetic": "kә'mju:niti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2135,7 +2135,7 @@ module.exports = {
     "word": "companies",
     "pos": "n.",
     "meaning": "公司, 企业；公司财产；伙伴（company的复数形式）",
-    "phonetic": "",
+    "phonetic": "'kʌmpәni",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2160,7 +2160,7 @@ module.exports = {
     "word": "competencies",
     "pos": "n.",
     "meaning": "能力（competency的复数）；胜任特征；职业能力素质",
-    "phonetic": "",
+    "phonetic": "'kɔmpit(ә)nsi",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2168,7 +2168,7 @@ module.exports = {
     "word": "competing",
     "pos": "adj.",
     "meaning": "相互矛盾的；抵触的",
-    "phonetic": "",
+    "phonetic": "kәm'pi:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2248,7 +2248,7 @@ module.exports = {
     "word": "compromising",
     "pos": "adj.",
     "meaning": "妥协的；让步的",
-    "phonetic": "",
+    "phonetic": "'kɒmprәmaiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2264,7 +2264,7 @@ module.exports = {
     "word": "concentrating",
     "pos": "",
     "meaning": "[建] 浓缩",
-    "phonetic": "",
+    "phonetic": "'kɒnsәntreit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2281,7 +2281,7 @@ module.exports = {
     "word": "concerns",
     "pos": "n.",
     "meaning": "关注；关注点；关注者（concern的复数形式）",
-    "phonetic": "",
+    "phonetic": "kәn'sә:n",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2298,7 +2298,7 @@ module.exports = {
     "word": "conditions",
     "pos": "n.",
     "meaning": "形势, 情况, 环境",
-    "phonetic": "",
+    "phonetic": "kәn'diʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2471,7 +2471,7 @@ module.exports = {
     "word": "constitutes",
     "pos": "v.",
     "meaning": "组成；构成（constitute的单三形式）",
-    "phonetic": "",
+    "phonetic": "kәn'stitjut",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2626,7 +2626,7 @@ module.exports = {
     "word": "contributed",
     "pos": "art.",
     "meaning": "已缴入的；贡献的, 分配的",
-    "phonetic": "",
+    "phonetic": "kәn'tribju:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2634,7 +2634,7 @@ module.exports = {
     "word": "contributing",
     "pos": "adj.",
     "meaning": "贡献的, 起一份作用的",
-    "phonetic": "",
+    "phonetic": "kәn'tribju:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2642,7 +2642,7 @@ module.exports = {
     "word": "contributions",
     "pos": "n.",
     "meaning": "贡献；出资",
-    "phonetic": "",
+    "phonetic": ".kɒntri'bju:ʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2682,7 +2682,7 @@ module.exports = {
     "word": "coordinated",
     "pos": "adj.",
     "meaning": "调节；调整；整理；使调和（coordinate的过去分词）",
-    "phonetic": "",
+    "phonetic": "kәu'ɒ:dineit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2707,7 +2707,7 @@ module.exports = {
     "word": "corporations",
     "pos": "n.",
     "meaning": "公司, 企业（corporation的复数形式）",
-    "phonetic": "",
+    "phonetic": ".kɒ:pә'reiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2763,7 +2763,7 @@ module.exports = {
     "word": "costs",
     "pos": "n.",
     "meaning": "费用；诉讼费；损失（cost的复数）",
-    "phonetic": "",
+    "phonetic": "kɒst",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2779,7 +2779,7 @@ module.exports = {
     "word": "countries",
     "pos": "",
     "meaning": "国家（country的复数）",
-    "phonetic": "",
+    "phonetic": "'kʌntri",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2787,7 +2787,7 @@ module.exports = {
     "word": "courses",
     "pos": "",
     "meaning": "[医] 月经",
-    "phonetic": "",
+    "phonetic": "kɒ:s",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2795,7 +2795,7 @@ module.exports = {
     "word": "courts",
     "pos": "n.",
     "meaning": "法院；场地（court的复数）",
-    "phonetic": "",
+    "phonetic": "kɒ:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2811,7 +2811,7 @@ module.exports = {
     "word": "creating",
     "pos": "",
     "meaning": "生成的",
-    "phonetic": "",
+    "phonetic": "kri:'eit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2827,7 +2827,7 @@ module.exports = {
     "word": "credentials",
     "pos": "n.",
     "meaning": "信任状, 国书, 文件, 身份证明, 证书",
-    "phonetic": "",
+    "phonetic": "kri'denʃәl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2867,7 +2867,7 @@ module.exports = {
     "word": "critics",
     "pos": "n.",
     "meaning": "评论家；批评者；吹毛求疵的人（critic的复数）",
-    "phonetic": "",
+    "phonetic": "'kritik",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -2883,7 +2883,7 @@ module.exports = {
     "word": "crops",
     "pos": "",
     "meaning": "[医] 分批出现(疹)",
-    "phonetic": "",
+    "phonetic": "krɒp",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3022,7 +3022,7 @@ module.exports = {
     "word": "customs",
     "pos": "n.",
     "meaning": "海关, 关卡, 关税",
-    "phonetic": "",
+    "phonetic": "'kʌstәm",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3030,7 +3030,7 @@ module.exports = {
     "word": "cycles",
     "pos": "n.",
     "meaning": "循环动作；圈数；周期（cycle的复数）",
-    "phonetic": "",
+    "phonetic": "'saikl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3152,7 +3152,7 @@ module.exports = {
     "word": "defining",
     "pos": "adj.",
     "meaning": "定义的",
-    "phonetic": "",
+    "phonetic": "di'fain",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3201,7 +3201,7 @@ module.exports = {
     "word": "delegated",
     "pos": "adj.",
     "meaning": "授与的",
-    "phonetic": "",
+    "phonetic": "'deligeit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3347,7 +3347,7 @@ module.exports = {
     "word": "depends",
     "pos": "v.",
     "meaning": "依赖；信赖（depend的三单形式）",
-    "phonetic": "",
+    "phonetic": "di'pend",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3420,7 +3420,7 @@ module.exports = {
     "word": "destroyed",
     "pos": "adj.",
     "meaning": "被毁, 毁坏；遭破坏的",
-    "phonetic": "",
+    "phonetic": "di'strɒi",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3484,7 +3484,7 @@ module.exports = {
     "word": "developments",
     "pos": "n.",
     "meaning": "建设；发展；进展（development的复数）",
-    "phonetic": "",
+    "phonetic": "di'velәpmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3543,7 +3543,7 @@ module.exports = {
     "word": "differences",
     "pos": "n.",
     "meaning": "偏差, 差异（difference复数形式）",
-    "phonetic": "",
+    "phonetic": "'difәrәns",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3867,7 +3867,7 @@ module.exports = {
     "word": "documented",
     "pos": "adj.",
     "meaning": "备有证明文件的",
-    "phonetic": "",
+    "phonetic": "'dɒkjumәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -3883,7 +3883,7 @@ module.exports = {
     "word": "domains",
     "pos": "n.",
     "meaning": "域, 域名；领域；网域（domain的复数形式）",
-    "phonetic": "",
+    "phonetic": "dәu'mein",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4005,7 +4005,7 @@ module.exports = {
     "word": "earlier",
     "pos": "art.",
     "meaning": "早的；初期的",
-    "phonetic": "",
+    "phonetic": "'ә:li",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4192,7 +4192,7 @@ module.exports = {
     "word": "efforts",
     "pos": "n.",
     "meaning": "努力；转向力（effort的复数）",
-    "phonetic": "",
+    "phonetic": "'efәt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4256,7 +4256,7 @@ module.exports = {
     "word": "emerging",
     "pos": "adj.",
     "meaning": "[法] 出现的, 发生的, 形成的",
-    "phonetic": "",
+    "phonetic": "i'mә:dʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4338,7 +4338,7 @@ module.exports = {
     "word": "employees",
     "pos": "n.",
     "meaning": "员工；雇员；从业人员（emploee的复数）",
-    "phonetic": "",
+    "phonetic": ".emplɒi'i:",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4508,7 +4508,7 @@ module.exports = {
     "word": "engines",
     "pos": "n.",
     "meaning": "火车头；发动机, 引擎（engine的复数形式）",
-    "phonetic": "",
+    "phonetic": "'endʒin",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4582,7 +4582,7 @@ module.exports = {
     "word": "enterprises",
     "pos": "n.",
     "meaning": "企业（enterprise的复数）",
-    "phonetic": "",
+    "phonetic": "'entәpraiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4630,7 +4630,7 @@ module.exports = {
     "word": "environments",
     "pos": "n.",
     "meaning": "环境；生态环境；[计]（计算机系统运行的）环境（environment的复数）",
-    "phonetic": "",
+    "phonetic": "in'vairәnmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4819,7 +4819,7 @@ module.exports = {
     "word": "events",
     "pos": "n.",
     "meaning": "事件；[体育]项目（event的复数）",
-    "phonetic": "",
+    "phonetic": "i'vent",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4836,7 +4836,7 @@ module.exports = {
     "word": "evolved",
     "pos": "adj.",
     "meaning": "进化了的",
-    "phonetic": "",
+    "phonetic": "i'vɒlv",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4844,7 +4844,7 @@ module.exports = {
     "word": "evolving",
     "pos": "adj.",
     "meaning": "展开的；进化的",
-    "phonetic": "",
+    "phonetic": "i'vɒlv",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4924,7 +4924,7 @@ module.exports = {
     "word": "exhibits",
     "pos": "n.",
     "meaning": "陈列品；展览（exhibit的复数）",
-    "phonetic": "",
+    "phonetic": "ig'zibit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -4996,7 +4996,7 @@ module.exports = {
     "word": "experiencing",
     "pos": "n.",
     "meaning": "体验",
-    "phonetic": "",
+    "phonetic": "ik'spiәriәns",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5013,7 +5013,7 @@ module.exports = {
     "word": "experts",
     "pos": "n.",
     "meaning": "专家；人才（expert的复数形式）",
-    "phonetic": "",
+    "phonetic": "'ekspә:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5093,7 +5093,7 @@ module.exports = {
     "word": "externalised",
     "pos": "",
     "meaning": "(externalise 的过去分词) vt.<主英>=externalize",
-    "phonetic": "",
+    "phonetic": "ik'st\\\\:nәlaiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5133,7 +5133,7 @@ module.exports = {
     "word": "fabricated",
     "pos": "adj.",
     "meaning": "焊接的；组合的, 装配式的",
-    "phonetic": "",
+    "phonetic": "'fæbrikeit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5165,7 +5165,7 @@ module.exports = {
     "word": "facilities",
     "pos": "n.",
     "meaning": "工具, 设施, 设备",
-    "phonetic": "",
+    "phonetic": "fә'siliti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5198,7 +5198,7 @@ module.exports = {
     "word": "factors",
     "pos": "n.",
     "meaning": "因素（factor的复数）",
-    "phonetic": "",
+    "phonetic": "'fæktә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5223,7 +5223,7 @@ module.exports = {
     "word": "failures",
     "pos": "n.",
     "meaning": "失败（failure的复数）",
-    "phonetic": "",
+    "phonetic": "'feiljә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5255,7 +5255,7 @@ module.exports = {
     "word": "farmers",
     "pos": "n.",
     "meaning": "农民（farmer的复数）",
-    "phonetic": "",
+    "phonetic": "'fɑ:mә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5271,7 +5271,7 @@ module.exports = {
     "word": "farms",
     "pos": "n.",
     "meaning": "农场；庄园（farm的复数形式）",
-    "phonetic": "",
+    "phonetic": "fɑ:m",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5369,7 +5369,7 @@ module.exports = {
     "word": "findings",
     "pos": "n.",
     "meaning": "发现, 调查结果；检验发现的情况（finding复数）",
-    "phonetic": "",
+    "phonetic": "'faindiŋ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5442,7 +5442,7 @@ module.exports = {
     "word": "fluctuating",
     "pos": "adj.",
     "meaning": "波动（fluctuate的ing形式）",
-    "phonetic": "",
+    "phonetic": "'flʌktʃueit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5458,7 +5458,7 @@ module.exports = {
     "word": "foods",
     "pos": "n.",
     "meaning": "食品",
-    "phonetic": "",
+    "phonetic": "fu:d",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5546,7 +5546,7 @@ module.exports = {
     "word": "foundations",
     "pos": "n.",
     "meaning": "地基",
-    "phonetic": "",
+    "phonetic": "faun'deiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5635,7 +5635,7 @@ module.exports = {
     "word": "functions",
     "pos": "n.",
     "meaning": "功能；函数（function的复数形式）",
-    "phonetic": "",
+    "phonetic": "'fʌŋkʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5676,7 +5676,7 @@ module.exports = {
     "word": "gained",
     "pos": "v.",
     "meaning": "增进；获得, 得到（gain的过去式）",
-    "phonetic": "",
+    "phonetic": "gein",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5708,7 +5708,7 @@ module.exports = {
     "word": "generated",
     "pos": "adj.",
     "meaning": "生成的；发生的",
-    "phonetic": "",
+    "phonetic": "'dʒenәreit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5733,7 +5733,7 @@ module.exports = {
     "word": "generations",
     "pos": "n.",
     "meaning": "世代（generation的复数）",
-    "phonetic": "",
+    "phonetic": ".dʒenә'reiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -5837,7 +5837,7 @@ module.exports = {
     "word": "governments",
     "pos": "n.",
     "meaning": "政权；政府；可转让政府证券（government的复数）",
-    "phonetic": "",
+    "phonetic": "'gʌvәnmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6064,7 +6064,7 @@ module.exports = {
     "word": "histories",
     "pos": "n.",
     "meaning": "历史, 历史故事；历史纪录（history的复数形式）",
-    "phonetic": "",
+    "phonetic": "'histәri",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6112,7 +6112,7 @@ module.exports = {
     "word": "hours",
     "pos": "n.",
     "meaning": "小时（hour的复数形式）",
-    "phonetic": "",
+    "phonetic": "auә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6168,7 +6168,7 @@ module.exports = {
     "word": "hundreds",
     "pos": "n.",
     "meaning": "数百",
-    "phonetic": "",
+    "phonetic": "'hʌndrәd",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6201,7 +6201,7 @@ module.exports = {
     "word": "identifying",
     "pos": "adj.",
     "meaning": "识别, 标识；标识关系",
-    "phonetic": "",
+    "phonetic": "ai'dentifai",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6243,7 +6243,7 @@ module.exports = {
     "word": "images",
     "pos": "n.",
     "meaning": "图片；意象（image的复数）",
-    "phonetic": "",
+    "phonetic": "'imidʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6335,7 +6335,7 @@ module.exports = {
     "word": "implications",
     "pos": "n.",
     "meaning": "蕴涵式；卷入（implication的复数）",
-    "phonetic": "",
+    "phonetic": ".impli'keiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6351,7 +6351,7 @@ module.exports = {
     "word": "imposed",
     "pos": "adj.",
     "meaning": "强加的；施加的；应用的",
-    "phonetic": "",
+    "phonetic": "im'pәuz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6423,7 +6423,7 @@ module.exports = {
     "word": "including",
     "pos": "prep.",
     "meaning": "包含, 包括",
-    "phonetic": "",
+    "phonetic": "in'klu:d",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6472,7 +6472,7 @@ module.exports = {
     "word": "incurring",
     "pos": "n.",
     "meaning": "招致（遭受）",
-    "phonetic": "",
+    "phonetic": "in'kә:",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6497,7 +6497,7 @@ module.exports = {
     "word": "indicates",
     "pos": "v.",
     "meaning": "指示, 显示；表明（indicate的第三人称单数形式）",
-    "phonetic": "",
+    "phonetic": "'indikeit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6529,7 +6529,7 @@ module.exports = {
     "word": "individuals",
     "pos": "n.",
     "meaning": "个人；个体（individual的复数）",
-    "phonetic": "",
+    "phonetic": ".indi'vidʒuәl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6553,7 +6553,7 @@ module.exports = {
     "word": "industries",
     "pos": "n.",
     "meaning": "行业, 工业；实业公司（industry的复数）",
-    "phonetic": "",
+    "phonetic": "'indәstri",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6570,7 +6570,7 @@ module.exports = {
     "word": "inequalities",
     "pos": "n.",
     "meaning": "[数]不等式；不均等, 不平衡；不平坦（inequality的复数形式）",
-    "phonetic": "",
+    "phonetic": ".ini'kwɒliti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6612,7 +6612,7 @@ module.exports = {
     "word": "infections",
     "pos": "n.",
     "meaning": "传染病；口腔病害（infection复数形式）",
-    "phonetic": "",
+    "phonetic": "in'fekʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6775,7 +6775,7 @@ module.exports = {
     "word": "institutions",
     "pos": "n.",
     "meaning": "体系",
-    "phonetic": "",
+    "phonetic": ".insti'tju:ʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6783,7 +6783,7 @@ module.exports = {
     "word": "instruments",
     "pos": "n.",
     "meaning": "乐器；工具；仪器（instrument的复数）",
-    "phonetic": "",
+    "phonetic": "'instrumәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -6863,7 +6863,7 @@ module.exports = {
     "word": "intensifying",
     "pos": "adj.",
     "meaning": "加强；加紧, 加剧；增强（intensify的现在分词）",
-    "phonetic": "",
+    "phonetic": "in'tensifai",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7050,7 +7050,7 @@ module.exports = {
     "word": "islands",
     "pos": "n.",
     "meaning": "岛屿；群岛（island的复数）",
-    "phonetic": "",
+    "phonetic": "'ailәnd",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7204,7 +7204,7 @@ module.exports = {
     "word": "languages",
     "pos": "n.",
     "meaning": "语系, 语种；语言文字（language复数）",
-    "phonetic": "",
+    "phonetic": "'læŋgwidʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7326,7 +7326,7 @@ module.exports = {
     "word": "levels",
     "pos": "n.",
     "meaning": "色阶调整；控制色阶；水平, 标准（level复数形式）",
-    "phonetic": "",
+    "phonetic": "'levl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7350,7 +7350,7 @@ module.exports = {
     "word": "lifestyles",
     "pos": "",
     "meaning": "[法] 生活方式",
-    "phonetic": "",
+    "phonetic": "'laifstail",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7415,7 +7415,7 @@ module.exports = {
     "word": "locations",
     "pos": "n.",
     "meaning": "位置；定位件；地点（location的复数）",
-    "phonetic": "",
+    "phonetic": "lәu'keiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7431,7 +7431,7 @@ module.exports = {
     "word": "losses",
     "pos": "n.",
     "meaning": "损失；损耗（loss的复数）",
-    "phonetic": "",
+    "phonetic": "lɒs",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7504,7 +7504,7 @@ module.exports = {
     "word": "maintained",
     "pos": "adj.",
     "meaning": "被保持的",
-    "phonetic": "",
+    "phonetic": "mein'tein",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7546,7 +7546,7 @@ module.exports = {
     "word": "managed",
     "pos": "adj.",
     "meaning": "与中央化计划及管制有关的；托管的",
-    "phonetic": "",
+    "phonetic": "'mænidʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7586,7 +7586,7 @@ module.exports = {
     "word": "marginalised",
     "pos": "",
     "meaning": "(marginalise 的过去分词) v.使显得微不足道；使处于边缘；使无实权",
-    "phonetic": "",
+    "phonetic": "'mɑ:dʒɪnəlaɪz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7610,7 +7610,7 @@ module.exports = {
     "word": "markets",
     "pos": "n.",
     "meaning": "市场, 市场组合（market 复数）",
-    "phonetic": "",
+    "phonetic": "'mɑ:kit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7682,7 +7682,7 @@ module.exports = {
     "word": "measures",
     "pos": "n.",
     "meaning": "措施；层组（measure的复数）",
-    "phonetic": "",
+    "phonetic": "'meʒә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7789,7 +7789,7 @@ module.exports = {
     "word": "methods",
     "pos": "n.",
     "meaning": "方法, 方式；研究方法（method的复数）",
-    "phonetic": "",
+    "phonetic": "'meθәd",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7853,7 +7853,7 @@ module.exports = {
     "word": "millions",
     "pos": "n.",
     "meaning": "数百万",
-    "phonetic": "",
+    "phonetic": "'miljәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -7886,7 +7886,7 @@ module.exports = {
     "word": "minutes",
     "pos": "n.",
     "meaning": "会议记录",
-    "phonetic": "",
+    "phonetic": "'minit. mai'nju:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8006,7 +8006,7 @@ module.exports = {
     "word": "movements",
     "pos": "n.",
     "meaning": "运动, 运转；运动健身；动作（movement的复数形式）",
-    "phonetic": "",
+    "phonetic": "'mu:vmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8062,7 +8062,7 @@ module.exports = {
     "word": "museums",
     "pos": "n.",
     "meaning": "博物馆（museum的复数形式）",
-    "phonetic": "",
+    "phonetic": "mju:'ziәm",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8094,7 +8094,7 @@ module.exports = {
     "word": "nations",
     "pos": "n.",
     "meaning": "国家（nation的复数）",
-    "phonetic": "",
+    "phonetic": "'neiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8175,7 +8175,7 @@ module.exports = {
     "word": "networks",
     "pos": "n.",
     "meaning": "网络；广播电视网（network的复数形式）",
-    "phonetic": "",
+    "phonetic": "'netwә:k",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8313,7 +8313,7 @@ module.exports = {
     "word": "objects",
     "pos": "n.",
     "meaning": "目标；物体（object的复数）",
-    "phonetic": "",
+    "phonetic": "'ɒbdʒekt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8329,7 +8329,7 @@ module.exports = {
     "word": "obligations",
     "pos": "n.",
     "meaning": "义务；债务；承付款项（obligation的复数）",
-    "phonetic": "",
+    "phonetic": ".ɒbli'geiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8412,7 +8412,7 @@ module.exports = {
     "word": "offered",
     "pos": "adj.",
     "meaning": "提供, 提议；奉献（offer过去时态）",
-    "phonetic": "",
+    "phonetic": "'ɒfә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8420,7 +8420,7 @@ module.exports = {
     "word": "offers",
     "pos": "n.",
     "meaning": "提议；出价；求婚；试图（offer的复数）",
-    "phonetic": "",
+    "phonetic": "'ɒfә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8525,7 +8525,7 @@ module.exports = {
     "word": "opponents",
     "pos": "n.",
     "meaning": "对手（opponent的复数形式）",
-    "phonetic": "",
+    "phonetic": "ә'pәunәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8614,7 +8614,7 @@ module.exports = {
     "word": "organising",
     "pos": "",
     "meaning": "组织",
-    "phonetic": "",
+    "phonetic": "'ɒ:gәnaiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8662,7 +8662,7 @@ module.exports = {
     "word": "outlets",
     "pos": "n.",
     "meaning": "出路；排水口；销售点；批发商点（outlet的复数形式）",
-    "phonetic": "",
+    "phonetic": "'autlet",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8734,7 +8734,7 @@ module.exports = {
     "word": "packages",
     "pos": "n.",
     "meaning": "程序包；包装；包裹（package的复数）",
-    "phonetic": "",
+    "phonetic": "'pækidʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8854,7 +8854,7 @@ module.exports = {
     "word": "patterns",
     "pos": "n.",
     "meaning": "模式（pattern的复数形式）",
-    "phonetic": "",
+    "phonetic": "'pætәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -8894,7 +8894,7 @@ module.exports = {
     "word": "periods",
     "pos": "n.",
     "meaning": "周期（period的复数）",
-    "phonetic": "",
+    "phonetic": "'piәriәd",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9016,7 +9016,7 @@ module.exports = {
     "word": "places",
     "pos": "n.",
     "meaning": "地点；位置；[数]位数（place的复数）",
-    "phonetic": "",
+    "phonetic": "pleis",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9048,7 +9048,7 @@ module.exports = {
     "word": "planning",
     "pos": "n.",
     "meaning": "计划的制订, 策划, 设计, 规划",
-    "phonetic": "",
+    "phonetic": "plæn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9088,7 +9088,7 @@ module.exports = {
     "word": "policies",
     "pos": "n.",
     "meaning": "政策；保险单（policy的复数）",
-    "phonetic": "",
+    "phonetic": "'pɒlisi",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9105,7 +9105,7 @@ module.exports = {
     "word": "policymakers",
     "pos": "",
     "meaning": "(policymaker 的复数) n. 政策制定者；决策人",
-    "phonetic": "",
+    "phonetic": "'pɔlisi.meikә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9171,7 +9171,7 @@ module.exports = {
     "word": "positions",
     "pos": "n.",
     "meaning": "定位；位置（position的复数）",
-    "phonetic": "",
+    "phonetic": "pә'ziʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9349,7 +9349,7 @@ module.exports = {
     "word": "presents",
     "pos": "n.",
     "meaning": "出品；礼物（present的复数）",
-    "phonetic": "",
+    "phonetic": "'preznt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9415,7 +9415,7 @@ module.exports = {
     "word": "prices",
     "pos": "n.",
     "meaning": "价格（price的复数）",
-    "phonetic": "",
+    "phonetic": "prais",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9481,7 +9481,7 @@ module.exports = {
     "word": "principles",
     "pos": "n.",
     "meaning": "原则, 原理, 道义, 节操",
-    "phonetic": "",
+    "phonetic": "'prinsipl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9505,7 +9505,7 @@ module.exports = {
     "word": "prized",
     "pos": "adj.",
     "meaning": "被看作最有价值的",
-    "phonetic": "",
+    "phonetic": "praiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9530,7 +9530,7 @@ module.exports = {
     "word": "processed",
     "pos": "adj.",
     "meaning": "处理的, 加工过的",
-    "phonetic": "",
+    "phonetic": "'prɒses",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9562,7 +9562,7 @@ module.exports = {
     "word": "products",
     "pos": "n.",
     "meaning": "产品；商品（product的复数）",
-    "phonetic": "",
+    "phonetic": "'prɒdʌkt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9578,7 +9578,7 @@ module.exports = {
     "word": "professionals",
     "pos": "n.",
     "meaning": "专业人员（professional的复数）",
-    "phonetic": "",
+    "phonetic": "prә'feʃәnl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9603,7 +9603,7 @@ module.exports = {
     "word": "profits",
     "pos": "n.",
     "meaning": "收益, 红利；盈利（profit的复数）",
-    "phonetic": "",
+    "phonetic": "'prɒfit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9651,7 +9651,7 @@ module.exports = {
     "word": "projected",
     "pos": "adj.",
     "meaning": "投影的, 投射",
-    "phonetic": "",
+    "phonetic": "'prɒdʒekt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9659,7 +9659,7 @@ module.exports = {
     "word": "projections",
     "pos": "n.",
     "meaning": "投影；发射, 规划；突出部分；预测, 推测（projection的复数形式）",
-    "phonetic": "",
+    "phonetic": "prә'dʒekʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9667,7 +9667,7 @@ module.exports = {
     "word": "projects",
     "pos": "n.",
     "meaning": "项目；企划；工程（project的复数）",
-    "phonetic": "",
+    "phonetic": "'prɒdʒekt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9724,7 +9724,7 @@ module.exports = {
     "word": "prompted",
     "pos": "v.",
     "meaning": "引起；提示（prompt的过去时, 过去分词）",
-    "phonetic": "",
+    "phonetic": "prɒmpt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9732,7 +9732,7 @@ module.exports = {
     "word": "propelled",
     "pos": "adj.",
     "meaning": "推进的",
-    "phonetic": "",
+    "phonetic": "prәu'pel",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9764,7 +9764,7 @@ module.exports = {
     "word": "proportions",
     "pos": "n.",
     "meaning": "比例；大小（proportion的复数形式）",
-    "phonetic": "",
+    "phonetic": "prә'pɒ:ʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9772,7 +9772,7 @@ module.exports = {
     "word": "proposed",
     "pos": "adj.",
     "meaning": "被提议的；所推荐的",
-    "phonetic": "",
+    "phonetic": "prә'pәuz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9780,7 +9780,7 @@ module.exports = {
     "word": "prospects",
     "pos": "n.",
     "meaning": "预期；前景；潜在顾客；远景展望",
-    "phonetic": "",
+    "phonetic": "'prɒspekt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9812,7 +9812,7 @@ module.exports = {
     "word": "protected",
     "pos": "adj.",
     "meaning": "受保护的",
-    "phonetic": "",
+    "phonetic": "prә'tekt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9836,7 +9836,7 @@ module.exports = {
     "word": "protocols",
     "pos": "n.",
     "meaning": "协议；礼仪礼节；条款（protocol的复数）",
-    "phonetic": "",
+    "phonetic": "'prәutәkɒl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9919,7 +9919,7 @@ module.exports = {
     "word": "purchasers",
     "pos": "n.",
     "meaning": "用户, 购买者（purchaser的复数形式）",
-    "phonetic": "",
+    "phonetic": "'pә:tʃәsә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -9984,7 +9984,7 @@ module.exports = {
     "word": "quantities",
     "pos": "n.",
     "meaning": "数量, 工程量；[音]音符长度（quantity的复数）",
-    "phonetic": "",
+    "phonetic": "'kwɒntәti",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10056,7 +10056,7 @@ module.exports = {
     "word": "rates",
     "pos": "n.",
     "meaning": "比率；价格；等级（rate的复数形式）",
-    "phonetic": "",
+    "phonetic": "reit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10176,7 +10176,7 @@ module.exports = {
     "word": "recorded",
     "pos": "adj.",
     "meaning": "记录的",
-    "phonetic": "",
+    "phonetic": "ri'kɒ:d",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10225,7 +10225,7 @@ module.exports = {
     "word": "reduces",
     "pos": "v.",
     "meaning": "减少；降低；将…归纳；折合（reduce的第三人称单数形式）",
-    "phonetic": "",
+    "phonetic": "ri'dju:s",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10298,7 +10298,7 @@ module.exports = {
     "word": "regions",
     "pos": "n.",
     "meaning": "地区；地域；领域（region的复数）",
-    "phonetic": "",
+    "phonetic": "'ri:dʒәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10332,7 +10332,7 @@ module.exports = {
     "word": "regulations",
     "pos": "n.",
     "meaning": "章则；条例；规程（regulation的复数）",
-    "phonetic": "",
+    "phonetic": ".regju'leiʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10566,7 +10566,7 @@ module.exports = {
     "word": "requirements",
     "pos": "n.",
     "meaning": "调整需要量, 必需品；要求（requirement的复数）",
-    "phonetic": "",
+    "phonetic": "ri'kwaiәmәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10574,7 +10574,7 @@ module.exports = {
     "word": "requires",
     "pos": "n.",
     "meaning": "需要；要求；需求（require的复数）",
-    "phonetic": "",
+    "phonetic": "ri'kwaiә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10598,7 +10598,7 @@ module.exports = {
     "word": "reserves",
     "pos": "n.",
     "meaning": "储量, 后备队",
-    "phonetic": "",
+    "phonetic": "ri'zә:v",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10606,7 +10606,7 @@ module.exports = {
     "word": "residents",
     "pos": "n.",
     "meaning": "居民；房客；住院医生（resident的复数）",
-    "phonetic": "",
+    "phonetic": "'rezidәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10671,7 +10671,7 @@ module.exports = {
     "word": "resources",
     "pos": "n.",
     "meaning": "资源；物力（resource的复数）",
-    "phonetic": "",
+    "phonetic": "ri'sɒ:s",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10687,7 +10687,7 @@ module.exports = {
     "word": "responses",
     "pos": "n.",
     "meaning": "响应回应",
-    "phonetic": "",
+    "phonetic": "ri'spɒns",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10727,7 +10727,7 @@ module.exports = {
     "word": "retraining",
     "pos": "n.",
     "meaning": "再训练",
-    "phonetic": "",
+    "phonetic": "ri:'trein",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10735,7 +10735,7 @@ module.exports = {
     "word": "retreating",
     "pos": "adj.",
     "meaning": "[化] 再精制; 再处理",
-    "phonetic": "",
+    "phonetic": "ri'tri:t",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10751,7 +10751,7 @@ module.exports = {
     "word": "retrofitting",
     "pos": "n.",
     "meaning": "改装",
-    "phonetic": "",
+    "phonetic": "'retrә,fit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10792,7 +10792,7 @@ module.exports = {
     "word": "revolutionised",
     "pos": "",
     "meaning": "(revolutionise 的过去分词) vt. 使革命化, 彻底改革, 彻底改变",
-    "phonetic": "",
+    "phonetic": ",revә'lju:ʃənaiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10800,7 +10800,7 @@ module.exports = {
     "word": "revolutions",
     "pos": "n.",
     "meaning": "革命, 转数（revolution的复数形式）",
-    "phonetic": "",
+    "phonetic": ".revә'lu:ʃәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10840,7 +10840,7 @@ module.exports = {
     "word": "rights",
     "pos": "n.",
     "meaning": "正当权利",
-    "phonetic": "",
+    "phonetic": "rait",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10856,7 +10856,7 @@ module.exports = {
     "word": "rises",
     "pos": "v.",
     "meaning": "价格上涨；（日、月、星）升起；起身（rise第三人称单数）",
-    "phonetic": "",
+    "phonetic": "raiz",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10872,7 +10872,7 @@ module.exports = {
     "word": "risks",
     "pos": "n.",
     "meaning": "风险, 危险（risk复数）",
-    "phonetic": "",
+    "phonetic": "risk",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10897,7 +10897,7 @@ module.exports = {
     "word": "roles",
     "pos": "n.",
     "meaning": "人物；角色；任务, 作用（role的复数形式）",
-    "phonetic": "",
+    "phonetic": "rәul",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -10961,7 +10961,7 @@ module.exports = {
     "word": "safeguards",
     "pos": "n.",
     "meaning": "保障措施；安全保护（safeguard的复数）",
-    "phonetic": "",
+    "phonetic": "'seifgɑ:d",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11035,7 +11035,7 @@ module.exports = {
     "word": "schedules",
     "pos": "n.",
     "meaning": "时间表；待办事项；日程安排（schedule的复数形式）",
-    "phonetic": "",
+    "phonetic": "'skedʒuәl",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11116,7 +11116,7 @@ module.exports = {
     "word": "sectors",
     "pos": "n.",
     "meaning": "分区；部门；扇区数（sector的复数）",
-    "phonetic": "",
+    "phonetic": "'sektә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11205,7 +11205,7 @@ module.exports = {
     "word": "services",
     "pos": "n.",
     "meaning": "服务；服务项目（service复数形式）",
-    "phonetic": "",
+    "phonetic": "'sә:vis",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11213,7 +11213,7 @@ module.exports = {
     "word": "sets",
     "pos": "n.",
     "meaning": "集合, 设置（set的复数）",
-    "phonetic": "",
+    "phonetic": "set",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11350,7 +11350,7 @@ module.exports = {
     "word": "sites",
     "pos": "n.",
     "meaning": "遗址, 举办地点；网站（site的复数）",
-    "phonetic": "",
+    "phonetic": "sait",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11463,7 +11463,7 @@ module.exports = {
     "word": "solving",
     "pos": "n.",
     "meaning": "解决",
-    "phonetic": "",
+    "phonetic": "sɒlv",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11504,7 +11504,7 @@ module.exports = {
     "word": "sources",
     "pos": "n.",
     "meaning": "输入源；发起者；来源（source的复数）",
-    "phonetic": "",
+    "phonetic": "sɒ:s",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11552,7 +11552,7 @@ module.exports = {
     "word": "spreads",
     "pos": "n.",
     "meaning": "扩展；广阔；桌布（spread的复数）",
-    "phonetic": "",
+    "phonetic": "spred",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11593,7 +11593,7 @@ module.exports = {
     "word": "States",
     "pos": "n.",
     "meaning": "美国",
-    "phonetic": "",
+    "phonetic": "steit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11714,7 +11714,7 @@ module.exports = {
     "word": "structures",
     "pos": "n.",
     "meaning": "结构；构筑物；业务方式（structure的复数）",
-    "phonetic": "",
+    "phonetic": "'strʌktʃә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11730,7 +11730,7 @@ module.exports = {
     "word": "students",
     "pos": "n.",
     "meaning": "（尤指大专院校的）学生（student的复数）",
-    "phonetic": "",
+    "phonetic": "'stju:dnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11811,7 +11811,7 @@ module.exports = {
     "word": "sugars",
     "pos": "n.",
     "meaning": "糖类（sugar的复数形式）",
-    "phonetic": "",
+    "phonetic": "'ʃugә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11819,7 +11819,7 @@ module.exports = {
     "word": "suggesting",
     "pos": "v.",
     "meaning": "提议；暗示（suggest的ing形式）",
-    "phonetic": "",
+    "phonetic": "sәg'dʒest",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11827,7 +11827,7 @@ module.exports = {
     "word": "Summers",
     "pos": "n.",
     "meaning": "萨莫斯（人名）",
-    "phonetic": "",
+    "phonetic": "'sʌmә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11851,7 +11851,7 @@ module.exports = {
     "word": "supplemented",
     "pos": "v.",
     "meaning": "增补, 补充（supplement的过去分词）",
-    "phonetic": "",
+    "phonetic": "'sʌplimәnt",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11859,7 +11859,7 @@ module.exports = {
     "word": "supplies",
     "pos": "n.",
     "meaning": "供应品, 日用必需品, 生活用品, (储备)物质, 存货, 补给品, 生活费用",
-    "phonetic": "",
+    "phonetic": "sә'plai",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11875,7 +11875,7 @@ module.exports = {
     "word": "surged",
     "pos": "v.",
     "meaning": "（波涛等）汹涌( surge的过去式和过去分词 ); （人群等）蜂拥而出; 使强烈地感到",
-    "phonetic": "",
+    "phonetic": "sә:dʒ",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11907,7 +11907,7 @@ module.exports = {
     "word": "surveys",
     "pos": "n.",
     "meaning": "调查（survey的复数）",
-    "phonetic": "",
+    "phonetic": "sә'vei",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11949,7 +11949,7 @@ module.exports = {
     "word": "symptoms",
     "pos": "n.",
     "meaning": "病徵；症状；症候",
-    "phonetic": "",
+    "phonetic": "'simptәm",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11973,7 +11973,7 @@ module.exports = {
     "word": "systems",
     "pos": "n.",
     "meaning": "体制, 体系；制度；系统（system的复数形式）",
-    "phonetic": "",
+    "phonetic": "'sistәm",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11981,7 +11981,7 @@ module.exports = {
     "word": "takes",
     "pos": "v.",
     "meaning": "取走, 预备动作（take第三人称单数）",
-    "phonetic": "",
+    "phonetic": "teik",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11989,7 +11989,7 @@ module.exports = {
     "word": "targets",
     "pos": "n.",
     "meaning": "目标；枪靶；投放范围（target的复数）",
-    "phonetic": "",
+    "phonetic": "'tɑ:git",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -11997,7 +11997,7 @@ module.exports = {
     "word": "tasks",
     "pos": "n.",
     "meaning": "任务；工作；苦差事（task的复数）",
-    "phonetic": "",
+    "phonetic": "tɑ:sk",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12031,7 +12031,7 @@ module.exports = {
     "word": "techniques",
     "pos": "n.",
     "meaning": "方法；技巧；技术（technique的复数）",
-    "phonetic": "",
+    "phonetic": "tek'ni:k",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12047,7 +12047,7 @@ module.exports = {
     "word": "technologies",
     "pos": "n.",
     "meaning": "技术；科技（technology的复数）",
-    "phonetic": "",
+    "phonetic": "tek'nɒlәdʒi",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12470,7 +12470,7 @@ module.exports = {
     "word": "transmitted",
     "pos": "adj.",
     "meaning": "传输；传送（transmit的过去分词）",
-    "phonetic": "",
+    "phonetic": "træns'mit",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12682,7 +12682,7 @@ module.exports = {
     "word": "undermined",
     "pos": "adj.",
     "meaning": "暗地里破坏；挖…的下面（undermine的过去分词）",
-    "phonetic": "",
+    "phonetic": ".ʌndә'main",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12731,7 +12731,7 @@ module.exports = {
     "word": "unions",
     "pos": "n.",
     "meaning": "工会；联合（union的复数）",
-    "phonetic": "",
+    "phonetic": "'ju:njәn",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -12844,7 +12844,7 @@ module.exports = {
     "word": "users",
     "pos": "n.",
     "meaning": "使用者；受限用户（user的复数）",
-    "phonetic": "",
+    "phonetic": "'ju:zә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -13017,7 +13017,7 @@ module.exports = {
     "word": "voices",
     "pos": "n.",
     "meaning": "声音",
-    "phonetic": "",
+    "phonetic": "vɒis",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -13368,7 +13368,7 @@ module.exports = {
     "word": "workers",
     "pos": "n.",
     "meaning": "工人, 人员；角色（worker复数形式）",
-    "phonetic": "",
+    "phonetic": "'wә:kә",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -13417,7 +13417,7 @@ module.exports = {
     "word": "worldviews",
     "pos": "",
     "meaning": "(worldview 的复数) n. 看; 视力; 观点; 目的",
-    "phonetic": "",
+    "phonetic": "'wɜ:ldvju:",
     "example": "",
     "topic": "阅读词汇"
   },
@@ -13457,7 +13457,7 @@ module.exports = {
     "word": "yields",
     "pos": "n.",
     "meaning": "生产量, 投资效益（yield的复数形式）",
-    "phonetic": "",
+    "phonetic": "ji:ld",
     "example": "",
     "topic": "阅读词汇"
   },

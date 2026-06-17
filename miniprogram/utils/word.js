@@ -302,11 +302,19 @@ function resolveLemmaEntry(vocab, wordKey) {
   const candidates = [...new Set([lemmaKey, key, ...lemmaCandidates(key)])];
 
   let entry = null;
+  let phonetic = "";
+
+  const lemmaEntry = lookupVocab(vocab, lemmaKey);
+  if (lemmaEntry && (lemmaEntry.phonetic || "").trim()) {
+    phonetic = lemmaEntry.phonetic.trim();
+  }
+
   for (let i = 0; i < candidates.length; i += 1) {
     const found = lookupVocab(vocab, candidates[i]);
-    if (found) {
-      entry = found;
-      break;
+    if (!found) continue;
+    if (!entry) entry = found;
+    if (!phonetic && (found.phonetic || "").trim()) {
+      phonetic = found.phonetic.trim();
     }
   }
 
@@ -314,6 +322,7 @@ function resolveLemmaEntry(vocab, wordKey) {
     return {
       ...entry,
       pos: normalizePos(entry.pos),
+      phonetic,
       word: lemmaKey,
       lemmaKey,
     };

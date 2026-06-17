@@ -14,16 +14,44 @@
 }
 
 .tank-nav-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
   height: 88rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+.nav-back {
+  width: 48rpx;
+  height: 48rpx;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.nav-back-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
 .tank-nav-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: 34rpx;
   font-weight: 500;
-  color: #000000;
+  color: #333333;
+  pointer-events: none;
+}
+
+.nav-side {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .tank-scroll {
@@ -32,7 +60,7 @@
 }
 
 .tank-body {
-  padding: 24rpx 32rpx calc(104rpx + env(safe-area-inset-bottom) + 24rpx);
+  padding: 24rpx 32rpx calc(env(safe-area-inset-bottom) + 32rpx);
 }
 
 .empty-block {

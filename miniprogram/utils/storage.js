@@ -204,9 +204,61 @@ function findWordRecord(words, wordKey) {
   return words.find((w) => keysAreRelated(w.key, wordKey));
 }
 
+function syncCaughtWordsFromArticleMarks(articles) {
+  migrateArticleWordMarks();
+  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const words = [...getCaughtWords()];
+  let changed = false;
+
+  const findArticle = (articleId) =>
+    (articles || []).find((item) =>
+      isSameArticle(item.id, articleId)
+    );
+
+  Object.keys(stored).forEach((articleIdStr) => {
+    const article = findArticle(articleIdStr);
+    const markMap = stored[articleIdStr] || {};
+
+    Object.keys(markMap).forEach((rawKey) => {
+      const key = normalizeWordKey(rawKey);
+      if (!key || findWordRecord(words, key)) return;
+
+      words.unshift({
+        key,
+        word: rawKey,
+        pos: "",
+        phonetic: "",
+        meaning: "暂无释义",
+        example: "",
+        sentence: "",
+        articleId: normalizeArticleId(articleIdStr),
+        articleTitle: article ? article.title : "",
+        topic: article ? article.topic : "",
+        caughtAt: todayStr(),
+        reviewLevel: 0,
+        nextReviewAt: addDays(todayStr(), 1),
+        status: "pending",
+        correctStreak: 0,
+      });
+      changed = true;
+    });
+  });
+
+  if (changed) {
+    saveCaughtWords(words);
+    const progress = getProgress();
+    progress.totalCaught = words.length;
+    saveProgress(progress);
+  }
+
+  return words;
+}
+
 function catchWord(wordInfo, article, sentence, tokenKey) {
   const words = getCaughtWords();
   const key = normalizeWordKey(tokenKey || wordInfo.word || wordInfo);
+  if (!key) return { action: "invalid" };
+
   const existing = findWordRecord(words, key);
   const displayWord = wordInfo.tappedText || tokenKey || wordInfo.word || key;
   const wordIndex =
@@ -217,6 +269,18 @@ function catchWord(wordInfo, article, sentence, tokenKey) {
   }
 
   if (existing) {
+    const idx = words.findIndex((w) => keysAreRelated(w.key, key));
+    if (idx >= 0 && article && article.id != null) {
+      words[idx] = {
+        ...words[idx],
+        word: displayWord || words[idx].word,
+        articleId: normalizeArticleId(article.id),
+        articleTitle: article.title,
+        topic: article.topic,
+      };
+      saveCaughtWords(words);
+      return { action: "exists", word: words[idx] };
+    }
     return { action: "exists", word: existing };
   }
 
@@ -311,6 +375,21 @@ function reviewWord(wordKey, isCorrect) {
   return word;
 }
 
+function isArticleReadOnDate(articleId, dateStr) {
+  const readArticles = wx.getStorageSync("readArticles") || {};
+  return readArticles[String(articleId)] === dateStr;
+}
+
+function isArticleReadToday(articleId) {
+  return isArticleReadOnDate(articleId, todayStr());
+}
+
+function getTodayArticleCtaText(articles) {
+  const article = getTodayArticle(articles);
+  if (!article) return "去抓小鱼";
+  return isArticleReadToday(article.id) ? "再次阅读" : "去抓小鱼";
+}
+
 function markArticleRead(articleId) {
   const progress = getProgress();
   const today = todayStr();
@@ -328,8 +407,9 @@ function markArticleRead(articleId) {
   }
 
   const readArticles = wx.getStorageSync("readArticles") || {};
-  if (!readArticles[articleId]) {
-    readArticles[articleId] = today;
+  const articleKey = String(articleId);
+  if (!readArticles[articleKey]) {
+    readArticles[articleKey] = today;
     progress.currentDay = Math.min((progress.currentDay || 1) + 1, 10);
     wx.setStorageSync("readArticles", readArticles);
   }
@@ -339,10 +419,27 @@ function markArticleRead(articleId) {
 }
 
 function getTodayArticle(articles) {
-  const progress = getProgress();
-  const dayIndex = Math.max(0, (progress.currentDay || 1) - 1);
   if (!articles || !articles.length) return null;
-  return articles[dayIndex % articles.length];
+
+  const progress = getProgress();
+  const today = todayStr();
+
+  if (
+    progress.todayArticleDate === today &&
+    progress.todayArticleId != null
+  ) {
+    const locked = articles.find((a) => a.id === progress.todayArticleId);
+    if (locked) return locked;
+  }
+
+  const dayIndex = Math.max(0, (progress.currentDay || 1) - 1);
+  const article = articles[dayIndex % articles.length];
+
+  progress.todayArticleDate = today;
+  progress.todayArticleId = article.id;
+  saveProgress(progress);
+
+  return article;
 }
 
 function isWordCaught(wordKey) {
@@ -376,6 +473,7 @@ function getWordDisplayStatus(word) {
 module.exports = {
   todayStr,
   getCaughtWords,
+  syncCaughtWordsFromArticleMarks,
   getCaughtWordKeysForArticle,
   markWordInArticle,
   unmarkWordInArticle,
@@ -387,6 +485,9 @@ module.exports = {
   reviewWord,
   markArticleRead,
   getTodayArticle,
+  getTodayArticleCtaText,
+  isArticleReadToday,
+  isArticleReadOnDate,
   getProgress,
   isWordCaught,
   getWordKey,
