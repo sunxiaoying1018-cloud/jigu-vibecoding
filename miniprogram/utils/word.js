@@ -64,7 +64,7 @@ function tokenizeText(text) {
     if (/^[a-zA-Z]/.test(value)) {
       tokens.push({ type: "word", text: value, key: normalizeWordKey(value) });
     } else if (/^\s+$/.test(value)) {
-      tokens.push({ type: "space", text: value });
+      tokens.push({ type: "space", text: " " });
     } else {
       tokens.push({ type: "punct", text: value });
     }

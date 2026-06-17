@@ -44,10 +44,15 @@ Page({
 
   onShow() {
     const app = getApp();
+    const articles = app.globalData.articles.length
+      ? app.globalData.articles
+      : dataLoader.loadArticles();
     const vocab =
       app.globalData.vocab && Object.keys(app.globalData.vocab).length
         ? app.globalData.vocab
         : dataLoader.loadVocab();
+
+    storage.syncCaughtWordsFromArticleMarks(articles);
 
     const revealed = this._revealed || {};
     const lemmaMap = {};
