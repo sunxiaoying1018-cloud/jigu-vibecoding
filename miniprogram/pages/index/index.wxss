@@ -1,10 +1,16 @@
 /* Figma 144:1926 / 144:2096 — 375px canvas, 1px = 2rpx */
 
+page {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .home-page {
-  min-height: 100vh;
+  height: 100vh;
   background: #f8f8fa;
   position: relative;
   line-height: 1.5;
+  overflow: hidden;
 }
 
 .home-header-bg {
@@ -56,6 +62,7 @@
   z-index: 1;
   height: 100vh;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .home-body {
@@ -99,13 +106,13 @@
 }
 
 .stat-col--center {
-  flex: 1;
-  align-items: center;
+  flex: 0 0 120rpx;
+  align-items: flex-start;
 }
 
 .stat-col--right {
   flex: 0 0 120rpx;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 /* 12px Regular #999 */
@@ -271,13 +278,14 @@
 /* 144:1994 — 24×24 grey chevron, y=43 in card */
 .action-arrow {
   position: absolute;
-  top: 86rpx;
-  right: 32rpx;
+  top: 50%;
+  right: 20rpx;
   width: 48rpx;
   height: 48rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-50%);
 }
 
 .action-arrow::after {

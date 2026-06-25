@@ -26,6 +26,42 @@
   text-align: center;
 }
 
+.stage-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stage-label {
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 1.5;
+}
+
+.stage-name {
+  margin-top: 8rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.stage-desc {
+  margin-top: 4rpx;
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 1.5;
+}
+
+.stage-action {
+  padding: 12rpx 24rpx;
+  border-radius: 999rpx;
+  background: #eef8ff;
+  color: #31afff;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
 .stat-num {
   font-size: 40rpx;
   font-weight: 700;

@@ -34,6 +34,7 @@ const wordUtil = require("../../utils/word");
 const markUtil = require("../../utils/mark");
 const { isSameArticle } = require("../../utils/article");
 const dataLoader = require("../../data/loader.js");
+const stage = require("../../utils/stage");
 
 function formatArticleTags(article) {
   const topic = article.topic || "";
@@ -45,8 +46,7 @@ function formatArticleTags(article) {
 }
 
 function articleHasReadBefore(articleId) {
-  const readArticles = wx.getStorageSync("readArticles") || {};
-  return !!readArticles[String(articleId)];
+  return storage.hasArticleRead(articleId);
 }
 
 Page({
@@ -107,8 +107,10 @@ Page({
       ? app.globalData.vocab
       : dataLoader.loadVocab();
 
+    const visibleArticles = stage.filterArticlesByCurrentStage(articles);
     const id = parseInt(options.id, 10) || 1;
-    const rawArticle = articles.find((a) => a.id === id) || articles[0];
+    const rawArticle =
+      visibleArticles.find((a) => a.id === id) || visibleArticles[0] || articles[0];
     const article = rawArticle ? formatArticleTags(rawArticle) : null;
 
     if (!article) {

@@ -1,15 +1,15 @@
-const { todayStr } = require("./storage");
+const { todayStr, getScopedStorageKey } = require("./storage");
 const wordUtil = require("./word");
 const { normalizeArticleId, isSameArticle } = require("./article");
 
 const MARKS_KEY = "savedSentences";
 
 function getMarks() {
-  return wx.getStorageSync(MARKS_KEY) || [];
+  return wx.getStorageSync(getScopedStorageKey(MARKS_KEY)) || [];
 }
 
 function saveMarks(list) {
-  wx.setStorageSync(MARKS_KEY, list);
+  wx.setStorageSync(getScopedStorageKey(MARKS_KEY), list);
 }
 
 function buildMarkedSpanKeys(articleId, paragraphs) {

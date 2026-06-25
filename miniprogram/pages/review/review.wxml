@@ -1,43 +1,123 @@
-<view class="container">
-  <view wx:if="{{!finished && current}}" class="quiz card">
-    <view class="quiz-header">
-      <text>开吃时间</text>
-      <text class="quiz-progress">{{index + 1}} / {{totalCount}}</text>
+<view class="review-page">
+  <view class="review-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="review-nav-inner">
+      <view class="nav-back" bindtap="onNavBack">
+        <image class="nav-back-icon" src="/assets/ui/icon-back-new.png" mode="aspectFit" />
+      </view>
+      <text class="review-nav-title">复习</text>
+      <view class="nav-side"></view>
     </view>
-    <view class="mascot-text quiz-tip">
-      <text class="mascot-name">卷卷：</text>选对这个词的中文意思
-    </view>
-    <view class="quiz-word">{{current.word}}</view>
-    <view class="quiz-sentence" wx:if="{{current.sentence}}">「{{current.sentence}}」</view>
+  </view>
 
-    <view class="options">
+  <scroll-view
+    scroll-y="{{false}}"
+    class="review-scroll"
+    style="padding-top: {{navTotalHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="review-body" style="min-height: calc(100vh - {{navTotalHeight}}px);">
       <view
-        wx:for="{{options}}"
-        wx:key="*this"
-        class="option {{selected === item ? (item === current.meaning ? 'correct' : 'wrong') : ''}} {{feedback && item === current.meaning ? 'correct' : ''}}"
-        data-meaning="{{item}}"
-        bindtap="onSelect"
-      >{{item}}</view>
+        wx:if="{{!finished && current}}"
+        class="quiz {{answerVisible ? 'quiz--revealed' : ''}}"
+        style="min-height: calc(100vh - {{navTotalHeight}}px);"
+        bindtap="revealAnswer"
+      >
+        <view class="word-block">
+          <view class="quiz-word">{{current.word}}</view>
+          <view class="quiz-meta" wx:if="{{current.phoneticDisplay || current.posDisplay}}">
+            <text wx:if="{{current.phoneticDisplay}}">{{current.phoneticDisplay}}</text>
+            <image class="speaker-icon" wx:if="{{current.phoneticDisplay}}" src="/assets/ui/icon-sound-black.png" mode="aspectFit" />
+          </view>
+        </view>
+
+        <view class="tap-hint" wx:if="{{!answerVisible}}">点击屏幕查看释义</view>
+
+        <view class="answer-panel" wx:else>
+          <view class="meaning-list">
+            <view class="meaning-row" wx:for="{{current.meaningLines}}" wx:key="text">
+              <text class="meaning-pos" wx:if="{{item.pos}}">{{item.pos}}</text>
+              <text class="meaning-text">{{item.text}}</text>
+            </view>
+          </view>
+
+          <scroll-view
+            scroll-y
+            enhanced
+            show-scrollbar="{{false}}"
+            class="detail-card {{current.detailLong ? 'detail-card--long' : ''}}"
+            style="{{current.detailLong ? 'height:' + current.detailLongHeightRpx + 'rpx;max-height:' + current.detailLongHeightRpx + 'rpx;' : ''}}"
+            wx:if="{{current.definitions.length || current.synonymsText || current.antonymsText || current.exampleSentence}}"
+          >
+            <view class="detail-section" wx:if="{{current.definitions.length}}">
+              <text class="detail-title">英文释义</text>
+              <text
+                class="detail-text"
+                wx:for="{{current.definitions}}"
+                wx:key="en"
+              >{{item.pos ? item.pos + ' ' : ''}}{{item.en}}</text>
+            </view>
+
+            <view class="detail-section" wx:if="{{current.synonymsText}}">
+              <text class="detail-title">近义词</text>
+              <text class="detail-text">{{current.synonymsText}}</text>
+            </view>
+
+            <view class="detail-section" wx:if="{{current.antonymsText}}">
+              <text class="detail-title">反义词</text>
+              <text class="detail-text">{{current.antonymsText}}</text>
+            </view>
+
+            <view class="detail-section" wx:if="{{current.exampleSentence}}">
+              <text class="detail-title">例句</text>
+              <view class="detail-text detail-text--sentence">
+                <text
+                  wx:for="{{current.exampleSentenceParts}}"
+                  wx:key="*this"
+                  class="{{item.highlight ? 'source-highlight' : ''}}"
+                >{{item.text}}</text>
+              </view>
+              <text class="detail-text detail-text--zh">{{current.exampleSentenceZh}}</text>
+            </view>
+          </scroll-view>
+        </view>
+
+        <view wx:if="{{answerVisible}}" class="assess-row">
+          <view class="assess-btn assess-btn--known" data-grade="known" catchtap="onAssess">
+            <view class="assess-icon-bg">
+              <image class="assess-icon" src="/assets/ui/review-known.png" mode="aspectFit" />
+            </view>
+            <text class="assess-title">认识</text>
+          </view>
+          <view class="assess-btn assess-btn--vague" data-grade="vague" catchtap="onAssess">
+            <view class="assess-icon-bg">
+              <image class="assess-icon" src="/assets/ui/review-vague.png" mode="aspectFit" />
+            </view>
+            <text class="assess-title">模糊</text>
+          </view>
+          <view class="assess-btn assess-btn--forgot" data-grade="forgot" catchtap="onAssess">
+            <view class="assess-icon-bg">
+              <image class="assess-icon" src="/assets/ui/review-forgot.png" mode="aspectFit" />
+            </view>
+            <text class="assess-title">不认识</text>
+          </view>
+        </view>
+      </view>
+
+      <view wx:elif="{{finished && totalCount > 0}}" class="done card">
+        <view class="done-emoji">🐱</view>
+        <view class="done-title">复习完成</view>
+        <view class="done-stats">记住了 {{knownCount}} / {{totalCount}}</view>
+        <view class="mascot-text">卷卷吃饱了，这些词短期内溜不走了</view>
+        <button class="btn-primary" bindtap="goHome">回首页</button>
+      </view>
+
+      <view wx:else class="empty card">
+        <view class="empty-emoji">🐱</view>
+        <view class="done-title">暂无待复习</view>
+        <view class="mascot-text">缸里的鱼都还好，去读文章抓新的吧</view>
+        <button class="btn-primary" bindtap="goHome">回首页</button>
+      </view>
     </view>
-
-    <view class="feedback" wx:if="{{feedback}}">{{feedback}}</view>
-    <button wx:if="{{feedback}}" class="btn-primary next-btn" bindtap="nextQuestion">
-      {{index + 1 >= totalCount ? '完成' : '下一个'}}
-    </button>
-  </view>
-
-  <view wx:elif="{{finished && totalCount > 0}}" class="done card">
-    <view class="done-emoji">🐱</view>
-    <view class="done-title">复习完成</view>
-    <view class="done-stats">正确 {{correctCount}} / {{totalCount}}</view>
-    <view class="mascot-text">卷卷吃饱了，这些词短期内溜不走了</view>
-    <button class="btn-primary" bindtap="goHome">回首页</button>
-  </view>
-
-  <view wx:else class="empty card">
-    <view class="empty-emoji">🐱</view>
-    <view class="done-title">暂无待复习</view>
-    <view class="mascot-text">缸里的鱼都还好，去读文章抓新的吧</view>
-    <button class="btn-primary" bindtap="goHome">回首页</button>
-  </view>
+  </scroll-view>
 </view>

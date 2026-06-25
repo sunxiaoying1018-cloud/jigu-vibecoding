@@ -30,7 +30,7 @@ Page({
     statusBarHeight: 20,
     navTotalHeight: 88,
     words: [],
-    emptyText: "鱼缸还是空的，去读文章标记生词吧",
+    emptyText: "这个阶段还没有生词，去读文章标记一下吧",
   },
 
   onLoad() {

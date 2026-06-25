@@ -2,6 +2,9 @@ const STORAGE_KEY = "caughtWords";
 const PROGRESS_KEY = "userProgress";
 const ARTICLE_MARKS_KEY = "articleWordMarks";
 const ARTICLE_MARKS_MIGRATED_KEY = "articleWordMarksMigrated";
+const READ_ARTICLES_KEY = "readArticles";
+const SAVED_SENTENCES_KEY = "savedSentences";
+const stage = require("./stage");
 const { normalizeArticleId, isSameArticle } = require("./article");
 const {
   normalizeWordKey,
@@ -12,6 +15,14 @@ const {
 const ARTICLE_MARK_INDICES_KEY = "articleWordMarkIndices";
 
 const REVIEW_INTERVALS = [1, 2, 4, 7, 15];
+
+function scopedKey(baseKey) {
+  return stage.getScopedStorageKey(baseKey);
+}
+
+function getScopedStorageKey(baseKey) {
+  return scopedKey(baseKey);
+}
 
 function todayStr() {
   const d = new Date();
@@ -31,11 +42,11 @@ function addDays(dateStr, days) {
 }
 
 function getCaughtWords() {
-  return wx.getStorageSync(STORAGE_KEY) || [];
+  return wx.getStorageSync(scopedKey(STORAGE_KEY)) || [];
 }
 
 function saveCaughtWords(words) {
-  wx.setStorageSync(STORAGE_KEY, words);
+  wx.setStorageSync(scopedKey(STORAGE_KEY), words);
 }
 
 function getProgress() {
@@ -46,11 +57,11 @@ function getProgress() {
     totalCaught: 0,
     totalMastered: 0,
   };
-  return { ...defaults, ...(wx.getStorageSync(PROGRESS_KEY) || {}) };
+  return { ...defaults, ...(wx.getStorageSync(scopedKey(PROGRESS_KEY)) || {}) };
 }
 
 function saveProgress(progress) {
-  wx.setStorageSync(PROGRESS_KEY, progress);
+  wx.setStorageSync(scopedKey(PROGRESS_KEY), progress);
 }
 
 function getWordKey(word) {
@@ -58,10 +69,10 @@ function getWordKey(word) {
 }
 
 function migrateArticleWordMarks() {
-  if (wx.getStorageSync(ARTICLE_MARKS_MIGRATED_KEY)) return;
+  if (wx.getStorageSync(scopedKey(ARTICLE_MARKS_MIGRATED_KEY))) return;
 
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
-  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
+  const indicesMap = wx.getStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY)) || {};
 
   getCaughtWords().forEach((w) => {
     if (!w || !w.key || w.articleId == null || w.articleId === "") return;
@@ -74,21 +85,21 @@ function migrateArticleWordMarks() {
     }
   });
 
-  wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
-  wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
-  wx.setStorageSync(ARTICLE_MARKS_MIGRATED_KEY, true);
+  wx.setStorageSync(scopedKey(ARTICLE_MARKS_KEY), stored);
+  wx.setStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY), indicesMap);
+  wx.setStorageSync(scopedKey(ARTICLE_MARKS_MIGRATED_KEY), true);
 }
 
 function getArticleWordMarkMap(articleId) {
   migrateArticleWordMarks();
   const id = String(normalizeArticleId(articleId));
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
   return stored[id] || {};
 }
 
 function syncArticleMarksFromTank(articleId) {
   const id = String(normalizeArticleId(articleId));
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
   let changed = false;
 
   if (!stored[id]) stored[id] = {};
@@ -100,7 +111,7 @@ function syncArticleMarksFromTank(articleId) {
     }
   });
 
-  if (changed) wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+  if (changed) wx.setStorageSync(scopedKey(ARTICLE_MARKS_KEY), stored);
 }
 
 function getCaughtWordKeysForArticle(articleId, paragraphs) {
@@ -118,7 +129,7 @@ function getCaughtWordKeysForArticle(articleId, paragraphs) {
   }
 
   const highlight = buildHighlightKeys(markKeys, paragraphs);
-  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const indicesMap = wx.getStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY)) || {};
   const id = String(normalizeArticleId(articleId));
   const indices = indicesMap[id] || {};
 
@@ -139,16 +150,16 @@ function markWordInArticle(articleId, wordKey, wordIndex) {
   if (!key) return;
 
   migrateArticleWordMarks();
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
   if (!stored[id]) stored[id] = {};
   stored[id][key] = true;
-  wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+  wx.setStorageSync(scopedKey(ARTICLE_MARKS_KEY), stored);
 
   if (typeof wordIndex === "number" && wordIndex >= 0) {
-    const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+    const indicesMap = wx.getStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY)) || {};
     if (!indicesMap[id]) indicesMap[id] = {};
     indicesMap[id][String(wordIndex)] = key;
-    wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
+    wx.setStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY), indicesMap);
   }
 }
 
@@ -157,16 +168,16 @@ function unmarkWordInArticle(articleId, wordKey, wordIndex) {
   const key = normalizeWordKey(wordKey);
   if (!key) return;
 
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
   if (stored[id]) {
     Object.keys(stored[id]).forEach((mk) => {
       if (keysAreRelated(mk, key)) delete stored[id][mk];
     });
     if (!Object.keys(stored[id]).length) delete stored[id];
-    wx.setStorageSync(ARTICLE_MARKS_KEY, stored);
+    wx.setStorageSync(scopedKey(ARTICLE_MARKS_KEY), stored);
   }
 
-  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const indicesMap = wx.getStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY)) || {};
   if (indicesMap[id]) {
     Object.keys(indicesMap[id]).forEach((idx) => {
       if (keysAreRelated(indicesMap[id][idx], key)) {
@@ -174,7 +185,7 @@ function unmarkWordInArticle(articleId, wordKey, wordIndex) {
       }
     });
     if (!Object.keys(indicesMap[id]).length) delete indicesMap[id];
-    wx.setStorageSync(ARTICLE_MARK_INDICES_KEY, indicesMap);
+    wx.setStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY), indicesMap);
   }
 }
 
@@ -194,7 +205,7 @@ function isWordMarkedInArticle(articleId, wordKey) {
   }
 
   migrateArticleWordMarks();
-  const indicesMap = wx.getStorageSync(ARTICLE_MARK_INDICES_KEY) || {};
+  const indicesMap = wx.getStorageSync(scopedKey(ARTICLE_MARK_INDICES_KEY)) || {};
   const id = String(normalizeArticleId(articleId));
   const indices = indicesMap[id] || {};
   return Object.values(indices).some((mk) => keysAreRelated(mk, key));
@@ -206,7 +217,7 @@ function findWordRecord(words, wordKey) {
 
 function syncCaughtWordsFromArticleMarks(articles) {
   migrateArticleWordMarks();
-  const stored = wx.getStorageSync(ARTICLE_MARKS_KEY) || {};
+  const stored = wx.getStorageSync(scopedKey(ARTICLE_MARKS_KEY)) || {};
   const words = [...getCaughtWords()];
   let changed = false;
 
@@ -334,15 +345,17 @@ function getDueWords() {
   );
 }
 
-function reviewWord(wordKey, isCorrect) {
+function reviewWord(wordKey, result) {
   const words = getCaughtWords();
-  const idx = words.findIndex((w) => w.key === wordKey);
+  const idx = words.findIndex((w) => keysAreRelated(w.key, wordKey));
   if (idx === -1) return null;
 
   const word = words[idx];
   const today = todayStr();
+  const grade =
+    typeof result === "boolean" ? (result ? "known" : "forgot") : result;
 
-  if (isCorrect) {
+  if (grade === "known") {
     word.correctStreak = (word.correctStreak || 0) + 1;
     word.reviewLevel = Math.min(
       (word.reviewLevel || 0) + 1,
@@ -357,11 +370,16 @@ function reviewWord(wordKey, isCorrect) {
       const interval = REVIEW_INTERVALS[word.reviewLevel - 1] || 1;
       word.nextReviewAt = addDays(today, interval);
     }
+  } else if (grade === "vague") {
+    word.correctStreak = 0;
+    word.reviewLevel = Math.max(word.reviewLevel || 0, 1);
+    word.status = "learning";
+    word.nextReviewAt = today;
   } else {
     word.correctStreak = 0;
     word.reviewLevel = 0;
     word.status = "pending";
-    word.nextReviewAt = addDays(today, 1);
+    word.nextReviewAt = today;
   }
 
   word.lastReviewAt = today;
@@ -376,7 +394,7 @@ function reviewWord(wordKey, isCorrect) {
 }
 
 function isArticleReadOnDate(articleId, dateStr) {
-  const readArticles = wx.getStorageSync("readArticles") || {};
+  const readArticles = getReadArticles();
   return readArticles[String(articleId)] === dateStr;
 }
 
@@ -406,12 +424,12 @@ function markArticleRead(articleId) {
     progress.lastStudyDate = today;
   }
 
-  const readArticles = wx.getStorageSync("readArticles") || {};
+  const readArticles = getReadArticles();
   const articleKey = String(articleId);
   if (!readArticles[articleKey]) {
     readArticles[articleKey] = today;
     progress.currentDay = Math.min((progress.currentDay || 1) + 1, 10);
-    wx.setStorageSync("readArticles", readArticles);
+    wx.setStorageSync(scopedKey(READ_ARTICLES_KEY), readArticles);
   }
 
   saveProgress(progress);
@@ -470,8 +488,47 @@ function getWordDisplayStatus(word) {
   };
 }
 
+function getReadArticles() {
+  return wx.getStorageSync(scopedKey(READ_ARTICLES_KEY)) || {};
+}
+
+function hasArticleRead(articleId) {
+  const readArticles = getReadArticles();
+  return !!readArticles[String(articleId)];
+}
+
+function migrateLegacyDataToCurrentStage() {
+  const stageKey = stage.getCurrentStageKey();
+  if (!stageKey || stage.wasLegacyMigrated(stageKey)) return;
+
+  [
+    STORAGE_KEY,
+    PROGRESS_KEY,
+    ARTICLE_MARKS_KEY,
+    ARTICLE_MARK_INDICES_KEY,
+    ARTICLE_MARKS_MIGRATED_KEY,
+    READ_ARTICLES_KEY,
+    SAVED_SENTENCES_KEY,
+  ].forEach((baseKey) => {
+    const targetKey = stage.getScopedStorageKey(baseKey, stageKey);
+    const legacyValue = wx.getStorageSync(baseKey);
+    const targetValue = wx.getStorageSync(targetKey);
+    if (
+      legacyValue !== "" &&
+      legacyValue !== undefined &&
+      (targetValue === "" || targetValue === undefined)
+    ) {
+      wx.setStorageSync(targetKey, legacyValue);
+    }
+  });
+
+  stage.markLegacyMigrated(stageKey);
+}
+
 module.exports = {
   todayStr,
+  getScopedStorageKey,
+  migrateLegacyDataToCurrentStage,
   getCaughtWords,
   syncCaughtWordsFromArticleMarks,
   getCaughtWordKeysForArticle,
@@ -484,6 +541,8 @@ module.exports = {
   getDueWords,
   reviewWord,
   markArticleRead,
+  getReadArticles,
+  hasArticleRead,
   getTodayArticle,
   getTodayArticleCtaText,
   isArticleReadToday,

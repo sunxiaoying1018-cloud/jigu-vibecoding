@@ -1,7 +1,16 @@
 {
   "description": "逮小鱼 - 读文章背单词",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "type": "file",
+        "value": "miniprogram/data/vocab.json"
+      },
+      {
+        "type": "file",
+        "value": "data/vocab.json"
+      }
+    ],
     "include": []
   },
   "setting": {

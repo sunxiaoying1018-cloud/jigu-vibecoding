@@ -459,6 +459,7 @@ function enrichParagraphs(
 module.exports = {
   normalizeWordKey,
   normalizePos,
+  tokenizeText,
   tokenizeParagraphs,
   getWordCount,
   normalizeWordRange,

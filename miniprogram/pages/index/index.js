@@ -1,6 +1,7 @@
 const storage = require("../../utils/storage");
 const dataLoader = require("../../data/loader.js");
 const { updateTabBarSelected } = require("../../utils/tabBar");
+const stage = require("../../utils/stage");
 
 function formatArticleTags(article) {
   const topic = article.topic || "";
@@ -11,19 +12,8 @@ function formatArticleTags(article) {
   return { ...article, topicTag, levelTag };
 }
 
-function getMarkedWordCount() {
-  const stored = wx.getStorageSync("articleWordMarks") || {};
-  let count = 0;
-  Object.values(stored).forEach((marks) => {
-    if (marks && typeof marks === "object") {
-      count += Object.keys(marks).length;
-    }
-  });
-  return count;
-}
-
 function getReadArticleCount() {
-  const readArticles = wx.getStorageSync("readArticles") || {};
+  const readArticles = storage.getReadArticles();
   return Object.keys(readArticles).length;
 }
 
@@ -65,6 +55,10 @@ Page({
 
   onShow() {
     updateTabBarSelected(this, 0);
+    if (!stage.hasSelectedStage()) {
+      wx.reLaunch({ url: "/pages/stage/stage" });
+      return;
+    }
     this.loadData();
   },
 
@@ -77,10 +71,12 @@ Page({
       app.globalData.articles = articles;
     }
 
+    articles = stage.filterArticlesByCurrentStage(articles);
+
     const caughtWords = storage.getCaughtWords();
     const dueCount = storage.getDueWords().length;
     const todayArticle = storage.getTodayArticle(articles);
-    const markedCount = getMarkedWordCount();
+    const markedCount = caughtWords.length;
     const readCount = getReadArticleCount();
     const totalCaught = caughtWords.length;
     const showReviewCard = dueCount > 0;

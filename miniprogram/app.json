@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/stage/stage",
     "pages/read/read",
     "pages/tank/tank",
     "pages/review/review",

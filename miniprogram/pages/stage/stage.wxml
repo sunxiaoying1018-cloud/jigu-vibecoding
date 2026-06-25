@@ -1,0 +1,32 @@
+<view class="stage-page">
+  <view class="stage-header">
+    <text class="stage-title">选择你的学习阶段</text>
+    <text class="stage-subtitle">系统会根据阶段推荐文章、生词本和复习内容</text>
+  </view>
+
+  <view class="stage-grid">
+    <view
+      wx:for="{{stages}}"
+      wx:key="key"
+      class="stage-card {{selectedKey === item.key ? 'stage-card--selected' : ''}}"
+      data-key="{{item.key}}"
+      bindtap="selectStage"
+    >
+      <view class="stage-check" wx:if="{{selectedKey === item.key}}">✓</view>
+      <text class="stage-name">{{item.name}}</text>
+      <text class="stage-desc">{{item.desc}}</text>
+    </view>
+  </view>
+
+  <view class="stage-tip" wx:if="{{fromSwitch}}">
+    切换阶段只会切换当前学习内容，原阶段记录会继续保留。
+  </view>
+
+  <button
+    class="stage-btn {{selectedKey ? '' : 'stage-btn--disabled'}}"
+    disabled="{{!selectedKey}}"
+    bindtap="confirmStage"
+  >
+    {{fromSwitch ? '确认切换' : '进入学习'}}
+  </button>
+</view>

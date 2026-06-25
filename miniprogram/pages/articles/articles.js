@@ -1,5 +1,6 @@
 const storage = require("../../utils/storage");
 const dataLoader = require("../../data/loader.js");
+const stage = require("../../utils/stage");
 
 function formatArticleTags(article) {
   const topic = article.topic || "";
@@ -11,8 +12,7 @@ function formatArticleTags(article) {
 }
 
 function getArticleStatus(articleId, currentDay) {
-  const readArticles = wx.getStorageSync("readArticles") || {};
-  if (readArticles[String(articleId)]) {
+  if (storage.hasArticleRead(articleId)) {
     return { statusLabel: "已阅读", statusType: "read", showStatus: true };
   }
 
@@ -73,6 +73,7 @@ Page({
       app.globalData.articles = articles;
     }
 
+    articles = stage.filterArticlesByCurrentStage(articles);
     const currentDay = storage.getProgress().currentDay || 1;
     const formatted = articles.map((article) => {
       const tags = formatArticleTags(article);
