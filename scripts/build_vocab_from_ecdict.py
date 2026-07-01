@@ -23,6 +23,19 @@ ECDICT_URL = (
 OUT_DIR = os.path.join(ROOT, "miniprogram", "data")
 
 WORD_RE = re.compile(r"[a-zA-Z]+(?:'[a-zA-Z]+)?")
+JUNIOR_NAME_WORDS = {
+    "anna",
+    "david",
+    "jack",
+    "jenny",
+    "lei",
+    "li",
+    "mei",
+    "ming",
+    "sara",
+    "tom",
+    "wang",
+}
 
 
 def ensure_ecdict_db():
@@ -44,6 +57,37 @@ def extract_article_words():
         for match in WORD_RE.findall(passage["text"]):
             words.add(match.lower())
     return words
+
+
+def extract_junior_article_words():
+    path = os.path.join(OUT_DIR, "junior_articles.js")
+    if not os.path.isfile(path):
+        return set()
+
+    words = set()
+    text = open(path, encoding="utf-8").read()
+    for match in re.finditer(r'en:\s*"((?:[^"\\]|\\.)*)"', text):
+        sentence = bytes(match.group(1), "utf-8").decode("unicode_escape")
+        for word in WORD_RE.findall(sentence):
+            words.add(word.lower())
+    return words
+
+
+def extract_stage_words(stage_id="middle"):
+    path = os.path.join(OUT_DIR, "stage_words.js")
+    if not os.path.isfile(path):
+        return set()
+
+    text = open(path, encoding="utf-8").read()
+    stage_match = re.search(
+        rf'id:\s*"{re.escape(stage_id)}".*?words:\s*\[(.*?)\]\s*,',
+        text,
+        re.S,
+    )
+    if not stage_match:
+        return set()
+
+    return {word.lower() for word in re.findall(r'"([^"]+)"', stage_match.group(1))}
 
 
 def build_curated_vocab():
@@ -533,5 +577,47 @@ def build_vocab():
     print(f"-> {js_path}")
 
 
+def build_junior_vocab():
+    ensure_ecdict_db()
+    all_keys = (extract_stage_words("middle") | extract_junior_article_words()) - JUNIOR_NAME_WORDS
+
+    conn = sqlite3.connect(ECDICT_DB)
+    vocab = {}
+    missing = []
+
+    for key in sorted(all_keys):
+        row = lookup_word(conn, key)
+        if not row:
+            missing.append(key)
+            continue
+
+        word, phonetic, pos, translation, _definition, exchange = row
+        parsed_pos = parse_pos(pos) or pos_from_translation(translation)
+        meanings = parse_translation_meanings(translation, parsed_pos)[:2]
+        entry = {
+            "pos": parsed_pos,
+            "meaning": compact_meaning(meanings, translation),
+        }
+        resolved_phonetic = resolve_phonetic(conn, word, phonetic or "", exchange or "")
+        if resolved_phonetic:
+            entry["phonetic"] = resolved_phonetic
+        vocab[key] = entry
+
+    conn.close()
+
+    os.makedirs(OUT_DIR, exist_ok=True)
+    js_path = os.path.join(OUT_DIR, "junior_vocab.js")
+    with open(js_path, "w", encoding="utf-8") as f:
+        f.write(
+            f"module.exports={json.dumps(vocab, ensure_ascii=False, separators=(',', ':'))};\n"
+        )
+
+    print(f"Built {len(vocab)} junior vocab entries ({len(missing)} missing)")
+    if missing:
+        print(f"Junior missing ({len(missing)}): {', '.join(missing[:20])}{'...' if len(missing) > 20 else ''}")
+    print(f"-> {js_path}")
+
+
 if __name__ == "__main__":
     build_vocab()
+    build_junior_vocab()

@@ -68,14 +68,21 @@ function filterArticlesByCurrentStage(articles) {
   const current = getCurrentStageKey();
   if (!current) return articles || [];
   const currentStage = getStageByKey(current);
+  const list = articles || [];
 
-  return (articles || []).filter((article) => {
+  const matched = list.filter((article) => {
     const stages = normalizeArticleStages(article);
     return (
-      stages.length === 0 ||
       stages.includes(current) ||
       (currentStage && stages.includes(currentStage.name))
     );
+  });
+
+  if (matched.length) return matched;
+
+  return list.filter((article) => {
+    const stages = normalizeArticleStages(article);
+    return stages.length === 0;
   });
 }
 

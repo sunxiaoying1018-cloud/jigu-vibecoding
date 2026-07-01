@@ -30,7 +30,7 @@
         <text class="advice-item">3. 隔天重读同一篇文章，直到标出的词都能认出来</text>
       </view>
     </view>
-    <text class="read-tips {{adviceExpanded ? 'read-tips--covered' : ''}}">tips: 不认识的词单击标记，长按可以标记句子哦～</text>
+    <text class="read-tips {{adviceExpanded ? 'read-tips--covered' : ''}}">{{hasReadBefore ? 'tips: 小括号是本篇中考考点，底部可以看简单分析哦～' : 'tips: 不认识的词单击标记，长按可以标记句子哦～'}}</text>
     <view class="read-sticky-divider"></view>
   </view>
 
@@ -50,11 +50,17 @@
         <view class="tag-row">
           <text class="tag-pill">{{article.topicTag}}</text>
           <text class="tag-pill">{{article.levelTag}}</text>
+          <text
+            class="tag-pill tag-pill--exam"
+            wx:for="{{article.examPointTags}}"
+            wx:for-item="point"
+            wx:key="*this"
+          >{{point}}</text>
         </view>
       </view>
     </view>
 
-    <view class="article-body">
+    <view id="articleContent" class="article-body">
       <view wx:if="{{paragraphs.length === 0}}" class="empty-body">正文加载中…</view>
 
       <block wx:for="{{paragraphs}}" wx:key="id">
@@ -63,6 +69,15 @@
         </view>
         <view wx:if="{{showZh && item.zh}}" class="paragraph-zh">{{item.zh}}</view>
       </block>
+
+      <view wx:if="{{hasReadBefore && examPointNotes.length}}" class="exam-notes">
+        <view class="exam-notes-title">本篇考点句</view>
+        <view class="exam-note" wx:for="{{examPointNotes}}" wx:key="sentence">
+          <text class="exam-note-point">{{item.point}}</text>
+          <text class="exam-note-sentence">{{item.sentence}}</text>
+          <text class="exam-note-analysis">{{item.analysis}}</text>
+        </view>
+      </view>
     </view>
   </scroll-view>
 
@@ -115,7 +130,7 @@
   <view class="footer-bar">
     <view class="footer-inner">
       <block wx:if="{{hasReadBefore}}">
-        <view class="footer-btn" catchtap="toggleZh">显示中文</view>
+        <view class="footer-btn" catchtap="toggleZh">{{showZh ? '隐藏中文' : '显示中文'}}</view>
         <view class="footer-btn" catchtap="openTankPanel">生词本</view>
       </block>
       <view

@@ -1,43 +1,72 @@
-<view class="container">
-  <view class="card profile">
-    <view class="avatar">🐱</view>
-    <view class="name">卷卷的搭档</view>
-    <view class="bio">按阶段读文章、记生词、做复习</view>
-  </view>
-
-  <view class="card stage-card" bindtap="goStageSwitch">
-    <view>
-      <view class="stage-label">学习阶段</view>
-      <view class="stage-name">{{currentStage ? currentStage.name : '未选择'}}</view>
-      <view class="stage-desc">{{currentStage ? currentStage.desc : '先选择当前学习阶段'}}</view>
-    </view>
-    <view class="stage-action">切换</view>
-  </view>
-
-  <view class="card stats-card">
-    <view class="stat-item">
-      <view class="stat-num">{{progress.currentDay || 1}}</view>
-      <view class="stat-label">学习天数</view>
-    </view>
-    <view class="stat-item">
-      <view class="stat-num">{{progress.totalCaught || 0}}</view>
-      <view class="stat-label">累计生词</view>
-    </view>
-    <view class="stat-item">
-      <view class="stat-num">{{progress.totalMastered || 0}}</view>
-      <view class="stat-label">已记牢</view>
-    </view>
-    <view class="stat-item">
-      <view class="stat-num">{{progress.streak || 0}}</view>
-      <view class="stat-label">连续天数</view>
+<view class="mine-page">
+  <view class="mine-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="mine-nav-inner">
+      <text class="mine-nav-title">我的</text>
     </view>
   </view>
 
-  <view class="card about">
-    <view class="about-title">关于逮小鱼</view>
-    <view class="about-text">选择当前学习阶段后，读对应文章，标记不认识的词。卷卷陪你按遗忘曲线复习。</view>
-    <view class="about-version">MVP v0.1 · 10 篇文章</view>
-  </view>
+  <scroll-view
+    scroll-y
+    class="mine-scroll"
+    style="padding-top: {{navTotalHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="mine-body">
+      <view class="card stats-card">
+        <view class="stat-item">
+          <view class="stat-num">{{progress.currentDay || 1}}</view>
+          <view class="stat-label">学习天数</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-num">{{progress.totalCaught || 0}}</view>
+          <view class="stat-label">累计生词</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-num">{{progress.totalMastered || 0}}</view>
+          <view class="stat-label">已记牢</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-num">{{progress.streak || 0}}</view>
+          <view class="stat-label">连续天数</view>
+        </view>
+      </view>
 
-  <button class="btn-secondary clear-btn" bindtap="clearData">清空学习数据（测试用）</button>
+      <view class="card stage-card" bindtap="goStageSwitch">
+        <view>
+          <view class="stage-label">学习阶段</view>
+          <view class="stage-name">{{currentStage ? currentStage.name : '未选择'}}</view>
+          <view class="stage-desc">{{currentStage ? currentStage.desc : '先选择当前学习阶段'}}</view>
+        </view>
+        <view class="stage-action">切换</view>
+      </view>
+
+      <view class="card accent-card">
+        <view>
+          <view class="accent-title">发音偏好</view>
+          <view class="accent-desc">复习和生词本会优先使用所选发音</view>
+        </view>
+        <view class="accent-options">
+          <view
+            class="accent-option {{pronunciationAccent === 'us' ? 'accent-option--active' : ''}}"
+            data-accent="us"
+            bindtap="selectPronunciationAccent"
+          >美音</view>
+          <view
+            class="accent-option {{pronunciationAccent === 'uk' ? 'accent-option--active' : ''}}"
+            data-accent="uk"
+            bindtap="selectPronunciationAccent"
+          >英音</view>
+        </view>
+      </view>
+
+      <view class="card about">
+        <view class="about-title">关于逮小鱼</view>
+        <view class="about-text">选择当前学习阶段后，读对应文章，标记不认识的词。卷卷陪你按遗忘曲线复习。</view>
+        <view class="about-version">MVP v0.1 · 10 篇文章</view>
+      </view>
+
+      <button class="clear-btn" bindtap="clearData">清空学习数据（测试用）</button>
+    </view>
+  </scroll-view>
 </view>

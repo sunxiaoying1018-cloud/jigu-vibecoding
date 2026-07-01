@@ -8,7 +8,10 @@ function formatArticleTags(article) {
   const topicTag = parts.length >= 2 ? `${parts[0]} ${parts[1]}` : topic;
   const level = article.level || "";
   const levelTag = level.replace(/IELTS\s*[\d.]+\s*/i, "IELTS ").trim();
-  return { ...article, topicTag, levelTag };
+  const examPointTags = Array.isArray(article.examPoints)
+    ? article.examPoints.slice(0, 3)
+    : [];
+  return { ...article, topicTag, levelTag, examPointTags };
 }
 
 function getArticleStatus(articleId, currentDay) {

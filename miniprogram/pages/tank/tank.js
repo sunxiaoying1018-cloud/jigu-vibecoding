@@ -1,6 +1,8 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
+const pronunciation = require("../../utils/pronunciation");
 const dataLoader = require("../../data/loader.js");
+const stage = require("../../utils/stage");
 
 function formatPhonetic(phonetic) {
   if (!phonetic) return "";
@@ -30,7 +32,8 @@ Page({
     statusBarHeight: 20,
     navTotalHeight: 88,
     words: [],
-    emptyText: "这个阶段还没有生词，去读文章标记一下吧",
+    emptyText: "这里还没有生词。去读一篇文章，点击不认识的词标记进生词本吧",
+    playingKey: "",
   },
 
   onLoad() {
@@ -39,6 +42,26 @@ Page({
     this.setData({
       statusBarHeight,
       navTotalHeight: statusBarHeight + 44,
+    });
+    this.audioContext = wx.createInnerAudioContext();
+    this.audioContext.obeyMuteSwitch = false;
+    this.audioContext.onPlay(() => {
+      this.clearPronunciationTimer();
+    });
+    this.audioContext.onEnded(() => {
+      this.clearPronunciationState();
+    });
+    this.audioContext.onStop(() => {
+      this.clearPronunciationTimer();
+    });
+    this.audioContext.onError((err) => {
+      if (this.playNextPronunciationUrl()) return;
+      console.warn("tank pronunciation play failed", err);
+      this.clearPronunciationState();
+      wx.showToast({
+        title: "发音播放失败",
+        icon: "none",
+      });
     });
   },
 
@@ -65,6 +88,7 @@ Page({
       lemmaMap[lemmaKey] = {
         key: lemmaKey,
         word: entry.word,
+        audioWord: entry.word || w.word || w.key,
         meaningDisplay: formatMeaningDisplay(
           entry.pos || w.pos,
           entry.meaning || w.meaning
@@ -98,11 +122,86 @@ Page({
     this.setData({ words });
   },
 
+  playWord(e) {
+    const { key } = e.currentTarget.dataset;
+    const word = this.data.words.find((item) => item.key === key);
+    if (!word || !this.audioContext) return;
+
+    const urls = pronunciation.getPronunciationUrls(word.audioWord, word.word, word.key);
+    if (!urls.length) return;
+
+    this.audioContext.stop();
+    this.setData({ playingKey: key });
+    this.pronunciationUrls = urls;
+    this.pronunciationUrlIndex = 0;
+    this.audioContext.src = urls[0];
+    this.audioContext.play();
+    this.schedulePronunciationFallback(0);
+  },
+
+  playNextPronunciationUrl() {
+    if (!this.audioContext || !this.pronunciationUrls) return false;
+    const nextIndex = this.pronunciationUrlIndex + 1;
+    if (nextIndex >= this.pronunciationUrls.length) return false;
+
+    this.pronunciationUrlIndex = nextIndex;
+    this.audioContext.src = this.pronunciationUrls[nextIndex];
+    this.audioContext.play();
+    this.schedulePronunciationFallback(nextIndex);
+    return true;
+  },
+
+  schedulePronunciationFallback(index) {
+    this.clearPronunciationTimer();
+    this.pronunciationTimer = setTimeout(() => {
+      if (
+        this.data.playingKey &&
+        this.pronunciationUrlIndex === index &&
+        this.playNextPronunciationUrl()
+      ) {
+        return;
+      }
+      this.clearPronunciationTimer();
+    }, 1200);
+  },
+
+  clearPronunciationTimer() {
+    if (this.pronunciationTimer) {
+      clearTimeout(this.pronunciationTimer);
+      this.pronunciationTimer = null;
+    }
+  },
+
+  clearPronunciationState() {
+    this.clearPronunciationTimer();
+    this.pronunciationUrls = null;
+    this.pronunciationUrlIndex = 0;
+    this.setData({ playingKey: "" });
+  },
+
   onNavBack() {
     wx.navigateBack({ delta: 1 });
   },
 
   goRead() {
-    wx.switchTab({ url: "/pages/index/index" });
+    const app = getApp();
+    let articles = app.globalData.articles && app.globalData.articles.length
+      ? app.globalData.articles
+      : dataLoader.loadArticles();
+    articles = stage.filterArticlesByCurrentStage(articles);
+    const article = storage.getTodayArticle(articles);
+    if (!article) {
+      wx.switchTab({ url: "/pages/index/index" });
+      return;
+    }
+    wx.navigateTo({ url: `/pages/read/read?id=${article.id}` });
+  },
+
+  onUnload() {
+    this.clearPronunciationTimer();
+    if (this.audioContext) {
+      this.audioContext.destroy();
+      this.audioContext = null;
+    }
   },
 });

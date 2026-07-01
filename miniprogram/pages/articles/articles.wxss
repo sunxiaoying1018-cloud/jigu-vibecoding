@@ -156,3 +156,8 @@
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.5;
 }
+
+.tag-pill--exam {
+  background: rgba(49, 175, 255, 0.1);
+  color: #31afff;
+}

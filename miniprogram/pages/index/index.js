@@ -9,7 +9,10 @@ function formatArticleTags(article) {
   const topicTag = parts.length >= 2 ? `${parts[0]} ${parts[1]}` : topic;
   const level = article.level || "";
   const levelTag = level.replace(/IELTS\s*[\d.]+\s*/i, "IELTS ").trim();
-  return { ...article, topicTag, levelTag };
+  const examPointTags = Array.isArray(article.examPoints)
+    ? article.examPoints.slice(0, 2)
+    : [];
+  return { ...article, topicTag, levelTag, examPointTags };
 }
 
 function getReadArticleCount() {
@@ -32,6 +35,7 @@ Page({
     allArticles: [],
     loadError: "",
     showReviewCard: false,
+    showReviewDot: false,
     mascotSrc: "/assets/ui/mascot.gif",
   },
 
@@ -43,7 +47,7 @@ Page({
       statusBarHeight,
       navTotalHeight: statusBarHeight + 44,
       mascotTop: Math.round(155 * scale),
-      bodyPaddingTop: Math.max(0, Math.round(96 * scale) - (statusBarHeight + 44)),
+      bodyPaddingTop: Math.round(12 * scale),
     });
   },
 
@@ -79,7 +83,8 @@ Page({
     const markedCount = caughtWords.length;
     const readCount = getReadArticleCount();
     const totalCaught = caughtWords.length;
-    const showReviewCard = dueCount > 0;
+    const showReviewCard = true;
+    const showReviewDot = dueCount > storage.getReviewNoticeCount();
 
     let loadError = "";
     if (!articles.length) {
@@ -99,6 +104,7 @@ Page({
       allArticles: formatted,
       loadError,
       showReviewCard,
+      showReviewDot,
     });
   },
 

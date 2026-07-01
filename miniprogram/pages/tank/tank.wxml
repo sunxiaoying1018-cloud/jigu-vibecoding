@@ -24,8 +24,13 @@
       </view>
 
       <view wx:else class="word-list">
+        <view class="tank-tips">tips: 点击单词可以发音</view>
         <view class="word-row" wx:for="{{words}}" wx:key="key">
-          <view class="word-left">
+          <view
+            class="word-left {{playingKey === item.key ? 'word-left--playing' : ''}}"
+            bindtap="playWord"
+            data-key="{{item.key}}"
+          >
             <text class="word-text">{{item.word}}</text>
             <text class="word-phonetic" wx:if="{{item.phoneticDisplay}}">{{item.phoneticDisplay}}</text>
           </view>

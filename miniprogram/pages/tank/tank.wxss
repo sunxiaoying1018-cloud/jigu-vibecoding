@@ -102,6 +102,16 @@
   gap: 40rpx;
 }
 
+.tank-tips {
+  display: block;
+  padding: 16rpx 32rpx;
+  margin: -16rpx -32rpx -24rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #31afff;
+  line-height: 1.5;
+}
+
 /* Figma 154:2753 — 左 150px 词+音标，右 180px 释义胶带 */
 .word-row {
   display: flex;
@@ -116,14 +126,26 @@
   display: flex;
   flex-direction: column;
   gap: 4rpx;
+  min-height: 80rpx;
+  justify-content: center;
+  margin: -12rpx 0;
+  padding: 12rpx 0;
+}
+
+.word-left--playing {
+  opacity: 1;
 }
 
 .word-text {
   font-size: 30rpx;
-  font-weight: 400;
-  color: #4e92ff;
+  font-weight: 500;
+  color: #333333;
   line-height: 1.5;
   word-break: break-word;
+}
+
+.word-left--playing .word-text {
+  color: #31afff;
 }
 
 .word-phonetic {

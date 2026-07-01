@@ -57,10 +57,16 @@
 
           <view class="today-article-block">
             <text class="passage-id">Passage {{todayArticle.id}}</text>
-            <text class="passage-title {{showReviewCard ? 'passage-title--single' : 'passage-title--multi'}}">{{todayArticle.title}}</text>
+            <text class="passage-title passage-title--multi">{{todayArticle.title}}</text>
             <view class="tag-row">
               <text class="tag-pill">{{todayArticle.topicTag}}</text>
               <text class="tag-pill">{{todayArticle.levelTag}}</text>
+              <text
+                class="tag-pill tag-pill--exam"
+                wx:for="{{todayArticle.examPointTags}}"
+                wx:for-item="point"
+                wx:key="*this"
+              >{{point}}</text>
             </view>
           </view>
 
@@ -80,6 +86,7 @@
           wx:if="{{showReviewCard}}"
           bindtap="goReview"
         >
+          <view class="review-red-dot" wx:if="{{showReviewDot}}" />
           <view class="action-arrow" />
           <text class="action-title">复习单词</text>
           <text class="action-sub">待复习 {{dueCount}}/{{totalCaught}}</text>

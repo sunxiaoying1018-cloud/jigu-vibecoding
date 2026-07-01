@@ -42,11 +42,100 @@ function formatArticleTags(article) {
   const topicTag = parts.length >= 2 ? `${parts[0]} ${parts[1]}` : topic;
   const level = article.level || "";
   const levelTag = level.replace(/IELTS\s*[\d.]+\s*/i, "IELTS ").trim();
-  return { ...article, topicTag, levelTag };
+  const examPointTags = Array.isArray(article.examPoints)
+    ? article.examPoints.slice(0, 3)
+    : [];
+  return { ...article, topicTag, levelTag, examPointTags };
 }
 
 function articleHasReadBefore(articleId) {
   return storage.hasArticleRead(articleId);
+}
+
+function sentenceMatchesExamPoint(sentence, point) {
+  const text = String(sentence || "").toLowerCase();
+  const tag = String(point || "");
+  if (!text || !tag) return false;
+
+  if (tag.includes("原因状语")) return /\bbecause\b/.test(text);
+  if (tag.includes("宾语从句")) return /\b(said|told|asked|learned|understood|knew|thought|hoped|noticed)\b/.test(text);
+  if (tag.includes("情态动词")) return /\b(should|could|may|can|must)\b/.test(text);
+  if (tag.includes("一般过去")) return /\b(was|were|visited|gave|told|saw|watched|bought|wrote|went|had|played|won|received|sent|cooked|smiled|felt)\b/.test(text);
+  if (tag.includes("动词不定式")) return /\bto\s+[a-z]+/.test(text);
+  if (tag.includes("There be")) return /\bthere\s+(is|are|was|were)\b/.test(text);
+  if (tag.includes("动名词")) return /^[\s"']*[a-z]+ing\b/.test(text);
+  if (tag.includes("比较级")) return /\b(faster|better|easier|more|less)\b/.test(text);
+  if (tag.includes("as...as")) return /\bas\b.+\bas\b/.test(text);
+  if (tag.includes("最高级")) return /\b(most|best|biggest|largest|smallest)\b/.test(text);
+  if (tag.includes("时间状语")) return /\b(when|before|after|while)\b/.test(text);
+  if (tag.includes("条件状语")) return /\bif\b/.test(text);
+  if (tag.includes("定语")) return /\b(who|which|that|where|named)\b/.test(text);
+  if (tag.includes("感官动词")) return /\b(see|saw|watch|watched|hear|heard|feel|felt)\b/.test(text);
+  if (tag.includes("spend doing")) return /\bspend(s|ing)?\b.+\b[a-z]+ing\b/.test(text);
+  if (tag.includes("how much")) return /\bhow much\b/.test(text);
+
+  return false;
+}
+
+function getExamPointAnalysis(point) {
+  const tag = String(point || "");
+  if (tag.includes("原因状语")) return "because 引导原因状语从句，说明主句动作发生的原因。";
+  if (tag.includes("宾语从句")) return "动词后接一个完整句子作宾语，注意从句要用陈述语序。";
+  if (tag.includes("情态动词")) return "情态动词后接动词原形，表示建议、能力、可能或必要。";
+  if (tag.includes("一般过去")) return "描述过去发生的动作或状态，动词通常使用过去式。";
+  if (tag.includes("动词不定式")) return "to do 结构可表示目的、计划或要做的事情。";
+  if (tag.includes("There be")) return "There be 表示“某处有某物”，be 动词随后面的名词变化。";
+  if (tag.includes("动名词")) return "动词 -ing 形式可作主语，表示一件事情或一种行为。";
+  if (tag.includes("比较级")) return "比较级用于两者比较，常见形式是 -er 或 more + 形容词。";
+  if (tag.includes("as...as")) return "as...as 表示“和……一样……”，中间接形容词或副词原级。";
+  if (tag.includes("最高级")) return "最高级用于三者及以上比较，常和 the most 或 -est 连用。";
+  if (tag.includes("时间状语")) return "when / before / after 等引导时间状语从句，说明动作发生的时间。";
+  if (tag.includes("条件状语")) return "if 引导条件状语从句，表示“如果……就……”。";
+  if (tag.includes("定语")) return "定语用于修饰名词，说明人或事物的特征。";
+  if (tag.includes("感官动词")) return "see / watch / hear 等感官动词后可接宾语和动作补足语。";
+  if (tag.includes("spend doing")) return "spend time doing sth. 表示“花时间做某事”。";
+  if (tag.includes("how much")) return "how much 可引导宾语从句，询问数量或程度。";
+  return "注意句子结构和关键词，结合上下文理解该考点。";
+}
+
+function buildExamPointAnnotations(paragraphs, examPoints) {
+  if (!Array.isArray(examPoints) || !examPoints.length) {
+    return { notes: [] };
+  }
+
+  const notes = [];
+  const usedNoteKeys = {};
+  (paragraphs || []).forEach((para) => {
+    let sentenceTokens = [];
+    const flushSentence = () => {
+      if (!sentenceTokens.length) return;
+      const sentence = sentenceTokens.map((token) => token.text || "").join("");
+      const matched = examPoints.filter((point) => sentenceMatchesExamPoint(sentence, point));
+      if (matched.length) {
+        matched.forEach((point) => {
+          const noteKey = `${point}:${sentence}`;
+          if (usedNoteKeys[noteKey]) return;
+          usedNoteKeys[noteKey] = true;
+          notes.push({
+            point,
+            sentence: sentence.replace(/\s+/g, " ").trim(),
+            analysis: getExamPointAnalysis(point),
+          });
+        });
+      }
+      sentenceTokens = [];
+    };
+
+    (para.tokens || []).forEach((token) => {
+      sentenceTokens.push(token);
+      if (/[.!?]/.test(token.text || "")) {
+        flushSentence();
+      }
+    });
+    flushSentence();
+  });
+
+  return { notes };
 }
 
 Page({
@@ -59,6 +148,7 @@ Page({
     handleRight: null,
     markCount: 0,
     articleMarkCount: 0,
+    examPointNotes: [],
     draggingHandle: false,
     showZh: false,
     tankPanelOpen: false,
@@ -158,6 +248,7 @@ Page({
       },
       () => {
         this._pageReady = true;
+        this.updateFinishAvailability();
         if (this._focusKey) {
           wx.nextTick(() => this.focusToWord());
         }
@@ -198,18 +289,25 @@ Page({
       articleTankWords,
       baseParagraphs
     );
+    const examPointAnnotations = buildExamPointAnnotations(
+      baseParagraphs,
+      this.article.examPoints
+    );
+
+    const paragraphs = wordUtil.enrichParagraphs(
+      this.article.id,
+      baseParagraphs,
+      caughtKeys,
+      markedSpanKeys,
+      caughtIndexMap
+    );
 
     return {
-      paragraphs: wordUtil.enrichParagraphs(
-        this.article.id,
-        baseParagraphs,
-        caughtKeys,
-        markedSpanKeys,
-        caughtIndexMap
-      ),
+      paragraphs,
       markCount,
       articleMarkCount: articleTankWords.length,
       articleTankWords,
+      examPointNotes: examPointAnnotations.notes,
     };
   },
 
@@ -230,6 +328,7 @@ Page({
           : {}),
       },
       () => {
+        this.updateFinishAvailability();
         if (typeof done === "function") done();
       }
     );
@@ -341,8 +440,14 @@ Page({
   finishReading() {
     if (!this.article || !this.data.canFinish || this.data.hasReadBefore) return;
     storage.markArticleRead(this.article.id);
-    this.setData({ hasReadBefore: true, canFinish: false });
-    wx.showToast({ title: "已完成阅读", icon: "none" });
+    this.setData({
+      hasReadBefore: true,
+      canFinish: false,
+      showZh: true,
+      scrollTop: 0,
+    });
+    this._scrollTop = 0;
+    wx.showToast({ title: "进入第二遍精读", icon: "none" });
   },
 
   isWordCaughtInArticle(wordKey) {
@@ -352,9 +457,29 @@ Page({
   onReady() {
     wx.nextTick(() => {
       this.cacheWordRects();
+      this.updateFinishAvailability();
       if (this._focusKey && !this._focusDone) {
         this.focusToWord();
       }
+    });
+  },
+
+  updateFinishAvailability() {
+    if (!this.article || this.data.hasReadBefore || this.data.canFinish) return;
+
+    wx.nextTick(() => {
+      const query = wx.createSelectorQuery().in(this);
+      query.select(".read-scroll").boundingClientRect();
+      query.select("#articleContent").boundingClientRect();
+      query.exec((res) => {
+        const scrollRect = res && res[0];
+        const contentRect = res && res[1];
+        if (!scrollRect || !contentRect) return;
+
+        if (contentRect.height <= scrollRect.height + 8) {
+          this.setData({ canFinish: true });
+        }
+      });
     });
   },
 

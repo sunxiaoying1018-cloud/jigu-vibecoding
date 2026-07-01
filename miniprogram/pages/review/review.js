@@ -1,9 +1,12 @@
 const storage = require("../../utils/storage");
 const wordUtil = require("../../utils/word");
+const pronunciation = require("../../utils/pronunciation");
+const dataLoader = require("../../data/loader.js");
+const stage = require("../../utils/stage");
 
 const REPEAT_RULES = {
-  forgot: { delay: 2, maxRepeats: 3 },
-  vague: { delay: 4, maxRepeats: 2 },
+  forgot: { delays: [6, 12, 20] },
+  vague: { delays: [10, 20] },
 };
 
 function formatPhonetic(phonetic) {
@@ -117,6 +120,7 @@ Page({
     repeatCounts: {},
     reviewContentHeightRpx: 724,
     bottomInsetRpx: 0,
+    pronunciationPlaying: false,
   },
 
   onLoad() {
@@ -130,6 +134,26 @@ Page({
       navTotalHeight: statusBarHeight + 44,
       reviewContentHeightRpx: toRpx(sys.windowHeight - statusBarHeight - 44),
       bottomInsetRpx: toRpx(bottomInsetPx),
+    });
+    this.audioContext = wx.createInnerAudioContext();
+    this.audioContext.obeyMuteSwitch = false;
+    this.audioContext.onPlay(() => {
+      this.clearPronunciationTimer();
+    });
+    this.audioContext.onEnded(() => {
+      this.clearPronunciationState();
+    });
+    this.audioContext.onStop(() => {
+      this.clearPronunciationTimer();
+    });
+    this.audioContext.onError((err) => {
+      if (this.playNextPronunciationUrl()) return;
+      console.warn("pronunciation play failed", err);
+      this.clearPronunciationState();
+      wx.showToast({
+        title: "发音播放失败",
+        icon: "none",
+      });
     });
   },
 
@@ -172,6 +196,7 @@ Page({
     const display = {
       ...word,
       word: entry.word,
+      audioWord: entry.word || word.word || word.key,
       posDisplay: wordUtil.normalizePos(entry.pos || word.pos),
       phoneticDisplay: formatPhonetic(entry.phonetic || word.phonetic),
       meaning: entry.meaning || word.meaning,
@@ -218,11 +243,72 @@ Page({
     this.setData({
       current: display,
       answerVisible: false,
+    }, () => {
+      this.playPronunciation();
     });
   },
 
   revealAnswer() {
     this.setData({ answerVisible: true });
+  },
+
+  playPronunciation() {
+    const current = this.data.current;
+    const urls = pronunciation.getPronunciationUrls(
+      current && current.audioWord,
+      current && current.word,
+      current && current.key
+    );
+    if (!urls.length || !this.audioContext) return;
+
+    this.audioContext.stop();
+    this.setData({ pronunciationPlaying: true });
+
+    this.pronunciationUrls = urls;
+    this.pronunciationUrlIndex = 0;
+    this.audioContext.src = urls[0];
+    this.audioContext.play();
+    this.schedulePronunciationFallback(0);
+  },
+
+  playNextPronunciationUrl() {
+    if (!this.audioContext || !this.pronunciationUrls) return false;
+    const nextIndex = this.pronunciationUrlIndex + 1;
+    if (nextIndex >= this.pronunciationUrls.length) return false;
+
+    this.pronunciationUrlIndex = nextIndex;
+    this.audioContext.src = this.pronunciationUrls[nextIndex];
+    this.audioContext.play();
+    this.schedulePronunciationFallback(nextIndex);
+    return true;
+  },
+
+  schedulePronunciationFallback(index) {
+    this.clearPronunciationTimer();
+    this.pronunciationTimer = setTimeout(() => {
+      if (
+        this.data.pronunciationPlaying &&
+        this.pronunciationUrlIndex === index &&
+        this.playNextPronunciationUrl()
+      ) {
+        return;
+      }
+      this.clearPronunciationTimer();
+    }, 1200);
+  },
+
+  clearPronunciationTimer() {
+    if (this.pronunciationTimer) {
+      clearTimeout(this.pronunciationTimer);
+      this.pronunciationTimer = null;
+    }
+  },
+
+  clearPronunciationState() {
+    this.clearPronunciationTimer();
+    this.pronunciationUrls = null;
+    this.pronunciationUrlIndex = 0;
+    this.setData({ pronunciationPlaying: false });
   },
 
   onAssess(e) {
@@ -252,8 +338,9 @@ Page({
       const repeatCount = (repeatCounts[key] || 0) + 1;
       repeatCounts[key] = repeatCount;
 
-      if (repeatCount <= rule.maxRepeats) {
-        const insertAt = Math.min(nextIndex + rule.delay, dueWords.length);
+      if (repeatCount <= rule.delays.length) {
+        const delay = rule.delays[repeatCount - 1];
+        const insertAt = Math.min(nextIndex + delay, dueWords.length);
         dueWords.splice(insertAt, 0, current);
       }
     }
@@ -284,7 +371,38 @@ Page({
     wx.switchTab({ url: "/pages/index/index" });
   },
 
+  goReadToday() {
+    const app = getApp();
+    let articles = app.globalData.articles && app.globalData.articles.length
+      ? app.globalData.articles
+      : dataLoader.loadArticles();
+    articles = stage.filterArticlesByCurrentStage(articles);
+    const article = storage.getTodayArticle(articles);
+    if (!article) {
+      wx.switchTab({ url: "/pages/index/index" });
+      return;
+    }
+    wx.navigateTo({ url: `/pages/read/read?id=${article.id}` });
+  },
+
   onNavBack() {
     wx.navigateBack({ delta: 1 });
+  },
+
+  acknowledgeReviewNotice() {
+    storage.acknowledgeReviewNotice(storage.getDueWords().length);
+  },
+
+  onHide() {
+    this.acknowledgeReviewNotice();
+  },
+
+  onUnload() {
+    this.acknowledgeReviewNotice();
+    this.clearPronunciationTimer();
+    if (this.audioContext) {
+      this.audioContext.destroy();
+      this.audioContext = null;
+    }
   },
 });

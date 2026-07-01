@@ -1,11 +1,24 @@
 const storage = require("../../utils/storage");
 const stage = require("../../utils/stage");
+const pronunciation = require("../../utils/pronunciation");
 const { updateTabBarSelected } = require("../../utils/tabBar");
 
 Page({
   data: {
+    statusBarHeight: 20,
+    navTotalHeight: 88,
     progress: {},
     currentStage: null,
+    pronunciationAccent: "us",
+  },
+
+  onLoad() {
+    const sys = wx.getSystemInfoSync();
+    const statusBarHeight = sys.statusBarHeight || 20;
+    this.setData({
+      statusBarHeight,
+      navTotalHeight: statusBarHeight + 44,
+    });
   },
 
   onShow() {
@@ -13,6 +26,7 @@ Page({
     this.setData({
       progress: storage.getProgress(),
       currentStage: stage.getCurrentStage(),
+      pronunciationAccent: pronunciation.getPronunciationAccent(),
     });
   },
 
@@ -20,6 +34,14 @@ Page({
     const current = stage.getCurrentStageKey();
     wx.navigateTo({
       url: `/pages/stage/stage?from=mine&key=${current}`,
+    });
+  },
+
+  selectPronunciationAccent(e) {
+    const accent = e.currentTarget.dataset.accent;
+    pronunciation.setPronunciationAccent(accent);
+    this.setData({
+      pronunciationAccent: pronunciation.getPronunciationAccent(),
     });
   },
 
@@ -38,6 +60,7 @@ Page({
             "articleWordMarks",
             "articleWordMarkIndices",
             "articleWordMarksMigrated",
+            "reviewNoticeCount",
           ].forEach((key) => wx.removeStorageSync(storage.getScopedStorageKey(key)));
           wx.showToast({ title: "已清空", icon: "success" });
           setTimeout(() => {

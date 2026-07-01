@@ -4,6 +4,7 @@ const ARTICLE_MARKS_KEY = "articleWordMarks";
 const ARTICLE_MARKS_MIGRATED_KEY = "articleWordMarksMigrated";
 const READ_ARTICLES_KEY = "readArticles";
 const SAVED_SENTENCES_KEY = "savedSentences";
+const REVIEW_NOTICE_COUNT_KEY = "reviewNoticeCount";
 const stage = require("./stage");
 const { normalizeArticleId, isSameArticle } = require("./article");
 const {
@@ -47,6 +48,14 @@ function getCaughtWords() {
 
 function saveCaughtWords(words) {
   wx.setStorageSync(scopedKey(STORAGE_KEY), words);
+}
+
+function getReviewNoticeCount() {
+  return wx.getStorageSync(scopedKey(REVIEW_NOTICE_COUNT_KEY)) || 0;
+}
+
+function acknowledgeReviewNotice(count) {
+  wx.setStorageSync(scopedKey(REVIEW_NOTICE_COUNT_KEY), Math.max(0, count || 0));
 }
 
 function getProgress() {
@@ -247,7 +256,7 @@ function syncCaughtWordsFromArticleMarks(articles) {
         topic: article ? article.topic : "",
         caughtAt: todayStr(),
         reviewLevel: 0,
-        nextReviewAt: addDays(todayStr(), 1),
+        nextReviewAt: todayStr(),
         status: "pending",
         correctStreak: 0,
       });
@@ -289,6 +298,14 @@ function catchWord(wordInfo, article, sentence, tokenKey) {
         articleTitle: article.title,
         topic: article.topic,
       };
+      if (
+        words[idx].status === "pending" &&
+        (words[idx].reviewLevel || 0) === 0 &&
+        words[idx].caughtAt === todayStr() &&
+        !words[idx].lastReviewAt
+      ) {
+        words[idx].nextReviewAt = todayStr();
+      }
       saveCaughtWords(words);
       return { action: "exists", word: words[idx] };
     }
@@ -308,7 +325,7 @@ function catchWord(wordInfo, article, sentence, tokenKey) {
     topic: article.topic,
     caughtAt: todayStr(),
     reviewLevel: 0,
-    nextReviewAt: addDays(todayStr(), 1),
+    nextReviewAt: todayStr(),
     status: "pending",
     correctStreak: 0,
     wordIndex: wordIndex >= 0 ? wordIndex : undefined,
@@ -340,9 +357,15 @@ function unCatchWord(wordKey, articleId, wordIndex) {
 
 function getDueWords() {
   const today = todayStr();
-  return getCaughtWords().filter(
-    (w) => w.status !== "mastered" && w.nextReviewAt <= today
-  );
+  return getCaughtWords().filter((w) => {
+    if (w.status === "mastered") return false;
+    if (w.nextReviewAt && w.nextReviewAt <= today) return true;
+    return (
+      w.caughtAt === today &&
+      (w.reviewLevel || 0) === 0 &&
+      !w.lastReviewAt
+    );
+  });
 }
 
 function reviewWord(wordKey, result) {
@@ -529,6 +552,8 @@ module.exports = {
   todayStr,
   getScopedStorageKey,
   migrateLegacyDataToCurrentStage,
+  getReviewNoticeCount,
+  acknowledgeReviewNotice,
   getCaughtWords,
   syncCaughtWordsFromArticleMarks,
   getCaughtWordKeysForArticle,

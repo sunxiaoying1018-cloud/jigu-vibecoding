@@ -27,7 +27,17 @@
           <view class="quiz-word">{{current.word}}</view>
           <view class="quiz-meta" wx:if="{{current.phoneticDisplay || current.posDisplay}}">
             <text wx:if="{{current.phoneticDisplay}}">{{current.phoneticDisplay}}</text>
-            <image class="speaker-icon" wx:if="{{current.phoneticDisplay}}" src="/assets/ui/icon-sound-black.png" mode="aspectFit" />
+            <view
+              class="speaker-hit"
+              wx:if="{{current.phoneticDisplay}}"
+              catchtap="playPronunciation"
+            >
+              <image
+                class="speaker-icon {{pronunciationPlaying ? 'speaker-icon--playing' : ''}}"
+                src="{{pronunciationPlaying ? '/assets/ui/icon-sound-blue.png' : '/assets/ui/icon-sound-black.png'}}"
+                mode="aspectFit"
+              />
+            </view>
           </view>
         </view>
 
@@ -113,10 +123,10 @@
       </view>
 
       <view wx:else class="empty card">
-        <view class="empty-emoji">🐱</view>
+        <image class="empty-mascot" src="/assets/ui/mascot.png" mode="aspectFit" />
         <view class="done-title">暂无待复习</view>
-        <view class="mascot-text">缸里的鱼都还好，去读文章抓新的吧</view>
-        <button class="btn-primary" bindtap="goHome">回首页</button>
+        <view class="mascot-text">先去读一篇文章，标记不认识的单词后，卷卷会提醒你复习</view>
+        <button class="btn-primary" bindtap="goReadToday">去阅读文章</button>
       </view>
     </view>
   </scroll-view>
