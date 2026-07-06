@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        color: #171717;
+        font: 12px/1.45 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 18px;
+        background: #f7f7f8;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        color: #666;
+      }
+
+      label {
+        display: block;
+        margin: 12px 0 5px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font: inherit;
+      }
+
+      input,
+      select {
+        border: 1px solid #d9d9dd;
+        padding: 8px 10px;
+        background: white;
+      }
+
+      button {
+        margin-top: 16px;
+        border: 0;
+        padding: 11px 12px;
+        color: white;
+        background: #266df0;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .check {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-top: 12px;
+        font-weight: 600;
+      }
+
+      .check input {
+        width: auto;
+      }
+
+      .status {
+        min-height: 38px;
+        margin-top: 14px;
+        padding: 10px;
+        border-radius: 8px;
+        color: #555;
+        background: white;
+        border: 1px solid #e5e5e8;
+      }
+
+      .hint {
+        margin-top: 10px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Element Splitter</h1>
+    <p>选中一张黑底素材图，一键去文字、抠透明底，并拆成独立 PNG 图层。</p>
+
+    <label for="serverUrl">本地服务地址</label>
+    <input id="serverUrl" value="http://127.0.0.1:8787" />
+
+    <label for="layoutMode">插入方式</label>
+    <select id="layoutMode">
+      <option value="original">按原图位置还原</option>
+      <option value="grid">整理成素材网格</option>
+    </select>
+
+    <div class="row">
+      <div>
+        <label for="backgroundThreshold">背景阈值</label>
+        <input id="backgroundThreshold" type="number" min="1" max="120" value="34" />
+      </div>
+      <div>
+        <label for="mergeGap">合并间距</label>
+        <input id="mergeGap" type="number" min="0" max="40" value="10" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="minArea">最小面积</label>
+        <input id="minArea" type="number" min="1" max="2000" value="45" />
+      </div>
+      <div>
+        <label for="padding">透明边距</label>
+        <input id="padding" type="number" min="0" max="60" value="6" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="leftTextWidth">左侧文字宽度</label>
+        <input id="leftTextWidth" type="number" min="0" max="500" value="190" />
+      </div>
+      <div>
+        <label for="labelBandHeight">标题高度</label>
+        <input id="labelBandHeight" type="number" min="0" max="80" value="28" />
+      </div>
+    </div>
+
+    <label class="check">
+      <input id="removeText" type="checkbox" checked />
+      去掉左侧说明文字
+    </label>
+
+    <label class="check">
+      <input id="removeGuides" type="checkbox" checked />
+      去掉横向分隔虚线
+    </label>
+
+    <button id="splitButton">拆分选中图片</button>
+    <div id="status" class="status">先启动本地 Python 服务，再在 Figma 画布里选中图片。</div>
+    <div class="hint">如果元素被切太碎，调大“合并间距”；如果多个元素粘在一起，调小它。</div>
+
+    <script>
+      const splitButton = document.getElementById("splitButton");
+      const statusBox = document.getElementById("status");
+
+      splitButton.onclick = () => {
+        setBusy(true, "正在读取 Figma 里选中的图片...");
+        parent.postMessage({ pluginMessage: { type: "split-selected" } }, "*");
+      };
+
+      window.onmessage = async (event) => {
+        const message = event.data.pluginMessage;
+        if (!message) {
+          return;
+        }
+
+        if (message.type === "selected-image") {
+          await splitSelectedImage(message);
+          return;
+        }
+
+        if (message.type === "error") {
+          setBusy(false, message.text);
+        }
+      };
+
+      async function splitSelectedImage(message) {
+        try {
+          setBusy(true, `已读取 ${message.source.name}，正在调用本地拆图服务...`);
+
+          const bytes = new Uint8Array(message.bytes);
+          const formData = new FormData();
+          formData.append("file", new Blob([bytes], { type: "image/png" }), "selection.png");
+          formData.append("background_threshold", valueOf("backgroundThreshold"));
+          formData.append("min_area", valueOf("minArea"));
+          formData.append("padding", valueOf("padding"));
+          formData.append("merge_gap", valueOf("mergeGap"));
+          formData.append("remove_text", checkedOf("removeText"));
+          formData.append("label_band_height", valueOf("labelBandHeight"));
+          formData.append("left_text_width", valueOf("leftTextWidth"));
+          formData.append("remove_guides", checkedOf("removeGuides"));
+
+          const serverUrl = document.getElementById("serverUrl").value.replace(/\/$/, "");
+          const response = await fetch(`${serverUrl}/split`, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            const text = await response.text();
+            throw new Error(`本地服务返回错误：${text}`);
+          }
+
+          const result = await response.json();
+          setBusy(true, `拆出 ${result.count} 个元素，正在插入 Figma...`);
+          parent.postMessage(
+            {
+              pluginMessage: {
+                type: "insert-elements",
+                result,
+                layoutMode: document.getElementById("layoutMode").value,
+              },
+            },
+            "*"
+          );
+          setBusy(false, `完成：已拆出 ${result.count} 个透明元素。`);
+        } catch (error) {
+          setBusy(false, error.message || String(error));
+        }
+      }
+
+      function valueOf(id) {
+        return document.getElementById(id).value;
+      }
+
+      function checkedOf(id) {
+        return document.getElementById(id).checked ? "true" : "false";
+      }
+
+      function setBusy(isBusy, text) {
+        splitButton.disabled = isBusy;
+        statusBox.textContent = text;
+      }
+    </script>
+  </body>
+</html>
