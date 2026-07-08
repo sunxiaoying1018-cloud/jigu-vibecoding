@@ -1,4 +1,4 @@
-<view class="tab-bar {{switching ? 'tab-bar--switching' : ''}}" style="padding-bottom: {{safeBottom}}px;">
+<view class="tab-bar {{switching ? 'tab-bar--switching' : ''}}">
   <view class="tab-bar-border"></view>
   <view
     wx:for="{{list}}"

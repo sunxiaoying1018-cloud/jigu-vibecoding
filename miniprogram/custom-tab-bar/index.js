@@ -1,7 +1,6 @@
 Component({
   data: {
     selected: 0,
-    safeBottom: 0,
     switching: false,
     list: [
       {
@@ -17,19 +16,6 @@ Component({
         selectedIconPath: "/assets/ui/tab/mine-active.png",
       },
     ],
-  },
-
-  lifetimes: {
-    attached() {
-      const sys = wx.getSystemInfoSync();
-      const safeBottom = Math.max(
-        (sys.screenHeight || 0) - (sys.safeArea && sys.safeArea.bottom
-          ? sys.safeArea.bottom
-          : sys.screenHeight || 0),
-        0
-      );
-      this.setData({ safeBottom });
-    },
   },
 
   pageLifetimes: {
