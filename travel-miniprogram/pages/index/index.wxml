@@ -1,0 +1,223 @@
+<view class="page">
+  <view class="nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-inner">
+      <text class="nav-title">游游清单</text>
+      <text class="nav-action" bindtap="resetProgress">重置</text>
+    </view>
+  </view>
+
+  <scroll-view
+    scroll-y
+    class="content"
+    style="padding-top: {{navHeight}}px;"
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="top-tabs-row">
+      <view class="day-tabs" wx:if="{{trip.days.length > 1}}">
+        <view
+          class="day-tab {{activeDayId === item.id ? 'day-tab--active' : ''}}"
+          wx:for="{{trip.days}}"
+          wx:key="id"
+          data-day="{{item.id}}"
+          bindtap="switchDay"
+        >
+          <text class="day-tab-title">{{item.label}}</text>
+          <text class="day-tab-date">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="sort-toggle sort-toggle--{{viewMode}}" bindtap="toggleViewMode">
+        <image
+          wx:if="{{viewMode === 'group'}}"
+          class="sort-toggle-icon"
+          src="/assets/icon-sort-rating.png"
+          mode="aspectFit"
+        />
+        <image
+          wx:else
+          class="sort-toggle-icon"
+          src="/assets/icon-sort-time.png"
+          mode="aspectFit"
+        />
+      </view>
+    </view>
+
+    <view class="visited-summary" wx:if="{{visitedSummary.count > 0}}">
+      <text class="visited-label">已去过</text>
+      <text class="visited-text">{{visitedSummary.text}}</text>
+    </view>
+
+    <block wx:for="{{trip.days}}" wx:key="id" wx:for-item="day">
+      <view wx:if="{{activeDayId === day.id}}" class="day-section">
+        <view wx:if="{{viewMode === 'time'}}" class="time-card">
+          <view class="trip-item" wx:for="{{sortedItems}}" wx:key="id" wx:for-item="item">
+            <view
+              class="check {{checkedMap[item.id] ? 'check--done' : ''}}"
+              data-id="{{item.id}}"
+              catchtap="toggleCheck"
+            >
+              <text wx:if="{{checkedMap[item.id]}}">✓</text>
+            </view>
+            <view class="item-main">
+              <view class="item-top">
+                <text class="item-title {{checkedMap[item.id] ? 'item-title--done' : ''}}">{{item.title}}</text>
+                <view class="item-hearts" wx:if="{{item.heartIcons.length}}">
+                  <image
+                    class="item-heart-icon"
+                    wx:for="{{item.heartIcons}}"
+                    wx:for-item="heart"
+                    wx:key="id"
+                    src="{{heart.filled ? '/assets/icon-heart-filled.png' : '/assets/icon-heart-empty.png'}}"
+                    mode="aspectFit"
+                  />
+                </view>
+                <text class="item-tag" wx:if="{{item.tag}}">{{item.tag}}</text>
+              </view>
+              <text class="item-time">{{item.timeLabel || '推荐时间'}}：{{item.time}}</text>
+              <text class="item-group">{{item.groupTitle}}</text>
+              <view class="photo-box" wx:if="{{checkedMap[item.id]}}">
+                <view class="photo-list" wx:if="{{photoMap[item.id] && photoMap[item.id].length}}">
+                  <view
+                    class="photo-item"
+                    wx:for="{{photoMap[item.id]}}"
+                    wx:for-item="photo"
+                    wx:key="*this"
+                  >
+                    <image
+                      class="photo-thumb"
+                      src="{{photo}}"
+                      mode="aspectFill"
+                      data-id="{{item.id}}"
+                      data-url="{{photo}}"
+                      bindtap="previewPhoto"
+                    />
+                    <text
+                      class="photo-remove"
+                      data-id="{{item.id}}"
+                      data-url="{{photo}}"
+                      catchtap="removePhoto"
+                    >×</text>
+                  </view>
+                </view>
+                <view class="photo-add" data-id="{{item.id}}" bindtap="addPhotos">
+                  <view class="photo-add-icon" />
+                  <text>照片</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="group-card" wx:if="{{viewMode === 'group'}}" wx:for="{{day.groups}}" wx:key="id" wx:for-item="group">
+          <view class="group-head" data-id="{{group.id}}" bindtap="toggleGroup">
+            <view class="group-head-copy">
+              <view class="group-title-row">
+                <text class="group-title">{{group.displayTitle}}</text>
+                <view class="group-stars" wx:if="{{group.starIcons.length}}">
+                  <image
+                    class="group-star-icon"
+                    wx:for="{{group.starIcons}}"
+                    wx:for-item="heart"
+                    wx:key="id"
+                    src="{{heart.filled ? '/assets/icon-heart-filled.png' : '/assets/icon-heart-empty.png'}}"
+                    mode="aspectFit"
+                  />
+                </view>
+              </view>
+              <text class="group-desc">{{group.desc}}</text>
+            </view>
+            <view
+              wx:if="{{!group.isRouteGroup}}"
+              class="group-arrow {{expandedMap[group.id] ? 'group-arrow--open' : ''}}"
+            >
+              <view class="group-arrow-icon" />
+            </view>
+          </view>
+
+          <view class="item-list" wx:if="{{group.isRouteGroup || expandedMap[group.id]}}">
+            <view class="trip-item" wx:for="{{group.items}}" wx:key="id" wx:for-item="item">
+              <view
+                class="check {{checkedMap[item.id] ? 'check--done' : ''}}"
+                data-id="{{item.id}}"
+                catchtap="toggleCheck"
+              >
+                <text wx:if="{{checkedMap[item.id]}}">✓</text>
+              </view>
+              <view class="item-main">
+                <view class="item-top">
+                  <text class="item-title {{checkedMap[item.id] ? 'item-title--done' : ''}}">{{item.title}}</text>
+                  <text class="item-tag" wx:if="{{item.tag}}">{{item.tag}}</text>
+                  <view
+                    wx:if="{{item.showTransport && item.transport.showDetail}}"
+                    class="item-detail-toggle {{expandedItemMap[item.id] ? 'item-detail-toggle--open' : ''}}"
+                    data-id="{{item.id}}"
+                    catchtap="toggleItemDetail"
+                  >
+                    <view class="item-detail-toggle-icon" />
+                  </view>
+                </view>
+                <text class="item-time">{{item.timeLabel || '推荐时间'}}：{{item.time}}</text>
+
+                <view class="detail-box" wx:if="{{item.showTransport && item.transport.showDetail && expandedItemMap[item.id]}}">
+                  <view class="detail-row" wx:if="{{item.transport.showTraffic}}">
+                    <text class="detail-label">交通方式</text>
+                    <text class="detail-value">{{item.transport.transportType || item.transport.mode}}</text>
+                  </view>
+                  <view class="detail-row" wx:if="{{item.transport.showLine}}">
+                    <text class="detail-label">线路</text>
+                    <text class="detail-value">{{item.transport.lineName}}</text>
+                  </view>
+                  <view class="detail-row" wx:if="{{item.transport.showDirection}}">
+                    <text class="detail-label">方向</text>
+                    <text class="detail-value">{{item.transport.directionText}}</text>
+                  </view>
+                  <view class="detail-row" wx:if="{{item.transport.boardAt}}">
+                    <text class="detail-label">起始地</text>
+                    <text class="detail-value">{{item.transport.boardAt}}</text>
+                  </view>
+                  <view class="detail-row" wx:if="{{item.transport.getOffAt}}">
+                    <text class="detail-label">目的地</text>
+                    <text class="detail-value">{{item.transport.getOffAt}}</text>
+                  </view>
+                  <view class="detail-row" wx:if="{{item.transport.remark}}">
+                    <text class="detail-label">备注</text>
+                    <text class="detail-value">{{item.transport.remark}}</text>
+                  </view>
+                </view>
+                <view class="photo-box" wx:if="{{checkedMap[item.id]}}">
+                  <view class="photo-list" wx:if="{{photoMap[item.id] && photoMap[item.id].length}}">
+                    <view
+                      class="photo-item"
+                      wx:for="{{photoMap[item.id]}}"
+                      wx:for-item="photo"
+                      wx:key="*this"
+                    >
+                      <image
+                        class="photo-thumb"
+                        src="{{photo}}"
+                        mode="aspectFill"
+                        data-id="{{item.id}}"
+                        data-url="{{photo}}"
+                        bindtap="previewPhoto"
+                      />
+                      <text
+                        class="photo-remove"
+                        data-id="{{item.id}}"
+                        data-url="{{photo}}"
+                        catchtap="removePhoto"
+                      >×</text>
+                    </view>
+                  </view>
+                  <view class="photo-add" data-id="{{item.id}}" bindtap="addPhotos">
+                    <view class="photo-add-icon" />
+                    <text>照片</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

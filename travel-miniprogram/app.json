@@ -3,10 +3,10 @@
     "pages/index/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "日程",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "游游清单",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#ffffff"
+    "backgroundColor": "#f7f8fa"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -1,25 +1,22 @@
 {
-  "description": "日程日历小程序",
+  "description": "游游清单小程序",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "bundle": false,
+    "urlCheck": true,
     "es6": true,
+    "enhance": true,
     "postcss": true,
     "minified": true,
-    "enhance": true,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
-    "minifyWXSS": true,
-    "minifyWXML": true,
     "compileWorklet": false,
     "uglifyFileName": false,
     "uploadWithSourceMap": true,
     "packNpmManually": false,
     "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
     "localPlugins": false,
     "disableUseStrict": false,
     "useCompilerPlugins": false,
@@ -33,14 +30,10 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.3.4",
+  "libVersion": "3.8.10",
   "appid": "wxff1956a43c9b99bf",
-  "projectname": "日程日历",
-  "miniprogramRoot": "./",
+  "projectname": "游游清单",
   "condition": {},
-  "editorSetting": {
-    "tabIndent": "insertSpaces",
-    "tabSize": 2
-  },
-  "simulatorPluginLibVersion": {}
+  "simulatorPluginLibVersion": {},
+  "editorSetting": {}
 }
